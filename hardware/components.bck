@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC3129
+D 15V, 200mA Synchronous Buck-Boost DC/DC Converter with 1.3μA Quiescent Current
+K LTC3129
+F http://www.linear.com/product/LTC3129
+$ENDCMP
+#
+#End Doc Library
