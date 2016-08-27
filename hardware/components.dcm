@@ -6,4 +6,13 @@ K LTC3129
 F http://www.linear.com/product/LTC3129
 $ENDCMP
 #
+$CMP ZTC1009
+D High-side current monitor
+$ENDCMP
+#
+$CMP ZTC1109
+D Low-Power high-side current monitor
+F http://www.diodes.com/_files/datasheets/ZXCT1107_10.pdf
+$ENDCMP
+#
 #End Doc Library
