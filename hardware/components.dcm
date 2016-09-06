@@ -15,4 +15,8 @@ D Low-Power high-side current monitor
 F http://www.diodes.com/_files/datasheets/ZXCT1107_10.pdf
 $ENDCMP
 #
+$CMP ZXCT1009
+D High-side current monitor
+$ENDCMP
+#
 #End Doc Library
