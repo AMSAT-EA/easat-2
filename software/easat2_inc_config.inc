@@ -1,11 +1,12 @@
-;************************************************************************************
+;******************************************************************************
 ;
-; Proyecto EASAT 2
-; Fichero: easat2_inc_config.inc
-; Descripción: Fichero de configuración de los flags del PIC
-; Última modificación: 03 de octubre de 2016
+; Project     : EASAT2
+; File        : easat2_inc_config.inc
 ;
-;************************************************************************************
+; Description : MCU flag configuration
+; Last update : 07 October 2016
+;
+;******************************************************************************
 
 ;==========================================================================
 ;
@@ -215,9 +216,9 @@
     CONFIG IESO = OFF       ; Internal/External Oscillator Switchover
 
 ; CONFIG2L
-    CONFIG PWRTEN = OFF      ; Power-up Timer Enable
-    CONFIG BOREN  = OFF      ; Brown-out Reset Enable  (OFF,ON,NOSLP,SBODIS)
-    CONFIG BORV   = 190      ; Brown Out Reset Volt.(285,250,220,190)[V/100]
+    CONFIG PWRTEN = OFF     ; Power-up Timer Enable
+    CONFIG BOREN  = OFF     ; Brown-out Reset Enable  (OFF,ON,NOSLP,SBODIS)
+    CONFIG BORV   = 190     ; Brown Out Reset Volt.(285,250,220,190)[V/100]
 
 ; CONFIG2H
     CONFIG WDTEN = OFF      ; Watchdog Timer Enable (OFF,NOSLP,SWON,ON)
@@ -255,9 +256,9 @@
     CONFIG WRT3 = OFF
 
 ; CONFIG6H
-    CONFIG WRTC = ON       ; CONFIGuration Register Write Protection
+    CONFIG WRTC = ON        ; CONFIGuration Register Write Protection
     CONFIG WRTB = OFF       ; Boot Block Write Protection
-    CONFIG WRTD = ON      ; Data EEPROM Write Protection
+    CONFIG WRTD = ON        ; Data EEPROM Write Protection
 
 ; CONFIG7L
     CONFIG EBTR0 = OFF      ; Table Read Protection Block 0

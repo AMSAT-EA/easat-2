@@ -1,45 +1,45 @@
-;************************************************************************************
+;******************************************************************************
 ;
-; Proyecto EASAT 2
-; Fichero: easat2_inc_eeprom.inc
-; Descripción: Fichero de mapeo de la memoria EEPROM
-; Última modificación: 03 de octubre de 2016
+; Project     : EASAT2
+; File        : easat2_inc_eeprom.inc
 ;
-;************************************************************************************
+; Description : EEPROM mapping for the MCU
+; Last update : 07 October de 2016
+;
+;******************************************************************************
 
-; mapeo de la memoria EEPROM    
+; EEPROM mapping
     
-    ORG   0xF00000			    ; mapear en EEPROM
+    ORG   0xF00000                          ; EEPROM address
 
-MENSAJE         DE "EASAT2 25 12 010 015"
-FIN_MENSAJE     DE 0h
-			
-		
-COMIENZO_TABLA	DE "A.-"
-LETRA_B         DE "B-..."
-LETRA_C         DE "C-.-."
-LETRA_D         DE "D-.."
-LETRA_E         DE "E."
-LETRA_F         DE "F..-."
-LETRA_G         DE "G--."
-LETRA_H         DE "H...."
-LETRA_I         DE "I.."
-LETRA_J         DE "J.---"
-LETRA_K         DE "K-.-"
-LETRA_M         DE "L.-.."
-LETRA_N         DE "N-."
-LETRA_O         DE "O---"
-LETRA_P         DE "P.--."
-LETRA_Q         DE "Q--.-"
-LETRA_R         DE "R.-.-"
-LETRA_S         DE "S..."
-LETRA_T         DE "T-"
-LETRA_U         DE "U..-"
-LETRA_V         DE "V...-"
-LETRA_W         DE "W.--"
-LETRA_X         DE "X-..-"
-LETRA_Y         DE "Y-.--"
-LETRA_Z         DE "Z--.."
+MESSAGE         DE "EASAT2 25 12 010 015"   ; beacon message format
+MESSAGE_END     DE 0h
+				
+EE_ARRAY_BEGIN	DE "A.-"
+LETTER_B        DE "B-..."
+LETTER_C        DE "C-.-."
+LETTER_D        DE "D-.."
+LETTER_E        DE "E."
+LETTER_F        DE "F..-."
+LETTER_G        DE "G--."
+LETTER_H        DE "H...."
+LETTER_I        DE "I.."
+LETTER_J        DE "J.---"
+LETTER_K        DE "K-.-"
+LETTER_M        DE "L.-.."
+LETTER_N        DE "N-."
+LETTER_O        DE "O---"
+LETTER_P        DE "P.--."
+LETTER_Q        DE "Q--.-"
+LETTER_R        DE "R.-.-"
+LETTER_S        DE "S..."
+LETTER_T        DE "T-"
+LETTER_U        DE "U..-"
+LETTER_V        DE "V...-"
+LETTER_W        DE "W.--"
+LETTER_X        DE "X-..-"
+LETTER_Y        DE "Y-.--"
+LETTER_Z        DE "Z--.."
 NUM_0           DE "0-----"
 NUM_1           DE "1.----"
 NUM_2           DE "2..---"
@@ -51,10 +51,8 @@ NUM_7           DE "7--..."
 NUM_8           DE "8---.."
 NUM_9           DE "9----."
 COMA            DE ",--..--"
-INTERROGACION	DE "?..--.."
-BARRA           DE "/-..-."
-ARROBA          DE ".--.-."
-FIN_MEMORIA     DE 0xFF
-
-
+QUESTION        DE "?..--.."
+SLASH           DE "/-..-."
+ARROW           DE ".--.-."
+EE_ARRAY_END    DE 0xFF
 
