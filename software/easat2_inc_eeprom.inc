@@ -4,7 +4,7 @@
 ; File        : easat2_inc_eeprom.inc
 ;
 ; Description : EEPROM mapping for the MCU
-; Last update : 07 October de 2016
+; Last update : 07 October 2016
 ;
 ;******************************************************************************
 
