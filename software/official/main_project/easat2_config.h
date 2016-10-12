@@ -8,10 +8,14 @@
  *                                                                            
 */
 
-#ifndef EASAT2_INC_CONFIG_H
-#define	EASAT2_INC_CONFIG_H
+#ifndef EASAT2_CONFIG_H
+#define	EASAT2_CONFIG_H
+
+#include <xc.h>
 
 /*  Configuration for PIC18F45K22 */
+
+#define _XTAL_FREQ 2000000      // 2 Mhz
 
 #pragma config FOSC = XT        // Oscillator (LP,XT,HSHP,HSMP,RC,RCIO6,ECHP,
                                 //  ECHPIO6,INTIO67,INTIO7,ECMPIO6,ECLP,ECLPIO6)
