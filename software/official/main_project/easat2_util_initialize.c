@@ -8,15 +8,17 @@
  *                                                                            
 */
 
-#include"easat2.h"
-#include"easat2_util_initialize.h"
+#include "easat2.h"
+#include "easat2_util_initialize.h"
 
 // this function initializes the MCU
 
 void initialize(void) {
     
-    
+    // TRISBbits.RB0 = 0;
+     
     // configure PORTS, ADCs, and so on
     
+    // TRISB = 0x0F;
 
 }

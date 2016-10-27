@@ -8,15 +8,15 @@
  *                                                                            
 */
 
-#include"easat2.h"
-#include"easat2_util_inputs.h"
+#include "easat2.h"
+#include "easat2_util_inputs.h"
 
 
 // get the battery voltage
 
 float getBatteryVoltage(void) {
     
-    return 3.7;
+    return 3.702;
     
 }
             
@@ -38,7 +38,7 @@ int getBatteryCurrent(void) {
 // get the system temperature
 float getTemperature(void) {
     
-    return -12.5;
+    return -12.502;
     
 }
 

@@ -8,12 +8,12 @@
  *                                                                            
 */
 
-#include"easat2.h"
-#include"easat2_main_mcu.h"
-#include"easat2_util_initialize.h"
-#include"easat2_util_inputs.h"
-#include"easat2_util_waits.h"
-#include"easat2_util_transmission.h"
+#include "easat2.h"
+#include "easat2_main_mcu.h"
+#include "easat2_util_initialize.h"
+#include "easat2_util_inputs.h"
+#include "easat2_util_waits.h"
+#include "easat2_util_transmission.h"
 
         
 void main(void) {
