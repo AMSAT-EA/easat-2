@@ -178,12 +178,14 @@ void util_transmit_letter(char letter) {
             break; 
         case SYMBOL_SPACE:
             util_transmit_space_between_words();
+            break;
         default:
-            /* after the letter, digit or symbol wait */
-            util_transmit_space_between_letters();
             break;
             
-    } 
+    }
+
+    /* after the letter, digit or symbol wait */
+    util_transmit_space_between_letters();
 
 }
 
@@ -205,20 +207,21 @@ void util_transmit_morse_sequence(char * morse_sequence) {
                 util_transmit_dot();
                 break;   
             case SYMBOL_DASH:
-                util_transmit_dash();            
+                util_transmit_dash();
                 break;   
             default:  
-                // after a dot or dash always wait the required time
-                util_transmit_space_between_dots_dashs();
                 break;
         }
+
+        // after a dot or dash always wait the required time
+        util_transmit_space_between_dots_dashes();
    
     } 
     
 }
 
 // This function transmits a dot using the port
-// Transmitint a dot is just put to high the output of the port
+// Transmiting a dot is just put to high the output of the port
 // the required time and then to low.
 // To make the buzzer sound, a 1 Khz square signal is generated inside
 
@@ -226,8 +229,8 @@ void util_transmit_dot(void) {
     
     // set to high the configured outputs
     
-    PORTDbits.RD0 = 1;  // led pin
-    PORTDbits.RD2 = 1;  // RF module pin
+    PORTDbits.RD1 = 1;  // led pin
+    PORTDbits.RD3 = 1;  // RF module pin
     
     for (int i = 0; i < DOT_DURATION_MS; i++) {
         
@@ -242,8 +245,8 @@ void util_transmit_dot(void) {
        
     }
     
-    PORTDbits.RD0 = 0;  // led pin
-    PORTDbits.RD2 = 0;  // RF module pin    
+    PORTDbits.RD1 = 0;  // led pin
+    PORTDbits.RD3 = 0;  // RF module pin
     
 }
 
@@ -257,8 +260,8 @@ void util_transmit_dash(void) {
     
     // set to high the configured outputs
     
-    PORTDbits.RD0 = 1;  // led pin on
-    PORTDbits.RD2 = 1;  // RF module pin on
+    PORTDbits.RD1 = 1;  // led pin on
+    PORTDbits.RD3 = 1;  // RF module pin on
     
     for (int i = 0; i < DASH_DURATION_MS; i++) {
           
@@ -270,17 +273,17 @@ void util_transmit_dash(void) {
                 util_transmit_buzzer_1ms_cycle();
         else
                 util_waits_delay_ms(1); // if not we just wait 1ms   
-              
+
     }
     
-    PORTDbits.RD0 = 0;  // led pin off
-    PORTDbits.RD2 = 0;  // RF module pin off      
+    PORTDbits.RD1 = 0;  // led pin off
+    PORTDbits.RD3 = 0;  // RF module pin off
 }
 
 // This function waits the required time between dots and dashes
 // Each time a dot or dash is transmited this function has to be called
 
-void util_transmit_space_between_dots_dashs(void) {
+void util_transmit_space_between_dots_dashes(void) {
     util_waits_delay_ms(DOTS_DASHES_SEPARATION_MS);
 }
 
@@ -302,14 +305,10 @@ void util_transmit_space_between_words(void) {
 // This function makes the buzzer sound just 1ms
 
 void util_transmit_buzzer_1ms_cycle(void) {
-    
-       for (int j = 0; j < (int)(US_IN_A_MS/BUZZER_CYCLE_US); j++) {
-    
-            PORTDbits.RD1 = 1;  // buzzer pin high
-            util_waits_delay_us(BUZZER_HALF_CYCLE_US);
-    
-            PORTDbits.RD1 = 0;  // buzzer pin low
-            util_waits_delay_us(BUZZER_HALF_CYCLE_US);
-        }
-       
+           
+            PORTDbits.RD2 = 1;  // buzzer pin high
+            util_waits_delay_hundred_us(BUZZER_HALF_CYCLE_HUNDRED_US);
+            PORTDbits.RD2 = 0;  // buzzer pin low
+            util_waits_delay_hundred_us(BUZZER_HALF_CYCLE_HUNDRED_US);
+           
 }

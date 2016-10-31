@@ -79,27 +79,41 @@
 [v _util_beacon_transmission util_beacon_transmission `(v  1 e 1 0 ]
 "52
 [v _util_transmit_letter util_transmit_letter `(v  1 e 1 0 ]
-"196
+"198
 [v _util_transmit_morse_sequence util_transmit_morse_sequence `(v  1 e 1 0 ]
-"225
+"228
 [v _util_transmit_dot util_transmit_dot `(v  1 e 1 0 ]
-"256
+"259
 [v _util_transmit_dash util_transmit_dash `(v  1 e 1 0 ]
-"283
-[v _util_transmit_space_between_dots_dashs util_transmit_space_between_dots_dashs `(v  1 e 1 0 ]
-"291
+"286
+[v _util_transmit_space_between_dots_dashes util_transmit_space_between_dots_dashes `(v  1 e 1 0 ]
+"294
 [v _util_transmit_space_between_letters util_transmit_space_between_letters `(v  1 e 1 0 ]
-"298
+"301
 [v _util_transmit_space_between_words util_transmit_space_between_words `(v  1 e 1 0 ]
-"304
+"307
 [v _util_transmit_buzzer_1ms_cycle util_transmit_buzzer_1ms_cycle `(v  1 e 1 0 ]
-"25 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
-[v _util_wait_delay_mins util_wait_delay_mins `(v  1 e 1 0 ]
-"41
+"24 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+[v _util_waits_delay_mins util_waits_delay_mins `(v  1 e 1 0 ]
+"31
+[v _util_waits_delay_secs util_waits_delay_secs `(v  1 e 1 0 ]
+"40
 [v _util_waits_delay_ms util_waits_delay_ms `(v  1 e 1 0 ]
-"48
-[v _util_waits_delay_us util_waits_delay_us `(v  1 e 1 0 ]
-[s S147 . 1 `uc 1 RD0 1 0 :1:0 
+"47
+[v _util_waits_delay_hundred_us util_waits_delay_hundred_us `(v  1 e 1 0 ]
+[s S137 . 1 `uc 1 ANSD0 1 0 :1:0 
+`uc 1 ANSD1 1 0 :1:1 
+`uc 1 ANSD2 1 0 :1:2 
+`uc 1 ANSD3 1 0 :1:3 
+`uc 1 ANSD4 1 0 :1:4 
+`uc 1 ANSD5 1 0 :1:5 
+`uc 1 ANSD6 1 0 :1:6 
+`uc 1 ANSD7 1 0 :1:7 
+]
+"209 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
+[u S146 . 1 `S137 1 . 1 0 ]
+[v _ANSELDbits ANSELDbits `VES146  1 e 1 @3899 ]
+[s S106 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -108,8 +122,8 @@
 `uc 1 RD6 1 0 :1:6 
 `uc 1 RD7 1 0 :1:7 
 ]
-"7297 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
-[s S156 . 1 `uc 1 . 1 0 :2:0 
+"7297
+[s S331 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 P2B 1 0 :1:2 
 `uc 1 P2C 1 0 :1:3 
 `uc 1 P2D 1 0 :1:4 
@@ -117,16 +131,16 @@
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
-[s S164 . 1 `uc 1 . 1 0 :1:0 
+[s S339 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP4 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 TX2 1 0 :1:6 
 `uc 1 RX2 1 0 :1:7 
 ]
-[s S170 . 1 `uc 1 . 1 0 :3:0 
+[s S345 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_SS2 1 0 :1:3 
 ]
-[s S173 . 1 `uc 1 SCK2 1 0 :1:0 
+[s S348 . 1 `uc 1 SCK2 1 0 :1:0 
 `uc 1 SDI2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 nSS2 1 0 :1:3 
@@ -135,12 +149,12 @@
 `uc 1 CK2 1 0 :1:6 
 `uc 1 DT2 1 0 :1:7 
 ]
-[s S182 . 1 `uc 1 SCL2 1 0 :1:0 
+[s S357 . 1 `uc 1 SCL2 1 0 :1:0 
 `uc 1 SDA2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SS2 1 0 :1:3 
 ]
-[s S187 . 1 `uc 1 AN20 1 0 :1:0 
+[s S362 . 1 `uc 1 AN20 1 0 :1:0 
 `uc 1 AN21 1 0 :1:1 
 `uc 1 AN22 1 0 :1:2 
 `uc 1 AN23 1 0 :1:3 
@@ -149,8 +163,55 @@
 `uc 1 AN26 1 0 :1:6 
 `uc 1 AN27 1 0 :1:7 
 ]
-[u S196 . 1 `S147 1 . 1 0 `S156 1 . 1 0 `S164 1 . 1 0 `S170 1 . 1 0 `S173 1 . 1 0 `S182 1 . 1 0 `S187 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES196  1 e 1 @3971 ]
+[u S371 . 1 `S106 1 . 1 0 `S331 1 . 1 0 `S339 1 . 1 0 `S345 1 . 1 0 `S348 1 . 1 0 `S357 1 . 1 0 `S362 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES371  1 e 1 @3971 ]
+[s S158 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"8112
+[s S167 . 1 `uc 1 LD0 1 0 :1:0 
+]
+[s S169 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+]
+[s S172 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LD2 1 0 :1:2 
+]
+[s S175 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 LD3 1 0 :1:3 
+]
+[s S178 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LD4 1 0 :1:4 
+]
+[s S181 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LD5 1 0 :1:5 
+]
+[s S184 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LD6 1 0 :1:6 
+]
+[s S187 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S190 . 1 `S158 1 . 1 0 `S167 1 . 1 0 `S169 1 . 1 0 `S172 1 . 1 0 `S175 1 . 1 0 `S178 1 . 1 0 `S181 1 . 1 0 `S184 1 . 1 0 `S187 1 . 1 0 ]
+[v _LATDbits LATDbits `VES190  1 e 1 @3980 ]
+[s S97 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"8948
+[u S115 . 1 `S97 1 . 1 0 `S106 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES115  1 e 1 @3989 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
 [v _dpowers dpowers `C[10]ul  1 s 40 dpowers ]
 "7 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\powers.c
@@ -175,11 +236,25 @@
 [v main_loop@solar_current solar_current `i  1 a 2 28 ]
 "68
 } 0
-"25 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
-[v _util_wait_delay_mins util_wait_delay_mins `(v  1 e 1 0 ]
+"24 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+[v _util_waits_delay_mins util_waits_delay_mins `(v  1 e 1 0 ]
 {
-[v util_wait_delay_mins@minutes minutes `i  1 p 2 0 ]
-"29
+"25
+[v util_waits_delay_mins@i i `i  1 a 2 15 ]
+"24
+[v util_waits_delay_mins@minutes minutes `i  1 p 2 12 ]
+"27
+} 0
+"31
+[v _util_waits_delay_secs util_waits_delay_secs `(v  1 e 1 0 ]
+{
+"33
+[v util_waits_delay_secs@j j `i  1 a 2 10 ]
+"32
+[v util_waits_delay_secs@i i `i  1 a 2 8 ]
+"31
+[v util_waits_delay_secs@secs secs `i  1 p 2 5 ]
+"36
 } 0
 "21 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
 [v _util_beacon_transmission util_beacon_transmission `(v  1 e 1 0 ]
@@ -203,71 +278,69 @@
 {
 [v util_transmit_letter@letter letter `uc  1 a 1 wreg ]
 [v util_transmit_letter@letter letter `uc  1 a 1 wreg ]
-[v util_transmit_letter@letter letter `uc  1 a 1 15 ]
-"188
+[v util_transmit_letter@letter letter `uc  1 a 1 13 ]
+"190
 } 0
-"298
+"301
 [v _util_transmit_space_between_words util_transmit_space_between_words `(v  1 e 1 0 ]
 {
-"300
+"303
 } 0
-"291
+"294
 [v _util_transmit_space_between_letters util_transmit_space_between_letters `(v  1 e 1 0 ]
 {
-"293
+"296
 } 0
-"196
+"198
 [v _util_transmit_morse_sequence util_transmit_morse_sequence `(v  1 e 1 0 ]
 {
-"200
-[v util_transmit_morse_sequence@i i `i  1 a 2 13 ]
-"196
-[v util_transmit_morse_sequence@morse_sequence morse_sequence `*.25uc  1 p 2 9 ]
-"218
+"202
+[v util_transmit_morse_sequence@i i `i  1 a 2 11 ]
+"198
+[v util_transmit_morse_sequence@morse_sequence morse_sequence `*.25uc  1 p 2 7 ]
+"221
 } 0
-"283
-[v _util_transmit_space_between_dots_dashs util_transmit_space_between_dots_dashs `(v  1 e 1 0 ]
+"286
+[v _util_transmit_space_between_dots_dashes util_transmit_space_between_dots_dashes `(v  1 e 1 0 ]
 {
-"285
+"288
 } 0
-"225
+"228
 [v _util_transmit_dot util_transmit_dot `(v  1 e 1 0 ]
 {
-"232
-[v util_transmit_dot@i i `i  1 a 2 7 ]
-"248
+"235
+[v util_transmit_dot@i i `i  1 a 2 5 ]
+"251
 } 0
-"256
+"259
 [v _util_transmit_dash util_transmit_dash `(v  1 e 1 0 ]
 {
-"263
-[v util_transmit_dash@i i `i  1 a 2 7 ]
-"278
+"266
+[v util_transmit_dash@i i `i  1 a 2 5 ]
+"281
 } 0
-"41 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+"40 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
 [v _util_waits_delay_ms util_waits_delay_ms `(v  1 e 1 0 ]
 {
-"42
-[v util_waits_delay_ms@i i `i  1 a 2 3 ]
 "41
+[v util_waits_delay_ms@i i `i  1 a 2 3 ]
+"40
 [v util_waits_delay_ms@ms ms `i  1 p 2 0 ]
-"44
+"43
 } 0
-"304 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+"307 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
 [v _util_transmit_buzzer_1ms_cycle util_transmit_buzzer_1ms_cycle `(v  1 e 1 0 ]
 {
-"306
-[v util_transmit_buzzer_1ms_cycle@j j `i  1 a 2 5 ]
-"315
+"314
 } 0
-"48 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
-[v _util_waits_delay_us util_waits_delay_us `(v  1 e 1 0 ]
+"47 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+[v _util_waits_delay_hundred_us util_waits_delay_hundred_us `(v  1 e 1 0 ]
 {
-"49
-[v util_waits_delay_us@i i `i  1 a 2 3 ]
 "48
-[v util_waits_delay_us@us us `i  1 p 2 0 ]
-"51
+[v util_waits_delay_hundred_us@i i `i  1 a 2 3 ]
+"47
+[v util_waits_delay_hundred_us@hun_us hun_us `i  1 p 2 0 ]
+"50
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -303,9 +376,9 @@
 {
 "528
 [v sprintf@val val `ul  1 a 4 13 ]
-[u S378 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+[u S551 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
 "526
-[v sprintf@tmpval tmpval `S378  1 a 4 9 ]
+[v sprintf@tmpval tmpval `S551  1 a 4 9 ]
 "516
 [v sprintf@fval fval `d  1 a 3 19 ]
 "504
@@ -543,5 +616,5 @@
 "16 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_initialize.c
 [v _initialize initialize `(v  1 e 1 0 ]
 {
-"24
+"54
 } 0

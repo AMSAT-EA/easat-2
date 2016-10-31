@@ -58,7 +58,7 @@ void main_loop(void) {
             }
             
             // wait until next cycle
-            util_wait_delay_mins(MAIN_LOOP_SLEEP_MINUTES);                              
+            util_waits_delay_mins(MAIN_LOOP_SLEEP_MINUTES);
             
             
         } while (1);

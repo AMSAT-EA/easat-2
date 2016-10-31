@@ -25,7 +25,7 @@ void util_transmit_morse_sequence(char * morse_sequence);
 void util_transmit_dot(void);
 void util_transmit_dash(void);
 
-void util_transmit_space_between_dots_dashs(void);
+void util_transmit_space_between_dots_dashes(void);
 void util_transmit_space_between_letters(void);
 void util_transmit_space_between_words(void);
 
@@ -36,10 +36,10 @@ void util_transmit_buzzer_1ms_cycle(void);
 
 #define EASAT2_BEACON_HEADER        "EASAT2"
 
-#define BUZZER_PRESENT              1       // 1 if present, 0 if not
-#define US_IN_A_MS                  1000    // microseconds in a milisecond
-#define BUZZER_CYCLE_US             1000    // 1000 us cycle (1ms = 1 Khz)
-#define BUZZER_HALF_CYCLE_US        (int)(BUZZER_CYCLE_US/2)
+#define BUZZER_PRESENT              1      // 1 if present, 0 if not
+#define US_IN_A_MS                  1000   // microseconds in a milisecond
+#define BUZZER_CYCLE_HUNDRED_US     10     // 10*100 = 1000 us cycle (1ms = 1 Khz)
+#define BUZZER_HALF_CYCLE_HUNDRED_US  (int)(BUZZER_CYCLE_HUNDRED_US/2)
 
 #define PORT_D_OUTPUT_LED           1  
 #define PORT_D_OUTPUT_BUZZER        2

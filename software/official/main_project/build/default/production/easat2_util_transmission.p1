@@ -22,7 +22,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "26
 [v _util_transmit_dash `(v ~T0 @X0 0 ef ]
 "28
-[v _util_transmit_space_between_dots_dashs `(v ~T0 @X0 0 ef ]
+[v _util_transmit_space_between_dots_dashes `(v ~T0 @X0 0 ef ]
 "7240 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
 [s S434 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S434 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
@@ -51,10 +51,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PORTDbits `VS433 ~T0 @X0 0 e@3971 ]
 "32 easat2_util_transmission.h
 [v _util_transmit_buzzer_1ms_cycle `(v ~T0 @X0 0 ef ]
-"21 easat2_util_waits.h
+"27 easat2_util_waits.h
 [v _util_waits_delay_ms `(v ~T0 @X0 0 ef1`i ]
-"22
-[v _util_waits_delay_us `(v ~T0 @X0 0 ef1`i ]
+"28
+[v _util_waits_delay_hundred_us `(v ~T0 @X0 0 ef1`i ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -7519,15 +7519,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_transmission.h: 24: void util_transmit_morse_sequence(char * morse_sequence);
 [; ;easat2_util_transmission.h: 25: void util_transmit_dot(void);
 [; ;easat2_util_transmission.h: 26: void util_transmit_dash(void);
-[; ;easat2_util_transmission.h: 28: void util_transmit_space_between_dots_dashs(void);
+[; ;easat2_util_transmission.h: 28: void util_transmit_space_between_dots_dashes(void);
 [; ;easat2_util_transmission.h: 29: void util_transmit_space_between_letters(void);
 [; ;easat2_util_transmission.h: 30: void util_transmit_space_between_words(void);
 [; ;easat2_util_transmission.h: 32: void util_transmit_buzzer_1ms_cycle(void);
-[; ;easat2_util_waits.h: 18: void util_wait_delay_hours(int hours);
-[; ;easat2_util_waits.h: 19: void util_wait_delay_mins(int minutes);
-[; ;easat2_util_waits.h: 20: void util_waits_delay_secs(int secs);
-[; ;easat2_util_waits.h: 21: void util_waits_delay_ms(int ms);
-[; ;easat2_util_waits.h: 22: void util_waits_delay_us(int us);
+[; ;easat2_util_waits.h: 24: void util_waits_delay_hours(int hours);
+[; ;easat2_util_waits.h: 25: void util_waits_delay_mins(int minutes);
+[; ;easat2_util_waits.h: 26: void util_waits_delay_secs(int secs);
+[; ;easat2_util_waits.h: 27: void util_waits_delay_ms(int ms);
+[; ;easat2_util_waits.h: 28: void util_waits_delay_hundred_us(int us);
 "21 easat2_util_transmission.c
 [v _util_beacon_transmission `(v ~T0 @X0 1 ef4`f`i`i`f ]
 "22
@@ -7966,18 +7966,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_transmission.c: 180: util_transmit_space_between_words();
 "180
 [e ( _util_transmit_space_between_words ..  ]
-[; ;easat2_util_transmission.c: 181: default:
+[; ;easat2_util_transmission.c: 181: break;
 "181
-[e :U 1171 ]
-[; ;easat2_util_transmission.c: 183: util_transmit_space_between_letters();
-"183
-[e ( _util_transmit_space_between_letters ..  ]
-[; ;easat2_util_transmission.c: 184: break;
-"184
 [e $U 1128  ]
-"186
+[; ;easat2_util_transmission.c: 182: default:
+"182
+[e :U 1171 ]
+[; ;easat2_util_transmission.c: 183: break;
+"183
+[e $U 1128  ]
+"185
 }
-[; ;easat2_util_transmission.c: 186: }
+[; ;easat2_util_transmission.c: 185: }
 [e $U 1128  ]
 "54
 [e :U 1129 ]
@@ -8023,55 +8023,55 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 46 `ui `uc 1169
  , $ -> -> 32 `ui `uc 1170
  1171 ]
-"186
+"185
 [e :U 1128 ]
-[; ;easat2_util_transmission.c: 188: }
+[; ;easat2_util_transmission.c: 188: util_transmit_space_between_letters();
 "188
+[e ( _util_transmit_space_between_letters ..  ]
+[; ;easat2_util_transmission.c: 190: }
+"190
 [e :UE 1127 ]
 }
-"196
+"198
 [v _util_transmit_morse_sequence `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;easat2_util_transmission.c: 196: void util_transmit_morse_sequence(char * morse_sequence) {
+[; ;easat2_util_transmission.c: 198: void util_transmit_morse_sequence(char * morse_sequence) {
 [e :U _util_transmit_morse_sequence ]
 [v _morse_sequence `*uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;easat2_util_transmission.c: 200: for (int i = 0; i < strlen(morse_sequence); i++) {
-"200
+[; ;easat2_util_transmission.c: 202: for (int i = 0; i < strlen(morse_sequence); i++) {
+"202
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 1176  ]
 [e :U 1173 ]
 {
-[; ;easat2_util_transmission.c: 202: switch(morse_sequence[i]) {
-"202
+[; ;easat2_util_transmission.c: 204: switch(morse_sequence[i]) {
+"204
 [e $U 1178  ]
 {
-[; ;easat2_util_transmission.c: 204: case '.':
-"204
-[e :U 1179 ]
-[; ;easat2_util_transmission.c: 205: util_transmit_dot();
-"205
-[e ( _util_transmit_dot ..  ]
-[; ;easat2_util_transmission.c: 206: break;
+[; ;easat2_util_transmission.c: 206: case '.':
 "206
-[e $U 1177  ]
-[; ;easat2_util_transmission.c: 207: case '-':
+[e :U 1179 ]
+[; ;easat2_util_transmission.c: 207: util_transmit_dot();
 "207
-[e :U 1180 ]
-[; ;easat2_util_transmission.c: 208: util_transmit_dash();
+[e ( _util_transmit_dot ..  ]
+[; ;easat2_util_transmission.c: 208: break;
 "208
-[e ( _util_transmit_dash ..  ]
-[; ;easat2_util_transmission.c: 209: break;
-"209
 [e $U 1177  ]
-[; ;easat2_util_transmission.c: 210: default:
+[; ;easat2_util_transmission.c: 209: case '-':
+"209
+[e :U 1180 ]
+[; ;easat2_util_transmission.c: 210: util_transmit_dash();
 "210
-[e :U 1181 ]
-[; ;easat2_util_transmission.c: 212: util_transmit_space_between_dots_dashs();
+[e ( _util_transmit_dash ..  ]
+[; ;easat2_util_transmission.c: 211: break;
+"211
+[e $U 1177  ]
+[; ;easat2_util_transmission.c: 212: default:
 "212
-[e ( _util_transmit_space_between_dots_dashs ..  ]
+[e :U 1181 ]
 [; ;easat2_util_transmission.c: 213: break;
 "213
 [e $U 1177  ]
@@ -8079,41 +8079,44 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [; ;easat2_util_transmission.c: 214: }
 [e $U 1177  ]
-"202
+"204
 [e :U 1178 ]
 [e [\ *U + _morse_sequence * -> _i `x -> -> # *U _morse_sequence `i `x , $ -> -> 46 `ui `uc 1179
  , $ -> -> 45 `ui `uc 1180
  1181 ]
 "214
 [e :U 1177 ]
-"216
+[; ;easat2_util_transmission.c: 217: util_transmit_space_between_dots_dashes();
+"217
+[e ( _util_transmit_space_between_dots_dashes ..  ]
+"219
 }
-"200
+"202
 [e ++ _i -> 1 `i ]
 [e :U 1176 ]
 [e $ < -> _i `ui ( _strlen (1 -> _morse_sequence `*Cuc 1173  ]
 [e :U 1174 ]
-"216
+"219
 }
-[; ;easat2_util_transmission.c: 216: }
-[; ;easat2_util_transmission.c: 218: }
-"218
+[; ;easat2_util_transmission.c: 219: }
+[; ;easat2_util_transmission.c: 221: }
+"221
 [e :UE 1172 ]
 }
-"225
+"228
 [v _util_transmit_dot `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 225: void util_transmit_dot(void) {
+[; ;easat2_util_transmission.c: 228: void util_transmit_dot(void) {
 [e :U _util_transmit_dot ]
 [f ]
-[; ;easat2_util_transmission.c: 229: PORTDbits.RD0 = 1;
-"229
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 230: PORTDbits.RD2 = 1;
-"230
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 232: for (int i = 0; i < (int)(2400/32); i++) {
+[; ;easat2_util_transmission.c: 232: PORTDbits.RD1 = 1;
 "232
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_util_transmission.c: 233: PORTDbits.RD3 = 1;
+"233
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+[; ;easat2_util_transmission.c: 235: for (int i = 0; i < (int)(2400/32); i++) {
+"235
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -8121,53 +8124,53 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1184  ]
 [e :U 1183 ]
 {
-[; ;easat2_util_transmission.c: 238: if (1)
-"238
+[; ;easat2_util_transmission.c: 241: if (1)
+"241
 [e $ ! != -> 1 `i -> 0 `i 1186  ]
-[; ;easat2_util_transmission.c: 239: util_transmit_buzzer_1ms_cycle();
-"239
+[; ;easat2_util_transmission.c: 242: util_transmit_buzzer_1ms_cycle();
+"242
 [e ( _util_transmit_buzzer_1ms_cycle ..  ]
 [e $U 1187  ]
-"240
+"243
 [e :U 1186 ]
-[; ;easat2_util_transmission.c: 240: else
-[; ;easat2_util_transmission.c: 241: util_waits_delay_ms(1);
-"241
+[; ;easat2_util_transmission.c: 243: else
+[; ;easat2_util_transmission.c: 244: util_waits_delay_ms(1);
+"244
 [e ( _util_waits_delay_ms (1 -> 1 `i ]
 [e :U 1187 ]
-"243
+"246
 }
-"232
+"235
 [e ++ _i -> 1 `i ]
 [e $ < _i / -> 2400 `i -> 32 `i 1183  ]
 [e :U 1184 ]
-"243
-}
-[; ;easat2_util_transmission.c: 243: }
-[; ;easat2_util_transmission.c: 245: PORTDbits.RD0 = 0;
-"245
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 246: PORTDbits.RD2 = 0;
 "246
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 248: }
+}
+[; ;easat2_util_transmission.c: 246: }
+[; ;easat2_util_transmission.c: 248: PORTDbits.RD1 = 0;
 "248
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_transmission.c: 249: PORTDbits.RD3 = 0;
+"249
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_transmission.c: 251: }
+"251
 [e :UE 1182 ]
 }
-"256
+"259
 [v _util_transmit_dash `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 256: void util_transmit_dash(void) {
+[; ;easat2_util_transmission.c: 259: void util_transmit_dash(void) {
 [e :U _util_transmit_dash ]
 [f ]
-[; ;easat2_util_transmission.c: 260: PORTDbits.RD0 = 1;
-"260
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 261: PORTDbits.RD2 = 1;
-"261
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 263: for (int i = 0; i < ((int)(2400/32)*3); i++) {
+[; ;easat2_util_transmission.c: 263: PORTDbits.RD1 = 1;
 "263
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_util_transmission.c: 264: PORTDbits.RD3 = 1;
+"264
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+[; ;easat2_util_transmission.c: 266: for (int i = 0; i < ((int)(2400/32)*3); i++) {
+"266
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -8175,116 +8178,98 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1190  ]
 [e :U 1189 ]
 {
-[; ;easat2_util_transmission.c: 269: if (1)
-"269
+[; ;easat2_util_transmission.c: 272: if (1)
+"272
 [e $ ! != -> 1 `i -> 0 `i 1192  ]
-[; ;easat2_util_transmission.c: 270: util_transmit_buzzer_1ms_cycle();
-"270
+[; ;easat2_util_transmission.c: 273: util_transmit_buzzer_1ms_cycle();
+"273
 [e ( _util_transmit_buzzer_1ms_cycle ..  ]
 [e $U 1193  ]
-"271
+"274
 [e :U 1192 ]
-[; ;easat2_util_transmission.c: 271: else
-[; ;easat2_util_transmission.c: 272: util_waits_delay_ms(1);
-"272
+[; ;easat2_util_transmission.c: 274: else
+[; ;easat2_util_transmission.c: 275: util_waits_delay_ms(1);
+"275
 [e ( _util_waits_delay_ms (1 -> 1 `i ]
 [e :U 1193 ]
-"274
+"277
 }
-"263
+"266
 [e ++ _i -> 1 `i ]
 [e $ < _i * / -> 2400 `i -> 32 `i -> 3 `i 1189  ]
 [e :U 1190 ]
-"274
-}
-[; ;easat2_util_transmission.c: 274: }
-[; ;easat2_util_transmission.c: 276: PORTDbits.RD0 = 0;
-"276
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 277: PORTDbits.RD2 = 0;
 "277
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 278: }
-"278
+}
+[; ;easat2_util_transmission.c: 277: }
+[; ;easat2_util_transmission.c: 279: PORTDbits.RD1 = 0;
+"279
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_transmission.c: 280: PORTDbits.RD3 = 0;
+"280
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_transmission.c: 281: }
+"281
 [e :UE 1188 ]
 }
-"283
-[v _util_transmit_space_between_dots_dashs `(v ~T0 @X0 1 ef ]
+"286
+[v _util_transmit_space_between_dots_dashes `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 283: void util_transmit_space_between_dots_dashs(void) {
-[e :U _util_transmit_space_between_dots_dashs ]
+[; ;easat2_util_transmission.c: 286: void util_transmit_space_between_dots_dashes(void) {
+[e :U _util_transmit_space_between_dots_dashes ]
 [f ]
-[; ;easat2_util_transmission.c: 284: util_waits_delay_ms((int)(2400/32));
-"284
+[; ;easat2_util_transmission.c: 287: util_waits_delay_ms((int)(2400/32));
+"287
 [e ( _util_waits_delay_ms (1 / -> 2400 `i -> 32 `i ]
-[; ;easat2_util_transmission.c: 285: }
-"285
+[; ;easat2_util_transmission.c: 288: }
+"288
 [e :UE 1194 ]
 }
-"291
+"294
 [v _util_transmit_space_between_letters `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 291: void util_transmit_space_between_letters(void) {
+[; ;easat2_util_transmission.c: 294: void util_transmit_space_between_letters(void) {
 [e :U _util_transmit_space_between_letters ]
 [f ]
-[; ;easat2_util_transmission.c: 292: util_waits_delay_ms(3*(int)(2400/32));
-"292
+[; ;easat2_util_transmission.c: 295: util_waits_delay_ms(3*(int)(2400/32));
+"295
 [e ( _util_waits_delay_ms (1 * -> 3 `i / -> 2400 `i -> 32 `i ]
-[; ;easat2_util_transmission.c: 293: }
-"293
+[; ;easat2_util_transmission.c: 296: }
+"296
 [e :UE 1195 ]
 }
-"298
+"301
 [v _util_transmit_space_between_words `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 298: void util_transmit_space_between_words(void) {
+[; ;easat2_util_transmission.c: 301: void util_transmit_space_between_words(void) {
 [e :U _util_transmit_space_between_words ]
 [f ]
-[; ;easat2_util_transmission.c: 299: util_waits_delay_ms(7*(int)(2400/32));
-"299
+[; ;easat2_util_transmission.c: 302: util_waits_delay_ms(7*(int)(2400/32));
+"302
 [e ( _util_waits_delay_ms (1 * -> 7 `i / -> 2400 `i -> 32 `i ]
-[; ;easat2_util_transmission.c: 300: }
-"300
+[; ;easat2_util_transmission.c: 303: }
+"303
 [e :UE 1196 ]
 }
-"304
+"307
 [v _util_transmit_buzzer_1ms_cycle `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 304: void util_transmit_buzzer_1ms_cycle(void) {
+[; ;easat2_util_transmission.c: 307: void util_transmit_buzzer_1ms_cycle(void) {
 [e :U _util_transmit_buzzer_1ms_cycle ]
 [f ]
-[; ;easat2_util_transmission.c: 306: for (int j = 0; j < (int)(1000/1000); j++) {
-"306
-{
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-[e $ < _j / -> 1000 `i -> 1000 `i 1198  ]
-[e $U 1199  ]
-[e :U 1198 ]
-{
-[; ;easat2_util_transmission.c: 308: PORTDbits.RD1 = 1;
-"308
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 309: util_waits_delay_us((int)(1000/2));
+[; ;easat2_util_transmission.c: 309: PORTDbits.RD2 = 1;
 "309
-[e ( _util_waits_delay_us (1 / -> 1000 `i -> 2 `i ]
-[; ;easat2_util_transmission.c: 311: PORTDbits.RD1 = 0;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+[; ;easat2_util_transmission.c: 310: util_waits_delay_hundred_us((int)(10/2));
+"310
+[e ( _util_waits_delay_hundred_us (1 / -> 10 `i -> 2 `i ]
+[; ;easat2_util_transmission.c: 311: PORTDbits.RD2 = 0;
 "311
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 312: util_waits_delay_us((int)(1000/2));
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_transmission.c: 312: util_waits_delay_hundred_us((int)(10/2));
 "312
-[e ( _util_waits_delay_us (1 / -> 1000 `i -> 2 `i ]
-"313
-}
-"306
-[e ++ _j -> 1 `i ]
-[e $ < _j / -> 1000 `i -> 1000 `i 1198  ]
-[e :U 1199 ]
-"313
-}
-[; ;easat2_util_transmission.c: 313: }
-[; ;easat2_util_transmission.c: 315: }
-"315
+[e ( _util_waits_delay_hundred_us (1 / -> 10 `i -> 2 `i ]
+[; ;easat2_util_transmission.c: 314: }
+"314
 [e :UE 1197 ]
 }
 [p f _sprintf 8495232 ]

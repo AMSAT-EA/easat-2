@@ -9263,34 +9263,33 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
-# 18 "easat2_util_waits.h"
-void util_wait_delay_hours(int hours);
-void util_wait_delay_mins(int minutes);
+# 24 "easat2_util_waits.h"
+void util_waits_delay_hours(int hours);
+void util_waits_delay_mins(int minutes);
 void util_waits_delay_secs(int secs);
 void util_waits_delay_ms(int ms);
-void util_waits_delay_us(int us);
+void util_waits_delay_hundred_us(int us);
 
 # 17 "easat2_util_waits.c"
-void util_wait_delay_hours(int hours) {
-
-
-
+void util_waits_delay_hours(int hours) {
+for (int i = 0; i < hours; i++)
+util_waits_delay_mins(60);
 }
 
 
 
-void util_wait_delay_mins(int minutes) {
-
-
-
+void util_waits_delay_mins(int minutes) {
+for (int i = 0; i < minutes; i++)
+util_waits_delay_secs(60);
 }
 
 
 
 void util_waits_delay_secs(int secs) {
-
-
-
+for (int i = 0; i < secs; i++) {
+for (int j = 0; j < 10; j++ )
+util_waits_delay_ms(100);
+}
 }
 
 
@@ -9302,7 +9301,7 @@ _delay((unsigned long)((1)*(2000000/4000.0)));
 
 
 
-void util_waits_delay_us(int us) {
-for (int i = 0; i < us; i++)
-_delay((unsigned long)((1)*(2000000/4000000.0)));
+void util_waits_delay_hundred_us(int hun_us) {
+for (int i = 0; i < hun_us; i++)
+_delay((unsigned long)((100)*(2000000/4000000.0)));
 }

@@ -1,4 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"25 easat2_util_waits.h
+[v _util_waits_delay_mins `(v ~T0 @X0 0 ef1`i ]
+"26
+[v _util_waits_delay_secs `(v ~T0 @X0 0 ef1`i ]
+"27
+[v _util_waits_delay_ms `(v ~T0 @X0 0 ef1`i ]
 [v F7701 `(v ~T0 @X0 1 tf1`ul ]
 "157 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18.h
 [v __delay `JF7701 ~T0 @X0 0 e ]
@@ -7405,97 +7411,166 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
-[; ;easat2_util_waits.h: 18: void util_wait_delay_hours(int hours);
-[; ;easat2_util_waits.h: 19: void util_wait_delay_mins(int minutes);
-[; ;easat2_util_waits.h: 20: void util_waits_delay_secs(int secs);
-[; ;easat2_util_waits.h: 21: void util_waits_delay_ms(int ms);
-[; ;easat2_util_waits.h: 22: void util_waits_delay_us(int us);
+[; ;easat2_util_waits.h: 24: void util_waits_delay_hours(int hours);
+[; ;easat2_util_waits.h: 25: void util_waits_delay_mins(int minutes);
+[; ;easat2_util_waits.h: 26: void util_waits_delay_secs(int secs);
+[; ;easat2_util_waits.h: 27: void util_waits_delay_ms(int ms);
+[; ;easat2_util_waits.h: 28: void util_waits_delay_hundred_us(int us);
 "17 easat2_util_waits.c
-[v _util_wait_delay_hours `(v ~T0 @X0 1 ef1`i ]
+[v _util_waits_delay_hours `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;easat2_util_waits.c: 17: void util_wait_delay_hours(int hours) {
-[e :U _util_wait_delay_hours ]
+[; ;easat2_util_waits.c: 17: void util_waits_delay_hours(int hours) {
+[e :U _util_waits_delay_hours ]
 [v _hours `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;easat2_util_waits.c: 21: }
-"21
+[; ;easat2_util_waits.c: 18: for (int i = 0; i < hours; i++)
+"18
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 1125  ]
+"19
+[e :U 1122 ]
+[; ;easat2_util_waits.c: 19: util_waits_delay_mins(60);
+[e ( _util_waits_delay_mins (1 -> 60 `i ]
+"18
+[e ++ _i -> 1 `i ]
+[e :U 1125 ]
+[e $ < _i _hours 1122  ]
+[e :U 1123 ]
+"19
+}
+[; ;easat2_util_waits.c: 20: }
+"20
 [e :UE 1121 ]
 }
-"25
-[v _util_wait_delay_mins `(v ~T0 @X0 1 ef1`i ]
+"24
+[v _util_waits_delay_mins `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;easat2_util_waits.c: 25: void util_wait_delay_mins(int minutes) {
-[e :U _util_wait_delay_mins ]
+[; ;easat2_util_waits.c: 24: void util_waits_delay_mins(int minutes) {
+[e :U _util_waits_delay_mins ]
 [v _minutes `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;easat2_util_waits.c: 29: }
-"29
-[e :UE 1122 ]
+[; ;easat2_util_waits.c: 25: for (int i = 0; i < minutes; i++)
+"25
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 1130  ]
+"26
+[e :U 1127 ]
+[; ;easat2_util_waits.c: 26: util_waits_delay_secs(60);
+[e ( _util_waits_delay_secs (1 -> 60 `i ]
+"25
+[e ++ _i -> 1 `i ]
+[e :U 1130 ]
+[e $ < _i _minutes 1127  ]
+[e :U 1128 ]
+"26
 }
-"33
+[; ;easat2_util_waits.c: 27: }
+"27
+[e :UE 1126 ]
+}
+"31
 [v _util_waits_delay_secs `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;easat2_util_waits.c: 33: void util_waits_delay_secs(int secs) {
+[; ;easat2_util_waits.c: 31: void util_waits_delay_secs(int secs) {
 [e :U _util_waits_delay_secs ]
 [v _secs `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;easat2_util_waits.c: 37: }
-"37
-[e :UE 1123 ]
+[; ;easat2_util_waits.c: 32: for (int i = 0; i < secs; i++) {
+"32
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 1135  ]
+[e :U 1132 ]
+{
+[; ;easat2_util_waits.c: 33: for (int j = 0; j < 10; j++ )
+"33
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $ < _j -> 10 `i 1136  ]
+[e $U 1137  ]
+"34
+[e :U 1136 ]
+[; ;easat2_util_waits.c: 34: util_waits_delay_ms(100);
+[e ( _util_waits_delay_ms (1 -> 100 `i ]
+"33
+[e ++ _j -> 1 `i ]
+[e $ < _j -> 10 `i 1136  ]
+[e :U 1137 ]
+"34
 }
-"41
+"35
+}
+"32
+[e ++ _i -> 1 `i ]
+[e :U 1135 ]
+[e $ < _i _secs 1132  ]
+[e :U 1133 ]
+"35
+}
+[; ;easat2_util_waits.c: 35: }
+[; ;easat2_util_waits.c: 36: }
+"36
+[e :UE 1131 ]
+}
+"40
 [v _util_waits_delay_ms `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;easat2_util_waits.c: 41: void util_waits_delay_ms(int ms) {
+[; ;easat2_util_waits.c: 40: void util_waits_delay_ms(int ms) {
 [e :U _util_waits_delay_ms ]
 [v _ms `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;easat2_util_waits.c: 42: for (int i = 0; i < ms; i++)
-"42
+[; ;easat2_util_waits.c: 41: for (int i = 0; i < ms; i++)
+"41
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 1128  ]
-"43
-[e :U 1125 ]
-[; ;easat2_util_waits.c: 43: _delay((unsigned long)((1)*(2000000/4000.0)));
+[e $U 1143  ]
+"42
+[e :U 1140 ]
+[; ;easat2_util_waits.c: 42: _delay((unsigned long)((1)*(2000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
-"42
+"41
 [e ++ _i -> 1 `i ]
-[e :U 1128 ]
-[e $ < _i _ms 1125  ]
-[e :U 1126 ]
+[e :U 1143 ]
+[e $ < _i _ms 1140  ]
+[e :U 1141 ]
+"42
+}
+[; ;easat2_util_waits.c: 43: }
 "43
+[e :UE 1139 ]
 }
-[; ;easat2_util_waits.c: 44: }
-"44
-[e :UE 1124 ]
-}
-"48
-[v _util_waits_delay_us `(v ~T0 @X0 1 ef1`i ]
+"47
+[v _util_waits_delay_hundred_us `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;easat2_util_waits.c: 48: void util_waits_delay_us(int us) {
-[e :U _util_waits_delay_us ]
-[v _us `i ~T0 @X0 1 r1 ]
+[; ;easat2_util_waits.c: 47: void util_waits_delay_hundred_us(int hun_us) {
+[e :U _util_waits_delay_hundred_us ]
+[v _hun_us `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;easat2_util_waits.c: 49: for (int i = 0; i < us; i++)
-"49
+[; ;easat2_util_waits.c: 48: for (int i = 0; i < hun_us; i++)
+"48
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 1133  ]
-"50
-[e :U 1130 ]
-[; ;easat2_util_waits.c: 50: _delay((unsigned long)((1)*(2000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 2000000 `l `d .4000000.0 `ul ]
+[e $U 1148  ]
 "49
+[e :U 1145 ]
+[; ;easat2_util_waits.c: 49: _delay((unsigned long)((100)*(2000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 2000000 `l `d .4000000.0 `ul ]
+"48
 [e ++ _i -> 1 `i ]
-[e :U 1133 ]
-[e $ < _i _us 1130  ]
-[e :U 1131 ]
-"50
+[e :U 1148 ]
+[e $ < _i _hun_us 1145  ]
+[e :U 1146 ]
+"49
 }
-[; ;easat2_util_waits.c: 51: }
-"51
-[e :UE 1129 ]
+[; ;easat2_util_waits.c: 50: }
+"50
+[e :UE 1144 ]
 }

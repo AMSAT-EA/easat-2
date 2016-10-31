@@ -9275,12 +9275,12 @@ int getSolarCurrent(void);
 int getBatteryCurrent(void);
 float getTemperature(void);
 
-# 18 "easat2_util_waits.h"
-void util_wait_delay_hours(int hours);
-void util_wait_delay_mins(int minutes);
+# 24 "easat2_util_waits.h"
+void util_waits_delay_hours(int hours);
+void util_waits_delay_mins(int minutes);
 void util_waits_delay_secs(int secs);
 void util_waits_delay_ms(int ms);
-void util_waits_delay_us(int us);
+void util_waits_delay_hundred_us(int us);
 
 # 4 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\__size_t.h"
 typedef unsigned size_t;
@@ -9386,7 +9386,7 @@ void util_transmit_morse_sequence(char * morse_sequence);
 void util_transmit_dot(void);
 void util_transmit_dash(void);
 
-void util_transmit_space_between_dots_dashs(void);
+void util_transmit_space_between_dots_dashes(void);
 void util_transmit_space_between_letters(void);
 void util_transmit_space_between_words(void);
 
@@ -9435,7 +9435,7 @@ util_beacon_transmission(battery_voltage, solar_current, battery_current, temper
 }
 
 
-util_wait_delay_mins(3);
+util_waits_delay_mins(3);
 
 
 } while (1);

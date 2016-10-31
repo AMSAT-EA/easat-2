@@ -14,8 +14,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _getTemperature `(f ~T0 @X0 0 ef ]
 "20 easat2_util_transmission.h
 [v _util_beacon_transmission `(v ~T0 @X0 0 ef4`f`i`i`f ]
-"19 easat2_util_waits.h
-[v _util_wait_delay_mins `(v ~T0 @X0 0 ef1`i ]
+"25 easat2_util_waits.h
+[v _util_waits_delay_mins `(v ~T0 @X0 0 ef1`i ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -7424,11 +7424,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_inputs.h: 19: int getSolarCurrent(void);
 [; ;easat2_util_inputs.h: 20: int getBatteryCurrent(void);
 [; ;easat2_util_inputs.h: 21: float getTemperature(void);
-[; ;easat2_util_waits.h: 18: void util_wait_delay_hours(int hours);
-[; ;easat2_util_waits.h: 19: void util_wait_delay_mins(int minutes);
-[; ;easat2_util_waits.h: 20: void util_waits_delay_secs(int secs);
-[; ;easat2_util_waits.h: 21: void util_waits_delay_ms(int ms);
-[; ;easat2_util_waits.h: 22: void util_waits_delay_us(int us);
+[; ;easat2_util_waits.h: 24: void util_waits_delay_hours(int hours);
+[; ;easat2_util_waits.h: 25: void util_waits_delay_mins(int minutes);
+[; ;easat2_util_waits.h: 26: void util_waits_delay_secs(int secs);
+[; ;easat2_util_waits.h: 27: void util_waits_delay_ms(int ms);
+[; ;easat2_util_waits.h: 28: void util_waits_delay_hundred_us(int us);
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -7491,7 +7491,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_transmission.h: 24: void util_transmit_morse_sequence(char * morse_sequence);
 [; ;easat2_util_transmission.h: 25: void util_transmit_dot(void);
 [; ;easat2_util_transmission.h: 26: void util_transmit_dash(void);
-[; ;easat2_util_transmission.h: 28: void util_transmit_space_between_dots_dashs(void);
+[; ;easat2_util_transmission.h: 28: void util_transmit_space_between_dots_dashes(void);
 [; ;easat2_util_transmission.h: 29: void util_transmit_space_between_letters(void);
 [; ;easat2_util_transmission.h: 30: void util_transmit_space_between_words(void);
 [; ;easat2_util_transmission.h: 32: void util_transmit_buzzer_1ms_cycle(void);
@@ -7556,9 +7556,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 1127 ]
 [; ;easat2_main_mcu.c: 58: }
-[; ;easat2_main_mcu.c: 61: util_wait_delay_mins(3);
+[; ;easat2_main_mcu.c: 61: util_waits_delay_mins(3);
 "61
-[e ( _util_wait_delay_mins (1 -> 3 `i ]
+[e ( _util_waits_delay_mins (1 -> 3 `i ]
 "64
 }
 [; ;easat2_main_mcu.c: 64: } while (1);

@@ -9367,18 +9367,18 @@ void util_transmit_morse_sequence(char * morse_sequence);
 void util_transmit_dot(void);
 void util_transmit_dash(void);
 
-void util_transmit_space_between_dots_dashs(void);
+void util_transmit_space_between_dots_dashes(void);
 void util_transmit_space_between_letters(void);
 void util_transmit_space_between_words(void);
 
 void util_transmit_buzzer_1ms_cycle(void);
 
-# 18 "easat2_util_waits.h"
-void util_wait_delay_hours(int hours);
-void util_wait_delay_mins(int minutes);
+# 24 "easat2_util_waits.h"
+void util_waits_delay_hours(int hours);
+void util_waits_delay_mins(int minutes);
 void util_waits_delay_secs(int secs);
 void util_waits_delay_ms(int ms);
-void util_waits_delay_us(int us);
+void util_waits_delay_hundred_us(int us);
 
 # 21 "easat2_util_transmission.c"
 void util_beacon_transmission(float battery_voltage, int solar_current,
@@ -9537,16 +9537,18 @@ util_transmit_morse_sequence((char*)".-.-.-");
 break;
 case ' ':
 util_transmit_space_between_words();
+break;
 default:
-
-util_transmit_space_between_letters();
 break;
 
 }
 
+
+util_transmit_space_between_letters();
+
 }
 
-# 196
+# 198
 void util_transmit_morse_sequence(char * morse_sequence) {
 
 
@@ -9562,26 +9564,27 @@ case '-':
 util_transmit_dash();
 break;
 default:
-
-util_transmit_space_between_dots_dashs();
 break;
 }
 
-}
+
+util_transmit_space_between_dots_dashes();
 
 }
 
-# 225
+}
+
+# 228
 void util_transmit_dot(void) {
 
 
 
-PORTDbits.RD0 = 1;
-PORTDbits.RD2 = 1;
+PORTDbits.RD1 = 1;
+PORTDbits.RD3 = 1;
 
 for (int i = 0; i < (int)(2400/32); i++) {
 
-# 238
+# 241
 if (1)
 util_transmit_buzzer_1ms_cycle();
 else
@@ -9589,22 +9592,22 @@ util_waits_delay_ms(1);
 
 }
 
-PORTDbits.RD0 = 0;
-PORTDbits.RD2 = 0;
+PORTDbits.RD1 = 0;
+PORTDbits.RD3 = 0;
 
 }
 
-# 256
+# 259
 void util_transmit_dash(void) {
 
 
 
-PORTDbits.RD0 = 1;
-PORTDbits.RD2 = 1;
+PORTDbits.RD1 = 1;
+PORTDbits.RD3 = 1;
 
 for (int i = 0; i < ((int)(2400/32)*3); i++) {
 
-# 269
+# 272
 if (1)
 util_transmit_buzzer_1ms_cycle();
 else
@@ -9612,18 +9615,18 @@ util_waits_delay_ms(1);
 
 }
 
-PORTDbits.RD0 = 0;
-PORTDbits.RD2 = 0;
+PORTDbits.RD1 = 0;
+PORTDbits.RD3 = 0;
 }
 
 
 
 
-void util_transmit_space_between_dots_dashs(void) {
+void util_transmit_space_between_dots_dashes(void) {
 util_waits_delay_ms((int)(2400/32));
 }
 
-# 291
+# 294
 void util_transmit_space_between_letters(void) {
 util_waits_delay_ms(3*(int)(2400/32));
 }
@@ -9639,13 +9642,9 @@ util_waits_delay_ms(7*(int)(2400/32));
 
 void util_transmit_buzzer_1ms_cycle(void) {
 
-for (int j = 0; j < (int)(1000/1000); j++) {
-
-PORTDbits.RD1 = 1;
-util_waits_delay_us((int)(1000/2));
-
-PORTDbits.RD1 = 0;
-util_waits_delay_us((int)(1000/2));
-}
+PORTDbits.RD2 = 1;
+util_waits_delay_hundred_us((int)(10/2));
+PORTDbits.RD2 = 0;
+util_waits_delay_hundred_us((int)(10/2));
 
 }

@@ -1,4 +1,55 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"8927 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
+[s S520 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S520 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"8937
+[s S521 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S521 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"8926
+[u S519 `S520 1 `S521 1 ]
+[n S519 . . . ]
+"8948
+[v _TRISDbits `VS519 ~T0 @X0 0 e@3989 ]
+"198
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . ANSD0 ANSD1 ANSD2 ANSD3 ANSD4 ANSD5 ANSD6 ANSD7 ]
+"197
+[u S7 `S8 1 ]
+[n S7 . . ]
+"209
+[v _ANSELDbits `VS7 ~T0 @X0 0 e@3899 ]
+"8070
+[s S487 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S487 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"8080
+[s S488 :1 `uc 1 ]
+[n S488 . LD0 ]
+"8083
+[s S489 :1 `uc 1 :1 `uc 1 ]
+[n S489 . . LD1 ]
+"8087
+[s S490 :2 `uc 1 :1 `uc 1 ]
+[n S490 . . LD2 ]
+"8091
+[s S491 :3 `uc 1 :1 `uc 1 ]
+[n S491 . . LD3 ]
+"8095
+[s S492 :4 `uc 1 :1 `uc 1 ]
+[n S492 . . LD4 ]
+"8099
+[s S493 :5 `uc 1 :1 `uc 1 ]
+[n S493 . . LD5 ]
+"8103
+[s S494 :6 `uc 1 :1 `uc 1 ]
+[n S494 . . LD6 ]
+"8107
+[s S495 :7 `uc 1 :1 `uc 1 ]
+[n S495 . . LD7 ]
+"8069
+[u S486 `S487 1 `S488 1 `S489 1 `S490 1 `S491 1 `S492 1 `S493 1 `S494 1 `S495 1 ]
+[n S486 . . . . . . . . . . ]
+"8112
+[v _LATDbits `VS486 ~T0 @X0 0 e@3980 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -7408,7 +7459,79 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_initialize.c: 16: void initialize(void) {
 [e :U _initialize ]
 [f ]
-[; ;easat2_util_initialize.c: 24: }
+[; ;easat2_util_initialize.c: 23: TRISDbits.TRISD0 = 0;
+"23
+[e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 24: TRISDbits.TRISD1 = 0;
 "24
+[e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 25: TRISDbits.TRISD2 = 0;
+"25
+[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 26: TRISDbits.TRISD3 = 0;
+"26
+[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 27: TRISDbits.TRISD4 = 0;
+"27
+[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 28: TRISDbits.TRISD5 = 0;
+"28
+[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 29: TRISDbits.TRISD6 = 0;
+"29
+[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 30: TRISDbits.TRISD7 = 0;
+"30
+[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 34: ANSELDbits.ANSD0 = 0;
+"34
+[e = . . _ANSELDbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 35: ANSELDbits.ANSD1 = 0;
+"35
+[e = . . _ANSELDbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 36: ANSELDbits.ANSD2 = 0;
+"36
+[e = . . _ANSELDbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 37: ANSELDbits.ANSD3 = 0;
+"37
+[e = . . _ANSELDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 38: ANSELDbits.ANSD4 = 0;
+"38
+[e = . . _ANSELDbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 39: ANSELDbits.ANSD5 = 0;
+"39
+[e = . . _ANSELDbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 40: ANSELDbits.ANSD6 = 0;
+"40
+[e = . . _ANSELDbits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 41: ANSELDbits.ANSD7 = 0;
+"41
+[e = . . _ANSELDbits 0 7 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 45: LATDbits.LATD0 = 0;
+"45
+[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 46: LATDbits.LATD1 = 0;
+"46
+[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 47: LATDbits.LATD2 = 0;
+"47
+[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 48: LATDbits.LATD3 = 0;
+"48
+[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 49: LATDbits.LATD4 = 0;
+"49
+[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 50: LATDbits.LATD5 = 0;
+"50
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 51: LATDbits.LATD6 = 0;
+"51
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 52: LATDbits.LATD7 = 0;
+"52
+[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 54: }
+"54
 [e :UE 1121 ]
 }
