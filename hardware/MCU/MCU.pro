@@ -1,4 +1,4 @@
-update=12/11/2016 14:53:20
+update=12/11/2016 16:04:50
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=librerias/pic18f45k22
+LibName31=librerias/max6369
