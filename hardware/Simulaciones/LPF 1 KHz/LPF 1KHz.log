@@ -1,0 +1,23 @@
+Circuit: * C:\Users\imendizabal\Electronica\Simulaciones\LPF 1 KHz\LPF 1KHz.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Nov 15 21:43:51 2016
+Total elapsed time: 0.087 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4199
+traniter = 4174
+tranpoints = 1934
+accept = 1516
+rejected = 418
+matrix size = 25
+fillins = 27
+solver = Normal
+Thread vector: 14.0/6.4[3] 4.2/2.4[3] 1.3/1.0[3] 0.2/0.7[1]  2592/500
+Matrix Compiler1: 2.91 KB object code size  0.8/0.5/[0.4]
+Matrix Compiler2: 2.83 KB object code size  0.4/0.4/[0.3]
+
+
