@@ -5,16 +5,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 "18 easat2_main_mcu.h
 [v _main_loop `(v ~T0 @X0 0 ef ]
 "18 easat2_util_inputs.h
-[v _getBatteryVoltage `(f ~T0 @X0 0 ef ]
+[v _util_getBatteryVoltage `(f ~T0 @X0 0 ef ]
 "19
-[v _getSolarCurrent `(i ~T0 @X0 0 ef ]
+[v _util_getSolarCurrent `(i ~T0 @X0 0 ef ]
 "20
-[v _getBatteryCurrent `(i ~T0 @X0 0 ef ]
+[v _util_getBatteryCurrent `(i ~T0 @X0 0 ef ]
 "21
-[v _getTemperature `(f ~T0 @X0 0 ef ]
+[v _util_getTemperature `(f ~T0 @X0 0 ef ]
 "20 easat2_util_transmission.h
 [v _util_beacon_transmission `(v ~T0 @X0 0 ef4`f`i`i`f ]
-"25 easat2_util_waits.h
+"24 easat2_util_waits.h
+[v _util_waits_delay_hours `(v ~T0 @X0 0 ef1`i ]
+"25
 [v _util_waits_delay_mins `(v ~T0 @X0 0 ef1`i ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -7420,10 +7422,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTRB=OFF ]
 [; ;easat2_main_mcu.h: 18: void main_loop(void);
 [; ;easat2_util_initialize.h: 18: void initialize(void);
-[; ;easat2_util_inputs.h: 18: float getBatteryVoltage(void);
-[; ;easat2_util_inputs.h: 19: int getSolarCurrent(void);
-[; ;easat2_util_inputs.h: 20: int getBatteryCurrent(void);
-[; ;easat2_util_inputs.h: 21: float getTemperature(void);
+[; ;easat2_util_inputs.h: 18: float util_getBatteryVoltage(void);
+[; ;easat2_util_inputs.h: 19: int util_getSolarCurrent(void);
+[; ;easat2_util_inputs.h: 20: int util_getBatteryCurrent(void);
+[; ;easat2_util_inputs.h: 21: float util_getTemperature(void);
 [; ;easat2_util_waits.h: 24: void util_waits_delay_hours(int hours);
 [; ;easat2_util_waits.h: 25: void util_waits_delay_mins(int minutes);
 [; ;easat2_util_waits.h: 26: void util_waits_delay_secs(int secs);
@@ -7533,38 +7535,47 @@ Version 3.2 HI-TECH Software Intermediate Code
 "38
 [e :U 1126 ]
 {
-[; ;easat2_main_mcu.c: 43: battery_voltage = getBatteryVoltage();
+[; ;easat2_main_mcu.c: 43: battery_voltage = util_getBatteryVoltage();
 "43
-[e = _battery_voltage ( _getBatteryVoltage ..  ]
-[; ;easat2_main_mcu.c: 46: solar_current = getSolarCurrent();
+[e = _battery_voltage ( _util_getBatteryVoltage ..  ]
+[; ;easat2_main_mcu.c: 46: solar_current = util_getSolarCurrent();
 "46
-[e = _solar_current ( _getSolarCurrent ..  ]
-[; ;easat2_main_mcu.c: 49: battery_current = getBatteryCurrent();
+[e = _solar_current ( _util_getSolarCurrent ..  ]
+[; ;easat2_main_mcu.c: 49: battery_current = util_getBatteryCurrent();
 "49
-[e = _battery_current ( _getBatteryCurrent ..  ]
-[; ;easat2_main_mcu.c: 52: temperature = getTemperature();
+[e = _battery_current ( _util_getBatteryCurrent ..  ]
+[; ;easat2_main_mcu.c: 52: temperature = util_getTemperature();
 "52
-[e = _temperature ( _getTemperature ..  ]
-[; ;easat2_main_mcu.c: 56: if (battery_voltage > 2.8) {
+[e = _temperature ( _util_getTemperature ..  ]
+[; ;easat2_main_mcu.c: 56: if (battery_voltage >= 0) {
 "56
-[e $ ! > -> _battery_voltage `d .2.8 1127  ]
+[e $ ! >= _battery_voltage -> -> 0 `i `f 1127  ]
 {
 [; ;easat2_main_mcu.c: 57: util_beacon_transmission(battery_voltage, solar_current, battery_current, temperature);
 "57
 [e ( _util_beacon_transmission (4 , , , _battery_voltage _solar_current _battery_current _temperature ]
 "58
 }
+[; ;easat2_main_mcu.c: 58: } else {
+[e $U 1128  ]
 [e :U 1127 ]
-[; ;easat2_main_mcu.c: 58: }
-[; ;easat2_main_mcu.c: 61: util_waits_delay_mins(3);
+{
+[; ;easat2_main_mcu.c: 60: util_waits_delay_hours(2);
+"60
+[e ( _util_waits_delay_hours (1 -> 2 `i ]
 "61
-[e ( _util_waits_delay_mins (1 -> 3 `i ]
-"64
 }
-[; ;easat2_main_mcu.c: 64: } while (1);
+[e :U 1128 ]
+[; ;easat2_main_mcu.c: 61: }
+[; ;easat2_main_mcu.c: 64: util_waits_delay_mins(3);
+"64
+[e ( _util_waits_delay_mins (1 -> 3 `i ]
+"67
+}
+[; ;easat2_main_mcu.c: 67: } while (1);
 [e $ != -> 1 `i -> 0 `i 1126  ]
 [e :U 1125 ]
-[; ;easat2_main_mcu.c: 68: }
-"68
+[; ;easat2_main_mcu.c: 71: }
+"71
 [e :UE 1123 ]
 }

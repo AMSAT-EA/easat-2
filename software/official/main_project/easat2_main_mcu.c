@@ -34,27 +34,30 @@ void main_loop(void) {
     int solar_current;
     int battery_current;
     float temperature;
-            
+  
         do {
             
             // get the sensor values
             
             // get the battery voltage
-            battery_voltage = getBatteryVoltage();
+            battery_voltage = util_getBatteryVoltage();
             
             // get the solar panels current 
-            solar_current   = getSolarCurrent();
+            solar_current   = util_getSolarCurrent();
             
             // get the battery current
-            battery_current = getBatteryCurrent();
+            battery_current = util_getBatteryCurrent();
             
             // get the system temperature
-            temperature     = getTemperature();
+            temperature     = util_getTemperature();
 
             // check if is there enough power to transmit and do it if so
             
-            if (battery_voltage > MIN_TRANSMIT_VOLTAGE) {              
+            if (battery_voltage >= MIN_TRANSMIT_VOLTAGE) {
                 util_beacon_transmission(battery_voltage, solar_current, battery_current, temperature);
+            } else {
+                // wait to let battery charge before checking again
+                util_waits_delay_hours(LOW_BATTERY_SLEEP_HOURS);
             }
             
             // wait until next cycle

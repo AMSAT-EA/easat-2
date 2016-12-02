@@ -9264,37 +9264,231 @@ extern __nonreentrant void _delay3(unsigned char);
 #pragma config EBTRB = OFF
 
 # 18 "easat2_util_inputs.h"
-float getBatteryVoltage(void);
-int getSolarCurrent(void);
-int getBatteryCurrent(void);
-float getTemperature(void);
+float util_getBatteryVoltage(void);
+int util_getSolarCurrent(void);
+int util_getBatteryCurrent(void);
+float util_getTemperature(void);
 
-# 17 "easat2_util_inputs.c"
-float getBatteryVoltage(void) {
+# 58 "easat2_util_onewire.h"
+int util_onewire_reset(void);
+void util_onewire_write_byte(int value);
+int util_onewire_read_byte (void);
+void util_onewire_write_bit(int bit_in);
+int util_onewire_read_bit(void);
 
-return 3.702;
+# 24 "easat2_util_waits.h"
+void util_waits_delay_hours(int hours);
+void util_waits_delay_mins(int minutes);
+void util_waits_delay_secs(int secs);
+void util_waits_delay_ms(int ms);
+void util_waits_delay_hundred_us(int us);
+
+# 19 "easat2_util_inputs.c"
+float util_getBatteryVoltage(void) {
+
+float value = 0.0, voltage = 0.0;
+
+ADCON0bits.CHS = 0;
+ADCON0bits.ADON = 1;
+PIR1bits.ADIF = 0;
+
+ADCON0bits.GO = 1;
+while(!PIR1bits.ADIF);
+
+value = ADRES;
+PIR1bits.ADIF = 0;
+
+ADCON0bits.ADON = 0;
+
+# 40
+voltage = (1.024 / 1023.0) * value;
+
+
+
+voltage = voltage * 5.7;
+
+return voltage;
 
 }
 
 
-int getSolarCurrent(void ) {
 
-return 120;
+int util_getSolarCurrent(void ) {
+
+float value = 0.0, solarCurrent = 0.0;
+
+ADCON0bits.CHS = 1;
+ADCON0bits.ADON = 1;
+PIR1bits.ADIF = 0;
+
+ADCON0bits.GO = 1;
+while(!PIR1bits.ADIF);
+
+value = ADRES;
+PIR1bits.ADIF = 0;
+
+ADCON0bits.ADON = 0;
+
+# 73
+solarCurrent = (1.024 / 1023.0) * value;
+
+
+
+solarCurrent = solarCurrent * 1.0;
+
+return (int)solarCurrent;
 
 }
 
 
-int getBatteryCurrent(void) {
 
-return 100;
+int util_getBatteryCurrent(void) {
 
+float value = 0.0, batteryCurrent = 0.0;
+
+ADCON0bits.CHS = 2;
+ADCON0bits.ADON = 1;
+PIR1bits.ADIF = 0;
+
+ADCON0bits.GO = 1;
+while(!PIR1bits.ADIF);
+
+value = ADRES;
+PIR1bits.ADIF = 0;
+
+ADCON0bits.ADON = 0;
+
+# 106
+batteryCurrent = (1.024 / 1023.0) * value;
+
+
+
+batteryCurrent = batteryCurrent * 1.0;
+
+return (int)batteryCurrent;
 
 }
 
 
-float getTemperature(void) {
 
-return -12.502;
+float util_getTemperature(void) {
+
+int byte_mem[9];
+int bit_mem[(9*8)];
+
+int shift_reg_bit0 = 0;
+int shift_reg_bit1 = 0;
+int shift_reg_bit2 = 0;
+int shift_reg_bit3 = 0;
+int shift_reg_bit4 = 0;
+int shift_reg_bit5 = 0;
+int shift_reg_bit6 = 0;
+int shift_reg_bit7 = 0;
+int shift_reg_bit_temp = 0;
+
+int num_bit = 0, num_byte = 0, bit_in_byte = 0;
+
+float temperature = 0.0;
+float sign = 1.0;
+int i = 0;
+
+# 143
+if (util_onewire_reset()) return -99.1;
+
+
+util_onewire_write_byte(0xCC);
+
+
+util_onewire_write_byte(0x44);
+
+
+
+
+TRISAbits.TRISA3 = 1;
+
+
+
+for (i = 0; i < 5 && PORTAbits.RA3 == 0; i++)
+util_waits_delay_secs(1);
+
+if (i == 5) return -99.2;
+
+# 165
+if (util_onewire_reset()) return -99.3;
+
+
+util_onewire_write_byte(0xCC);
+
+
+util_onewire_write_byte(0xBE);
+
+# 182
+byte_mem[0] = util_onewire_read_byte();
+
+byte_mem[1] = util_onewire_read_byte();
+
+byte_mem[2] = util_onewire_read_byte();
+
+byte_mem[3] = util_onewire_read_byte();
+
+byte_mem[4] = util_onewire_read_byte();
+
+byte_mem[5] = util_onewire_read_byte();
+
+byte_mem[6] = util_onewire_read_byte();
+
+byte_mem[7] = util_onewire_read_byte();
+
+byte_mem[8] = util_onewire_read_byte();
+
+
+
+for (num_byte = 0; num_byte < 9; num_byte++) {
+for (bit_in_byte = 0; bit_in_byte < 8; bit_in_byte++)
+bit_mem[num_bit++] = (byte_mem[num_byte] >> bit_in_byte) & 0x01;
+}
+
+
+
+for (i = 0; i < (9*8); i++) {
+
+
+
+
+shift_reg_bit_temp = shift_reg_bit0^bit_mem[i];
+
+shift_reg_bit0 = shift_reg_bit1;
+shift_reg_bit1 = shift_reg_bit2;
+shift_reg_bit2 = shift_reg_bit3 ^ shift_reg_bit_temp;
+shift_reg_bit3 = shift_reg_bit4 ^ shift_reg_bit_temp;
+shift_reg_bit4 = shift_reg_bit5;
+shift_reg_bit5 = shift_reg_bit6;
+shift_reg_bit6 = shift_reg_bit7;
+shift_reg_bit7 = shift_reg_bit_temp;
 
 }
 
+
+
+if (shift_reg_bit0 != 0 || shift_reg_bit1 != 0 || shift_reg_bit2 != 0 &&
+shift_reg_bit3 != 0 || shift_reg_bit4 != 0 || shift_reg_bit5 != 0 &&
+shift_reg_bit6 != 0 || shift_reg_bit7 != 0)
+return -99.7;
+
+
+
+if (bit_mem[11] == 0) sign = 1.0; else sign = -1.0;
+
+temperature = (float)bit_mem[0]/16.0 + (float)bit_mem[1]/8.0 +
+(float)bit_mem[2]/4.0 + (float)bit_mem[3]/2.0 +
+(float)bit_mem[4] + (float)bit_mem[5]*2.0 ;
+temperature = temperature +
+(float)bit_mem[6]*4.0 + (float)bit_mem[7]*8.0 +
+(float)bit_mem[8]*16.0 + (float)bit_mem[9]*32.0 +
+(float)bit_mem[10]*64.0;
+
+temperature = temperature * sign;
+
+return temperature;
+
+}

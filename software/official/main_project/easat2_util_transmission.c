@@ -32,9 +32,9 @@ void util_beacon_transmission(float battery_voltage, int solar_current,
     memset(BEACON_BUFFER, 0, sizeof(BEACON_BUFFER));
     sprintf(BEACON_BUFFER, " %.1f %.1f %3.0d %3.0d", temperature, battery_voltage,
         solar_current, battery_current);
-  
+
     strcat(BEACON_MESSAGE, BEACON_BUFFER);
-    
+        
     // go over the message and call a function that will
     // transmit the current letter to the RF module
     
@@ -175,7 +175,10 @@ void util_transmit_letter(char letter) {
             break; 
         case SYMBOL_DOT:
             util_transmit_morse_sequence((char*)MORSE_SEQUENCE_SYMBOL_DOT);
-            break; 
+            break;
+        case SYMBOL_DASH:
+            util_transmit_morse_sequence((char*)MORSE_SEQUENCE_SYMBOL_DASH);
+            break;
         case SYMBOL_SPACE:
             util_transmit_space_between_words();
             break;
@@ -306,9 +309,9 @@ void util_transmit_space_between_words(void) {
 
 void util_transmit_buzzer_1ms_cycle(void) {
            
-            PORTDbits.RD2 = 1;  // buzzer pin high
-            util_waits_delay_hundred_us(BUZZER_HALF_CYCLE_HUNDRED_US);
-            PORTDbits.RD2 = 0;  // buzzer pin low
-            util_waits_delay_hundred_us(BUZZER_HALF_CYCLE_HUNDRED_US);
+    PORTDbits.RD2 = 1;  // buzzer pin high
+    util_waits_delay_hundred_us(BUZZER_HALF_CYCLE_HUNDRED_US);
+    PORTDbits.RD2 = 0;  // buzzer pin low
+    util_waits_delay_hundred_us(BUZZER_HALF_CYCLE_HUNDRED_US);
            
 }

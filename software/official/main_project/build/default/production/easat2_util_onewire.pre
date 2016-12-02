@@ -1,5 +1,5 @@
 
-# 1 "easat2_util_initialize.c"
+# 1 "easat2_util_onewire.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.38\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -9263,79 +9263,179 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
-# 18 "easat2_util_initialize.h"
-void initialize(void);
+# 58 "easat2_util_onewire.h"
+int util_onewire_reset(void);
+void util_onewire_write_byte(int value);
+int util_onewire_read_byte (void);
+void util_onewire_write_bit(int bit_in);
+int util_onewire_read_bit(void);
 
-# 16 "easat2_util_initialize.c"
-void initialize(void) {
+# 18 "easat2_util_onewire.c"
+int util_onewire_reset(void) {
 
-# 25
-VREFCON0bits.FVREN = 1;
-VREFCON0bits.FVRS0 = 1;
-VREFCON0bits.FVRS1 = 0;
-
-VREFCON0bits.FVRST = 1;
-
-# 34
-ADCON1 = 0x08;
-ADCON2 = 0xAF;
+int presence = 1;
 
 
+TRISAbits.TRISA3 = 0;
 
-TRISAbits.TRISA0 = 1;
-TRISAbits.TRISA1 = 1;
-TRISAbits.TRISA2 = 1;
+PORTAbits.RA3 = 0;
+
+
+
+_delay((unsigned long)((560)*(2000000/4000000.0)));
+
+
+PORTAbits.RA3 = 1;
+
+# 39
+_delay((unsigned long)((70)*(2000000/4000000.0)));
+
+
 TRISAbits.TRISA3 = 1;
-TRISAbits.TRISA4 = 1;
-TRISAbits.TRISA5 = 1;
-
-# 51
-ANSELAbits.ANSA0 = 1;
-ANSELAbits.ANSA1 = 1;
-ANSELAbits.ANSA2 = 1;
-ANSELAbits.ANSA3 = 0;
-
-ANSELAbits.ANSA5 = 1;
 
 
 
-LATAbits.LATA0 = 0;
-LATAbits.LATA1 = 0;
-LATAbits.LATA2 = 0;
-LATAbits.LATA3 = 0;
-LATAbits.LATA4 = 0;
-LATAbits.LATA5 = 0;
 
-# 72
-TRISDbits.TRISD0 = 0;
-TRISDbits.TRISD1 = 0;
-TRISDbits.TRISD2 = 0;
-TRISDbits.TRISD3 = 0;
-TRISDbits.TRISD4 = 0;
-TRISDbits.TRISD5 = 0;
-TRISDbits.TRISD6 = 0;
-TRISDbits.TRISD7 = 0;
+presence = PORTAbits.RA3;
 
 
 
-ANSELDbits.ANSD0 = 0;
-ANSELDbits.ANSD1 = 0;
-ANSELDbits.ANSD2 = 0;
-ANSELDbits.ANSD3 = 0;
-ANSELDbits.ANSD4 = 0;
-ANSELDbits.ANSD5 = 0;
-ANSELDbits.ANSD6 = 0;
-ANSELDbits.ANSD7 = 0;
+
+_delay((unsigned long)((420)*(2000000/4000000.0)));
 
 
 
-LATDbits.LATD0 = 0;
-LATDbits.LATD1 = 0;
-LATDbits.LATD2 = 0;
-LATDbits.LATD3 = 0;
-LATDbits.LATD4 = 0;
-LATDbits.LATD5 = 0;
-LATDbits.LATD6 = 0;
-LATDbits.LATD7 = 0;
+return presence;
+
+}
+
+
+
+void util_onewire_write_byte(int value) {
+
+int bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7;
+
+bit0 = (value >> 0) & 0x01;
+bit1 = (value >> 1) & 0x01;
+bit2 = (value >> 2) & 0x01;
+bit3 = (value >> 3) & 0x01;
+bit4 = (value >> 4) & 0x01;
+bit5 = (value >> 5) & 0x01;
+bit6 = (value >> 6) & 0x01;
+bit7 = (value >> 7) & 0x01;
+
+util_onewire_write_bit(bit0);
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+util_onewire_write_bit(bit1);
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+util_onewire_write_bit(bit2);
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+util_onewire_write_bit(bit3);
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+util_onewire_write_bit(bit4);
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+util_onewire_write_bit(bit5);
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+util_onewire_write_bit(bit6);
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+util_onewire_write_bit(bit7);
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+
+}
+
+
+
+int util_onewire_read_byte (void) {
+
+int bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7;
+int value = 0;
+
+
+TRISAbits.TRISA3 = 1;
+
+bit0 = util_onewire_read_bit();
+bit1 = util_onewire_read_bit();
+bit2 = util_onewire_read_bit();
+bit3 = util_onewire_read_bit();
+bit4 = util_onewire_read_bit();
+bit5 = util_onewire_read_bit();
+bit6 = util_onewire_read_bit();
+bit7 = util_onewire_read_bit();
+
+value = bit0 + (bit1 << 1) + (bit2 << 2) + (bit3 << 3) + (bit4 << 4)
++ (bit5 << 5) + (bit6 << 6) + (bit7 << 7);
+
+return value;
+}
+
+
+
+void util_onewire_write_bit(int bit_in) {
+
+
+TRISAbits.TRISA3 = 0;
+
+if (bit_in) {
+
+
+PORTAbits.RA3 = 0;
+
+
+
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+
+
+PORTAbits.RA3 = 1;
+
+
+_delay((unsigned long)((55)*(2000000/4000000.0)));
+
+} else {
+
+
+PORTAbits.RA3 = 0;
+
+
+
+_delay((unsigned long)((70)*(2000000/4000000.0)));
+
+
+PORTAbits.RA3 = 1;
+
+
+_delay((unsigned long)((10)*(2000000/4000000.0)));
+
+}
+
+}
+
+
+
+int util_onewire_read_bit(void) {
+
+int value = 0;
+
+
+TRISAbits.TRISA3 = 0;
+
+
+PORTAbits.RA3 = 0;
+
+
+_delay((unsigned long)((1)*(2000000/4000000.0)));
+
+
+PORTAbits.RA3 = 1;
+
+
+_delay((unsigned long)((5)*(2000000/4000000.0)));
+
+
+value = PORTAbits.RA3;
+
+
+_delay((unsigned long)((60)*(2000000/4000000.0)));
+
+return value;
 
 }

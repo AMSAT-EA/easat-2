@@ -14,8 +14,9 @@
 #include <xc.h>
 #include "easat2_config.h"
 
-#define MIN_TRANSMIT_VOLTAGE        2.8
+#define MIN_TRANSMIT_VOLTAGE        0
 #define MAIN_LOOP_SLEEP_MINUTES     3
+#define LOW_BATTERY_SLEEP_HOURS     2
 
 #define CHAR_A                      'A'
 #define CHAR_B                      'B'
@@ -104,7 +105,7 @@
 #define MORSE_SEQUENCE_SYMBOL_QUESTION  "..--.."
 #define MORSE_SEQUENCE_SYMBOL_SLASH     "-..-."
 #define MORSE_SEQUENCE_SYMBOL_DOT       ".-.-.-"
-    
+#define MORSE_SEQUENCE_SYMBOL_DASH      "-....-"
 
 
 #endif

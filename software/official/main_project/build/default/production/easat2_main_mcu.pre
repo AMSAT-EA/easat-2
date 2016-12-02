@@ -9270,10 +9270,10 @@ void main_loop(void);
 void initialize(void);
 
 # 18 "easat2_util_inputs.h"
-float getBatteryVoltage(void);
-int getSolarCurrent(void);
-int getBatteryCurrent(void);
-float getTemperature(void);
+float util_getBatteryVoltage(void);
+int util_getSolarCurrent(void);
+int util_getBatteryCurrent(void);
+float util_getTemperature(void);
 
 # 24 "easat2_util_waits.h"
 void util_waits_delay_hours(int hours);
@@ -9417,21 +9417,24 @@ do {
 
 
 
-battery_voltage = getBatteryVoltage();
+battery_voltage = util_getBatteryVoltage();
 
 
-solar_current = getSolarCurrent();
+solar_current = util_getSolarCurrent();
 
 
-battery_current = getBatteryCurrent();
+battery_current = util_getBatteryCurrent();
 
 
-temperature = getTemperature();
+temperature = util_getTemperature();
 
 
 
-if (battery_voltage > 2.8) {
+if (battery_voltage >= 0) {
 util_beacon_transmission(battery_voltage, solar_current, battery_current, temperature);
+} else {
+
+util_waits_delay_hours(2);
 }
 
 

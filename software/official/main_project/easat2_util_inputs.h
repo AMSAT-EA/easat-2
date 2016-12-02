@@ -15,10 +15,20 @@
 
 // functions prototypes
 
-float getBatteryVoltage(void);
-int getSolarCurrent(void);
-int getBatteryCurrent(void);
-float getTemperature(void);
+float util_getBatteryVoltage(void);
+int util_getSolarCurrent(void);
+int util_getBatteryCurrent(void);
+float util_getTemperature(void);
 
+#define ADC_VOLTAGE_REFERENCE 1.024         // internal common ADC reference
+#define ADC_BATTERY_VOLTAGE_SCALER_FACTOR   5.7
+#define ADC_SOLAR_CURRENT_SCALER_FACTOR     1.0
+#define ADC_BATTERY_CURRENT_SCALER_FACTOR   1.0
+
+#define MAX_THERMOMETER_WAIT_ATTEMPS        5
+#define THERMOMETER_TABLE_SIZE              9   // in bytes ( 8 + crc one)
+#define THERMOMETER_BIT_TABLE_SIZE          (THERMOMETER_TABLE_SIZE*8)
+
+#define BITS_IN_BYTE                        8
 
 #endif

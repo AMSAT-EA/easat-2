@@ -7,6 +7,8 @@
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
 "409 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
 [v _fround fround `(d  1 s 3 fround ]
 "425
@@ -41,6 +43,8 @@
 [v ___llmod __llmod `(ul  1 e 4 0 ]
 "35 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lltoft.c
 [v ___lltoft __lltoft `(f  1 e 3 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\sprcadd.c
@@ -67,33 +71,45 @@
 [v _main_loop main_loop `(v  1 e 1 0 ]
 "16 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_initialize.c
 [v _initialize initialize `(v  1 e 1 0 ]
-"17 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
-[v _getBatteryVoltage getBatteryVoltage `(f  1 e 3 0 ]
-"24
-[v _getSolarCurrent getSolarCurrent `(i  1 e 2 0 ]
-"31
-[v _getBatteryCurrent getBatteryCurrent `(i  1 e 2 0 ]
-"39
-[v _getTemperature getTemperature `(f  1 e 3 0 ]
+"19 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+[v _util_getBatteryVoltage util_getBatteryVoltage `(f  1 e 3 0 ]
+"52
+[v _util_getSolarCurrent util_getSolarCurrent `(i  1 e 2 0 ]
+"85
+[v _util_getBatteryCurrent util_getBatteryCurrent `(i  1 e 2 0 ]
+"118
+[v _util_getTemperature util_getTemperature `(f  1 e 3 0 ]
+"18 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+[v _util_onewire_reset util_onewire_reset `(i  1 e 2 0 ]
+"62
+[v _util_onewire_write_byte util_onewire_write_byte `(v  1 e 1 0 ]
+"96
+[v _util_onewire_read_byte util_onewire_read_byte `(i  1 e 2 0 ]
+"121
+[v _util_onewire_write_bit util_onewire_write_bit `(v  1 e 1 0 ]
+"162
+[v _util_onewire_read_bit util_onewire_read_bit `(i  1 e 2 0 ]
 "21 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
 [v _util_beacon_transmission util_beacon_transmission `(v  1 e 1 0 ]
 "52
 [v _util_transmit_letter util_transmit_letter `(v  1 e 1 0 ]
-"198
+"201
 [v _util_transmit_morse_sequence util_transmit_morse_sequence `(v  1 e 1 0 ]
-"228
+"231
 [v _util_transmit_dot util_transmit_dot `(v  1 e 1 0 ]
-"259
+"262
 [v _util_transmit_dash util_transmit_dash `(v  1 e 1 0 ]
-"286
+"289
 [v _util_transmit_space_between_dots_dashes util_transmit_space_between_dots_dashes `(v  1 e 1 0 ]
-"294
+"297
 [v _util_transmit_space_between_letters util_transmit_space_between_letters `(v  1 e 1 0 ]
-"301
+"304
 [v _util_transmit_space_between_words util_transmit_space_between_words `(v  1 e 1 0 ]
-"307
+"310
 [v _util_transmit_buzzer_1ms_cycle util_transmit_buzzer_1ms_cycle `(v  1 e 1 0 ]
-"24 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+"17 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+[v _util_waits_delay_hours util_waits_delay_hours `(v  1 e 1 0 ]
+"24
 [v _util_waits_delay_mins util_waits_delay_mins `(v  1 e 1 0 ]
 "31
 [v _util_waits_delay_secs util_waits_delay_secs `(v  1 e 1 0 ]
@@ -101,7 +117,17 @@
 [v _util_waits_delay_ms util_waits_delay_ms `(v  1 e 1 0 ]
 "47
 [v _util_waits_delay_hundred_us util_waits_delay_hundred_us `(v  1 e 1 0 ]
-[s S137 . 1 `uc 1 ANSD0 1 0 :1:0 
+[s S166 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 ANSA3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 ANSA5 1 0 :1:5 
+]
+"64 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
+[u S173 . 1 `S166 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES173  1 e 1 @3896 ]
+[s S298 . 1 `uc 1 ANSD0 1 0 :1:0 
 `uc 1 ANSD1 1 0 :1:1 
 `uc 1 ANSD2 1 0 :1:2 
 `uc 1 ANSD3 1 0 :1:3 
@@ -110,10 +136,91 @@
 `uc 1 ANSD6 1 0 :1:6 
 `uc 1 ANSD7 1 0 :1:7 
 ]
-"209 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
-[u S146 . 1 `S137 1 . 1 0 ]
-[v _ANSELDbits ANSELDbits `VES146  1 e 1 @3899 ]
-[s S106 . 1 `uc 1 RD0 1 0 :1:0 
+"209
+[u S307 . 1 `S298 1 . 1 0 ]
+[v _ANSELDbits ANSELDbits `VES307  1 e 1 @3899 ]
+[s S102 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 FVRS 1 0 :2:4 
+`uc 1 FVRST 1 0 :1:6 
+`uc 1 FVREN 1 0 :1:7 
+]
+"707
+[s S107 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 FVRS0 1 0 :1:4 
+`uc 1 FVRS1 1 0 :1:5 
+]
+[u S111 . 1 `S102 1 . 1 0 `S107 1 . 1 0 ]
+[v _VREFCON0bits VREFCON0bits `VES111  1 e 1 @3906 ]
+[s S135 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"6457
+[s S590 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+]
+[s S597 . 1 `uc 1 C12IN0M 1 0 :1:0 
+`uc 1 C12IN1M 1 0 :1:1 
+`uc 1 C2INP 1 0 :1:2 
+`uc 1 C1INP 1 0 :1:3 
+`uc 1 C1OUT 1 0 :1:4 
+`uc 1 C2OUT 1 0 :1:5 
+]
+[s S604 . 1 `uc 1 C12IN0N 1 0 :1:0 
+`uc 1 C12IN1N 1 0 :1:1 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 SS 1 0 :1:5 
+]
+[s S611 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_SS 1 0 :1:5 
+]
+[s S614 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFN 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SRQ 1 0 :1:4 
+`uc 1 nSS 1 0 :1:5 
+]
+[s S620 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CVREF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S625 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 DACOUT 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S630 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SS1 1 0 :1:5 
+]
+[s S633 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_SS1 1 0 :1:5 
+]
+[s S636 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 nSS1 1 0 :1:5 
+]
+[s S639 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRNQ 1 0 :1:5 
+]
+[s S642 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RJPU 1 0 :1:7 
+]
+[s S645 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S647 . 1 `S135 1 . 1 0 `S590 1 . 1 0 `S597 1 . 1 0 `S604 1 . 1 0 `S611 1 . 1 0 `S614 1 . 1 0 `S620 1 . 1 0 `S625 1 . 1 0 `S630 1 . 1 0 `S633 1 . 1 0 `S636 1 . 1 0 `S639 1 . 1 0 `S642 1 . 1 0 `S645 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES647  1 e 1 @3968 ]
+[s S267 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -123,7 +230,7 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "7297
-[s S331 . 1 `uc 1 . 1 0 :2:0 
+[s S854 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 P2B 1 0 :1:2 
 `uc 1 P2C 1 0 :1:3 
 `uc 1 P2D 1 0 :1:4 
@@ -131,16 +238,16 @@
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
-[s S339 . 1 `uc 1 . 1 0 :1:0 
+[s S862 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP4 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 TX2 1 0 :1:6 
 `uc 1 RX2 1 0 :1:7 
 ]
-[s S345 . 1 `uc 1 . 1 0 :3:0 
+[s S868 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_SS2 1 0 :1:3 
 ]
-[s S348 . 1 `uc 1 SCK2 1 0 :1:0 
+[s S871 . 1 `uc 1 SCK2 1 0 :1:0 
 `uc 1 SDI2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 nSS2 1 0 :1:3 
@@ -149,12 +256,12 @@
 `uc 1 CK2 1 0 :1:6 
 `uc 1 DT2 1 0 :1:7 
 ]
-[s S357 . 1 `uc 1 SCL2 1 0 :1:0 
+[s S880 . 1 `uc 1 SCL2 1 0 :1:0 
 `uc 1 SDA2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SS2 1 0 :1:3 
 ]
-[s S362 . 1 `uc 1 AN20 1 0 :1:0 
+[s S885 . 1 `uc 1 AN20 1 0 :1:0 
 `uc 1 AN21 1 0 :1:1 
 `uc 1 AN22 1 0 :1:2 
 `uc 1 AN23 1 0 :1:3 
@@ -163,9 +270,44 @@
 `uc 1 AN26 1 0 :1:6 
 `uc 1 AN27 1 0 :1:7 
 ]
-[u S371 . 1 `S106 1 . 1 0 `S331 1 . 1 0 `S339 1 . 1 0 `S345 1 . 1 0 `S348 1 . 1 0 `S357 1 . 1 0 `S362 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES371  1 e 1 @3971 ]
-[s S158 . 1 `uc 1 LATD0 1 0 :1:0 
+[u S894 . 1 `S267 1 . 1 0 `S854 1 . 1 0 `S862 1 . 1 0 `S868 1 . 1 0 `S871 1 . 1 0 `S880 1 . 1 0 `S885 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES894  1 e 1 @3971 ]
+[s S183 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"7716
+[s S192 . 1 `uc 1 LA0 1 0 :1:0 
+]
+[s S194 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+]
+[s S197 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LA2 1 0 :1:2 
+]
+[s S200 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 LA3 1 0 :1:3 
+]
+[s S203 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LA4 1 0 :1:4 
+]
+[s S206 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LA5 1 0 :1:5 
+]
+[s S209 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LA6 1 0 :1:6 
+]
+[s S212 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LA7 1 0 :1:7 
+]
+[u S215 . 1 `S183 1 . 1 0 `S192 1 . 1 0 `S194 1 . 1 0 `S197 1 . 1 0 `S200 1 . 1 0 `S203 1 . 1 0 `S206 1 . 1 0 `S209 1 . 1 0 `S212 1 . 1 0 ]
+[v _LATAbits LATAbits `VES215  1 e 1 @3977 ]
+[s S319 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -175,32 +317,44 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "8112
-[s S167 . 1 `uc 1 LD0 1 0 :1:0 
+[s S328 . 1 `uc 1 LD0 1 0 :1:0 
 ]
-[s S169 . 1 `uc 1 . 1 0 :1:0 
+[s S330 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 ]
-[s S172 . 1 `uc 1 . 1 0 :2:0 
+[s S333 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LD2 1 0 :1:2 
 ]
-[s S175 . 1 `uc 1 . 1 0 :3:0 
+[s S336 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 LD3 1 0 :1:3 
 ]
-[s S178 . 1 `uc 1 . 1 0 :4:0 
+[s S339 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LD4 1 0 :1:4 
 ]
-[s S181 . 1 `uc 1 . 1 0 :5:0 
+[s S342 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 LD5 1 0 :1:5 
 ]
-[s S184 . 1 `uc 1 . 1 0 :6:0 
+[s S345 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 LD6 1 0 :1:6 
 ]
-[s S187 . 1 `uc 1 . 1 0 :7:0 
+[s S348 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S190 . 1 `S158 1 . 1 0 `S167 1 . 1 0 `S169 1 . 1 0 `S172 1 . 1 0 `S175 1 . 1 0 `S178 1 . 1 0 `S181 1 . 1 0 `S184 1 . 1 0 `S187 1 . 1 0 ]
-[v _LATDbits LATDbits `VES190  1 e 1 @3980 ]
-[s S97 . 1 `uc 1 TRISD0 1 0 :1:0 
+[u S351 . 1 `S319 1 . 1 0 `S328 1 . 1 0 `S330 1 . 1 0 `S333 1 . 1 0 `S336 1 . 1 0 `S339 1 . 1 0 `S342 1 . 1 0 `S345 1 . 1 0 `S348 1 . 1 0 ]
+[v _LATDbits LATDbits `VES351  1 e 1 @3980 ]
+[s S126 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"8285
+[u S144 . 1 `S126 1 . 1 0 `S135 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES144  1 e 1 @3986 ]
+[s S258 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -210,8 +364,63 @@
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "8948
-[u S115 . 1 `S97 1 . 1 0 `S106 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES115  1 e 1 @3989 ]
+[u S276 . 1 `S258 1 . 1 0 `S267 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES276  1 e 1 @3989 ]
+[s S518 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"9698
+[s S526 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S531 . 1 `S518 1 . 1 0 `S526 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES531  1 e 1 @3998 ]
+"13761
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"13831
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+[s S448 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"13943
+[s S451 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S455 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+[s S463 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S466 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S469 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S472 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[s S475 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S478 . 1 `S448 1 . 1 0 `S451 1 . 1 0 `S455 1 . 1 0 `S463 1 . 1 0 `S466 1 . 1 0 `S469 1 . 1 0 `S472 1 . 1 0 `S475 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES478  1 e 1 @4034 ]
+"14022
+[v _ADRES ADRES `VEus  1 e 2 @4035 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
 [v _dpowers dpowers `C[10]ul  1 s 40 dpowers ]
 "7 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\powers.c
@@ -234,9 +443,18 @@
 [v main_loop@battery_current battery_current `i  1 a 2 30 ]
 "34
 [v main_loop@solar_current solar_current `i  1 a 2 28 ]
-"68
+"71
 } 0
-"24 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+"17 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+[v _util_waits_delay_hours util_waits_delay_hours `(v  1 e 1 0 ]
+{
+"18
+[v util_waits_delay_hours@i i `i  1 a 2 20 ]
+"17
+[v util_waits_delay_hours@hours hours `i  1 p 2 17 ]
+"20
+} 0
+"24
 [v _util_waits_delay_mins util_waits_delay_mins `(v  1 e 1 0 ]
 {
 "25
@@ -245,7 +463,45 @@
 [v util_waits_delay_mins@minutes minutes `i  1 p 2 12 ]
 "27
 } 0
-"31
+"118 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+[v _util_getTemperature util_getTemperature `(f  1 e 3 0 ]
+{
+"121
+[v util_getTemperature@bit_mem bit_mem `[72]i  1 a 144 0 ]
+"120
+[v util_getTemperature@byte_mem byte_mem `[9]i  1 a 18 144 ]
+"135
+[v util_getTemperature@temperature temperature `f  1 a 3 201 ]
+"136
+[v util_getTemperature@sign sign `f  1 a 3 164 ]
+"137
+[v util_getTemperature@i i `i  1 a 2 204 ]
+"133
+[v util_getTemperature@bit_in_byte bit_in_byte `i  1 a 2 199 ]
+[v util_getTemperature@num_byte num_byte `i  1 a 2 197 ]
+"131
+[v util_getTemperature@shift_reg_bit_temp shift_reg_bit_temp `i  1 a 2 195 ]
+"130
+[v util_getTemperature@shift_reg_bit7 shift_reg_bit7 `i  1 a 2 193 ]
+"129
+[v util_getTemperature@shift_reg_bit6 shift_reg_bit6 `i  1 a 2 191 ]
+"128
+[v util_getTemperature@shift_reg_bit5 shift_reg_bit5 `i  1 a 2 189 ]
+"127
+[v util_getTemperature@shift_reg_bit4 shift_reg_bit4 `i  1 a 2 187 ]
+"126
+[v util_getTemperature@shift_reg_bit3 shift_reg_bit3 `i  1 a 2 185 ]
+"125
+[v util_getTemperature@shift_reg_bit2 shift_reg_bit2 `i  1 a 2 183 ]
+"124
+[v util_getTemperature@shift_reg_bit1 shift_reg_bit1 `i  1 a 2 181 ]
+"123
+[v util_getTemperature@shift_reg_bit0 shift_reg_bit0 `i  1 a 2 179 ]
+"133
+[v util_getTemperature@num_bit num_bit `i  1 a 2 162 ]
+"250
+} 0
+"31 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
 [v _util_waits_delay_secs util_waits_delay_secs `(v  1 e 1 0 ]
 {
 "33
@@ -255,6 +511,111 @@
 "31
 [v util_waits_delay_secs@secs secs `i  1 p 2 5 ]
 "36
+} 0
+"62 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+[v _util_onewire_write_byte util_onewire_write_byte `(v  1 e 1 0 ]
+{
+"64
+[v util_onewire_write_byte@bit7 bit7 `i  1 a 2 21 ]
+[v util_onewire_write_byte@bit6 bit6 `i  1 a 2 19 ]
+[v util_onewire_write_byte@bit5 bit5 `i  1 a 2 17 ]
+[v util_onewire_write_byte@bit4 bit4 `i  1 a 2 15 ]
+[v util_onewire_write_byte@bit3 bit3 `i  1 a 2 13 ]
+[v util_onewire_write_byte@bit2 bit2 `i  1 a 2 11 ]
+[v util_onewire_write_byte@bit1 bit1 `i  1 a 2 9 ]
+[v util_onewire_write_byte@bit0 bit0 `i  1 a 2 7 ]
+"62
+[v util_onewire_write_byte@value value `i  1 p 2 2 ]
+"92
+} 0
+"121
+[v _util_onewire_write_bit util_onewire_write_bit `(v  1 e 1 0 ]
+{
+[v util_onewire_write_bit@bit_in bit_in `i  1 p 2 0 ]
+"158
+} 0
+"18
+[v _util_onewire_reset util_onewire_reset `(i  1 e 2 0 ]
+{
+"20
+[v util_onewire_reset@presence presence `i  1 a 2 3 ]
+"58
+} 0
+"96
+[v _util_onewire_read_byte util_onewire_read_byte `(i  1 e 2 0 ]
+{
+"99
+[v util_onewire_read_byte@value value `i  1 a 2 37 ]
+"98
+[v util_onewire_read_byte@bit7 bit7 `i  1 a 2 35 ]
+[v util_onewire_read_byte@bit6 bit6 `i  1 a 2 33 ]
+[v util_onewire_read_byte@bit5 bit5 `i  1 a 2 31 ]
+[v util_onewire_read_byte@bit4 bit4 `i  1 a 2 29 ]
+[v util_onewire_read_byte@bit3 bit3 `i  1 a 2 27 ]
+[v util_onewire_read_byte@bit2 bit2 `i  1 a 2 25 ]
+[v util_onewire_read_byte@bit1 bit1 `i  1 a 2 23 ]
+[v util_onewire_read_byte@bit0 bit0 `i  1 a 2 21 ]
+"117
+} 0
+"162
+[v _util_onewire_read_bit util_onewire_read_bit `(i  1 e 2 0 ]
+{
+"164
+[v util_onewire_read_bit@value value `i  1 a 2 3 ]
+"189
+} 0
+"54 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 22 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 26 ]
+[v ___ftdiv@exp exp `uc  1 a 1 25 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 21 ]
+"54
+[v ___ftdiv@f1 f1 `f  1 p 3 12 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 15 ]
+"86
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 11 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
+} 0
+"52 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+[v _util_getSolarCurrent util_getSolarCurrent `(i  1 e 2 0 ]
+{
+"54
+[v util_getSolarCurrent@solarCurrent solarCurrent `f  1 a 3 62 ]
+[v util_getSolarCurrent@value value `f  1 a 3 59 ]
+"81
+} 0
+"19
+[v _util_getBatteryVoltage util_getBatteryVoltage `(f  1 e 3 0 ]
+{
+"21
+[v util_getBatteryVoltage@voltage voltage `f  1 a 3 41 ]
+[v util_getBatteryVoltage@value value `f  1 a 3 38 ]
+"48
+} 0
+"85
+[v _util_getBatteryCurrent util_getBatteryCurrent `(i  1 e 2 0 ]
+{
+"87
+[v util_getBatteryCurrent@batteryCurrent batteryCurrent `f  1 a 3 62 ]
+[v util_getBatteryCurrent@value value `f  1 a 3 59 ]
+"114
+} 0
+"28 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
 } 0
 "21 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
 [v _util_beacon_transmission util_beacon_transmission `(v  1 e 1 0 ]
@@ -279,45 +640,45 @@
 [v util_transmit_letter@letter letter `uc  1 a 1 wreg ]
 [v util_transmit_letter@letter letter `uc  1 a 1 wreg ]
 [v util_transmit_letter@letter letter `uc  1 a 1 13 ]
-"190
+"193
 } 0
-"301
+"304
 [v _util_transmit_space_between_words util_transmit_space_between_words `(v  1 e 1 0 ]
 {
-"303
+"306
 } 0
-"294
+"297
 [v _util_transmit_space_between_letters util_transmit_space_between_letters `(v  1 e 1 0 ]
 {
-"296
+"299
 } 0
-"198
+"201
 [v _util_transmit_morse_sequence util_transmit_morse_sequence `(v  1 e 1 0 ]
 {
-"202
+"205
 [v util_transmit_morse_sequence@i i `i  1 a 2 11 ]
-"198
+"201
 [v util_transmit_morse_sequence@morse_sequence morse_sequence `*.25uc  1 p 2 7 ]
-"221
+"224
 } 0
-"286
+"289
 [v _util_transmit_space_between_dots_dashes util_transmit_space_between_dots_dashes `(v  1 e 1 0 ]
 {
-"288
+"291
 } 0
-"228
+"231
 [v _util_transmit_dot util_transmit_dot `(v  1 e 1 0 ]
 {
-"235
+"238
 [v util_transmit_dot@i i `i  1 a 2 5 ]
-"251
+"254
 } 0
-"259
+"262
 [v _util_transmit_dash util_transmit_dash `(v  1 e 1 0 ]
 {
-"266
+"269
 [v util_transmit_dash@i i `i  1 a 2 5 ]
-"281
+"284
 } 0
 "40 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
 [v _util_waits_delay_ms util_waits_delay_ms `(v  1 e 1 0 ]
@@ -328,10 +689,10 @@
 [v util_waits_delay_ms@ms ms `i  1 p 2 0 ]
 "43
 } 0
-"307 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+"310 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
 [v _util_transmit_buzzer_1ms_cycle util_transmit_buzzer_1ms_cycle `(v  1 e 1 0 ]
 {
-"314
+"317
 } 0
 "47 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
 [v _util_waits_delay_hundred_us util_waits_delay_hundred_us `(v  1 e 1 0 ]
@@ -376,9 +737,9 @@
 {
 "528
 [v sprintf@val val `ul  1 a 4 13 ]
-[u S551 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+[u S1216 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
 "526
-[v sprintf@tmpval tmpval `S551  1 a 4 9 ]
+[v sprintf@tmpval tmpval `S1216  1 a 4 9 ]
 "516
 [v sprintf@fval fval `d  1 a 3 19 ]
 "504
@@ -593,28 +954,8 @@
 [v memset@n n `ui  1 p 2 4 ]
 "22
 } 0
-"39 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
-[v _getTemperature getTemperature `(f  1 e 3 0 ]
-{
-"43
-} 0
-"24
-[v _getSolarCurrent getSolarCurrent `(i  1 e 2 0 ]
-{
-"28
-} 0
-"17
-[v _getBatteryVoltage getBatteryVoltage `(f  1 e 3 0 ]
-{
-"21
-} 0
-"31
-[v _getBatteryCurrent getBatteryCurrent `(i  1 e 2 0 ]
-{
-"36
-} 0
 "16 C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_initialize.c
 [v _initialize initialize `(v  1 e 1 0 ]
 {
-"54
+"103
 } 0

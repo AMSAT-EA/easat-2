@@ -9535,6 +9535,9 @@ break;
 case '.':
 util_transmit_morse_sequence((char*)".-.-.-");
 break;
+case '-':
+util_transmit_morse_sequence((char*)"-....-");
+break;
 case ' ':
 util_transmit_space_between_words();
 break;
@@ -9548,7 +9551,7 @@ util_transmit_space_between_letters();
 
 }
 
-# 198
+# 201
 void util_transmit_morse_sequence(char * morse_sequence) {
 
 
@@ -9574,7 +9577,7 @@ util_transmit_space_between_dots_dashes();
 
 }
 
-# 228
+# 231
 void util_transmit_dot(void) {
 
 
@@ -9584,7 +9587,7 @@ PORTDbits.RD3 = 1;
 
 for (int i = 0; i < (int)(2400/32); i++) {
 
-# 241
+# 244
 if (1)
 util_transmit_buzzer_1ms_cycle();
 else
@@ -9597,7 +9600,7 @@ PORTDbits.RD3 = 0;
 
 }
 
-# 259
+# 262
 void util_transmit_dash(void) {
 
 
@@ -9607,7 +9610,7 @@ PORTDbits.RD3 = 1;
 
 for (int i = 0; i < ((int)(2400/32)*3); i++) {
 
-# 272
+# 275
 if (1)
 util_transmit_buzzer_1ms_cycle();
 else
@@ -9626,7 +9629,7 @@ void util_transmit_space_between_dots_dashes(void) {
 util_waits_delay_ms((int)(2400/32));
 }
 
-# 294
+# 297
 void util_transmit_space_between_letters(void) {
 util_waits_delay_ms(3*(int)(2400/32));
 }

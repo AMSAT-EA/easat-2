@@ -1,4 +1,112 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"13904 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
+[s S814 :1 `uc 1 :1 `uc 1 ]
+[n S814 . . GO_NOT_DONE ]
+"13908
+[s S815 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S815 . ADON GO_nDONE CHS ]
+"13913
+[s S816 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S816 . . GO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"13922
+[s S817 :1 `uc 1 :1 `uc 1 ]
+[n S817 . . DONE ]
+"13926
+[s S818 :1 `uc 1 :1 `uc 1 ]
+[n S818 . . NOT_DONE ]
+"13930
+[s S819 :1 `uc 1 :1 `uc 1 ]
+[n S819 . . nDONE ]
+"13934
+[s S820 :1 `uc 1 :1 `uc 1 ]
+[n S820 . . GO_DONE ]
+"13938
+[s S821 :1 `uc 1 :1 `uc 1 ]
+[n S821 . . GODONE ]
+"13903
+[u S813 `S814 1 `S815 1 `S816 1 `S817 1 `S818 1 `S819 1 `S820 1 `S821 1 ]
+[n S813 . . . . . . . . . ]
+"13943
+[v _ADCON0bits `VS813 ~T0 @X0 0 e@4034 ]
+"9682
+[s S548 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S548 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+"9691
+[s S549 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S549 . . SSPIF TXIF RCIF ]
+"9681
+[u S547 `S548 1 `S549 1 ]
+[n S547 . . . ]
+"9698
+[v _PIR1bits `VS547 ~T0 @X0 0 e@3998 ]
+"14022
+[v _ADRES `Vus ~T0 @X0 0 e@4035 ]
+"58 easat2_util_onewire.h
+[v _util_onewire_reset `(i ~T0 @X0 0 ef ]
+"59
+[v _util_onewire_write_byte `(v ~T0 @X0 0 ef1`i ]
+"8264 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
+[s S502 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S502 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"8274
+[s S503 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S503 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"8263
+[u S501 `S502 1 `S503 1 ]
+[n S501 . . . ]
+"8285
+[v _TRISAbits `VS501 ~T0 @X0 0 e@3986 ]
+"26 easat2_util_waits.h
+[v _util_waits_delay_secs `(v ~T0 @X0 0 ef1`i ]
+"6376 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic18f45k22.h
+[s S401 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S401 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"6386
+[s S402 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S402 . AN0 AN1 AN2 AN3 . AN4 ]
+"6394
+[s S403 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S403 . C12IN0M C12IN1M C2INP C1INP C1OUT C2OUT ]
+"6402
+[s S404 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S404 . C12IN0N C12IN1N VREFM VREFP T0CKI SS ]
+"6410
+[s S405 :5 `uc 1 :1 `uc 1 ]
+[n S405 . . NOT_SS ]
+"6414
+[s S406 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S406 . . VREFN . SRQ nSS ]
+"6421
+[s S407 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S407 . . CVREF . LVDIN ]
+"6427
+[s S408 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S408 . . DACOUT . HLVDIN ]
+"6433
+[s S409 :5 `uc 1 :1 `uc 1 ]
+[n S409 . . SS1 ]
+"6437
+[s S410 :5 `uc 1 :1 `uc 1 ]
+[n S410 . . NOT_SS1 ]
+"6441
+[s S411 :5 `uc 1 :1 `uc 1 ]
+[n S411 . . nSS1 ]
+"6445
+[s S412 :5 `uc 1 :1 `uc 1 ]
+[n S412 . . SRNQ ]
+"6449
+[s S413 :7 `uc 1 :1 `uc 1 ]
+[n S413 . . RJPU ]
+"6453
+[s S414 :1 `uc 1 ]
+[n S414 . ULPWUIN ]
+"6375
+[u S400 `S401 1 `S402 1 `S403 1 `S404 1 `S405 1 `S406 1 `S407 1 `S408 1 `S409 1 `S410 1 `S411 1 `S412 1 `S413 1 `S414 1 ]
+[n S400 . . . . . . . . . . . . . . . ]
+"6457
+[v _PORTAbits `VS400 ~T0 @X0 0 e@3968 ]
+"60 easat2_util_onewire.h
+[v _util_onewire_read_byte `(i ~T0 @X0 0 ef ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -7401,63 +7509,440 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
-[; ;easat2_util_inputs.h: 18: float getBatteryVoltage(void);
-[; ;easat2_util_inputs.h: 19: int getSolarCurrent(void);
-[; ;easat2_util_inputs.h: 20: int getBatteryCurrent(void);
-[; ;easat2_util_inputs.h: 21: float getTemperature(void);
-"17 easat2_util_inputs.c
-[v _getBatteryVoltage `(f ~T0 @X0 1 ef ]
+[; ;easat2_util_inputs.h: 18: float util_getBatteryVoltage(void);
+[; ;easat2_util_inputs.h: 19: int util_getSolarCurrent(void);
+[; ;easat2_util_inputs.h: 20: int util_getBatteryCurrent(void);
+[; ;easat2_util_inputs.h: 21: float util_getTemperature(void);
+[; ;easat2_util_onewire.h: 58: int util_onewire_reset(void);
+[; ;easat2_util_onewire.h: 59: void util_onewire_write_byte(int value);
+[; ;easat2_util_onewire.h: 60: int util_onewire_read_byte (void);
+[; ;easat2_util_onewire.h: 61: void util_onewire_write_bit(int bit_in);
+[; ;easat2_util_onewire.h: 62: int util_onewire_read_bit(void);
+[; ;easat2_util_waits.h: 24: void util_waits_delay_hours(int hours);
+[; ;easat2_util_waits.h: 25: void util_waits_delay_mins(int minutes);
+[; ;easat2_util_waits.h: 26: void util_waits_delay_secs(int secs);
+[; ;easat2_util_waits.h: 27: void util_waits_delay_ms(int ms);
+[; ;easat2_util_waits.h: 28: void util_waits_delay_hundred_us(int us);
+"19 easat2_util_inputs.c
+[v _util_getBatteryVoltage `(f ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_inputs.c: 17: float getBatteryVoltage(void) {
-[e :U _getBatteryVoltage ]
+[; ;easat2_util_inputs.c: 19: float util_getBatteryVoltage(void) {
+[e :U _util_getBatteryVoltage ]
 [f ]
-[; ;easat2_util_inputs.c: 19: return 3.702;
-"19
-[e ) -> .3.702 `f ]
-[e $UE 1121  ]
-[; ;easat2_util_inputs.c: 21: }
 "21
+[v _value `f ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 21: float value = 0.0, voltage = 0.0;
+[e = _value -> .0.0 `f ]
+[v _voltage `f ~T0 @X0 1 a ]
+[e = _voltage -> .0.0 `f ]
+[; ;easat2_util_inputs.c: 23: ADCON0bits.CHS = 0;
+"23
+[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 24: ADCON0bits.ADON = 1;
+"24
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;easat2_util_inputs.c: 25: PIR1bits.ADIF = 0;
+"25
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 27: ADCON0bits.GO = 1;
+"27
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;easat2_util_inputs.c: 28: while(!PIR1bits.ADIF);
+"28
+[e $U 1122  ]
+[e :U 1123 ]
+[e :U 1122 ]
+[e $ ! != -> . . _PIR1bits 0 6 `i -> -> -> 0 `i `Vuc `i 1123  ]
+[e :U 1124 ]
+[; ;easat2_util_inputs.c: 30: value = ADRES;
+"30
+[e = _value -> _ADRES `f ]
+[; ;easat2_util_inputs.c: 31: PIR1bits.ADIF = 0;
+"31
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 33: ADCON0bits.ADON = 0;
+"33
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 40: voltage = (1.024 / 1023.0) * value;
+"40
+[e = _voltage -> * / .1.024 .1023.0 -> _value `d `f ]
+[; ;easat2_util_inputs.c: 44: voltage = voltage * 5.7;
+"44
+[e = _voltage -> * -> _voltage `d .5.7 `f ]
+[; ;easat2_util_inputs.c: 46: return voltage;
+"46
+[e ) _voltage ]
+[e $UE 1121  ]
+[; ;easat2_util_inputs.c: 48: }
+"48
 [e :UE 1121 ]
 }
-"24
-[v _getSolarCurrent `(i ~T0 @X0 1 ef ]
+"52
+[v _util_getSolarCurrent `(i ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_inputs.c: 24: int getSolarCurrent(void ) {
-[e :U _getSolarCurrent ]
+[; ;easat2_util_inputs.c: 52: int util_getSolarCurrent(void ) {
+[e :U _util_getSolarCurrent ]
 [f ]
-[; ;easat2_util_inputs.c: 26: return 120;
-"26
-[e ) -> 120 `i ]
-[e $UE 1122  ]
-[; ;easat2_util_inputs.c: 28: }
-"28
-[e :UE 1122 ]
+"54
+[v _value `f ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 54: float value = 0.0, solarCurrent = 0.0;
+[e = _value -> .0.0 `f ]
+[v _solarCurrent `f ~T0 @X0 1 a ]
+[e = _solarCurrent -> .0.0 `f ]
+[; ;easat2_util_inputs.c: 56: ADCON0bits.CHS = 1;
+"56
+[e = . . _ADCON0bits 1 2 -> -> 1 `i `uc ]
+[; ;easat2_util_inputs.c: 57: ADCON0bits.ADON = 1;
+"57
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;easat2_util_inputs.c: 58: PIR1bits.ADIF = 0;
+"58
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 60: ADCON0bits.GO = 1;
+"60
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;easat2_util_inputs.c: 61: while(!PIR1bits.ADIF);
+"61
+[e $U 1126  ]
+[e :U 1127 ]
+[e :U 1126 ]
+[e $ ! != -> . . _PIR1bits 0 6 `i -> -> -> 0 `i `Vuc `i 1127  ]
+[e :U 1128 ]
+[; ;easat2_util_inputs.c: 63: value = ADRES;
+"63
+[e = _value -> _ADRES `f ]
+[; ;easat2_util_inputs.c: 64: PIR1bits.ADIF = 0;
+"64
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 66: ADCON0bits.ADON = 0;
+"66
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 73: solarCurrent = (1.024 / 1023.0) * value;
+"73
+[e = _solarCurrent -> * / .1.024 .1023.0 -> _value `d `f ]
+[; ;easat2_util_inputs.c: 77: solarCurrent = solarCurrent * 1.0;
+"77
+[e = _solarCurrent -> * -> _solarCurrent `d .1.0 `f ]
+[; ;easat2_util_inputs.c: 79: return (int)solarCurrent;
+"79
+[e ) -> _solarCurrent `i ]
+[e $UE 1125  ]
+[; ;easat2_util_inputs.c: 81: }
+"81
+[e :UE 1125 ]
 }
-"31
-[v _getBatteryCurrent `(i ~T0 @X0 1 ef ]
+"85
+[v _util_getBatteryCurrent `(i ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_inputs.c: 31: int getBatteryCurrent(void) {
-[e :U _getBatteryCurrent ]
+[; ;easat2_util_inputs.c: 85: int util_getBatteryCurrent(void) {
+[e :U _util_getBatteryCurrent ]
 [f ]
-[; ;easat2_util_inputs.c: 33: return 100;
-"33
-[e ) -> 100 `i ]
-[e $UE 1123  ]
-[; ;easat2_util_inputs.c: 36: }
-"36
-[e :UE 1123 ]
+"87
+[v _value `f ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 87: float value = 0.0, batteryCurrent = 0.0;
+[e = _value -> .0.0 `f ]
+[v _batteryCurrent `f ~T0 @X0 1 a ]
+[e = _batteryCurrent -> .0.0 `f ]
+[; ;easat2_util_inputs.c: 89: ADCON0bits.CHS = 2;
+"89
+[e = . . _ADCON0bits 1 2 -> -> 2 `i `uc ]
+[; ;easat2_util_inputs.c: 90: ADCON0bits.ADON = 1;
+"90
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;easat2_util_inputs.c: 91: PIR1bits.ADIF = 0;
+"91
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 93: ADCON0bits.GO = 1;
+"93
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;easat2_util_inputs.c: 94: while(!PIR1bits.ADIF);
+"94
+[e $U 1130  ]
+[e :U 1131 ]
+[e :U 1130 ]
+[e $ ! != -> . . _PIR1bits 0 6 `i -> -> -> 0 `i `Vuc `i 1131  ]
+[e :U 1132 ]
+[; ;easat2_util_inputs.c: 96: value = ADRES;
+"96
+[e = _value -> _ADRES `f ]
+[; ;easat2_util_inputs.c: 97: PIR1bits.ADIF = 0;
+"97
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 99: ADCON0bits.ADON = 0;
+"99
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[; ;easat2_util_inputs.c: 106: batteryCurrent = (1.024 / 1023.0) * value;
+"106
+[e = _batteryCurrent -> * / .1.024 .1023.0 -> _value `d `f ]
+[; ;easat2_util_inputs.c: 110: batteryCurrent = batteryCurrent * 1.0;
+"110
+[e = _batteryCurrent -> * -> _batteryCurrent `d .1.0 `f ]
+[; ;easat2_util_inputs.c: 112: return (int)batteryCurrent;
+"112
+[e ) -> _batteryCurrent `i ]
+[e $UE 1129  ]
+[; ;easat2_util_inputs.c: 114: }
+"114
+[e :UE 1129 ]
 }
-"39
-[v _getTemperature `(f ~T0 @X0 1 ef ]
+"118
+[v _util_getTemperature `(f ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_inputs.c: 39: float getTemperature(void) {
-[e :U _getTemperature ]
+[; ;easat2_util_inputs.c: 118: float util_getTemperature(void) {
+[e :U _util_getTemperature ]
 [f ]
-[; ;easat2_util_inputs.c: 41: return -12.502;
-"41
-[e ) -> -U .12.502 `f ]
-[e $UE 1124  ]
-[; ;easat2_util_inputs.c: 43: }
-"43
-[e :UE 1124 ]
+"120
+[v _byte_mem `i ~T0 @X0 -> 9 `i a ]
+"121
+[v _bit_mem `i ~T0 @X0 * -> 9 `i -> 8 `i a ]
+"123
+[v _shift_reg_bit0 `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 120: int byte_mem[9];
+[; ;easat2_util_inputs.c: 121: int bit_mem[(9*8)];
+[; ;easat2_util_inputs.c: 123: int shift_reg_bit0 = 0;
+[e = _shift_reg_bit0 -> 0 `i ]
+"124
+[v _shift_reg_bit1 `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 124: int shift_reg_bit1 = 0;
+[e = _shift_reg_bit1 -> 0 `i ]
+"125
+[v _shift_reg_bit2 `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 125: int shift_reg_bit2 = 0;
+[e = _shift_reg_bit2 -> 0 `i ]
+"126
+[v _shift_reg_bit3 `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 126: int shift_reg_bit3 = 0;
+[e = _shift_reg_bit3 -> 0 `i ]
+"127
+[v _shift_reg_bit4 `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 127: int shift_reg_bit4 = 0;
+[e = _shift_reg_bit4 -> 0 `i ]
+"128
+[v _shift_reg_bit5 `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 128: int shift_reg_bit5 = 0;
+[e = _shift_reg_bit5 -> 0 `i ]
+"129
+[v _shift_reg_bit6 `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 129: int shift_reg_bit6 = 0;
+[e = _shift_reg_bit6 -> 0 `i ]
+"130
+[v _shift_reg_bit7 `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 130: int shift_reg_bit7 = 0;
+[e = _shift_reg_bit7 -> 0 `i ]
+"131
+[v _shift_reg_bit_temp `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 131: int shift_reg_bit_temp = 0;
+[e = _shift_reg_bit_temp -> 0 `i ]
+"133
+[v _num_bit `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 133: int num_bit = 0, num_byte = 0, bit_in_byte = 0;
+[e = _num_bit -> 0 `i ]
+[v _num_byte `i ~T0 @X0 1 a ]
+[e = _num_byte -> 0 `i ]
+[v _bit_in_byte `i ~T0 @X0 1 a ]
+[e = _bit_in_byte -> 0 `i ]
+"135
+[v _temperature `f ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 135: float temperature = 0.0;
+[e = _temperature -> .0.0 `f ]
+"136
+[v _sign `f ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 136: float sign = 1.0;
+[e = _sign -> .1.0 `f ]
+"137
+[v _i `i ~T0 @X0 1 a ]
+[; ;easat2_util_inputs.c: 137: int i = 0;
+[e = _i -> 0 `i ]
+[; ;easat2_util_inputs.c: 143: if (util_onewire_reset()) return -99.1;
+"143
+[e $ ! != ( _util_onewire_reset ..  -> 0 `i 1134  ]
+[e ) -> -U .99.1 `f ]
+[e $UE 1133  ]
+[e :U 1134 ]
+[; ;easat2_util_inputs.c: 146: util_onewire_write_byte(0xCC);
+"146
+[e ( _util_onewire_write_byte (1 -> 204 `i ]
+[; ;easat2_util_inputs.c: 149: util_onewire_write_byte(0x44);
+"149
+[e ( _util_onewire_write_byte (1 -> 68 `i ]
+[; ;easat2_util_inputs.c: 154: TRISAbits.TRISA3 = 1;
+"154
+[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
+[; ;easat2_util_inputs.c: 158: for (i = 0; i < 5 && PORTAbits.RA3 == 0; i++)
+"158
+{
+[e = _i -> 0 `i ]
+[e $U 1138  ]
+"159
+[e :U 1135 ]
+[; ;easat2_util_inputs.c: 159: util_waits_delay_secs(1);
+[e ( _util_waits_delay_secs (1 -> 1 `i ]
+"158
+[e ++ _i -> 1 `i ]
+[e :U 1138 ]
+[e $ && < _i -> 5 `i == -> . . _PORTAbits 0 3 `i -> 0 `i 1135  ]
+[e :U 1136 ]
+"159
+}
+[; ;easat2_util_inputs.c: 161: if (i == 5) return -99.2;
+"161
+[e $ ! == _i -> 5 `i 1139  ]
+[e ) -> -U .99.2 `f ]
+[e $UE 1133  ]
+[e :U 1139 ]
+[; ;easat2_util_inputs.c: 165: if (util_onewire_reset()) return -99.3;
+"165
+[e $ ! != ( _util_onewire_reset ..  -> 0 `i 1140  ]
+[e ) -> -U .99.3 `f ]
+[e $UE 1133  ]
+[e :U 1140 ]
+[; ;easat2_util_inputs.c: 168: util_onewire_write_byte(0xCC);
+"168
+[e ( _util_onewire_write_byte (1 -> 204 `i ]
+[; ;easat2_util_inputs.c: 171: util_onewire_write_byte(0xBE);
+"171
+[e ( _util_onewire_write_byte (1 -> 190 `i ]
+[; ;easat2_util_inputs.c: 182: byte_mem[0] = util_onewire_read_byte();
+"182
+[e = *U + &U _byte_mem * -> -> -> 0 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 184: byte_mem[1] = util_onewire_read_byte();
+"184
+[e = *U + &U _byte_mem * -> -> -> 1 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 186: byte_mem[2] = util_onewire_read_byte();
+"186
+[e = *U + &U _byte_mem * -> -> -> 2 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 188: byte_mem[3] = util_onewire_read_byte();
+"188
+[e = *U + &U _byte_mem * -> -> -> 3 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 190: byte_mem[4] = util_onewire_read_byte();
+"190
+[e = *U + &U _byte_mem * -> -> -> 4 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 192: byte_mem[5] = util_onewire_read_byte();
+"192
+[e = *U + &U _byte_mem * -> -> -> 5 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 194: byte_mem[6] = util_onewire_read_byte();
+"194
+[e = *U + &U _byte_mem * -> -> -> 6 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 196: byte_mem[7] = util_onewire_read_byte();
+"196
+[e = *U + &U _byte_mem * -> -> -> 7 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 198: byte_mem[8] = util_onewire_read_byte();
+"198
+[e = *U + &U _byte_mem * -> -> -> 8 `i `ui `ux -> -> # *U &U _byte_mem `ui `ux ( _util_onewire_read_byte ..  ]
+[; ;easat2_util_inputs.c: 202: for (num_byte = 0; num_byte < 9; num_byte++) {
+"202
+{
+[e = _num_byte -> 0 `i ]
+[e $ < _num_byte -> 9 `i 1141  ]
+[e $U 1142  ]
+[e :U 1141 ]
+{
+[; ;easat2_util_inputs.c: 203: for (bit_in_byte = 0; bit_in_byte < 8; bit_in_byte++)
+"203
+{
+[e = _bit_in_byte -> 0 `i ]
+[e $ < _bit_in_byte -> 8 `i 1144  ]
+[e $U 1145  ]
+"204
+[e :U 1144 ]
+[; ;easat2_util_inputs.c: 204: bit_mem[num_bit++] = (byte_mem[num_byte] >> bit_in_byte) & 0x01;
+[e = *U + &U _bit_mem * -> -> ++ _num_bit -> 1 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux & >> *U + &U _byte_mem * -> -> _num_byte `ui `ux -> -> # *U &U _byte_mem `ui `ux _bit_in_byte -> 1 `i ]
+"203
+[e ++ _bit_in_byte -> 1 `i ]
+[e $ < _bit_in_byte -> 8 `i 1144  ]
+[e :U 1145 ]
+"204
+}
+"205
+}
+"202
+[e ++ _num_byte -> 1 `i ]
+[e $ < _num_byte -> 9 `i 1141  ]
+[e :U 1142 ]
+"205
+}
+[; ;easat2_util_inputs.c: 205: }
+[; ;easat2_util_inputs.c: 209: for (i = 0; i < (9*8); i++) {
+"209
+{
+[e = _i -> 0 `i ]
+[e $ < _i * -> 9 `i -> 8 `i 1147  ]
+[e $U 1148  ]
+[e :U 1147 ]
+{
+[; ;easat2_util_inputs.c: 214: shift_reg_bit_temp = shift_reg_bit0^bit_mem[i];
+"214
+[e = _shift_reg_bit_temp ^ _shift_reg_bit0 *U + &U _bit_mem * -> -> _i `ui `ux -> -> # *U &U _bit_mem `ui `ux ]
+[; ;easat2_util_inputs.c: 216: shift_reg_bit0 = shift_reg_bit1;
+"216
+[e = _shift_reg_bit0 _shift_reg_bit1 ]
+[; ;easat2_util_inputs.c: 217: shift_reg_bit1 = shift_reg_bit2;
+"217
+[e = _shift_reg_bit1 _shift_reg_bit2 ]
+[; ;easat2_util_inputs.c: 218: shift_reg_bit2 = shift_reg_bit3 ^ shift_reg_bit_temp;
+"218
+[e = _shift_reg_bit2 ^ _shift_reg_bit3 _shift_reg_bit_temp ]
+[; ;easat2_util_inputs.c: 219: shift_reg_bit3 = shift_reg_bit4 ^ shift_reg_bit_temp;
+"219
+[e = _shift_reg_bit3 ^ _shift_reg_bit4 _shift_reg_bit_temp ]
+[; ;easat2_util_inputs.c: 220: shift_reg_bit4 = shift_reg_bit5;
+"220
+[e = _shift_reg_bit4 _shift_reg_bit5 ]
+[; ;easat2_util_inputs.c: 221: shift_reg_bit5 = shift_reg_bit6;
+"221
+[e = _shift_reg_bit5 _shift_reg_bit6 ]
+[; ;easat2_util_inputs.c: 222: shift_reg_bit6 = shift_reg_bit7;
+"222
+[e = _shift_reg_bit6 _shift_reg_bit7 ]
+[; ;easat2_util_inputs.c: 223: shift_reg_bit7 = shift_reg_bit_temp;
+"223
+[e = _shift_reg_bit7 _shift_reg_bit_temp ]
+"225
+}
+"209
+[e ++ _i -> 1 `i ]
+[e $ < _i * -> 9 `i -> 8 `i 1147  ]
+[e :U 1148 ]
+"225
+}
+[; ;easat2_util_inputs.c: 225: }
+[; ;easat2_util_inputs.c: 229: if (shift_reg_bit0 != 0 || shift_reg_bit1 != 0 || shift_reg_bit2 != 0 &&
+[; ;easat2_util_inputs.c: 230: shift_reg_bit3 != 0 || shift_reg_bit4 != 0 || shift_reg_bit5 != 0 &&
+[; ;easat2_util_inputs.c: 231: shift_reg_bit6 != 0 || shift_reg_bit7 != 0)
+"231
+[e $ ! || || || || || != _shift_reg_bit0 -> 0 `i != _shift_reg_bit1 -> 0 `i && != _shift_reg_bit2 -> 0 `i != _shift_reg_bit3 -> 0 `i != _shift_reg_bit4 -> 0 `i && != _shift_reg_bit5 -> 0 `i != _shift_reg_bit6 -> 0 `i != _shift_reg_bit7 -> 0 `i 1150  ]
+[; ;easat2_util_inputs.c: 232: return -99.7;
+"232
+[e ) -> -U .99.7 `f ]
+[e $UE 1133  ]
+[e :U 1150 ]
+[; ;easat2_util_inputs.c: 236: if (bit_mem[11] == 0) sign = 1.0; else sign = -1.0;
+"236
+[e $ ! == *U + &U _bit_mem * -> -> -> 11 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux -> 0 `i 1151  ]
+[e = _sign -> .1.0 `f ]
+[e $U 1152  ]
+[e :U 1151 ]
+[e = _sign -> -U .1.0 `f ]
+[e :U 1152 ]
+[; ;easat2_util_inputs.c: 238: temperature = (float)bit_mem[0]/16.0 + (float)bit_mem[1]/8.0 +
+[; ;easat2_util_inputs.c: 239: (float)bit_mem[2]/4.0 + (float)bit_mem[3]/2.0 +
+[; ;easat2_util_inputs.c: 240: (float)bit_mem[4] + (float)bit_mem[5]*2.0 ;
+"240
+[e = _temperature -> + + + + + / -> -> *U + &U _bit_mem * -> -> -> 0 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .16.0 / -> -> *U + &U _bit_mem * -> -> -> 1 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .8.0 / -> -> *U + &U _bit_mem * -> -> -> 2 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .4.0 / -> -> *U + &U _bit_mem * -> -> -> 3 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .2.0 -> -> *U + &U _bit_mem * -> -> -> 4 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d * -> -> *U + &U _bit_mem * -> -> -> 5 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .2.0 `f ]
+[; ;easat2_util_inputs.c: 241: temperature = temperature +
+[; ;easat2_util_inputs.c: 242: (float)bit_mem[6]*4.0 + (float)bit_mem[7]*8.0 +
+[; ;easat2_util_inputs.c: 243: (float)bit_mem[8]*16.0 + (float)bit_mem[9]*32.0 +
+[; ;easat2_util_inputs.c: 244: (float)bit_mem[10]*64.0;
+"244
+[e = _temperature -> + + + + + -> _temperature `d * -> -> *U + &U _bit_mem * -> -> -> 6 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .4.0 * -> -> *U + &U _bit_mem * -> -> -> 7 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .8.0 * -> -> *U + &U _bit_mem * -> -> -> 8 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .16.0 * -> -> *U + &U _bit_mem * -> -> -> 9 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .32.0 * -> -> *U + &U _bit_mem * -> -> -> 10 `i `ui `ux -> -> # *U &U _bit_mem `ui `ux `f `d .64.0 `f ]
+[; ;easat2_util_inputs.c: 246: temperature = temperature * sign;
+"246
+[e = _temperature * _temperature _sign ]
+[; ;easat2_util_inputs.c: 248: return temperature;
+"248
+[e ) _temperature ]
+[e $UE 1133  ]
+[; ;easat2_util_inputs.c: 250: }
+"250
+[e :UE 1133 ]
 }

@@ -3,4 +3,6 @@
  easat2_util_inputs.c  \
 easat2_config.h  \
 easat2_util_inputs.h  \
-easat2.h 
+easat2.h  \
+easat2_util_waits.h  \
+easat2_util_onewire.h 
