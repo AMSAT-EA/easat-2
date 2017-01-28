@@ -37,6 +37,10 @@ void main_loop(void) {
   
         do {
             
+            // first of all clear the watchdog timer (131 seconds timer)
+            // the watchdog has been configured by software fuses
+            ClrWdt();
+            
             // get the sensor values
             
             // get the battery voltage

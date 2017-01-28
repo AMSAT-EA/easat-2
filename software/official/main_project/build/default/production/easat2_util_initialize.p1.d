@@ -3,4 +3,5 @@
  easat2_util_initialize.c  \
 easat2_config.h  \
 easat2_util_initialize.h  \
+easat2_util_timer.h  \
 easat2.h 

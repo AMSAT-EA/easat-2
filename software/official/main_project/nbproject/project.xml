@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://www.netbeans.org/ns/project/1">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>EASAT2-MCU-C</name>
-            <creation-uuid>756282f2-e01d-4bbe-99bb-6e42260aa10d</creation-uuid>
+            <creation-uuid>80b936cc-31d1-4a61-9e57-6588506b078c</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
