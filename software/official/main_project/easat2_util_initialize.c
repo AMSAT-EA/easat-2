@@ -10,6 +10,7 @@
 
 #include "easat2.h"
 #include "easat2_util_initialize.h"
+#include "easat2_util_timer.h"
 
 // this function initializes the MCU
 
@@ -100,4 +101,7 @@ void initialize(void) {
     LATDbits.LATD6   = 0;
     LATDbits.LATD7   = 0;    
 
+    // initialize TIMER 1
+    
+    util_timer1_initialize();
 }

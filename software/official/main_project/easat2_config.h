@@ -18,7 +18,7 @@
 #define _XTAL_FREQ 2000000      // 2 Mhz
 
 #pragma config FOSC = XT        // Oscillator (LP,XT,HSHP,HSMP,RC,RCIO6,ECHP,
-                                //  ECHPIO6,INTIO67,INTIO7,ECMPIO6,ECLP,ECLPIO6)
+                                // ECHPIO6,INTIO67,INTIO7,ECMPIO6,ECLP,ECLPIO6)
   
 #pragma config IG PLLCFG = OFF  // 4X PLL Enable
 #pragma config PRICLKEN = ON    // Primary clock enable
@@ -31,7 +31,7 @@
 #pragma config BORV   = 190     // Brown Out Reset Volt.(285,250,220,190)[V/100]
 
 // config2H
-#pragma config WDTEN = OFF      // Watchdog Timer Enable (OFF,NOSLP,SWON,ON)
+#pragma config WDTEN = ON       // Watchdog Timer Enable (OFF,NOSLP,SWON,ON)
 #pragma config WDTPS = 32768    // Watchdog Timer Postscale Select (1:32768)
 
 // config3H
