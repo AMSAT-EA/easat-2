@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC6082
+D Precision Quad Op amp.
+K LTC6082 opamp ltc
+F http://cds.linear.com/docs/en/datasheet/60812fd.pdf
+$ENDCMP
+#
+#End Doc Library
