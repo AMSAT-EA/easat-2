@@ -21,11 +21,11 @@ void initialize(void) {
     /* here we configure the Fixed Voltage Reference (FVR) channel
        for the ADC */
 
-    // 1.024 V as FVR (VREF+)
+    // 2.048 V as FVR (VREF+)
 
     VREFCON0bits.FVREN = 1; // Voltage Fixed Reference (VREF) enabled
-    VREFCON0bits.FVRS0 = 1; // Fixed Voltage Reference Peripheral
-    VREFCON0bits.FVRS1 = 0; // output is 1x (1.024 V)
+    VREFCON0bits.FVRS0 = 0; // Fixed Voltage Reference Peripheral
+    VREFCON0bits.FVRS1 = 1; // output is 2x (2.048 V)
 
     VREFCON0bits.FVRST = 1; // Fixed Voltage Reference output is ready for use
 
