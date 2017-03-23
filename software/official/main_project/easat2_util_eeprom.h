@@ -15,4 +15,11 @@
 
 // functions prototypes
 
+int util_eeprom_check(void);
+int util_eeprom_fix(void);
+int util_eeprom_write_CRC(void);
+int util_eeprom_write(int address, int value);
+int util_eeprom_read(int address);
+
+
 #endif

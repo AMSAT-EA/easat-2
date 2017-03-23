@@ -20,7 +20,7 @@ int util_getSolarCurrent(void);
 int util_getBatteryCurrent(void);
 float util_getTemperature(void);
 
-#define ADC_VOLTAGE_REFERENCE 1.024         // internal common ADC reference
+#define ADC_VOLTAGE_REFERENCE 2.048         // internal common ADC reference
 #define ADC_BATTERY_VOLTAGE_SCALER_FACTOR   5.7
 #define ADC_SOLAR_CURRENT_SCALER_FACTOR     1.0
 #define ADC_BATTERY_CURRENT_SCALER_FACTOR   1.0
