@@ -8492,6 +8492,7 @@ extern __nonreentrant void _delay3(unsigned char);
 
 # 18 "easat2_util_initialize.h"
 void initialize(void);
+void io_initialize(void);
 
 # 31 "easat2_util_timer.h"
 void util_timer1_initialize(void);
@@ -8501,14 +8502,24 @@ void interrupt low_priority low_priority_int();
 # 17 "easat2_util_initialize.c"
 void initialize(void) {
 
-# 26
+io_initialize();
+util_timer1_initialize();
+
+
+}
+
+
+
+void io_initialize(void) {
+
+# 36
 VREFCON0bits.FVREN = 1;
 VREFCON0bits.FVRS0 = 0;
 VREFCON0bits.FVRS1 = 1;
 
 VREFCON0bits.FVRST = 1;
 
-# 35
+# 45
 ADCON1 = 0x08;
 ADCON2 = 0xAF;
 
@@ -8516,12 +8527,12 @@ ADCON2 = 0xAF;
 
 TRISAbits.TRISA0 = 1;
 TRISAbits.TRISA1 = 1;
-TRISAbits.TRISA2 = 1;
+TRISAbits.TRISA2 = 0;
 TRISAbits.TRISA3 = 1;
 TRISAbits.TRISA4 = 1;
 TRISAbits.TRISA5 = 1;
 
-# 52
+# 62
 ANSELAbits.ANSA0 = 1;
 ANSELAbits.ANSA1 = 1;
 ANSELAbits.ANSA2 = 1;
@@ -8538,7 +8549,36 @@ LATAbits.LATA3 = 0;
 LATAbits.LATA4 = 0;
 LATAbits.LATA5 = 0;
 
-# 73
+# 83
+TRISBbits.TRISB0 = 1;
+TRISBbits.TRISB1 = 1;
+TRISBbits.TRISB2 = 1;
+TRISBbits.TRISB3 = 1;
+TRISBbits.TRISB4 = 1;
+TRISBbits.TRISB5 = 1;
+TRISBbits.TRISB6 = 1;
+TRISBbits.TRISB7 = 1;
+
+
+
+ANSELBbits.ANSB0 = 1;
+ANSELBbits.ANSB1 = 1;
+ANSELBbits.ANSB2 = 1;
+ANSELBbits.ANSB3 = 1;
+
+ANSELBbits.ANSB5 = 1;
+
+
+
+LATBbits.LATB0 = 0;
+LATBbits.LATB1 = 0;
+LATBbits.LATB2 = 0;
+LATBbits.LATB3 = 0;
+LATBbits.LATB4 = 0;
+LATBbits.LATB5 = 0;
+
+
+
 TRISDbits.TRISD0 = 0;
 TRISDbits.TRISD1 = 0;
 TRISDbits.TRISD2 = 0;
@@ -8570,7 +8610,4 @@ LATDbits.LATD5 = 0;
 LATDbits.LATD6 = 0;
 LATDbits.LATD7 = 0;
 
-
-
-util_timer1_initialize();
 }

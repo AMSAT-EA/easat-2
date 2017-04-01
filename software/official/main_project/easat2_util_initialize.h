@@ -16,5 +16,6 @@
 // functions prototypes
 
 void initialize(void);
+void io_initialize(void);
 
 #endif

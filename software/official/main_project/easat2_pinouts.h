@@ -20,20 +20,22 @@
 
 #define PINOUT_ADC_BATTERY_VOLTAGE_CHANNEL    0   // AN0 (RA0)
 #define PINOUT_ADC_SOLAR_CURRENT_CHANNEL      1   // AN1 (RA1)
-#define PINOUT_ADC_BATTERY_CURRENT_CHANNEL    2   // AN2 (RA2)
+                                                  // AN2 (RA2) used by DAC
                                                   // AN3 is used as digital
 #define PINOUT_ADC_RF_IN_SIGNAL_POWER_CHANNEL 4   // AN4 (RA4)
+#define PINOUT_ADC_BATTERY_CURRENT_CHANNEL    12  // AN2 (RB0)
 
 // PORTA, configured as input (termomether is bidirectional)
 
 #define PINOUT_BATTERY_VOLTAGE_CHANNEL    (PORTAbits.RA0) // used as ADC channel
 #define PINOUT_SOLAR_CURRENT_CHANNEL      (PORTAbits.RA1) // used as ADC channel
-#define PINOUT_BATTERY_CURRENT_CHANNEL    (PORTAbits.RA2) // used as ADC channel
+#define PINOUT_AGC_DAC                    (PORTAbits.RA2) // DAC for AGC
 #define PINOUT_TERMOMETHER                (PORTAbits.RA3) // digital termomether
 #define PINOUT_RF_IN_SIGNAL_POWER_CHANNEL (PORTAbits.RA4) // used as ADC channel
 
 // PORTB
 
+#define PINOUT_BATTERY_CURRENT_CHANNEL    (PORTBbits.RB0) // used as ADC channel
 
 // PORTC
 

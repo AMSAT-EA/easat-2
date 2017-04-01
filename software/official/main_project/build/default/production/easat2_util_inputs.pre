@@ -8573,7 +8573,7 @@ int util_getBatteryCurrent(void) {
 
 float value = 0.0, batteryCurrent = 0.0;
 
-ADCON0bits.CHS = 2;
+ADCON0bits.CHS = 12;
 ADCON0bits.ADON = 1;
 PIR1bits.ADIF = 0;
 

@@ -6641,6 +6641,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTRB=OFF ]
 [; ;easat2_main_mcu.h: 18: void main_loop(void);
 [; ;easat2_util_initialize.h: 18: void initialize(void);
+[; ;easat2_util_initialize.h: 19: void io_initialize(void);
 [; ;easat2_util_inputs.h: 18: float util_getBatteryVoltage(void);
 [; ;easat2_util_inputs.h: 19: int util_getSolarCurrent(void);
 [; ;easat2_util_inputs.h: 20: int util_getBatteryCurrent(void);

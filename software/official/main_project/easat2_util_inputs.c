@@ -86,7 +86,7 @@ int util_getBatteryCurrent(void) {
 
     float value = 0.0, batteryCurrent = 0.0;
 
-    ADCON0bits.CHS  = PINOUT_ADC_BATTERY_CURRENT_CHANNEL; // Select ADC channel 2
+    ADCON0bits.CHS  = PINOUT_ADC_BATTERY_CURRENT_CHANNEL; // Select ADC channel 12
     ADCON0bits.ADON = 1;        // Turn on ADC
     PIR1bits.ADIF   = 0;        // make sure ADC interuption not set
     
