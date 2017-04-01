@@ -6916,7 +6916,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "116
 [e $ ! == _tmr1_interrupt_number -> 50 `i 849  ]
 {
-[; ;easat2_util_timer.c: 119: PORTDbits.RD4 = !PORTDbits.RD4;
+[; ;easat2_util_timer.c: 119: (PORTDbits.RD4) = !(PORTDbits.RD4);
 "119
 [e = . . _PORTDbits 0 4 -> -> ! != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i `i `uc ]
 [; ;easat2_util_timer.c: 121: tmr1_interrupt_number = 0;
@@ -6975,7 +6975,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "161
 [e $ ! == F6950 -> 200 `i 856  ]
 {
-[; ;easat2_util_timer.c: 166: PORTDbits.RD6 = 1;
+[; ;easat2_util_timer.c: 166: (PORTDbits.RD6) = 1;
 "166
 [e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
 [; ;easat2_util_timer.c: 168: is_transmitter_active = 1;
@@ -7004,7 +7004,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "180
 [e $ ! == F6951 -> 12000 `i 858  ]
 {
-[; ;easat2_util_timer.c: 182: PORTDbits.RD6 = 0;
+[; ;easat2_util_timer.c: 182: (PORTDbits.RD6) = 0;
 "182
 [e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
 [; ;easat2_util_timer.c: 183: is_transmitter_active = 0;
@@ -7060,7 +7060,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 857 ]
 [; ;easat2_util_timer.c: 207: }
 [; ;easat2_util_timer.c: 209: }
-[; ;easat2_util_timer.c: 214: PIR1bits.TMR1IF=0;
+[; ;easat2_util_timer.c: 214: PIR1bits.TMR1IF = 0;
 "214
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
 "216

@@ -7338,10 +7338,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_transmission.c: 231: void util_transmit_dot(void) {
 [e :U _util_transmit_dot ]
 [f ]
-[; ;easat2_util_transmission.c: 235: PORTDbits.RD1 = 1;
+[; ;easat2_util_transmission.c: 235: (PORTDbits.RD1) = 1;
 "235
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 236: PORTDbits.RD3 = 1;
+[; ;easat2_util_transmission.c: 236: (PORTDbits.RD3) = 1;
 "236
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 [; ;easat2_util_transmission.c: 238: for (int i = 0; i < (int)(2400/32); i++) {
@@ -7376,10 +7376,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "249
 }
 [; ;easat2_util_transmission.c: 249: }
-[; ;easat2_util_transmission.c: 251: PORTDbits.RD1 = 0;
+[; ;easat2_util_transmission.c: 251: (PORTDbits.RD1) = 0;
 "251
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 252: PORTDbits.RD3 = 0;
+[; ;easat2_util_transmission.c: 252: (PORTDbits.RD3) = 0;
 "252
 [e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
 [; ;easat2_util_transmission.c: 254: }
@@ -7392,10 +7392,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_transmission.c: 262: void util_transmit_dash(void) {
 [e :U _util_transmit_dash ]
 [f ]
-[; ;easat2_util_transmission.c: 266: PORTDbits.RD1 = 1;
+[; ;easat2_util_transmission.c: 266: (PORTDbits.RD1) = 1;
 "266
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 267: PORTDbits.RD3 = 1;
+[; ;easat2_util_transmission.c: 267: (PORTDbits.RD3) = 1;
 "267
 [e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 [; ;easat2_util_transmission.c: 269: for (int i = 0; i < ((int)(2400/32)*3); i++) {
@@ -7430,10 +7430,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 "280
 }
 [; ;easat2_util_transmission.c: 280: }
-[; ;easat2_util_transmission.c: 282: PORTDbits.RD1 = 0;
+[; ;easat2_util_transmission.c: 282: (PORTDbits.RD1) = 0;
 "282
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 283: PORTDbits.RD3 = 0;
+[; ;easat2_util_transmission.c: 283: (PORTDbits.RD3) = 0;
 "283
 [e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
 [; ;easat2_util_transmission.c: 284: }
@@ -7485,13 +7485,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_transmission.c: 310: void util_transmit_buzzer_1ms_cycle(void) {
 [e :U _util_transmit_buzzer_1ms_cycle ]
 [f ]
-[; ;easat2_util_transmission.c: 312: PORTDbits.RD2 = 1;
+[; ;easat2_util_transmission.c: 312: (PORTDbits.RD2) = 1;
 "312
 [e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 [; ;easat2_util_transmission.c: 313: util_waits_delay_hundred_us((int)(10/2));
 "313
 [e ( _util_waits_delay_hundred_us (1 / -> 10 `i -> 2 `i ]
-[; ;easat2_util_transmission.c: 314: PORTDbits.RD2 = 0;
+[; ;easat2_util_transmission.c: 314: (PORTDbits.RD2) = 0;
 "314
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 [; ;easat2_util_transmission.c: 315: util_waits_delay_hundred_us((int)(10/2));

@@ -79,7 +79,7 @@ intcode CODE 0 8 8 6 1
 dataCOMRAM COMRAM 1 39 39 5 1
 bssCOMRAM COMRAM 1 2D 2D C 1
 mediumconst MEDIUMCONST 0 7EF4 7EF4 10C 1
-$C:\Users\FELIX\AppData\Local\Temp\s874.obj
+$C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 A6 A6 4 1
 reset_vec CODE 0 0 0 4 1
@@ -1101,42 +1101,42 @@ FAA text4 CODE >231:C:\Users\FELIX\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2
 3C7E text0 CODE >22:C:\Users\FELIX\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
 3C82 text0 CODE >25:C:\Users\FELIX\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
 3C86 text0 CODE >27:C:\Users\FELIX\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
-3846 cinit CODE >6164:C:\Users\FELIX\AppData\Local\Temp\s874.
-3846 cinit CODE >6166:C:\Users\FELIX\AppData\Local\Temp\s874.
-3846 cinit CODE >6169:C:\Users\FELIX\AppData\Local\Temp\s874.
-3846 cinit CODE >6209:C:\Users\FELIX\AppData\Local\Temp\s874.
-3848 cinit CODE >6210:C:\Users\FELIX\AppData\Local\Temp\s874.
-384A cinit CODE >6211:C:\Users\FELIX\AppData\Local\Temp\s874.
-384C cinit CODE >6212:C:\Users\FELIX\AppData\Local\Temp\s874.
-384E cinit CODE >6213:C:\Users\FELIX\AppData\Local\Temp\s874.
-3850 cinit CODE >6214:C:\Users\FELIX\AppData\Local\Temp\s874.
-3852 cinit CODE >6215:C:\Users\FELIX\AppData\Local\Temp\s874.
-3856 cinit CODE >6216:C:\Users\FELIX\AppData\Local\Temp\s874.
-385A cinit CODE >6217:C:\Users\FELIX\AppData\Local\Temp\s874.
-385A cinit CODE >6218:C:\Users\FELIX\AppData\Local\Temp\s874.
-385C cinit CODE >6219:C:\Users\FELIX\AppData\Local\Temp\s874.
-3860 cinit CODE >6220:C:\Users\FELIX\AppData\Local\Temp\s874.
-3862 cinit CODE >6221:C:\Users\FELIX\AppData\Local\Temp\s874.
-3864 cinit CODE >6222:C:\Users\FELIX\AppData\Local\Temp\s874.
-3866 cinit CODE >6226:C:\Users\FELIX\AppData\Local\Temp\s874.
-386A cinit CODE >6227:C:\Users\FELIX\AppData\Local\Temp\s874.
-386C cinit CODE >6228:C:\Users\FELIX\AppData\Local\Temp\s874.
-386C cinit CODE >6229:C:\Users\FELIX\AppData\Local\Temp\s874.
-386E cinit CODE >6230:C:\Users\FELIX\AppData\Local\Temp\s874.
-3870 cinit CODE >6231:C:\Users\FELIX\AppData\Local\Temp\s874.
-3872 cinit CODE >6234:C:\Users\FELIX\AppData\Local\Temp\s874.
-3876 cinit CODE >6235:C:\Users\FELIX\AppData\Local\Temp\s874.
-3878 cinit CODE >6236:C:\Users\FELIX\AppData\Local\Temp\s874.
-3878 cinit CODE >6237:C:\Users\FELIX\AppData\Local\Temp\s874.
-387A cinit CODE >6238:C:\Users\FELIX\AppData\Local\Temp\s874.
-387C cinit CODE >6239:C:\Users\FELIX\AppData\Local\Temp\s874.
-387E cinit CODE >6245:C:\Users\FELIX\AppData\Local\Temp\s874.
-387E cinit CODE >6247:C:\Users\FELIX\AppData\Local\Temp\s874.
-3880 cinit CODE >6248:C:\Users\FELIX\AppData\Local\Temp\s874.
-3882 cinit CODE >6250:C:\Users\FELIX\AppData\Local\Temp\s874.
-3884 cinit CODE >6251:C:\Users\FELIX\AppData\Local\Temp\s874.
-3886 cinit CODE >6252:C:\Users\FELIX\AppData\Local\Temp\s874.
-3888 cinit CODE >6253:C:\Users\FELIX\AppData\Local\Temp\s874.
+3846 cinit CODE >6164:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3846 cinit CODE >6166:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3846 cinit CODE >6169:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3846 cinit CODE >6209:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3848 cinit CODE >6210:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+384A cinit CODE >6211:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+384C cinit CODE >6212:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+384E cinit CODE >6213:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3850 cinit CODE >6214:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3852 cinit CODE >6215:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3856 cinit CODE >6216:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+385A cinit CODE >6217:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+385A cinit CODE >6218:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+385C cinit CODE >6219:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3860 cinit CODE >6220:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3862 cinit CODE >6221:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3864 cinit CODE >6222:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3866 cinit CODE >6226:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+386A cinit CODE >6227:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+386C cinit CODE >6228:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+386C cinit CODE >6229:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+386E cinit CODE >6230:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3870 cinit CODE >6231:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3872 cinit CODE >6234:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3876 cinit CODE >6235:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3878 cinit CODE >6236:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3878 cinit CODE >6237:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+387A cinit CODE >6238:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+387C cinit CODE >6239:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+387E cinit CODE >6245:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+387E cinit CODE >6247:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3880 cinit CODE >6248:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3882 cinit CODE >6250:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3884 cinit CODE >6251:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3886 cinit CODE >6252:C:\Users\FELIX\AppData\Local\Temp\s7a8.
+3888 cinit CODE >6253:C:\Users\FELIX\AppData\Local\Temp\s7a8.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1161,7 +1161,7 @@ util_transmit_dot@i 25 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MC
 main_loop@battery_voltage E3 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
 ___ftdiv@exp 83 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\EASAT2-MCU-C.X.production.obj
-__mediumconst 7EF4 0 MEDIUMCONST 0 mediumconst C:\Users\FELIX\AppData\Local\Temp\s874.obj
+__mediumconst 7EF4 0 MEDIUMCONST 0 mediumconst C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 util_onewire_write_byte@value 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
 __size_of_util_transmit_dash 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
 __size_of_high_priority_int 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
@@ -1172,12 +1172,12 @@ __size_of_util_transmit_space_between_letters 0 0 ABS 0 - dist/default/productio
 _util_getSolarCurrent 2F7C 0 CODE 0 text13 dist/default/production\EASAT2-MCU-C.X.production.obj
 high_priority_int@cycles_transmitter_active 31 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\EASAT2-MCU-C.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\FELIX\AppData\Local\Temp\s874.obj
+___sp 0 0 STACK 2 stack C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 _main 3C7E 0 CODE 0 text0 dist/default/production\EASAT2-MCU-C.X.production.obj
 btemp 3E 0 COMRAM 1 temp dist/default/production\EASAT2-MCU-C.X.production.obj
 ___ftadd@f1 93 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
 ___ftadd@f2 96 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
-start A6 0 CODE 0 init C:\Users\FELIX\AppData\Local\Temp\s874.obj
+start A6 0 CODE 0 init C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 high_priority_int@valid_samples 2D 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
 __size_of___awmod 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
@@ -1226,11 +1226,11 @@ _util_waits_delay_hundred_us 3B5E 0 CODE 0 text27 dist/default/production\EASAT2
 __end_of_util_waits_delay_ms 3B5E 0 CODE 0 text25 dist/default/production\EASAT2-MCU-C.X.production.obj
 _sprintf$2172 B9 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
 util_getBatteryCurrent@value A1 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\FELIX\AppData\Local\Temp\s874.obj
-intlevel0 0 0 CODE 0 text C:\Users\FELIX\AppData\Local\Temp\s874.obj
-intlevel1 0 0 CODE 0 text C:\Users\FELIX\AppData\Local\Temp\s874.obj
-intlevel2 0 0 CODE 0 text C:\Users\FELIX\AppData\Local\Temp\s874.obj
-intlevel3 0 0 CODE 0 text C:\Users\FELIX\AppData\Local\Temp\s874.obj
+__accesstop 60 0 ABS 0 - C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
+intlevel0 0 0 CODE 0 text C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
+intlevel1 0 0 CODE 0 text C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
+intlevel2 0 0 CODE 0 text C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
+intlevel3 0 0 CODE 0 text C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
 __size_of__div_to_l_ 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
 strcat@from 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
@@ -1265,8 +1265,8 @@ _ADCON1 FC1 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
 _ADCON2 FC0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
 _scale$2171 8C 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
 ___awdiv@dividend 75 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\FELIX\AppData\Local\Temp\s874.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\FELIX\AppData\Local\Temp\s874.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 _util_getBatteryVoltage 3110 0 CODE 0 text14 dist/default/production\EASAT2-MCU-C.X.production.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
 __size_of___awtoft 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
@@ -1399,7 +1399,7 @@ high_priority_int@i 20 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MC
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\EASAT2-MCU-C.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\EASAT2-MCU-C.X.production.obj
 util_getTemperature@temperature 1C9 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\FELIX\AppData\Local\Temp\s874.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 __size_of_util_transmit_dot 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
 __end_of_sprintf C48 0 CODE 0 text31 dist/default/production\EASAT2-MCU-C.X.production.obj
 ___lltoft 3684 0 CODE 0 text41 dist/default/production\EASAT2-MCU-C.X.production.obj
@@ -1670,8 +1670,8 @@ util_transmit_dash@i 25 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-M
 _util_transmit_space_between_words 3C4E 0 CODE 0 text19 dist/default/production\EASAT2-MCU-C.X.production.obj
 _util_transmit_dash 3A32 0 CODE 0 text24 dist/default/production\EASAT2-MCU-C.X.production.obj
 ___lwtoft@c 76 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
-stackhi 5FF 0 ABS 0 - C:\Users\FELIX\AppData\Local\Temp\s874.obj
-stacklo 2C8 0 ABS 0 - C:\Users\FELIX\AppData\Local\Temp\s874.obj
+stackhi 5FF 0 ABS 0 - C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
+stacklo 2C8 0 ABS 0 - C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 _util_transmit_space_between_dots_dashes 3C6E 0 CODE 0 text22 dist/default/production\EASAT2-MCU-C.X.production.obj
 __end_of_util_waits_delay_hundred_us 3B8E 0 CODE 0 text27 dist/default/production\EASAT2-MCU-C.X.production.obj
 _util_waits_delay_mins 3994 0 CODE 0 text3 dist/default/production\EASAT2-MCU-C.X.production.obj
@@ -1790,7 +1790,7 @@ __Ltext51 0 0 ABS 0 text51 dist/default/production\EASAT2-MCU-C.X.production.obj
 __Ltext52 0 0 ABS 0 text52 dist/default/production\EASAT2-MCU-C.X.production.obj
 __Ltext55 0 0 ABS 0 text55 dist/default/production\EASAT2-MCU-C.X.production.obj
 __end_of_util_transmit_space_between_letters 3C6E 0 CODE 0 text20 dist/default/production\EASAT2-MCU-C.X.production.obj
-__ramtop 600 0 RAM 0 ramtop C:\Users\FELIX\AppData\Local\Temp\s874.obj
+__ramtop 600 0 RAM 0 ramtop C:\Users\FELIX\AppData\Local\Temp\s7a8.obj
 _sprintf AA 0 CODE 0 text31 dist/default/production\EASAT2-MCU-C.X.production.obj
 high_priority_int@noise_mean_value 39 0 COMRAM 1 dataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
 __Lpowerup A6 0 CODE 0 powerup dist/default/production\EASAT2-MCU-C.X.production.obj

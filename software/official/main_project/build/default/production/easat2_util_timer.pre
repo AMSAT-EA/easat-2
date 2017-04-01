@@ -8577,7 +8577,7 @@ tmr1_interrupt_number++;
 if (tmr1_interrupt_number == 50) {
 
 
-PORTDbits.RD4 = !PORTDbits.RD4;
+(PORTDbits.RD4) = !(PORTDbits.RD4);
 
 tmr1_interrupt_number = 0;
 
@@ -8614,7 +8614,7 @@ if (times_thresold_exceeded == 200) {
 
 
 
-PORTDbits.RD6 = 1;
+(PORTDbits.RD6) = 1;
 
 is_transmitter_active = 1;
 cycles_transmitter_active = 0;
@@ -8630,7 +8630,7 @@ times_thresold_exceeded = 0;
 
 if (cycles_transmitter_active == 12000) {
 
-PORTDbits.RD6 = 0;
+(PORTDbits.RD6) = 0;
 is_transmitter_active = 0;
 }
 
@@ -8662,7 +8662,7 @@ activation_thresold = noise_mean_value * 2;
 
 
 
-PIR1bits.TMR1IF=0;
+PIR1bits.TMR1IF = 0;
 
 }
 

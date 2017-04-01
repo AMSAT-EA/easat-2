@@ -6701,13 +6701,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_onewire.c: 23: TRISAbits.TRISA3 = 0;
 "23
 [e = . . _TRISAbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_onewire.c: 25: PORTAbits.RA3 = 0;
+[; ;easat2_util_onewire.c: 25: (PORTAbits.RA3) = 0;
 "25
 [e = . . _PORTAbits 0 3 -> -> 0 `i `uc ]
 [; ;easat2_util_onewire.c: 29: _delay((unsigned long)((560)*(2000000/4000000.0)));
 "29
 [e ( __delay (1 -> * -> -> 560 `i `d / -> -> 2000000 `l `d .4000000.0 `ul ]
-[; ;easat2_util_onewire.c: 32: PORTAbits.RA3 = 1;
+[; ;easat2_util_onewire.c: 32: (PORTAbits.RA3) = 1;
 "32
 [e = . . _PORTAbits 0 3 -> -> 1 `i `uc ]
 [; ;easat2_util_onewire.c: 39: _delay((unsigned long)((70)*(2000000/4000000.0)));
@@ -6716,7 +6716,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_onewire.c: 42: TRISAbits.TRISA3 = 1;
 "42
 [e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_onewire.c: 47: presence = PORTAbits.RA3;
+[; ;easat2_util_onewire.c: 47: presence = (PORTAbits.RA3);
 "47
 [e = _presence -> . . _PORTAbits 0 3 `i ]
 [; ;easat2_util_onewire.c: 52: _delay((unsigned long)((420)*(2000000/4000000.0)));
@@ -6896,13 +6896,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "126
 [e $ ! != _bit_in -> 0 `i 850  ]
 {
-[; ;easat2_util_onewire.c: 129: PORTAbits.RA3 = 0;
+[; ;easat2_util_onewire.c: 129: (PORTAbits.RA3) = 0;
 "129
 [e = . . _PORTAbits 0 3 -> -> 0 `i `uc ]
 [; ;easat2_util_onewire.c: 133: _delay((unsigned long)((10)*(2000000/4000000.0)));
 "133
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 2000000 `l `d .4000000.0 `ul ]
-[; ;easat2_util_onewire.c: 136: PORTAbits.RA3 = 1;
+[; ;easat2_util_onewire.c: 136: (PORTAbits.RA3) = 1;
 "136
 [e = . . _PORTAbits 0 3 -> -> 1 `i `uc ]
 [; ;easat2_util_onewire.c: 139: _delay((unsigned long)((55)*(2000000/4000000.0)));
@@ -6914,13 +6914,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 851  ]
 [e :U 850 ]
 {
-[; ;easat2_util_onewire.c: 144: PORTAbits.RA3 = 0;
+[; ;easat2_util_onewire.c: 144: (PORTAbits.RA3) = 0;
 "144
 [e = . . _PORTAbits 0 3 -> -> 0 `i `uc ]
 [; ;easat2_util_onewire.c: 148: _delay((unsigned long)((70)*(2000000/4000000.0)));
 "148
 [e ( __delay (1 -> * -> -> 70 `i `d / -> -> 2000000 `l `d .4000000.0 `ul ]
-[; ;easat2_util_onewire.c: 151: PORTAbits.RA3 = 1;
+[; ;easat2_util_onewire.c: 151: (PORTAbits.RA3) = 1;
 "151
 [e = . . _PORTAbits 0 3 -> -> 1 `i `uc ]
 [; ;easat2_util_onewire.c: 154: _delay((unsigned long)((10)*(2000000/4000000.0)));
@@ -6947,19 +6947,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_onewire.c: 167: TRISAbits.TRISA3 = 0;
 "167
 [e = . . _TRISAbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_onewire.c: 170: PORTAbits.RA3 = 0;
+[; ;easat2_util_onewire.c: 170: (PORTAbits.RA3) = 0;
 "170
 [e = . . _PORTAbits 0 3 -> -> 0 `i `uc ]
 [; ;easat2_util_onewire.c: 173: _delay((unsigned long)((1)*(2000000/4000000.0)));
 "173
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 2000000 `l `d .4000000.0 `ul ]
-[; ;easat2_util_onewire.c: 176: PORTAbits.RA3 = 1;
+[; ;easat2_util_onewire.c: 176: (PORTAbits.RA3) = 1;
 "176
 [e = . . _PORTAbits 0 3 -> -> 1 `i `uc ]
 [; ;easat2_util_onewire.c: 179: _delay((unsigned long)((5)*(2000000/4000000.0)));
 "179
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 2000000 `l `d .4000000.0 `ul ]
-[; ;easat2_util_onewire.c: 182: value = PORTAbits.RA3;
+[; ;easat2_util_onewire.c: 182: value = (PORTAbits.RA3);
 "182
 [e = _value -> . . _PORTAbits 0 3 `i ]
 [; ;easat2_util_onewire.c: 185: _delay((unsigned long)((60)*(2000000/4000000.0)));

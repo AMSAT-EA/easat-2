@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.41 build -162212810 
-                                                                                               Mon Mar 20 12:09:12 2017
+                                                                                               Sat Apr 01 11:27:14 2017
 
 Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
      1                           	processor	18F45K22
@@ -3193,7 +3193,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3170  0039D6  D009               	goto	l156
   3171                           
   3172                           ; BSR set to: 0
-  3173                           ;easat2_util_onewire.c: 129: PORTAbits.RA3 = 0;
+  3173                           ;easat2_util_onewire.c: 129: (PORTAbits.RA3) = 0;
   3174  0039D8  9680               	bcf	3968,3,c	;volatile
   3175                           
   3176                           ;easat2_util_onewire.c: 133: _delay((unsigned long)((10)*(2000000/4000000.0)));
@@ -3201,7 +3201,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3178  0039DC  D000               	nop2		;2 cycle nop
   3179  0039DE  F000               	nop	
   3180                           
-  3181                           ;easat2_util_onewire.c: 136: PORTAbits.RA3 = 1;
+  3181                           ;easat2_util_onewire.c: 136: (PORTAbits.RA3) = 1;
   3182  0039E0  8680               	bsf	3968,3,c	;volatile
   3183                           
   3184                           ;easat2_util_onewire.c: 139: _delay((unsigned long)((55)*(2000000/4000000.0)));
@@ -3215,7 +3215,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3192  0039EA                     l156:
   3193                           
   3194                           ; BSR set to: 0
-  3195                           ;easat2_util_onewire.c: 144: PORTAbits.RA3 = 0;
+  3195                           ;easat2_util_onewire.c: 144: (PORTAbits.RA3) = 0;
   3196  0039EA  9680               	bcf	3968,3,c	;volatile
   3197                           
   3198                           ; BSR set to: 0
@@ -3226,7 +3226,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3203  0039F0  D7FE               	bra	u6367
   3204  0039F2  D000               	nop2	
   3205                           
-  3206                           ;easat2_util_onewire.c: 151: PORTAbits.RA3 = 1;
+  3206                           ;easat2_util_onewire.c: 151: (PORTAbits.RA3) = 1;
   3207  0039F4  8680               	bsf	3968,3,c	;volatile
   3208                           
   3209                           ;easat2_util_onewire.c: 154: _delay((unsigned long)((10)*(2000000/4000000.0)));
@@ -3297,7 +3297,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3274                           ;easat2_util_onewire.c: 23: TRISAbits.TRISA3 = 0;
   3275  00391A  9692               	bcf	3986,3,c	;volatile
   3276                           
-  3277                           ;easat2_util_onewire.c: 25: PORTAbits.RA3 = 0;
+  3277                           ;easat2_util_onewire.c: 25: (PORTAbits.RA3) = 0;
   3278  00391C  9680               	bcf	3968,3,c	;volatile
   3279                           
   3280                           ;easat2_util_onewire.c: 29: _delay((unsigned long)((560)*(2000000/4000000.0)));
@@ -3307,7 +3307,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3284  003922  D7FE               	bra	u6377
   3285  003924  F000               	nop	
   3286                           
-  3287                           ;easat2_util_onewire.c: 32: PORTAbits.RA3 = 1;
+  3287                           ;easat2_util_onewire.c: 32: (PORTAbits.RA3) = 1;
   3288  003926  8680               	bsf	3968,3,c	;volatile
   3289                           
   3290                           ;easat2_util_onewire.c: 39: _delay((unsigned long)((70)*(2000000/4000000.0)));
@@ -3320,7 +3320,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3297                           ;easat2_util_onewire.c: 42: TRISAbits.TRISA3 = 1;
   3298  003930  8692               	bsf	3986,3,c	;volatile
   3299                           
-  3300                           ;easat2_util_onewire.c: 47: presence = PORTAbits.RA3;
+  3300                           ;easat2_util_onewire.c: 47: presence = (PORTAbits.RA3);
   3301  003932  A680               	btfss	3968,3,c	;volatile
   3302  003934  D003               	goto	u5400
   3303  003936  6A22               	clrf	??_util_onewire_reset& (0+255),c
@@ -3663,10 +3663,10 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3639                           ;easat2_util_onewire.c: 167: TRISAbits.TRISA3 = 0;
   3640  003A6E  9692               	bcf	3986,3,c	;volatile
   3641                           
-  3642                           ;easat2_util_onewire.c: 170: PORTAbits.RA3 = 0;
+  3642                           ;easat2_util_onewire.c: 170: (PORTAbits.RA3) = 0;
   3643  003A70  9680               	bcf	3968,3,c	;volatile
   3644                           
-  3645                           ;easat2_util_onewire.c: 176: PORTAbits.RA3 = 1;
+  3645                           ;easat2_util_onewire.c: 176: (PORTAbits.RA3) = 1;
   3646                           
   3647                           ;easat2_util_onewire.c: 173: _delay((unsigned long)((1)*(2000000/4000000.0)));
   3648  003A72  8680               	bsf	3968,3,c	;volatile
@@ -3674,7 +3674,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   3650                           ;easat2_util_onewire.c: 179: _delay((unsigned long)((5)*(2000000/4000000.0)));
   3651  003A74  D000               	nop2		;2 cycle nop
   3652                           
-  3653                           ;easat2_util_onewire.c: 182: value = PORTAbits.RA3;
+  3653                           ;easat2_util_onewire.c: 182: value = (PORTAbits.RA3);
   3654  003A76  A680               	btfss	3968,3,c	;volatile
   3655  003A78  D003               	goto	u5000
   3656  003A7A  6A22               	clrf	??_util_onewire_read_bit& (0+255),c
@@ -5921,12 +5921,12 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5896  0039FE                     _util_transmit_dot:
   5897                           	opt stack 21
   5898                           
-  5899                           ;easat2_util_transmission.c: 235: PORTDbits.RD1 = 1;
+  5899                           ;easat2_util_transmission.c: 235: (PORTDbits.RD1) = 1;
   5900                           
   5901                           ;incstack = 0
   5902  0039FE  8283               	bsf	3971,1,c	;volatile
   5903                           
-  5904                           ;easat2_util_transmission.c: 236: PORTDbits.RD3 = 1;
+  5904                           ;easat2_util_transmission.c: 236: (PORTDbits.RD3) = 1;
   5905  003A00  8683               	bsf	3971,3,c	;volatile
   5906                           
   5907                           ;easat2_util_transmission.c: 238: for (int i = 0; i < (int)(2400/32); i++) {
@@ -5960,10 +5960,10 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5935  003A2C                     l326:
   5936                           
   5937                           ;easat2_util_transmission.c: 249: }
-  5938                           ;easat2_util_transmission.c: 251: PORTDbits.RD1 = 0;
+  5938                           ;easat2_util_transmission.c: 251: (PORTDbits.RD1) = 0;
   5939  003A2C  9283               	bcf	3971,1,c	;volatile
   5940                           
-  5941                           ;easat2_util_transmission.c: 252: PORTDbits.RD3 = 0;
+  5941                           ;easat2_util_transmission.c: 252: (PORTDbits.RD3) = 0;
   5942  003A2E  9683               	bcf	3971,3,c	;volatile
   5943  003A30  0012               	return		;funcret
   5944  003A32                     __end_of_util_transmit_dot:
@@ -6020,12 +6020,12 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   5995  003A32                     _util_transmit_dash:
   5996                           	opt stack 21
   5997                           
-  5998                           ;easat2_util_transmission.c: 266: PORTDbits.RD1 = 1;
+  5998                           ;easat2_util_transmission.c: 266: (PORTDbits.RD1) = 1;
   5999                           
   6000                           ;incstack = 0
   6001  003A32  8283               	bsf	3971,1,c	;volatile
   6002                           
-  6003                           ;easat2_util_transmission.c: 267: PORTDbits.RD3 = 1;
+  6003                           ;easat2_util_transmission.c: 267: (PORTDbits.RD3) = 1;
   6004  003A34  8683               	bsf	3971,3,c	;volatile
   6005                           
   6006                           ;easat2_util_transmission.c: 269: for (int i = 0; i < ((int)(2400/32)*3); i++) {
@@ -6059,10 +6059,10 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6034  003A60                     l333:
   6035                           
   6036                           ;easat2_util_transmission.c: 280: }
-  6037                           ;easat2_util_transmission.c: 282: PORTDbits.RD1 = 0;
+  6037                           ;easat2_util_transmission.c: 282: (PORTDbits.RD1) = 0;
   6038  003A60  9283               	bcf	3971,1,c	;volatile
   6039                           
-  6040                           ;easat2_util_transmission.c: 283: PORTDbits.RD3 = 0;
+  6040                           ;easat2_util_transmission.c: 283: (PORTDbits.RD3) = 0;
   6041  003A62  9683               	bcf	3971,3,c	;volatile
   6042  003A64  0012               	return		;funcret
   6043  003A66                     __end_of_util_transmit_dash:
@@ -6209,7 +6209,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6184  003C0E                     _util_transmit_buzzer_1ms_cycle:
   6185                           	opt stack 21
   6186                           
-  6187                           ;easat2_util_transmission.c: 312: PORTDbits.RD2 = 1;
+  6187                           ;easat2_util_transmission.c: 312: (PORTDbits.RD2) = 1;
   6188                           
   6189                           ; BSR set to: 0
   6190                           ;incstack = 0
@@ -6223,7 +6223,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   6198  003C18  6F71               	movwf	util_waits_delay_hundred_us@hun_us& (0+255),b
   6199  003C1A  ECAF  F01D         	call	_util_waits_delay_hundred_us	;wreg free
   6200                           
-  6201                           ;easat2_util_transmission.c: 314: PORTDbits.RD2 = 0;
+  6201                           ;easat2_util_transmission.c: 314: (PORTDbits.RD2) = 0;
   6202  003C1E  9483               	bcf	3971,2,c	;volatile
   6203                           
   6204                           ;easat2_util_transmission.c: 315: util_waits_delay_hundred_us((int)(10/2));
@@ -13376,7 +13376,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  13343  0021F4  A4D8               	btfss	status,2,c
  13344  0021F6  D010               	goto	i2l4509
  13345                           
- 13346                           ;easat2_util_timer.c: 119: PORTDbits.RD4 = !PORTDbits.RD4;
+ 13346                           ;easat2_util_timer.c: 119: (PORTDbits.RD4) = !(PORTDbits.RD4);
  13347  0021F8  B883               	btfsc	3971,4,c	;volatile
  13348  0021FA  D003               	goto	i2u428_40
  13349  0021FC  6A0B               	clrf	??_high_priority_int& (0+255),c
@@ -13478,7 +13478,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  13445  00227A  A4D8               	btfss	status,2,c
  13446  00227C  D081               	goto	i2l4571
  13447                           
- 13448                           ;easat2_util_timer.c: 166: PORTDbits.RD6 = 1;
+ 13448                           ;easat2_util_timer.c: 166: (PORTDbits.RD6) = 1;
  13449  00227E  8C83               	bsf	3971,6,c	;volatile
  13450                           
  13451                           ;easat2_util_timer.c: 168: is_transmitter_active = 1;
@@ -13519,7 +13519,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  13486  0022AC  A4D8               	btfss	status,2,c
  13487  0022AE  D005               	goto	i2l4545
  13488                           
- 13489                           ;easat2_util_timer.c: 182: PORTDbits.RD6 = 0;
+ 13489                           ;easat2_util_timer.c: 182: (PORTDbits.RD6) = 0;
  13490  0022B0  9C83               	bcf	3971,6,c	;volatile
  13491                           
  13492                           ;easat2_util_timer.c: 183: is_transmitter_active = 0;
@@ -13640,7 +13640,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
  13606                           
  13607                           ;easat2_util_timer.c: 207: }
  13608                           ;easat2_util_timer.c: 209: }
- 13609                           ;easat2_util_timer.c: 214: PIR1bits.TMR1IF=0;
+ 13609                           ;easat2_util_timer.c: 214: PIR1bits.TMR1IF = 0;
  13610  002380  909E               	bcf	3998,0,c	;volatile
  13611  002382                     i2l222:
  13612  002382  C01D  FFF5         	movff	??_high_priority_int+18,tablat
@@ -14859,7 +14859,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.41 build -162212810 
-Symbol Table                                                                                   Mon Mar 20 12:09:12 2017
+Symbol Table                                                                                   Sat Apr 01 11:27:14 2017
 
                      util_onewire_read_byte@value 0093              high_priority_int@activation_thresold 003C  
                             util_getTemperature@i 01CC                                                l24 3504  

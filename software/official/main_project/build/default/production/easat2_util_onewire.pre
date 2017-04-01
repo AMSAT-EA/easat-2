@@ -8505,14 +8505,14 @@ int presence = 1;
 
 TRISAbits.TRISA3 = 0;
 
-PORTAbits.RA3 = 0;
+(PORTAbits.RA3) = 0;
 
 
 
 _delay((unsigned long)((560)*(2000000/4000000.0)));
 
 
-PORTAbits.RA3 = 1;
+(PORTAbits.RA3) = 1;
 
 # 39
 _delay((unsigned long)((70)*(2000000/4000000.0)));
@@ -8523,7 +8523,7 @@ TRISAbits.TRISA3 = 1;
 
 
 
-presence = PORTAbits.RA3;
+presence = (PORTAbits.RA3);
 
 
 
@@ -8605,14 +8605,14 @@ TRISAbits.TRISA3 = 0;
 if (bit_in) {
 
 
-PORTAbits.RA3 = 0;
+(PORTAbits.RA3) = 0;
 
 
 
 _delay((unsigned long)((10)*(2000000/4000000.0)));
 
 
-PORTAbits.RA3 = 1;
+(PORTAbits.RA3) = 1;
 
 
 _delay((unsigned long)((55)*(2000000/4000000.0)));
@@ -8620,14 +8620,14 @@ _delay((unsigned long)((55)*(2000000/4000000.0)));
 } else {
 
 
-PORTAbits.RA3 = 0;
+(PORTAbits.RA3) = 0;
 
 
 
 _delay((unsigned long)((70)*(2000000/4000000.0)));
 
 
-PORTAbits.RA3 = 1;
+(PORTAbits.RA3) = 1;
 
 
 _delay((unsigned long)((10)*(2000000/4000000.0)));
@@ -8646,19 +8646,19 @@ int value = 0;
 TRISAbits.TRISA3 = 0;
 
 
-PORTAbits.RA3 = 0;
+(PORTAbits.RA3) = 0;
 
 
 _delay((unsigned long)((1)*(2000000/4000000.0)));
 
 
-PORTAbits.RA3 = 1;
+(PORTAbits.RA3) = 1;
 
 
 _delay((unsigned long)((5)*(2000000/4000000.0)));
 
 
-value = PORTAbits.RA3;
+value = (PORTAbits.RA3);
 
 
 _delay((unsigned long)((60)*(2000000/4000000.0)));

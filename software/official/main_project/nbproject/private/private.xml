@@ -5,9 +5,12 @@
         <group>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_transmission.h</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_initialize.c</file>
+            <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_energy.c</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_timer.c</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_config.h</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_initialize.h</file>
+            <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_pinouts.h</file>
+            <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_commands.c</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_transmission.c</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2.h</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_waits.c</file>
@@ -15,6 +18,7 @@
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_inputs.c</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_eeprom.c</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_agc.c</file>
+            <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_onewire.c</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_agc.h</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_main_mcu.c</file>
             <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_eeprom.h</file>

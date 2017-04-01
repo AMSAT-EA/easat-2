@@ -20,16 +20,16 @@ int util_onewire_reset(void) {
     int presence = 1;
 
     // set RA3 as output
-    TRISAbits.TRISA3 = 0;
+    TRISAbits.TRISA3    = 0;
     // set the output low
-    PORTAbits.RA3  = 0;
+    PINOUT_TERMOMETHER  = 0;
 
     // wait for the required delay (between 480us and 640 us)
     // 560 is fine
      __delay_us(ONEWIRE_RESET_DELAY_DOWN_US);
 
      // set output high
-    PORTAbits.RA3 = 1;
+    PINOUT_TERMOMETHER = 1;
 
     // wait for the required delay (between 15us and 60 us) at least to read
     // termometer can wait 15 to 60 to send pulse and
@@ -44,7 +44,7 @@ int util_onewire_reset(void) {
     // line should be low
     // read presence pulse from slave
 
-    presence = PORTAbits.RA3;
+    presence = PINOUT_TERMOMETHER;
 
     // wait for the pulse to finish minimum 480 us from line to UP
     // so at least (480-70 = 410). 420 is fine
@@ -126,14 +126,14 @@ void util_onewire_write_bit(int bit_in) {
     if (bit_in) {
 
         // set the output low
-        PORTAbits.RA3  = 0;
+        PINOUT_TERMOMETHER  = 0;
 
         // wait for the required delay (between 0 and  us)
         // 10 us is right
         __delay_us(ONEWIRE_WRITE_DELAY_ONE_DOWN_US);
 
         // set output high
-        PORTAbits.RA3 = 1;
+        PINOUT_TERMOMETHER = 1;
 
         // wait to complete 60 us (55 is ok)
         __delay_us(ONEWIRE_WRITE_DELAY_ONE_UP_US);   
@@ -141,14 +141,14 @@ void util_onewire_write_bit(int bit_in) {
     } else {
 
         // set the output low
-        PORTAbits.RA3  = 0;
+        PINOUT_TERMOMETHER  = 0;
 
         // wait for the required delay (minimun 60 us)
         // 70 us is right
         __delay_us(ONEWIRE_WRITE_DELAY_ZERO_DOWN_US);
 
         // set output high
-        PORTAbits.RA3 = 1;
+        PINOUT_TERMOMETHER = 1;
 
         // wait to complete 60 us (at least 1 - 10 is ok)
         __delay_us(ONEWIRE_WRITE_DELAY_ZERO_UP_US);
@@ -167,19 +167,19 @@ int util_onewire_read_bit(void) {
     TRISAbits.TRISA3 = 0;
 
     // set the output low
-    PORTAbits.RA3  = 0;
+    PINOUT_TERMOMETHER  = 0;
 
     // wait for the required delay (between 0 and 1 us)
     __delay_us(ONEWIRE_READ_DELAY_ONE_DOWN_US);
 
     // set output high
-    PORTAbits.RA3 = 1;
+    PINOUT_TERMOMETHER = 1;
 
     // read before 15 us
     __delay_us(ONEWIRE_READ_DELAY_US);
 
     // get the value from the pin
-    value = PORTAbits.RA3;
+    value = PINOUT_TERMOMETHER;
 
     // wait to complete the read slot
     __delay_us(ONEWIRE_READ_DELAY_SLOT_US);
