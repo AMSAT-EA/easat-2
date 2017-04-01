@@ -150,6 +150,35 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADCON0bits `VS639 ~T0 @X0 0 e@4034 ]
 "13567
 [v _ADRES `Vus ~T0 @X0 0 e@4035 ]
+"6490
+[s S341 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S341 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"6500
+[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"6510
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
+"6520
+[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S344 . FLT0 C12IN3M . C12IN2M T5G T1G ]
+"6528
+[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S345 . SRI C12IN3N . C12IN2N . CCP3 ]
+"6536
+[s S346 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S346 . . CTED1 CTED2 . T3CKI ]
+"6543
+[s S347 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S347 . . P2A . P3A ]
+"6549
+[s S348 :3 `uc 1 :1 `uc 1 ]
+[n S348 . . CCP2_PA2 ]
+"6489
+[u S340 `S341 1 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 `S348 1 ]
+[n S340 . . . . . . . . . ]
+"6554
+[v _PORTBbits `VS340 ~T0 @X0 0 e@3969 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6975,9 +7004,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "161
 [e $ ! == F6950 -> 200 `i 856  ]
 {
-[; ;easat2_util_timer.c: 166: (PORTDbits.RD6) = 1;
+[; ;easat2_util_timer.c: 166: (PORTBbits.RB1) = 1;
 "166
-[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
 [; ;easat2_util_timer.c: 168: is_transmitter_active = 1;
 "168
 [e = F6952 -> 1 `i ]
@@ -7004,9 +7033,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "180
 [e $ ! == F6951 -> 12000 `i 858  ]
 {
-[; ;easat2_util_timer.c: 182: (PORTDbits.RD6) = 0;
+[; ;easat2_util_timer.c: 182: (PORTBbits.RB1) = 0;
 "182
-[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
 [; ;easat2_util_timer.c: 183: is_transmitter_active = 0;
 "183
 [e = F6952 -> 0 `i ]

@@ -163,7 +163,7 @@ void interrupt high_priority_int() {
                 // turn on repeater
                 
                 // set output high
-                PINOUT_REPEATER_ON = 1;               
+                PINOUT_REPEATER_PTT_ON = 1;               
                 
                 is_transmitter_active     = 1;
                 cycles_transmitter_active = 0;
@@ -179,7 +179,7 @@ void interrupt high_priority_int() {
             
             if (cycles_transmitter_active == REPEATER_ACTIVE_CYCLES) {
                 // turn off repeater
-                PINOUT_REPEATER_ON = 0;
+                PINOUT_REPEATER_PTT_ON = 0;
                 is_transmitter_active     = 0;
             }
             
@@ -188,7 +188,7 @@ void interrupt high_priority_int() {
             // check if we have to start from first position again (cycle)
             if (sample_position == SAMPLE_TABLE_SIZE) sample_position = 0;
 
-            if (valid_samples == SAMPLE_TABLE_SIZE) {
+            if (valid_samples   == SAMPLE_TABLE_SIZE) {
                 
                 // calculate new noise mean value
                 noise_mean_value = 0;

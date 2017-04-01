@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.41\dat\en_msgs.txt -cs \
   -h+dist/default/production\EASAT2-MCU-C.X.production.sym \
   --cmf=dist/default/production\EASAT2-MCU-C.X.production.cmf -z -Q18F45K22 \
-  -oC:\Users\FELIX\AppData\Local\Temp\s3so.2 \
+  -oC:\Users\FELIX\AppData\Local\Temp\s7t0.2 \
   -Mdist/default/production/EASAT2-MCU-C.X.production.map -E1 -ver=XC8 \
   -ASTACK=02C8h-05ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0600h-06FFhx122 -AMEDIUMCONST=0600h-07FFFh -ACOMRAM=01h-05Fh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\FELIX\AppData\Local\Temp\s3so.obj \
+  C:\Users\FELIX\AppData\Local\Temp\s7t0.obj \
   dist/default/production\EASAT2-MCU-C.X.production.obj 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\FELIX\AppData\Local\Temp\s3so.obj
+C:\Users\FELIX\AppData\Local\Temp\s7t0.obj
                 init                                 A6       A6        4        C       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -314,6 +314,7 @@ _LATDbits                                         (abs)        000F8C
 _PIE1bits                                         (abs)        000F9D
 _PIR1bits                                         (abs)        000F9E
 _PORTAbits                                        (abs)        000F80
+_PORTBbits                                        (abs)        000F81
 _PORTDbits                                        (abs)        000F83
 _RCONbits                                         (abs)        000FD0
 _T1CONbits                                        (abs)        000FCD
@@ -884,21 +885,21 @@ __tdiv_to_l_@f2                                   cstackBANK0  000074
 __tdiv_to_l_@quot                                 cstackCOMRAM 000025
 _dpowers                                          mediumconst  007EF5
 _fround                                           text34       001C88
-_fround$2293                                      cstackBANK0  00008F
-_fround$2294                                      cstackBANK0  00008C
+_fround$2421                                      cstackBANK0  00008F
+_fround$2422                                      cstackBANK0  00008C
 _high_priority_int                                intcode      000008
 _initialize                                       text51       003CB6
 _io_initialize                                    text53       003286
 _isdigit                                          text33       003C5C
-_isdigit$1935                                     cstackCOMRAM 000023
+_isdigit$2063                                     cstackCOMRAM 000023
 _low_priority_int                                 intcodelo    000018
 _main                                             text0        003CAA
 _main_loop                                        text1        0035BA
 _memset                                           text50       003B28
 _scale                                            text32       0013EA
-_scale$2295                                       cstackBANK0  00008C
+_scale$2423                                       cstackBANK0  00008C
 _sprintf                                          text31       0000AA
-_sprintf$2296                                     cstackBANK0  0000B9
+_sprintf$2424                                     cstackBANK0  0000B9
 _strcat                                           text30       0038B8
 _strcpy                                           text29       003AC4
 _strlen                                           text28       00377C
@@ -908,10 +909,10 @@ _util_getBatteryCurrent                           text15       003046
 _util_getBatteryVoltage                           text14       003110
 _util_getSolarCurrent                             text13       002F7C
 _util_getTemperature                              text4        000C48
-_util_getTemperature$2289                         cstackBANK1  0001A7
-_util_getTemperature$2290                         cstackBANK1  0001AA
-_util_getTemperature$2291                         cstackBANK1  0001AD
-_util_getTemperature$2292                         cstackBANK1  0001B0
+_util_getTemperature$2417                         cstackBANK1  0001A7
+_util_getTemperature$2418                         cstackBANK1  0001AA
+_util_getTemperature$2419                         cstackBANK1  0001AD
+_util_getTemperature$2420                         cstackBANK1  0001B0
 _util_onewire_read_bit                            text10       003A92
 _util_onewire_read_byte                           text9        0023BE
 _util_onewire_reset                               text8        00393E

@@ -8614,7 +8614,7 @@ if (times_thresold_exceeded == 200) {
 
 
 
-(PORTDbits.RD6) = 1;
+(PORTBbits.RB1) = 1;
 
 is_transmitter_active = 1;
 cycles_transmitter_active = 0;
@@ -8630,7 +8630,7 @@ times_thresold_exceeded = 0;
 
 if (cycles_transmitter_active == 12000) {
 
-(PORTDbits.RD6) = 0;
+(PORTBbits.RB1) = 0;
 is_transmitter_active = 0;
 }
 

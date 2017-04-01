@@ -6828,42 +6828,42 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_initialize.c: 83: TRISBbits.TRISB0 = 1;
 "83
 [e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 84: TRISBbits.TRISB1 = 1;
+[; ;easat2_util_initialize.c: 84: TRISBbits.TRISB1 = 0;
 "84
-[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 85: TRISBbits.TRISB2 = 1;
+[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 85: TRISBbits.TRISB2 = 0;
 "85
-[e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 86: TRISBbits.TRISB3 = 1;
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 86: TRISBbits.TRISB3 = 0;
 "86
-[e = . . _TRISBbits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 87: TRISBbits.TRISB4 = 1;
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 87: TRISBbits.TRISB4 = 0;
 "87
-[e = . . _TRISBbits 0 4 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 88: TRISBbits.TRISB5 = 1;
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 88: TRISBbits.TRISB5 = 0;
 "88
-[e = . . _TRISBbits 0 5 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 89: TRISBbits.TRISB6 = 1;
+[e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 89: TRISBbits.TRISB6 = 0;
 "89
-[e = . . _TRISBbits 0 6 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 90: TRISBbits.TRISB7 = 1;
+[e = . . _TRISBbits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 90: TRISBbits.TRISB7 = 0;
 "90
-[e = . . _TRISBbits 0 7 -> -> 1 `i `uc ]
+[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
 [; ;easat2_util_initialize.c: 94: ANSELBbits.ANSB0 = 1;
 "94
 [e = . . _ANSELBbits 0 0 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 95: ANSELBbits.ANSB1 = 1;
+[; ;easat2_util_initialize.c: 95: ANSELBbits.ANSB1 = 0;
 "95
-[e = . . _ANSELBbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 96: ANSELBbits.ANSB2 = 1;
+[e = . . _ANSELBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 96: ANSELBbits.ANSB2 = 0;
 "96
-[e = . . _ANSELBbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 97: ANSELBbits.ANSB3 = 1;
+[e = . . _ANSELBbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 97: ANSELBbits.ANSB3 = 0;
 "97
-[e = . . _ANSELBbits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 99: ANSELBbits.ANSB5 = 1;
+[e = . . _ANSELBbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_initialize.c: 99: ANSELBbits.ANSB5 = 0;
 "99
-[e = . . _ANSELBbits 0 5 -> -> 1 `i `uc ]
+[e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
 [; ;easat2_util_initialize.c: 103: LATBbits.LATB0 = 0;
 "103
 [e = . . _LATBbits 0 0 -> -> 0 `i `uc ]

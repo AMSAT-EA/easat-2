@@ -78,25 +78,25 @@ void io_initialize(void) {
     // LATAbits.LATA6   = 0; Crystal
     // LATAbits.LATA7   = 0; Crystal
 
-    // set PORTB as input
+    // set PORTB as input for B0, the other ones are output
 
     TRISBbits.TRISB0 = 1;
-    TRISBbits.TRISB1 = 1;
-    TRISBbits.TRISB2 = 1;
-    TRISBbits.TRISB3 = 1;
-    TRISBbits.TRISB4 = 1;
-    TRISBbits.TRISB5 = 1;
-    TRISBbits.TRISB6 = 1;
-    TRISBbits.TRISB7 = 1;
+    TRISBbits.TRISB1 = 0;
+    TRISBbits.TRISB2 = 0;
+    TRISBbits.TRISB3 = 0;
+    TRISBbits.TRISB4 = 0;
+    TRISBbits.TRISB5 = 0;
+    TRISBbits.TRISB6 = 0;
+    TRISBbits.TRISB7 = 0;
 
-    // set B inputs as analog. Only 0, 1, 2, 3 and 5 can be used
+    // set B0 input as analog. Only 0, 1, 2, 3 and 5 can be used
 
     ANSELBbits.ANSB0 = 1;
-    ANSELBbits.ANSB1 = 1;
-    ANSELBbits.ANSB2 = 1;
-    ANSELBbits.ANSB3 = 1;
+    ANSELBbits.ANSB1 = 0;
+    ANSELBbits.ANSB2 = 0;
+    ANSELBbits.ANSB3 = 0;
     
-    ANSELBbits.ANSB5 = 1;     
+    ANSELBbits.ANSB5 = 0;     
 
     // clean B latches
 

@@ -239,6 +239,64 @@
 ]
 [u S698 . 1 `S133 1 . 1 0 `S642 1 . 1 0 `S649 1 . 1 0 `S656 1 . 1 0 `S663 1 . 1 0 `S666 1 . 1 0 `S672 1 . 1 0 `S677 1 . 1 0 `S682 1 . 1 0 `S685 1 . 1 0 `S688 1 . 1 0 `S691 1 . 1 0 `S694 1 . 1 0 ]
 [v _PORTAbits PORTAbits `VES698  1 e 1 @3968 ]
+[s S230 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"6554
+[s S1379 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 CCP2 1 0 :1:3 
+`uc 1 KBI0 1 0 :1:4 
+`uc 1 KBI1 1 0 :1:5 
+`uc 1 KBI2 1 0 :1:6 
+`uc 1 KBI3 1 0 :1:7 
+]
+[s S1388 . 1 `uc 1 AN12 1 0 :1:0 
+`uc 1 AN10 1 0 :1:1 
+`uc 1 AN8 1 0 :1:2 
+`uc 1 AN9 1 0 :1:3 
+`uc 1 AN11 1 0 :1:4 
+`uc 1 AN13 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S1397 . 1 `uc 1 FLT0 1 0 :1:0 
+`uc 1 C12IN3M 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 C12IN2M 1 0 :1:3 
+`uc 1 T5G 1 0 :1:4 
+`uc 1 T1G 1 0 :1:5 
+]
+[s S1404 . 1 `uc 1 SRI 1 0 :1:0 
+`uc 1 C12IN3N 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 C12IN2N 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CCP3 1 0 :1:5 
+]
+[s S1411 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CTED1 1 0 :1:2 
+`uc 1 CTED2 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T3CKI 1 0 :1:5 
+]
+[s S1417 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 P2A 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 P3A 1 0 :1:5 
+]
+[s S1422 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S1425 . 1 `S230 1 . 1 0 `S1379 1 . 1 0 `S1388 1 . 1 0 `S1397 1 . 1 0 `S1404 1 . 1 0 `S1411 1 . 1 0 `S1417 1 . 1 0 `S1422 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES1425  1 e 1 @3969 ]
 [s S327 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
@@ -376,15 +434,6 @@
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "8223
-[s S230 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
 [u S239 . 1 `S221 1 . 1 0 `S230 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES239  1 e 1 @3987 ]
 [s S318 . 1 `uc 1 TRISD0 1 0 :1:0 
@@ -890,9 +939,9 @@
 {
 "528
 [v sprintf@val val `ul  1 a 4 102 ]
-[u S1699 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+[u S1827 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
 "526
-[v sprintf@tmpval tmpval `S1699  1 a 4 98 ]
+[v sprintf@tmpval tmpval `S1827  1 a 4 98 ]
 "516
 [v sprintf@fval fval `d  1 a 3 108 ]
 "504
