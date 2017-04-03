@@ -15,6 +15,16 @@
 // this function initializes the MCU
 
 void initialize(void) {
+    
+    io_initialize();
+    util_timer1_initialize();
+    
+    
+}
+
+// this functions initializes PORTS and ADCs
+
+void io_initialize(void) {
           
     // configure PORTS, ADCs, and so on
 
@@ -35,11 +45,11 @@ void initialize(void) {
     ADCON1 = 0x08;      // b'00001000' ; ADC VREF+=FVR BUF2,VREF-=Vss
     ADCON2 = 0xAF;      // b'10101111' ; right justify, Frc, 12 TAD ACQ time
     
-    // set PORTA as input
+    // set PORTA as input, except RA2 (DAC output)
 
     TRISAbits.TRISA0 = 1;
     TRISAbits.TRISA1 = 1;
-    TRISAbits.TRISA2 = 1;
+    TRISAbits.TRISA2 = 0;
     TRISAbits.TRISA3 = 1;
     TRISAbits.TRISA4 = 1;
     TRISAbits.TRISA5 = 1;
@@ -68,6 +78,35 @@ void initialize(void) {
     // LATAbits.LATA6   = 0; Crystal
     // LATAbits.LATA7   = 0; Crystal
 
+    // set PORTB as input for B0, the other ones are output
+
+    TRISBbits.TRISB0 = 1;
+    TRISBbits.TRISB1 = 0;
+    TRISBbits.TRISB2 = 0;
+    TRISBbits.TRISB3 = 0;
+    TRISBbits.TRISB4 = 0;
+    TRISBbits.TRISB5 = 0;
+    TRISBbits.TRISB6 = 0;
+    TRISBbits.TRISB7 = 0;
+
+    // set B0 input as analog. Only 0, 1, 2, 3 and 5 can be used
+
+    ANSELBbits.ANSB0 = 1;
+    ANSELBbits.ANSB1 = 0;
+    ANSELBbits.ANSB2 = 0;
+    ANSELBbits.ANSB3 = 0;
+    
+    ANSELBbits.ANSB5 = 0;     
+
+    // clean B latches
+
+    LATBbits.LATB0   = 0;
+    LATBbits.LATB1   = 0;
+    LATBbits.LATB2   = 0;
+    LATBbits.LATB3   = 0;
+    LATBbits.LATB4   = 0;
+    LATBbits.LATB5   = 0;
+    
     // set PORTD as output
 
     TRISDbits.TRISD0 = 0;
@@ -101,7 +140,4 @@ void initialize(void) {
     LATDbits.LATD6   = 0;
     LATDbits.LATD7   = 0;    
 
-    // initialize TIMER 1
-    
-    util_timer1_initialize();
 }

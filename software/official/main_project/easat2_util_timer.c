@@ -116,7 +116,7 @@ void interrupt high_priority_int() {
         if (tmr1_interrupt_number == TMR1_HALF_SECOND) {
 
             // blink auxiliar green LED
-            PORTDbits.RD4 = !PORTDbits.RD4;
+            PINOUT_TIMER_LED = !PINOUT_TIMER_LED;
 
             tmr1_interrupt_number = 0;
             
@@ -137,7 +137,7 @@ void interrupt high_priority_int() {
         
         // take RF (S-meter) signal sample from AN4 (RA5)
         
-        ADCON0bits.CHS  = 4;        // Select ADC channel 4
+        ADCON0bits.CHS  = PINOUT_ADC_RF_IN_SIGNAL_POWER_CHANNEL; // ADC channel 4
         ADCON0bits.ADON = 1;        // Turn on ADC
         PIR1bits.ADIF   = 0;        // make sure ADC interuption not set
     
@@ -163,7 +163,7 @@ void interrupt high_priority_int() {
                 // turn on repeater
                 
                 // set output high
-                PORTDbits.RD6 = 1;               
+                PINOUT_REPEATER_PTT_ON = 1;               
                 
                 is_transmitter_active     = 1;
                 cycles_transmitter_active = 0;
@@ -179,7 +179,7 @@ void interrupt high_priority_int() {
             
             if (cycles_transmitter_active == REPEATER_ACTIVE_CYCLES) {
                 // turn off repeater
-                PORTDbits.RD6 = 0;
+                PINOUT_REPEATER_PTT_ON = 0;
                 is_transmitter_active     = 0;
             }
             
@@ -188,7 +188,7 @@ void interrupt high_priority_int() {
             // check if we have to start from first position again (cycle)
             if (sample_position == SAMPLE_TABLE_SIZE) sample_position = 0;
 
-            if (valid_samples == SAMPLE_TABLE_SIZE) {
+            if (valid_samples   == SAMPLE_TABLE_SIZE) {
                 
                 // calculate new noise mean value
                 noise_mean_value = 0;
@@ -211,7 +211,7 @@ void interrupt high_priority_int() {
         
         // clear interruption flag
         
-        PIR1bits.TMR1IF=0; 
+        PIR1bits.TMR1IF = 0; 
         
     }
 

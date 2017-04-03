@@ -6859,9 +6859,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _value -> .0.0 `f ]
 [v _batteryCurrent `f ~T0 @X0 1 a ]
 [e = _batteryCurrent -> .0.0 `f ]
-[; ;easat2_util_inputs.c: 89: ADCON0bits.CHS = 2;
+[; ;easat2_util_inputs.c: 89: ADCON0bits.CHS = 12;
 "89
-[e = . . _ADCON0bits 1 2 -> -> 2 `i `uc ]
+[e = . . _ADCON0bits 1 2 -> -> 12 `i `uc ]
 [; ;easat2_util_inputs.c: 90: ADCON0bits.ADON = 1;
 "90
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]

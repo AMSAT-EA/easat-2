@@ -13,6 +13,7 @@
 
 #include <xc.h>
 #include "easat2_config.h"
+#include "easat2_pinouts.h"
 
 #define MIN_TRANSMIT_VOLTAGE        0
 #define MAIN_LOOP_SLEEP_MINUTES     3

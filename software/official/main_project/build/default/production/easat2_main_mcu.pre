@@ -8495,6 +8495,7 @@ void main_loop(void);
 
 # 18 "easat2_util_initialize.h"
 void initialize(void);
+void io_initialize(void);
 
 # 18 "easat2_util_inputs.h"
 float util_getBatteryVoltage(void);

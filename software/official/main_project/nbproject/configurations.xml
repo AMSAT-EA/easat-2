@@ -36,6 +36,7 @@
       <itemPath>easat2_util_transmission.h</itemPath>
       <itemPath>easat2_util_waits.c</itemPath>
       <itemPath>easat2_util_waits.h</itemPath>
+      <itemPath>easat2_pinouts.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

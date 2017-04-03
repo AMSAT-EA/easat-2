@@ -8809,8 +8809,8 @@ void util_transmit_dot(void) {
 
 
 
-PORTDbits.RD1 = 1;
-PORTDbits.RD3 = 1;
+(PORTDbits.RD1) = 1;
+(PORTDbits.RD3) = 1;
 
 for (int i = 0; i < (int)(2400/32); i++) {
 
@@ -8822,8 +8822,8 @@ util_waits_delay_ms(1);
 
 }
 
-PORTDbits.RD1 = 0;
-PORTDbits.RD3 = 0;
+(PORTDbits.RD1) = 0;
+(PORTDbits.RD3) = 0;
 
 }
 
@@ -8832,8 +8832,8 @@ void util_transmit_dash(void) {
 
 
 
-PORTDbits.RD1 = 1;
-PORTDbits.RD3 = 1;
+(PORTDbits.RD1) = 1;
+(PORTDbits.RD3) = 1;
 
 for (int i = 0; i < ((int)(2400/32)*3); i++) {
 
@@ -8845,8 +8845,8 @@ util_waits_delay_ms(1);
 
 }
 
-PORTDbits.RD1 = 0;
-PORTDbits.RD3 = 0;
+(PORTDbits.RD1) = 0;
+(PORTDbits.RD3) = 0;
 }
 
 
@@ -8872,9 +8872,9 @@ util_waits_delay_ms(7*(int)(2400/32));
 
 void util_transmit_buzzer_1ms_cycle(void) {
 
-PORTDbits.RD2 = 1;
+(PORTDbits.RD2) = 1;
 util_waits_delay_hundred_us((int)(10/2));
-PORTDbits.RD2 = 0;
+(PORTDbits.RD2) = 0;
 util_waits_delay_hundred_us((int)(10/2));
 
 }
