@@ -323,7 +323,7 @@
   )
 
   (module Crystals:Crystal_HC49-4H_Vertical (layer F.Cu) (tedit 58778B02) (tstamp 587D561F)
-    (at 23.0759 189.6872 90)
+    (at 25.64384 191.94272 90)
     (descr "Crystal THT HC-49-4H http://5hertz.com/pdfs/04404_D.pdf")
     (tags "THT crystalHC-49-4H")
     (path /58272070)
@@ -403,7 +403,7 @@
   )
 
   (module SOT-223 (layer F.Cu) (tedit 5883B228) (tstamp 58C44F99)
-    (at 32.93364 193.26352 270)
+    (at 36.10864 193.28384 270)
     (descr "module CMS SOT223 4 pins")
     (tags "CMS SOT")
     (path /58C16FE8)
@@ -635,7 +635,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 58D44CBF)
-    (at 37.719 189.14364 270)
+    (at 41.10736 189.7888 270)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /58C4011D)
@@ -707,7 +707,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 58D44CDF)
-    (at 24.03856 160.52292 90)
+    (at 26.65476 163.0934 90)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /58C4C9B4)
@@ -887,7 +887,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 58D44D4F)
-    (at 19.2913 165.9636 270)
+    (at 20.03552 162.88004 270)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /58C45359)
@@ -923,7 +923,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 58D44D5F)
-    (at 17.5895 165.9255 270)
+    (at 18.67916 162.94608 270)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /58C45420)
@@ -959,7 +959,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 58D44D6F)
-    (at 20.9169 171.45 90)
+    (at 22.92096 174.48784 90)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /58C5E1EC)
@@ -1103,7 +1103,7 @@
   )
 
   (module Resistors_SMD:R_0603_HandSoldering (layer F.Cu) (tedit 58AAD9E8) (tstamp 58D44DAF)
-    (at 19.3548 161.8234 90)
+    (at 23.37308 163.0934 90)
     (descr "Resistor SMD 0603, hand soldering")
     (tags "resistor 0603")
     (path /58C4C879)
@@ -1211,7 +1211,7 @@
   )
 
   (module Resistors_SMD:R_0603_HandSoldering (layer F.Cu) (tedit 58AAD9E8) (tstamp 58D44DDF)
-    (at 17.6022 161.8361 90)
+    (at 21.77288 163.00196 90)
     (descr "Resistor SMD 0603, hand soldering")
     (tags "resistor 0603")
     (path /58C4F5A9)
@@ -1247,7 +1247,7 @@
   )
 
   (module Resistors_SMD:R_0603_HandSoldering (layer F.Cu) (tedit 58AAD9E8) (tstamp 58D44DEF)
-    (at 22.1996 160.5026 90)
+    (at 24.90724 163.0934 90)
     (descr "Resistor SMD 0603, hand soldering")
     (tags "resistor 0603")
     (path /58C52D06)
@@ -1427,7 +1427,7 @@
   )
 
   (module Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm (layer F.Cu) (tedit 54130A77) (tstamp 58D44E3F)
-    (at 24.13 165.862)
+    (at 24.5872 168.49344)
     (descr "SSOP16: plastic shrink small outline package; 16 leads; body width 3.9 mm; lead pitch 0.635; (see NXP SSOP-TSSOP-VSO-REFLOW.pdf and sot519-1_po.pdf)")
     (tags "SSOP 0.635")
     (path /58C89BED)
@@ -1592,7 +1592,7 @@
   )
 
   (module Capacitors_SMD:C_0603_HandSoldering (layer F.Cu) (tedit 58AA848B) (tstamp 58D46291)
-    (at 19.2278 171.45 90)
+    (at 21.2344 174.4472 90)
     (descr "Capacitor SMD 0603, hand soldering")
     (tags "capacitor 0603")
     (path /58C5BC85)
@@ -1628,7 +1628,7 @@
   )
 
   (module Sockets_MOLEX_KK-System:Socket_MOLEX-KK-RM2-54mm_Lock_5pin_straight (layer F.Cu) (tedit 0) (tstamp 58D46AED)
-    (at 16.00708 189.57036 90)
+    (at 16.1544 190.41872 90)
     (descr "Socket, MOLEX, KK, RM 2.54mm, Lock, 5pin, straight,")
     (tags "Socket, MOLEX, KK, RM 2.54mm, Lock, 5pin, straight,")
     (path /58278D06)
@@ -1686,7 +1686,7 @@
   )
 
   (module Sockets_MOLEX_KK-System:Socket_MOLEX-KK-RM2-54mm_Lock_4pin_straight (layer F.Cu) (tedit 0) (tstamp 58D46B0A)
-    (at 3.19532 169.76344 90)
+    (at 14.38656 170.20032 90)
     (descr "Socket, MOLEX, KK, RM 2.54mm, Lock, 4pin, straight,")
     (tags "Socket, MOLEX, KK, RM 2.54mm, Lock, 4pin, straight,")
     (path /58C0D3D7)
