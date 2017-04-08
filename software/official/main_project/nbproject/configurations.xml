@@ -37,6 +37,8 @@
       <itemPath>easat2_util_waits.c</itemPath>
       <itemPath>easat2_util_waits.h</itemPath>
       <itemPath>easat2_pinouts.h</itemPath>
+      <itemPath>easat2_util_pwm.c</itemPath>
+      <itemPath>easat2_util_pwm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -57,7 +59,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>Simulator</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.41</languageToolchainVersion>
+        <languageToolchainVersion>1.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>

@@ -77,7 +77,13 @@ void io_initialize(void) {
     
     // LATAbits.LATA6   = 0; Crystal
     // LATAbits.LATA7   = 0; Crystal
-
+    
+    // disable all PORTB/E pull-up resistors (only usable in input mode)
+     // PORTE MCLR internal pull-up is always on in MCLR mode
+    
+    WPUB = 0b00000000;
+    RBPU = 0b11111111;
+         
     // set PORTB as input for B0, the other ones are output
 
     TRISBbits.TRISB0 = 1;
@@ -139,5 +145,9 @@ void io_initialize(void) {
     LATDbits.LATD5   = 0;
     LATDbits.LATD6   = 0;
     LATDbits.LATD7   = 0;    
+    
+    // PORTE
+    
+    
 
 }
