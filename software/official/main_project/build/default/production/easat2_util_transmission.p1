@@ -49,11 +49,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S356 . . . . . . . . ]
 "7114
 [v _PORTDbits `VS356 ~T0 @X0 0 e@3971 ]
-"32 easat2_util_transmission.h
-[v _util_transmit_buzzer_1ms_cycle `(v ~T0 @X0 0 ef ]
+"34 easat2_util_pwm.h
+[v _util_pwm_start `(v ~T0 @X0 0 ef ]
 "27 easat2_util_waits.h
 [v _util_waits_delay_ms `(v ~T0 @X0 0 ef1`i ]
-"28
+"35 easat2_util_pwm.h
+[v _util_pwm_stop `(v ~T0 @X0 0 ef ]
+"28 easat2_util_waits.h
 [v _util_waits_delay_hundred_us `(v ~T0 @X0 0 ef1`i ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -6738,467 +6740,470 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_util_waits.h: 26: void util_waits_delay_secs(int secs);
 [; ;easat2_util_waits.h: 27: void util_waits_delay_ms(int ms);
 [; ;easat2_util_waits.h: 28: void util_waits_delay_hundred_us(int us);
-"21 easat2_util_transmission.c
+[; ;easat2_util_pwm.h: 33: void util_pwm_initialize(void);
+[; ;easat2_util_pwm.h: 34: void util_pwm_start(void);
+[; ;easat2_util_pwm.h: 35: void util_pwm_stop(void);
+"22 easat2_util_transmission.c
 [v _util_beacon_transmission `(v ~T0 @X0 1 ef4`f`i`i`f ]
-"22
+"23
 {
-[; ;easat2_util_transmission.c: 21: void util_beacon_transmission(float battery_voltage, int solar_current,
-[; ;easat2_util_transmission.c: 22: int battery_current, float temperature) {
+[; ;easat2_util_transmission.c: 22: void util_beacon_transmission(float battery_voltage, int solar_current,
+[; ;easat2_util_transmission.c: 23: int battery_current, float temperature) {
 [e :U _util_beacon_transmission ]
-"21
+"22
 [v _battery_voltage `f ~T0 @X0 1 r1 ]
 [v _solar_current `i ~T0 @X0 1 r2 ]
-"22
+"23
 [v _battery_current `i ~T0 @X0 1 r3 ]
 [v _temperature `f ~T0 @X0 1 r4 ]
 [f ]
-"24
-[v _BEACON_MESSAGE `uc ~T0 @X0 -> 128 `i a ]
 "25
+[v _BEACON_MESSAGE `uc ~T0 @X0 -> 128 `i a ]
+"26
 [v _BEACON_BUFFER `uc ~T0 @X0 -> 64 `i a ]
-[; ;easat2_util_transmission.c: 24: char BEACON_MESSAGE[128];
-[; ;easat2_util_transmission.c: 25: char BEACON_BUFFER[64];
-[; ;easat2_util_transmission.c: 29: memset(BEACON_MESSAGE, 0, sizeof(BEACON_MESSAGE));
-"29
-[e ( _memset (3 , , -> &U _BEACON_MESSAGE `*v -> 0 `i -> # _BEACON_MESSAGE `ui ]
-[; ;easat2_util_transmission.c: 30: strcpy(BEACON_MESSAGE, "EASAT2");
+[; ;easat2_util_transmission.c: 25: char BEACON_MESSAGE[128];
+[; ;easat2_util_transmission.c: 26: char BEACON_BUFFER[64];
+[; ;easat2_util_transmission.c: 30: memset(BEACON_MESSAGE, 0, sizeof(BEACON_MESSAGE));
 "30
+[e ( _memset (3 , , -> &U _BEACON_MESSAGE `*v -> 0 `i -> # _BEACON_MESSAGE `ui ]
+[; ;easat2_util_transmission.c: 31: strcpy(BEACON_MESSAGE, "EASAT2");
+"31
 [e ( _strcpy (2 , &U _BEACON_MESSAGE :s 1C ]
-[; ;easat2_util_transmission.c: 32: memset(BEACON_BUFFER, 0, sizeof(BEACON_BUFFER));
-"32
+[; ;easat2_util_transmission.c: 33: memset(BEACON_BUFFER, 0, sizeof(BEACON_BUFFER));
+"33
 [e ( _memset (3 , , -> &U _BEACON_BUFFER `*v -> 0 `i -> # _BEACON_BUFFER `ui ]
-[; ;easat2_util_transmission.c: 33: sprintf(BEACON_BUFFER, " %.1f %.1f %3.0d %3.0d", temperature, battery_voltage,
-[; ;easat2_util_transmission.c: 34: solar_current, battery_current);
-"34
+[; ;easat2_util_transmission.c: 34: sprintf(BEACON_BUFFER, " %.1f %.1f %3.0d %3.0d", temperature, battery_voltage,
+[; ;easat2_util_transmission.c: 35: solar_current, battery_current);
+"35
 [e ( _sprintf (1 , , , , (. , &U _BEACON_BUFFER :s 2C -> _temperature `d -> _battery_voltage `d _solar_current _battery_current ]
-[; ;easat2_util_transmission.c: 36: strcat(BEACON_MESSAGE, BEACON_BUFFER);
-"36
+[; ;easat2_util_transmission.c: 37: strcat(BEACON_MESSAGE, BEACON_BUFFER);
+"37
 [e ( _strcat (2 , &U _BEACON_MESSAGE -> &U _BEACON_BUFFER `*Cuc ]
-[; ;easat2_util_transmission.c: 41: for (int i = 0; i < strlen(BEACON_MESSAGE); i++) {
-"41
+[; ;easat2_util_transmission.c: 42: for (int i = 0; i < strlen(BEACON_MESSAGE); i++) {
+"42
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 848  ]
 [e :U 845 ]
 {
-[; ;easat2_util_transmission.c: 42: util_transmit_letter(BEACON_MESSAGE[i]);
-"42
-[e ( _util_transmit_letter (1 *U + &U _BEACON_MESSAGE * -> -> _i `ui `ux -> -> # *U &U _BEACON_MESSAGE `ui `ux ]
+[; ;easat2_util_transmission.c: 43: util_transmit_letter(BEACON_MESSAGE[i]);
 "43
+[e ( _util_transmit_letter (1 *U + &U _BEACON_MESSAGE * -> -> _i `ui `ux -> -> # *U &U _BEACON_MESSAGE `ui `ux ]
+"44
 }
-"41
+"42
 [e ++ _i -> 1 `i ]
 [e :U 848 ]
 [e $ < -> _i `ui ( _strlen (1 -> &U _BEACON_MESSAGE `*Cuc 845  ]
 [e :U 846 ]
-"43
+"44
 }
-[; ;easat2_util_transmission.c: 43: }
-[; ;easat2_util_transmission.c: 45: }
-"45
+[; ;easat2_util_transmission.c: 44: }
+[; ;easat2_util_transmission.c: 46: }
+"46
 [e :UE 844 ]
 }
-"52
+"53
 [v _util_transmit_letter `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;easat2_util_transmission.c: 52: void util_transmit_letter(char letter) {
+[; ;easat2_util_transmission.c: 53: void util_transmit_letter(char letter) {
 [e :U _util_transmit_letter ]
 [v _letter `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;easat2_util_transmission.c: 54: switch (letter) {
-"54
+[; ;easat2_util_transmission.c: 55: switch (letter) {
+"55
 [e $U 851  ]
 {
-[; ;easat2_util_transmission.c: 59: case 'A':
-"59
-[e :U 852 ]
-[; ;easat2_util_transmission.c: 60: util_transmit_morse_sequence((char*)".-");
+[; ;easat2_util_transmission.c: 60: case 'A':
 "60
-[e ( _util_transmit_morse_sequence (1 -> :s 3C `*uc ]
-[; ;easat2_util_transmission.c: 61: break;
+[e :U 852 ]
+[; ;easat2_util_transmission.c: 61: util_transmit_morse_sequence((char*)".-");
 "61
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 62: case 'B':
+[e ( _util_transmit_morse_sequence (1 -> :s 3C `*uc ]
+[; ;easat2_util_transmission.c: 62: break;
 "62
-[e :U 853 ]
-[; ;easat2_util_transmission.c: 63: util_transmit_morse_sequence((char*)"-...");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 63: case 'B':
 "63
-[e ( _util_transmit_morse_sequence (1 -> :s 4C `*uc ]
-[; ;easat2_util_transmission.c: 64: break;
+[e :U 853 ]
+[; ;easat2_util_transmission.c: 64: util_transmit_morse_sequence((char*)"-...");
 "64
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 65: case 'C':
+[e ( _util_transmit_morse_sequence (1 -> :s 4C `*uc ]
+[; ;easat2_util_transmission.c: 65: break;
 "65
-[e :U 854 ]
-[; ;easat2_util_transmission.c: 66: util_transmit_morse_sequence((char*)"-.-.");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 66: case 'C':
 "66
-[e ( _util_transmit_morse_sequence (1 -> :s 5C `*uc ]
-[; ;easat2_util_transmission.c: 67: break;
+[e :U 854 ]
+[; ;easat2_util_transmission.c: 67: util_transmit_morse_sequence((char*)"-.-.");
 "67
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 68: case 'D':
+[e ( _util_transmit_morse_sequence (1 -> :s 5C `*uc ]
+[; ;easat2_util_transmission.c: 68: break;
 "68
-[e :U 855 ]
-[; ;easat2_util_transmission.c: 69: util_transmit_morse_sequence((char*)"-..");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 69: case 'D':
 "69
-[e ( _util_transmit_morse_sequence (1 -> :s 6C `*uc ]
-[; ;easat2_util_transmission.c: 70: break;
+[e :U 855 ]
+[; ;easat2_util_transmission.c: 70: util_transmit_morse_sequence((char*)"-..");
 "70
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 71: case 'E':
+[e ( _util_transmit_morse_sequence (1 -> :s 6C `*uc ]
+[; ;easat2_util_transmission.c: 71: break;
 "71
-[e :U 856 ]
-[; ;easat2_util_transmission.c: 72: util_transmit_morse_sequence((char*)".");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 72: case 'E':
 "72
-[e ( _util_transmit_morse_sequence (1 -> :s 7C `*uc ]
-[; ;easat2_util_transmission.c: 73: break;
+[e :U 856 ]
+[; ;easat2_util_transmission.c: 73: util_transmit_morse_sequence((char*)".");
 "73
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 74: case 'F':
+[e ( _util_transmit_morse_sequence (1 -> :s 7C `*uc ]
+[; ;easat2_util_transmission.c: 74: break;
 "74
-[e :U 857 ]
-[; ;easat2_util_transmission.c: 75: util_transmit_morse_sequence((char*)"..-.");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 75: case 'F':
 "75
-[e ( _util_transmit_morse_sequence (1 -> :s 8C `*uc ]
-[; ;easat2_util_transmission.c: 76: break;
+[e :U 857 ]
+[; ;easat2_util_transmission.c: 76: util_transmit_morse_sequence((char*)"..-.");
 "76
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 77: case 'G':
+[e ( _util_transmit_morse_sequence (1 -> :s 8C `*uc ]
+[; ;easat2_util_transmission.c: 77: break;
 "77
-[e :U 858 ]
-[; ;easat2_util_transmission.c: 78: util_transmit_morse_sequence((char*)"--.");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 78: case 'G':
 "78
-[e ( _util_transmit_morse_sequence (1 -> :s 9C `*uc ]
-[; ;easat2_util_transmission.c: 79: break;
+[e :U 858 ]
+[; ;easat2_util_transmission.c: 79: util_transmit_morse_sequence((char*)"--.");
 "79
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 80: case 'H':
+[e ( _util_transmit_morse_sequence (1 -> :s 9C `*uc ]
+[; ;easat2_util_transmission.c: 80: break;
 "80
-[e :U 859 ]
-[; ;easat2_util_transmission.c: 81: util_transmit_morse_sequence((char*)"....");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 81: case 'H':
 "81
-[e ( _util_transmit_morse_sequence (1 -> :s 10C `*uc ]
-[; ;easat2_util_transmission.c: 82: break;
+[e :U 859 ]
+[; ;easat2_util_transmission.c: 82: util_transmit_morse_sequence((char*)"....");
 "82
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 83: case 'I':
+[e ( _util_transmit_morse_sequence (1 -> :s 10C `*uc ]
+[; ;easat2_util_transmission.c: 83: break;
 "83
-[e :U 860 ]
-[; ;easat2_util_transmission.c: 84: util_transmit_morse_sequence((char*)"..");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 84: case 'I':
 "84
-[e ( _util_transmit_morse_sequence (1 -> :s 11C `*uc ]
-[; ;easat2_util_transmission.c: 85: break;
+[e :U 860 ]
+[; ;easat2_util_transmission.c: 85: util_transmit_morse_sequence((char*)"..");
 "85
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 86: case 'J':
+[e ( _util_transmit_morse_sequence (1 -> :s 11C `*uc ]
+[; ;easat2_util_transmission.c: 86: break;
 "86
-[e :U 861 ]
-[; ;easat2_util_transmission.c: 87: util_transmit_morse_sequence((char*)".---");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 87: case 'J':
 "87
-[e ( _util_transmit_morse_sequence (1 -> :s 12C `*uc ]
-[; ;easat2_util_transmission.c: 88: break;
+[e :U 861 ]
+[; ;easat2_util_transmission.c: 88: util_transmit_morse_sequence((char*)".---");
 "88
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 89: case 'K':
+[e ( _util_transmit_morse_sequence (1 -> :s 12C `*uc ]
+[; ;easat2_util_transmission.c: 89: break;
 "89
-[e :U 862 ]
-[; ;easat2_util_transmission.c: 90: util_transmit_morse_sequence((char*)"-.-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 90: case 'K':
 "90
-[e ( _util_transmit_morse_sequence (1 -> :s 13C `*uc ]
-[; ;easat2_util_transmission.c: 91: break;
+[e :U 862 ]
+[; ;easat2_util_transmission.c: 91: util_transmit_morse_sequence((char*)"-.-");
 "91
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 92: case 'L':
+[e ( _util_transmit_morse_sequence (1 -> :s 13C `*uc ]
+[; ;easat2_util_transmission.c: 92: break;
 "92
-[e :U 863 ]
-[; ;easat2_util_transmission.c: 93: util_transmit_morse_sequence((char*)".-..");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 93: case 'L':
 "93
-[e ( _util_transmit_morse_sequence (1 -> :s 14C `*uc ]
-[; ;easat2_util_transmission.c: 94: break;
+[e :U 863 ]
+[; ;easat2_util_transmission.c: 94: util_transmit_morse_sequence((char*)".-..");
 "94
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 95: case 'M':
+[e ( _util_transmit_morse_sequence (1 -> :s 14C `*uc ]
+[; ;easat2_util_transmission.c: 95: break;
 "95
-[e :U 864 ]
-[; ;easat2_util_transmission.c: 96: util_transmit_morse_sequence((char*)"--");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 96: case 'M':
 "96
-[e ( _util_transmit_morse_sequence (1 -> :s 15C `*uc ]
-[; ;easat2_util_transmission.c: 97: break;
+[e :U 864 ]
+[; ;easat2_util_transmission.c: 97: util_transmit_morse_sequence((char*)"--");
 "97
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 98: case 'N':
+[e ( _util_transmit_morse_sequence (1 -> :s 15C `*uc ]
+[; ;easat2_util_transmission.c: 98: break;
 "98
-[e :U 865 ]
-[; ;easat2_util_transmission.c: 99: util_transmit_morse_sequence((char*)"-.");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 99: case 'N':
 "99
-[e ( _util_transmit_morse_sequence (1 -> :s 16C `*uc ]
-[; ;easat2_util_transmission.c: 100: break;
+[e :U 865 ]
+[; ;easat2_util_transmission.c: 100: util_transmit_morse_sequence((char*)"-.");
 "100
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 101: case 'O':
+[e ( _util_transmit_morse_sequence (1 -> :s 16C `*uc ]
+[; ;easat2_util_transmission.c: 101: break;
 "101
-[e :U 866 ]
-[; ;easat2_util_transmission.c: 102: util_transmit_morse_sequence((char*)"---");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 102: case 'O':
 "102
-[e ( _util_transmit_morse_sequence (1 -> :s 17C `*uc ]
-[; ;easat2_util_transmission.c: 103: break;
+[e :U 866 ]
+[; ;easat2_util_transmission.c: 103: util_transmit_morse_sequence((char*)"---");
 "103
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 104: case 'P':
+[e ( _util_transmit_morse_sequence (1 -> :s 17C `*uc ]
+[; ;easat2_util_transmission.c: 104: break;
 "104
-[e :U 867 ]
-[; ;easat2_util_transmission.c: 105: util_transmit_morse_sequence((char*)".--.");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 105: case 'P':
 "105
-[e ( _util_transmit_morse_sequence (1 -> :s 18C `*uc ]
-[; ;easat2_util_transmission.c: 106: break;
+[e :U 867 ]
+[; ;easat2_util_transmission.c: 106: util_transmit_morse_sequence((char*)".--.");
 "106
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 107: case 'Q':
+[e ( _util_transmit_morse_sequence (1 -> :s 18C `*uc ]
+[; ;easat2_util_transmission.c: 107: break;
 "107
-[e :U 868 ]
-[; ;easat2_util_transmission.c: 108: util_transmit_morse_sequence((char*)"--.-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 108: case 'Q':
 "108
-[e ( _util_transmit_morse_sequence (1 -> :s 19C `*uc ]
-[; ;easat2_util_transmission.c: 109: break;
+[e :U 868 ]
+[; ;easat2_util_transmission.c: 109: util_transmit_morse_sequence((char*)"--.-");
 "109
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 110: case 'R':
+[e ( _util_transmit_morse_sequence (1 -> :s 19C `*uc ]
+[; ;easat2_util_transmission.c: 110: break;
 "110
-[e :U 869 ]
-[; ;easat2_util_transmission.c: 111: util_transmit_morse_sequence((char*)".-.");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 111: case 'R':
 "111
-[e ( _util_transmit_morse_sequence (1 -> :s 20C `*uc ]
-[; ;easat2_util_transmission.c: 112: break;
+[e :U 869 ]
+[; ;easat2_util_transmission.c: 112: util_transmit_morse_sequence((char*)".-.");
 "112
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 113: case 'S':
+[e ( _util_transmit_morse_sequence (1 -> :s 20C `*uc ]
+[; ;easat2_util_transmission.c: 113: break;
 "113
-[e :U 870 ]
-[; ;easat2_util_transmission.c: 114: util_transmit_morse_sequence((char*)"...");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 114: case 'S':
 "114
-[e ( _util_transmit_morse_sequence (1 -> :s 21C `*uc ]
-[; ;easat2_util_transmission.c: 115: break;
+[e :U 870 ]
+[; ;easat2_util_transmission.c: 115: util_transmit_morse_sequence((char*)"...");
 "115
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 116: case 'T':
+[e ( _util_transmit_morse_sequence (1 -> :s 21C `*uc ]
+[; ;easat2_util_transmission.c: 116: break;
 "116
-[e :U 871 ]
-[; ;easat2_util_transmission.c: 117: util_transmit_morse_sequence((char*)"-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 117: case 'T':
 "117
-[e ( _util_transmit_morse_sequence (1 -> :s 22C `*uc ]
-[; ;easat2_util_transmission.c: 118: break;
+[e :U 871 ]
+[; ;easat2_util_transmission.c: 118: util_transmit_morse_sequence((char*)"-");
 "118
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 119: case 'U':
+[e ( _util_transmit_morse_sequence (1 -> :s 22C `*uc ]
+[; ;easat2_util_transmission.c: 119: break;
 "119
-[e :U 872 ]
-[; ;easat2_util_transmission.c: 120: util_transmit_morse_sequence((char*)"..-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 120: case 'U':
 "120
-[e ( _util_transmit_morse_sequence (1 -> :s 23C `*uc ]
-[; ;easat2_util_transmission.c: 121: break;
+[e :U 872 ]
+[; ;easat2_util_transmission.c: 121: util_transmit_morse_sequence((char*)"..-");
 "121
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 122: case 'V':
+[e ( _util_transmit_morse_sequence (1 -> :s 23C `*uc ]
+[; ;easat2_util_transmission.c: 122: break;
 "122
-[e :U 873 ]
-[; ;easat2_util_transmission.c: 123: util_transmit_morse_sequence((char*)"...-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 123: case 'V':
 "123
-[e ( _util_transmit_morse_sequence (1 -> :s 24C `*uc ]
-[; ;easat2_util_transmission.c: 124: break;
+[e :U 873 ]
+[; ;easat2_util_transmission.c: 124: util_transmit_morse_sequence((char*)"...-");
 "124
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 125: case 'W':
+[e ( _util_transmit_morse_sequence (1 -> :s 24C `*uc ]
+[; ;easat2_util_transmission.c: 125: break;
 "125
-[e :U 874 ]
-[; ;easat2_util_transmission.c: 126: util_transmit_morse_sequence((char*)".--");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 126: case 'W':
 "126
-[e ( _util_transmit_morse_sequence (1 -> :s 25C `*uc ]
-[; ;easat2_util_transmission.c: 127: break;
+[e :U 874 ]
+[; ;easat2_util_transmission.c: 127: util_transmit_morse_sequence((char*)".--");
 "127
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 128: case 'X':
+[e ( _util_transmit_morse_sequence (1 -> :s 25C `*uc ]
+[; ;easat2_util_transmission.c: 128: break;
 "128
-[e :U 875 ]
-[; ;easat2_util_transmission.c: 129: util_transmit_morse_sequence((char*)"-..-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 129: case 'X':
 "129
-[e ( _util_transmit_morse_sequence (1 -> :s 26C `*uc ]
-[; ;easat2_util_transmission.c: 130: break;
+[e :U 875 ]
+[; ;easat2_util_transmission.c: 130: util_transmit_morse_sequence((char*)"-..-");
 "130
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 131: case 'Y':
+[e ( _util_transmit_morse_sequence (1 -> :s 26C `*uc ]
+[; ;easat2_util_transmission.c: 131: break;
 "131
-[e :U 876 ]
-[; ;easat2_util_transmission.c: 132: util_transmit_morse_sequence((char*)"-.--");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 132: case 'Y':
 "132
-[e ( _util_transmit_morse_sequence (1 -> :s 27C `*uc ]
-[; ;easat2_util_transmission.c: 133: break;
+[e :U 876 ]
+[; ;easat2_util_transmission.c: 133: util_transmit_morse_sequence((char*)"-.--");
 "133
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 134: case 'Z':
+[e ( _util_transmit_morse_sequence (1 -> :s 27C `*uc ]
+[; ;easat2_util_transmission.c: 134: break;
 "134
-[e :U 877 ]
-[; ;easat2_util_transmission.c: 135: util_transmit_morse_sequence((char*)"--..");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 135: case 'Z':
 "135
-[e ( _util_transmit_morse_sequence (1 -> :s 28C `*uc ]
-[; ;easat2_util_transmission.c: 136: break;
+[e :U 877 ]
+[; ;easat2_util_transmission.c: 136: util_transmit_morse_sequence((char*)"--..");
 "136
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 137: case '0':
+[e ( _util_transmit_morse_sequence (1 -> :s 28C `*uc ]
+[; ;easat2_util_transmission.c: 137: break;
 "137
-[e :U 878 ]
-[; ;easat2_util_transmission.c: 138: util_transmit_morse_sequence((char*)"-----");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 138: case '0':
 "138
-[e ( _util_transmit_morse_sequence (1 -> :s 29C `*uc ]
-[; ;easat2_util_transmission.c: 139: break;
+[e :U 878 ]
+[; ;easat2_util_transmission.c: 139: util_transmit_morse_sequence((char*)"-----");
 "139
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 140: case '1':
+[e ( _util_transmit_morse_sequence (1 -> :s 29C `*uc ]
+[; ;easat2_util_transmission.c: 140: break;
 "140
-[e :U 879 ]
-[; ;easat2_util_transmission.c: 141: util_transmit_morse_sequence((char*)".----");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 141: case '1':
 "141
-[e ( _util_transmit_morse_sequence (1 -> :s 30C `*uc ]
-[; ;easat2_util_transmission.c: 142: break;
+[e :U 879 ]
+[; ;easat2_util_transmission.c: 142: util_transmit_morse_sequence((char*)".----");
 "142
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 143: case '2':
+[e ( _util_transmit_morse_sequence (1 -> :s 30C `*uc ]
+[; ;easat2_util_transmission.c: 143: break;
 "143
-[e :U 880 ]
-[; ;easat2_util_transmission.c: 144: util_transmit_morse_sequence((char*)"..---");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 144: case '2':
 "144
-[e ( _util_transmit_morse_sequence (1 -> :s 31C `*uc ]
-[; ;easat2_util_transmission.c: 145: break;
+[e :U 880 ]
+[; ;easat2_util_transmission.c: 145: util_transmit_morse_sequence((char*)"..---");
 "145
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 146: case '3':
+[e ( _util_transmit_morse_sequence (1 -> :s 31C `*uc ]
+[; ;easat2_util_transmission.c: 146: break;
 "146
-[e :U 881 ]
-[; ;easat2_util_transmission.c: 147: util_transmit_morse_sequence((char*)"...--");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 147: case '3':
 "147
-[e ( _util_transmit_morse_sequence (1 -> :s 32C `*uc ]
-[; ;easat2_util_transmission.c: 148: break;
+[e :U 881 ]
+[; ;easat2_util_transmission.c: 148: util_transmit_morse_sequence((char*)"...--");
 "148
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 149: case '4':
+[e ( _util_transmit_morse_sequence (1 -> :s 32C `*uc ]
+[; ;easat2_util_transmission.c: 149: break;
 "149
-[e :U 882 ]
-[; ;easat2_util_transmission.c: 150: util_transmit_morse_sequence((char*)"....-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 150: case '4':
 "150
-[e ( _util_transmit_morse_sequence (1 -> :s 33C `*uc ]
-[; ;easat2_util_transmission.c: 151: break;
+[e :U 882 ]
+[; ;easat2_util_transmission.c: 151: util_transmit_morse_sequence((char*)"....-");
 "151
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 152: case '5':
+[e ( _util_transmit_morse_sequence (1 -> :s 33C `*uc ]
+[; ;easat2_util_transmission.c: 152: break;
 "152
-[e :U 883 ]
-[; ;easat2_util_transmission.c: 153: util_transmit_morse_sequence((char*)".....");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 153: case '5':
 "153
-[e ( _util_transmit_morse_sequence (1 -> :s 34C `*uc ]
-[; ;easat2_util_transmission.c: 154: break;
+[e :U 883 ]
+[; ;easat2_util_transmission.c: 154: util_transmit_morse_sequence((char*)".....");
 "154
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 155: case '6':
+[e ( _util_transmit_morse_sequence (1 -> :s 34C `*uc ]
+[; ;easat2_util_transmission.c: 155: break;
 "155
-[e :U 884 ]
-[; ;easat2_util_transmission.c: 156: util_transmit_morse_sequence((char*)"-....");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 156: case '6':
 "156
-[e ( _util_transmit_morse_sequence (1 -> :s 35C `*uc ]
-[; ;easat2_util_transmission.c: 157: break;
+[e :U 884 ]
+[; ;easat2_util_transmission.c: 157: util_transmit_morse_sequence((char*)"-....");
 "157
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 158: case '7':
+[e ( _util_transmit_morse_sequence (1 -> :s 35C `*uc ]
+[; ;easat2_util_transmission.c: 158: break;
 "158
-[e :U 885 ]
-[; ;easat2_util_transmission.c: 159: util_transmit_morse_sequence((char*)"--...");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 159: case '7':
 "159
-[e ( _util_transmit_morse_sequence (1 -> :s 36C `*uc ]
-[; ;easat2_util_transmission.c: 160: break;
+[e :U 885 ]
+[; ;easat2_util_transmission.c: 160: util_transmit_morse_sequence((char*)"--...");
 "160
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 161: case '8':
+[e ( _util_transmit_morse_sequence (1 -> :s 36C `*uc ]
+[; ;easat2_util_transmission.c: 161: break;
 "161
-[e :U 886 ]
-[; ;easat2_util_transmission.c: 162: util_transmit_morse_sequence((char*)"---..");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 162: case '8':
 "162
-[e ( _util_transmit_morse_sequence (1 -> :s 37C `*uc ]
-[; ;easat2_util_transmission.c: 163: break;
+[e :U 886 ]
+[; ;easat2_util_transmission.c: 163: util_transmit_morse_sequence((char*)"---..");
 "163
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 164: case '9':
+[e ( _util_transmit_morse_sequence (1 -> :s 37C `*uc ]
+[; ;easat2_util_transmission.c: 164: break;
 "164
-[e :U 887 ]
-[; ;easat2_util_transmission.c: 165: util_transmit_morse_sequence((char*)"----.");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 165: case '9':
 "165
-[e ( _util_transmit_morse_sequence (1 -> :s 38C `*uc ]
-[; ;easat2_util_transmission.c: 166: break;
+[e :U 887 ]
+[; ;easat2_util_transmission.c: 166: util_transmit_morse_sequence((char*)"----.");
 "166
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 167: case ',':
+[e ( _util_transmit_morse_sequence (1 -> :s 38C `*uc ]
+[; ;easat2_util_transmission.c: 167: break;
 "167
-[e :U 888 ]
-[; ;easat2_util_transmission.c: 168: util_transmit_morse_sequence((char*)"--..--");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 168: case ',':
 "168
-[e ( _util_transmit_morse_sequence (1 -> :s 39C `*uc ]
-[; ;easat2_util_transmission.c: 169: break;
+[e :U 888 ]
+[; ;easat2_util_transmission.c: 169: util_transmit_morse_sequence((char*)"--..--");
 "169
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 170: case '?':
+[e ( _util_transmit_morse_sequence (1 -> :s 39C `*uc ]
+[; ;easat2_util_transmission.c: 170: break;
 "170
-[e :U 889 ]
-[; ;easat2_util_transmission.c: 171: util_transmit_morse_sequence((char*)"..--..");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 171: case '?':
 "171
-[e ( _util_transmit_morse_sequence (1 -> :s 40C `*uc ]
-[; ;easat2_util_transmission.c: 172: break;
+[e :U 889 ]
+[; ;easat2_util_transmission.c: 172: util_transmit_morse_sequence((char*)"..--..");
 "172
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 173: case '/':
+[e ( _util_transmit_morse_sequence (1 -> :s 40C `*uc ]
+[; ;easat2_util_transmission.c: 173: break;
 "173
-[e :U 890 ]
-[; ;easat2_util_transmission.c: 174: util_transmit_morse_sequence((char*)"-..-.");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 174: case '/':
 "174
-[e ( _util_transmit_morse_sequence (1 -> :s 41C `*uc ]
-[; ;easat2_util_transmission.c: 175: break;
+[e :U 890 ]
+[; ;easat2_util_transmission.c: 175: util_transmit_morse_sequence((char*)"-..-.");
 "175
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 176: case '.':
+[e ( _util_transmit_morse_sequence (1 -> :s 41C `*uc ]
+[; ;easat2_util_transmission.c: 176: break;
 "176
-[e :U 891 ]
-[; ;easat2_util_transmission.c: 177: util_transmit_morse_sequence((char*)".-.-.-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 177: case '.':
 "177
-[e ( _util_transmit_morse_sequence (1 -> :s 42C `*uc ]
-[; ;easat2_util_transmission.c: 178: break;
+[e :U 891 ]
+[; ;easat2_util_transmission.c: 178: util_transmit_morse_sequence((char*)".-.-.-");
 "178
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 179: case '-':
+[e ( _util_transmit_morse_sequence (1 -> :s 42C `*uc ]
+[; ;easat2_util_transmission.c: 179: break;
 "179
-[e :U 892 ]
-[; ;easat2_util_transmission.c: 180: util_transmit_morse_sequence((char*)"-....-");
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 180: case '-':
 "180
-[e ( _util_transmit_morse_sequence (1 -> :s 43C `*uc ]
-[; ;easat2_util_transmission.c: 181: break;
+[e :U 892 ]
+[; ;easat2_util_transmission.c: 181: util_transmit_morse_sequence((char*)"-....-");
 "181
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 182: case ' ':
+[e ( _util_transmit_morse_sequence (1 -> :s 43C `*uc ]
+[; ;easat2_util_transmission.c: 182: break;
 "182
-[e :U 893 ]
-[; ;easat2_util_transmission.c: 183: util_transmit_space_between_words();
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 183: case ' ':
 "183
-[e ( _util_transmit_space_between_words ..  ]
-[; ;easat2_util_transmission.c: 184: break;
+[e :U 893 ]
+[; ;easat2_util_transmission.c: 184: util_transmit_space_between_words();
 "184
-[e $U 850  ]
-[; ;easat2_util_transmission.c: 185: default:
+[e ( _util_transmit_space_between_words ..  ]
+[; ;easat2_util_transmission.c: 185: break;
 "185
-[e :U 894 ]
-[; ;easat2_util_transmission.c: 186: break;
+[e $U 850  ]
+[; ;easat2_util_transmission.c: 186: default:
 "186
+[e :U 894 ]
+[; ;easat2_util_transmission.c: 187: break;
+"187
 [e $U 850  ]
-"188
+"189
 }
-[; ;easat2_util_transmission.c: 188: }
+[; ;easat2_util_transmission.c: 189: }
 [e $U 850  ]
-"54
+"55
 [e :U 851 ]
 [e [\ _letter , $ -> -> 65 `ui `uc 852
  , $ -> -> 66 `ui `uc 853
@@ -7243,254 +7248,190 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 45 `ui `uc 892
  , $ -> -> 32 `ui `uc 893
  894 ]
-"188
+"189
 [e :U 850 ]
-[; ;easat2_util_transmission.c: 191: util_transmit_space_between_letters();
-"191
+[; ;easat2_util_transmission.c: 192: util_transmit_space_between_letters();
+"192
 [e ( _util_transmit_space_between_letters ..  ]
-[; ;easat2_util_transmission.c: 193: }
-"193
+[; ;easat2_util_transmission.c: 194: }
+"194
 [e :UE 849 ]
 }
-"201
+"202
 [v _util_transmit_morse_sequence `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;easat2_util_transmission.c: 201: void util_transmit_morse_sequence(char * morse_sequence) {
+[; ;easat2_util_transmission.c: 202: void util_transmit_morse_sequence(char * morse_sequence) {
 [e :U _util_transmit_morse_sequence ]
 [v _morse_sequence `*uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;easat2_util_transmission.c: 205: for (int i = 0; i < strlen(morse_sequence); i++) {
-"205
+[; ;easat2_util_transmission.c: 206: for (int i = 0; i < strlen(morse_sequence); i++) {
+"206
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 899  ]
 [e :U 896 ]
 {
-[; ;easat2_util_transmission.c: 207: switch(morse_sequence[i]) {
-"207
+[; ;easat2_util_transmission.c: 208: switch(morse_sequence[i]) {
+"208
 [e $U 901  ]
 {
-[; ;easat2_util_transmission.c: 209: case '.':
-"209
-[e :U 902 ]
-[; ;easat2_util_transmission.c: 210: util_transmit_dot();
+[; ;easat2_util_transmission.c: 210: case '.':
 "210
-[e ( _util_transmit_dot ..  ]
-[; ;easat2_util_transmission.c: 211: break;
+[e :U 902 ]
+[; ;easat2_util_transmission.c: 211: util_transmit_dot();
 "211
-[e $U 900  ]
-[; ;easat2_util_transmission.c: 212: case '-':
+[e ( _util_transmit_dot ..  ]
+[; ;easat2_util_transmission.c: 212: break;
 "212
-[e :U 903 ]
-[; ;easat2_util_transmission.c: 213: util_transmit_dash();
+[e $U 900  ]
+[; ;easat2_util_transmission.c: 213: case '-':
 "213
-[e ( _util_transmit_dash ..  ]
-[; ;easat2_util_transmission.c: 214: break;
+[e :U 903 ]
+[; ;easat2_util_transmission.c: 214: util_transmit_dash();
 "214
-[e $U 900  ]
-[; ;easat2_util_transmission.c: 215: default:
+[e ( _util_transmit_dash ..  ]
+[; ;easat2_util_transmission.c: 215: break;
 "215
-[e :U 904 ]
-[; ;easat2_util_transmission.c: 216: break;
+[e $U 900  ]
+[; ;easat2_util_transmission.c: 216: default:
 "216
-[e $U 900  ]
+[e :U 904 ]
+[; ;easat2_util_transmission.c: 217: break;
 "217
-}
-[; ;easat2_util_transmission.c: 217: }
 [e $U 900  ]
-"207
+"218
+}
+[; ;easat2_util_transmission.c: 218: }
+[e $U 900  ]
+"208
 [e :U 901 ]
 [e [\ *U + _morse_sequence * -> _i `x -> -> # *U _morse_sequence `i `x , $ -> -> 46 `ui `uc 902
  , $ -> -> 45 `ui `uc 903
  904 ]
-"217
+"218
 [e :U 900 ]
-[; ;easat2_util_transmission.c: 220: util_transmit_space_between_dots_dashes();
-"220
+[; ;easat2_util_transmission.c: 221: util_transmit_space_between_dots_dashes();
+"221
 [e ( _util_transmit_space_between_dots_dashes ..  ]
-"222
+"223
 }
-"205
+"206
 [e ++ _i -> 1 `i ]
 [e :U 899 ]
 [e $ < -> _i `ui ( _strlen (1 -> _morse_sequence `*Cuc 896  ]
 [e :U 897 ]
-"222
+"223
 }
-[; ;easat2_util_transmission.c: 222: }
-[; ;easat2_util_transmission.c: 224: }
-"224
+[; ;easat2_util_transmission.c: 223: }
+[; ;easat2_util_transmission.c: 225: }
+"225
 [e :UE 895 ]
 }
-"231
+"232
 [v _util_transmit_dot `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 231: void util_transmit_dot(void) {
+[; ;easat2_util_transmission.c: 232: void util_transmit_dot(void) {
 [e :U _util_transmit_dot ]
 [f ]
-[; ;easat2_util_transmission.c: 235: (PORTDbits.RD1) = 1;
-"235
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 236: (PORTDbits.RD3) = 1;
+[; ;easat2_util_transmission.c: 236: (PORTDbits.RD1) = 1;
 "236
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 238: for (int i = 0; i < (int)(2400/32); i++) {
-"238
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i / -> 2400 `i -> 32 `i 906  ]
-[e $U 907  ]
-[e :U 906 ]
-{
-[; ;easat2_util_transmission.c: 244: if (1)
-"244
-[e $ ! != -> 1 `i -> 0 `i 909  ]
-[; ;easat2_util_transmission.c: 245: util_transmit_buzzer_1ms_cycle();
-"245
-[e ( _util_transmit_buzzer_1ms_cycle ..  ]
-[e $U 910  ]
-"246
-[e :U 909 ]
-[; ;easat2_util_transmission.c: 246: else
-[; ;easat2_util_transmission.c: 247: util_waits_delay_ms(1);
-"247
-[e ( _util_waits_delay_ms (1 -> 1 `i ]
-[e :U 910 ]
-"249
-}
-"238
-[e ++ _i -> 1 `i ]
-[e $ < _i / -> 2400 `i -> 32 `i 906  ]
-[e :U 907 ]
-"249
-}
-[; ;easat2_util_transmission.c: 249: }
-[; ;easat2_util_transmission.c: 251: (PORTDbits.RD1) = 0;
-"251
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_util_transmission.c: 239: util_pwm_start();
+"239
+[e ( _util_pwm_start ..  ]
+[; ;easat2_util_transmission.c: 240: util_waits_delay_ms((int)(2400/32));
+"240
+[e ( _util_waits_delay_ms (1 / -> 2400 `i -> 32 `i ]
+[; ;easat2_util_transmission.c: 241: util_pwm_stop();
+"241
+[e ( _util_pwm_stop ..  ]
+[; ;easat2_util_transmission.c: 243: (PORTDbits.RD1) = 0;
+"243
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 252: (PORTDbits.RD3) = 0;
-"252
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 254: }
-"254
+[; ;easat2_util_transmission.c: 246: }
+"246
 [e :UE 905 ]
 }
-"262
+"254
 [v _util_transmit_dash `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 262: void util_transmit_dash(void) {
+[; ;easat2_util_transmission.c: 254: void util_transmit_dash(void) {
 [e :U _util_transmit_dash ]
 [f ]
-[; ;easat2_util_transmission.c: 266: (PORTDbits.RD1) = 1;
-"266
+[; ;easat2_util_transmission.c: 258: (PORTDbits.RD1) = 1;
+"258
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 267: (PORTDbits.RD3) = 1;
-"267
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 269: for (int i = 0; i < ((int)(2400/32)*3); i++) {
-"269
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i * / -> 2400 `i -> 32 `i -> 3 `i 912  ]
-[e $U 913  ]
-[e :U 912 ]
-{
-[; ;easat2_util_transmission.c: 275: if (1)
-"275
-[e $ ! != -> 1 `i -> 0 `i 915  ]
-[; ;easat2_util_transmission.c: 276: util_transmit_buzzer_1ms_cycle();
-"276
-[e ( _util_transmit_buzzer_1ms_cycle ..  ]
-[e $U 916  ]
-"277
-[e :U 915 ]
-[; ;easat2_util_transmission.c: 277: else
-[; ;easat2_util_transmission.c: 278: util_waits_delay_ms(1);
-"278
-[e ( _util_waits_delay_ms (1 -> 1 `i ]
-[e :U 916 ]
-"280
-}
-"269
-[e ++ _i -> 1 `i ]
-[e $ < _i * / -> 2400 `i -> 32 `i -> 3 `i 912  ]
-[e :U 913 ]
-"280
-}
-[; ;easat2_util_transmission.c: 280: }
-[; ;easat2_util_transmission.c: 282: (PORTDbits.RD1) = 0;
-"282
+[; ;easat2_util_transmission.c: 261: util_pwm_start();
+"261
+[e ( _util_pwm_start ..  ]
+[; ;easat2_util_transmission.c: 262: util_waits_delay_ms(((int)(2400/32)*3));
+"262
+[e ( _util_waits_delay_ms (1 * / -> 2400 `i -> 32 `i -> 3 `i ]
+[; ;easat2_util_transmission.c: 263: util_pwm_stop();
+"263
+[e ( _util_pwm_stop ..  ]
+[; ;easat2_util_transmission.c: 265: (PORTDbits.RD1) = 0;
+"265
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 283: (PORTDbits.RD3) = 0;
-"283
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 284: }
-"284
-[e :UE 911 ]
+[; ;easat2_util_transmission.c: 267: }
+"267
+[e :UE 906 ]
 }
-"289
+"272
 [v _util_transmit_space_between_dots_dashes `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 289: void util_transmit_space_between_dots_dashes(void) {
+[; ;easat2_util_transmission.c: 272: void util_transmit_space_between_dots_dashes(void) {
 [e :U _util_transmit_space_between_dots_dashes ]
 [f ]
-[; ;easat2_util_transmission.c: 290: util_waits_delay_ms((int)(2400/32));
-"290
+[; ;easat2_util_transmission.c: 273: util_waits_delay_ms((int)(2400/32));
+"273
 [e ( _util_waits_delay_ms (1 / -> 2400 `i -> 32 `i ]
-[; ;easat2_util_transmission.c: 291: }
-"291
-[e :UE 917 ]
+[; ;easat2_util_transmission.c: 274: }
+"274
+[e :UE 907 ]
 }
-"297
+"280
 [v _util_transmit_space_between_letters `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 297: void util_transmit_space_between_letters(void) {
+[; ;easat2_util_transmission.c: 280: void util_transmit_space_between_letters(void) {
 [e :U _util_transmit_space_between_letters ]
 [f ]
-[; ;easat2_util_transmission.c: 298: util_waits_delay_ms(3*(int)(2400/32));
-"298
+[; ;easat2_util_transmission.c: 281: util_waits_delay_ms(3*(int)(2400/32));
+"281
 [e ( _util_waits_delay_ms (1 * -> 3 `i / -> 2400 `i -> 32 `i ]
-[; ;easat2_util_transmission.c: 299: }
-"299
-[e :UE 918 ]
+[; ;easat2_util_transmission.c: 282: }
+"282
+[e :UE 908 ]
 }
-"304
+"287
 [v _util_transmit_space_between_words `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 304: void util_transmit_space_between_words(void) {
+[; ;easat2_util_transmission.c: 287: void util_transmit_space_between_words(void) {
 [e :U _util_transmit_space_between_words ]
 [f ]
-[; ;easat2_util_transmission.c: 305: util_waits_delay_ms(7*(int)(2400/32));
-"305
+[; ;easat2_util_transmission.c: 288: util_waits_delay_ms(7*(int)(2400/32));
+"288
 [e ( _util_waits_delay_ms (1 * -> 7 `i / -> 2400 `i -> 32 `i ]
-[; ;easat2_util_transmission.c: 306: }
-"306
-[e :UE 919 ]
+[; ;easat2_util_transmission.c: 289: }
+"289
+[e :UE 909 ]
 }
-"310
+"293
 [v _util_transmit_buzzer_1ms_cycle `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_transmission.c: 310: void util_transmit_buzzer_1ms_cycle(void) {
+[; ;easat2_util_transmission.c: 293: void util_transmit_buzzer_1ms_cycle(void) {
 [e :U _util_transmit_buzzer_1ms_cycle ]
 [f ]
-[; ;easat2_util_transmission.c: 312: (PORTDbits.RD2) = 1;
-"312
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_transmission.c: 313: util_waits_delay_hundred_us((int)(10/2));
-"313
+[; ;easat2_util_transmission.c: 296: util_waits_delay_hundred_us((int)(10/2));
+"296
 [e ( _util_waits_delay_hundred_us (1 / -> 10 `i -> 2 `i ]
-[; ;easat2_util_transmission.c: 314: (PORTDbits.RD2) = 0;
-"314
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_transmission.c: 315: util_waits_delay_hundred_us((int)(10/2));
-"315
+[; ;easat2_util_transmission.c: 298: util_waits_delay_hundred_us((int)(10/2));
+"298
 [e ( _util_waits_delay_hundred_us (1 / -> 10 `i -> 2 `i ]
-[; ;easat2_util_transmission.c: 317: }
-"317
-[e :UE 920 ]
+[; ;easat2_util_transmission.c: 300: }
+"300
+[e :UE 910 ]
 }
 [p f _sprintf 8495232 ]
 [a 2C 32 37 46 49 102 32 37 46 49 102 32 37 51 46 48 100 32 37 51 46 48 100 0 ]

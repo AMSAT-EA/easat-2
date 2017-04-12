@@ -1,5 +1,5 @@
 
-# 1 "easat2_util_timer.c"
+# 1 "easat2_init_timer.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -8481,15 +8481,14 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
-# 31 "easat2_util_timer.h"
-void util_timer1_initialize(void);
-void interrupt high_priority_int();
-void interrupt low_priority low_priority_int();
+# 21 "easat2_init_timer.h"
+void init_timer1_initialize(void);
+void init_timer2_initialize(void);
 
-# 19 "easat2_util_timer.c"
-void util_timer1_initialize(void) {
+# 17 "easat2_init_timer.c"
+void init_timer1_initialize(void) {
 
-# 32
+# 30
 RCONbits.IPEN = 1;
 
 
@@ -8526,145 +8525,28 @@ INTCONbits.GIE = 1;
 
 }
 
+# 70
+void init_timer2_initialize(void) {
 
-
-int tmr1_interrupt_number = 0;
-
-
-
-void interrupt high_priority_int() {
-
-static unsigned int samples[100];
-static int sample_position = 0;
-static unsigned short long noise_mean_value = 32000;
-static unsigned int activation_thresold = 32000;
-static int times_thresold_exceeded = 0;
-static int cycles_transmitter_active = 0;
-static int is_transmitter_active = 0;
-
-static int valid_samples = 0;
-
-unsigned int sample = 0;
-
-
-
-if (PIR1bits.TMR1IF) {
-
-
-
-TMR1H = 0xEC;
-TMR1L = 0x77 ; 60535;
+# 77
+T2CONbits.TMR2ON = 0;
 
 
 
 
-asm(" clrwdt");
-
-# 112
-tmr1_interrupt_number++;
+T2CONbits.T2CKPS0 = 1;
+T2CONbits.T2CKPS1 = 0;
 
 
+T2CONbits.T2OUTPS = 0b0000;
 
-if (tmr1_interrupt_number == 50) {
+# 93
+TMR2 = 0;
 
 
-(PORTDbits.RD4) = !(PORTDbits.RD4);
+PIE1bits.TMR2IE = 1;
+IPR1bits.TMR2IP = 0;
+PIR1bits.TMR2IF = 0;
 
-tmr1_interrupt_number = 0;
-
+# 105
 }
-
-
-
-if (valid_samples < 100) valid_samples++;
-
-# 140
-ADCON0bits.CHS = 4;
-ADCON0bits.ADON = 1;
-PIR1bits.ADIF = 0;
-
-ADCON0bits.GO = 1;
-while(!PIR1bits.ADIF);
-
-sample = ADRES;
-
-PIR1bits.ADIF = 0;
-ADCON0bits.ADON = 0;
-
-if (is_transmitter_active) cycles_transmitter_active++;
-
-
-
-
-if (sample > 128 && sample > activation_thresold) {
-
-times_thresold_exceeded++;
-
-if (times_thresold_exceeded == 200) {
-
-
-
-
-(PORTBbits.RB1) = 1;
-
-is_transmitter_active = 1;
-cycles_transmitter_active = 0;
-
-times_thresold_exceeded = 0;
-
-}
-
-
-} else {
-
-times_thresold_exceeded = 0;
-
-if (cycles_transmitter_active == 12000) {
-
-(PORTBbits.RB1) = 0;
-is_transmitter_active = 0;
-}
-
-samples[sample_position++] = sample;
-
-
-if (sample_position == 100) sample_position = 0;
-
-if (valid_samples == 100) {
-
-
-noise_mean_value = 0;
-
-for (int i = 0; i < 100; i++)
-noise_mean_value += samples[i];
-
-
-noise_mean_value = (unsigned short long)(noise_mean_value / 100);
-
-
-
-
-activation_thresold = noise_mean_value * 2;
-
-}
-
-}
-
-
-
-
-PIR1bits.TMR1IF = 0;
-
-}
-
-}
-
-
-
-
-void interrupt low_priority low_priority_int() {
-
-
-
-}
-

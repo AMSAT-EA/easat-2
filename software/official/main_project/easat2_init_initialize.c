@@ -1,7 +1,7 @@
 /*
  *                                                       
  * Project     : EASAT2                                            
- * File        : easat2_util_initialize.c
+ * File        : easat2_init_initialize.c
  *
  * Description : EASAT2 MCU initializing functions
  * Last update : 10 October 2016                                              
@@ -9,22 +9,29 @@
 */
 
 #include "easat2.h"
-#include "easat2_util_initialize.h"
-#include "easat2_util_timer.h"
+#include "easat2_init_initialize.h"
+#include "easat2_init_timer.h"
+#include "easat2_util_pwm.h"
 
 // this function initializes the MCU
 
-void initialize(void) {
+void init_initialize(void) {
     
-    io_initialize();
-    util_timer1_initialize();
+    // I/O initialize
+    init_io_initialize();
     
+    // timers initialize
+    init_timer1_initialize();
+    init_timer2_initialize();
     
+    // PWM initialize
+    util_pwm_initialize();
+      
 }
 
 // this functions initializes PORTS and ADCs
 
-void io_initialize(void) {
+void init_io_initialize(void) {
           
     // configure PORTS, ADCs, and so on
 

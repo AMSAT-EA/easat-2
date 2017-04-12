@@ -1,117 +1,105 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"19 easat2_util_initialize.h
-[v _io_initialize `(v ~T0 @X0 0 ef ]
-"31 easat2_util_timer.h
-[v _util_timer1_initialize `(v ~T0 @X0 0 ef ]
-"692 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f45k22.h
-[s S32 :4 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S32 . . FVRS FVRST FVREN ]
-"698
-[s S33 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S33 . . FVRS0 FVRS1 ]
-"691
-[u S31 `S32 1 `S33 1 ]
-[n S31 . . . ]
-"704
-[v _VREFCON0bits `VS31 ~T0 @X0 0 e@3906 ]
-"13368
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"13298
-[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
-"7973
-[s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S389 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
-"7983
-[s S390 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S390 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
-"7972
-[u S388 `S389 1 `S390 1 ]
-[n S388 . . . ]
-"7994
-[v _TRISAbits `VS388 ~T0 @X0 0 e@3986 ]
-"55
-[s S2 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2 . ANSA0 ANSA1 ANSA2 ANSA3 . ANSA5 ]
-"54
-[u S1 `S2 1 ]
-[n S1 . . ]
-"64
-[v _ANSELAbits `VS1 ~T0 @X0 0 e@3896 ]
-"7473
-[s S374 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S374 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"7483
-[s S375 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S375 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
-"7472
-[u S373 `S374 1 `S375 1 ]
-[n S373 . . . ]
-"7494
-[v _LATAbits `VS373 ~T0 @X0 0 e@3977 ]
-"2671
-[v _WPUB `Vuc ~T0 @X0 0 e@3937 ]
-"18506
-[v _RBPU `Vb ~T0 @X0 0 e@32655 ]
-"8194
-[s S395 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S395 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
-"8204
-[s S396 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S396 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"8193
-[u S394 `S395 1 `S396 1 ]
-[n S394 . . . ]
-"8215
-[v _TRISBbits `VS394 ~T0 @X0 0 e@3987 ]
-"99
-[s S4 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S4 . ANSB0 ANSB1 ANSB2 ANSB3 ANSB4 ANSB5 ]
-"98
-[u S3 `S4 1 ]
-[n S3 . . ]
-"108
-[v _ANSELBbits `VS3 ~T0 @X0 0 e@3897 ]
-"7584
-[s S377 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S377 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"7594
-[s S378 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S378 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
-"7583
-[u S376 `S377 1 `S378 1 ]
-[n S376 . . . ]
-"7605
-[v _LATBbits `VS376 ~T0 @X0 0 e@3978 ]
-"8636
-[s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S407 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
-"8646
-[s S408 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S408 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"8635
-[u S406 `S407 1 `S408 1 ]
-[n S406 . . . ]
-"8657
-[v _TRISDbits `VS406 ~T0 @X0 0 e@3989 ]
-"198
-[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S8 . ANSD0 ANSD1 ANSD2 ANSD3 ANSD4 ANSD5 ANSD6 ANSD7 ]
-"197
-[u S7 `S8 1 ]
-[n S7 . . ]
-"209
-[v _ANSELDbits `VS7 ~T0 @X0 0 e@3899 ]
-"7806
-[s S383 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S383 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"7816
-[s S384 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S384 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"7805
-[u S382 `S383 1 `S384 1 ]
-[n S382 . . . ]
-"7827
-[v _LATDbits `VS382 ~T0 @X0 0 e@3980 ]
+"9391 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f45k22.h
+[s S435 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S435 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+"9400
+[s S436 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S436 . . SSPIF TXIF RCIF ]
+"9390
+[u S434 `S435 1 `S436 1 ]
+[n S434 . . . ]
+"9407
+[v _PIR1bits `VS434 ~T0 @X0 0 e@3998 ]
+"15601
+[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
+"15582
+[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
+"7057
+[s S357 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S357 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"7067
+[s S358 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S358 . . P2B P2C P2D P1B P1C P1D ]
+"7076
+[s S359 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S359 . . CCP4 . TX2 RX2 ]
+"7083
+[s S360 :3 `uc 1 :1 `uc 1 ]
+[n S360 . . NOT_SS2 ]
+"7087
+[s S361 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S361 . SCK2 SDI2 . nSS2 SDO2 . CK2 DT2 ]
+"7097
+[s S362 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S362 . SCL2 SDA2 . SS2 ]
+"7103
+[s S363 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S363 . AN20 AN21 AN22 AN23 AN24 AN25 AN26 AN27 ]
+"7056
+[u S356 `S357 1 `S358 1 `S359 1 `S360 1 `S361 1 `S362 1 `S363 1 ]
+[n S356 . . . . . . . . ]
+"7114
+[v _PORTDbits `VS356 ~T0 @X0 0 e@3971 ]
+"13441
+[s S639 :1 `uc 1 :1 `uc 1 ]
+[n S639 . . GO_NOT_DONE ]
+"13445
+[s S640 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S640 . ADON GO_nDONE CHS ]
+"13450
+[s S641 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S641 . . GO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"13459
+[s S642 :1 `uc 1 :1 `uc 1 ]
+[n S642 . . DONE ]
+"13463
+[s S643 :1 `uc 1 :1 `uc 1 ]
+[n S643 . . NOT_DONE ]
+"13467
+[s S644 :1 `uc 1 :1 `uc 1 ]
+[n S644 . . nDONE ]
+"13471
+[s S645 :1 `uc 1 :1 `uc 1 ]
+[n S645 . . GO_DONE ]
+"13475
+[s S646 :1 `uc 1 :1 `uc 1 ]
+[n S646 . . GODONE ]
+"13440
+[u S638 `S639 1 `S640 1 `S641 1 `S642 1 `S643 1 `S644 1 `S645 1 `S646 1 ]
+[n S638 . . . . . . . . . ]
+"13480
+[v _ADCON0bits `VS638 ~T0 @X0 0 e@4034 ]
+"13559
+[v _ADRES `Vus ~T0 @X0 0 e@4035 ]
+"6482
+[s S340 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S340 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"6492
+[s S341 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S341 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"6502
+[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
+"6512
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . FLT0 C12IN3M . C12IN2M T5G T1G ]
+"6520
+[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S344 . SRI C12IN3N . C12IN2N . CCP3 ]
+"6528
+[s S345 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S345 . . CTED1 CTED2 . T3CKI ]
+"6535
+[s S346 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S346 . . P2A . P3A ]
+"6541
+[s S347 :3 `uc 1 :1 `uc 1 ]
+[n S347 . . CCP2_PA2 ]
+"6481
+[u S339 `S340 1 `S341 1 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 ]
+[n S339 . . . . . . . . . ]
+"6546
+[v _PORTBbits `VS339 ~T0 @X0 0 e@3969 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6724,238 +6712,259 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
-[; ;easat2_util_initialize.h: 18: void initialize(void);
-[; ;easat2_util_initialize.h: 19: void io_initialize(void);
-[; ;easat2_util_timer.h: 31: void util_timer1_initialize(void);
-[; ;easat2_util_timer.h: 32: void interrupt high_priority_int();
-[; ;easat2_util_timer.h: 33: void interrupt low_priority low_priority_int();
-"17 easat2_util_initialize.c
-[v _initialize `(v ~T0 @X0 1 ef ]
+[; ;easat2_init_timer.h: 21: void init_timer1_initialize(void);
+[; ;easat2_init_timer.h: 22: void init_timer2_initialize(void);
+[; ;easat2_func_interrupts.h: 32: void interrupt high_priority_int();
+[; ;easat2_func_interrupts.h: 33: void interrupt low_priority low_priority_int();
+[v F6933 `(v ~T0 @X0 1 tf ]
+"17 easat2_func_interrupts.c
+[v _high_priority_int `IF6933 ~T0 @X0 1 e ]
 {
-[; ;easat2_util_initialize.c: 17: void initialize(void) {
-[e :U _initialize ]
+[; ;easat2_func_interrupts.c: 17: void interrupt high_priority_int() {
+[e :U _high_priority_int ]
 [f ]
-[; ;easat2_util_initialize.c: 19: io_initialize();
 "19
-[e ( _io_initialize ..  ]
-[; ;easat2_util_initialize.c: 20: util_timer1_initialize();
-"20
-[e ( _util_timer1_initialize ..  ]
-[; ;easat2_util_initialize.c: 23: }
+[v F6937 `i ~T0 @X0 1 s tmr1_interrupt_number ]
+[i F6937
+-> 0 `i
+]
+"21
+[v F6938 `ui ~T0 @X0 -> 100 `i s samples ]
+"22
+[v F6939 `ui ~T0 @X0 1 s sample_position ]
+[i F6939
+-> -> 0 `i `ui
+]
 "23
+[v F6940 `um ~T0 @X0 1 s noise_mean_value ]
+[i F6940
+-> -> -> 32000 `i `m `um
+]
+"24
+[v F6941 `ui ~T0 @X0 1 s activation_thresold ]
+[i F6941
+-> -> 32000 `i `ui
+]
+"25
+[v F6942 `ui ~T0 @X0 1 s times_thresold_exceeded ]
+[i F6942
+-> -> 0 `i `ui
+]
+"26
+[v F6943 `ui ~T0 @X0 1 s cycles_transmitter_active ]
+[i F6943
+-> -> 0 `i `ui
+]
+"27
+[v F6944 `uc ~T0 @X0 1 s is_transmitter_active ]
+[i F6944
+-> -> 0 `i `uc
+]
+"29
+[v F6945 `ui ~T0 @X0 1 s valid_samples ]
+[i F6945
+-> -> 0 `i `ui
+]
+"31
+[v _sample `ui ~T0 @X0 1 a ]
+[; ;easat2_func_interrupts.c: 19: static int tmr1_interrupt_number = 0;
+[; ;easat2_func_interrupts.c: 21: static unsigned int samples[100];
+[; ;easat2_func_interrupts.c: 22: static unsigned int sample_position = 0;
+[; ;easat2_func_interrupts.c: 23: static unsigned short long noise_mean_value = 32000;
+[; ;easat2_func_interrupts.c: 24: static unsigned int activation_thresold = 32000;
+[; ;easat2_func_interrupts.c: 25: static unsigned int times_thresold_exceeded = 0;
+[; ;easat2_func_interrupts.c: 26: static unsigned int cycles_transmitter_active = 0;
+[; ;easat2_func_interrupts.c: 27: static unsigned char is_transmitter_active = 0;
+[; ;easat2_func_interrupts.c: 29: static unsigned int valid_samples = 0;
+[; ;easat2_func_interrupts.c: 31: unsigned int sample = 0;
+[e = _sample -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 33: if (PIR1bits.TMR2IF) {
+"33
+[e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 844  ]
+{
+[; ;easat2_func_interrupts.c: 37: PIR1bits.TMR2IF = 0;
+"37
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"39
+}
+[; ;easat2_func_interrupts.c: 39: } else {
+[e $U 845  ]
+[e :U 844 ]
+{
+[; ;easat2_func_interrupts.c: 43: if (PIR1bits.TMR1IF) {
+"43
+[e $ ! != -> . . _PIR1bits 0 0 `i -> -> -> 0 `i `Vuc `i 846  ]
+{
+[; ;easat2_func_interrupts.c: 47: TMR1H = 0xEC;
+"47
+[e = _TMR1H -> -> 236 `i `uc ]
+[; ;easat2_func_interrupts.c: 48: TMR1L = 0x77 ; 60535;
+"48
+[e = _TMR1L -> -> 119 `i `uc ]
+[e -> 60535 `l ]
+[; ;easat2_func_interrupts.c: 52: (PORTDbits.RD5) = !(PORTDbits.RD5);
+"52
+[e = . . _PORTDbits 0 5 -> -> ! != -> . . _PORTDbits 0 5 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;easat2_func_interrupts.c: 56: tmr1_interrupt_number++;
+"56
+[e ++ F6937 -> 1 `i ]
+[; ;easat2_func_interrupts.c: 60: if (tmr1_interrupt_number == 50) {
+"60
+[e $ ! == F6937 -> 50 `i 847  ]
+{
+[; ;easat2_func_interrupts.c: 63: (PORTDbits.RD4) = !(PORTDbits.RD4);
+"63
+[e = . . _PORTDbits 0 4 -> -> ! != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;easat2_func_interrupts.c: 68: asm(" clrwdt");
+"68
+[; <"  clrwdt ;# ">
+[; ;easat2_func_interrupts.c: 72: tmr1_interrupt_number = 0;
+"72
+[e = F6937 -> 0 `i ]
+"74
+}
+[e :U 847 ]
+[; ;easat2_func_interrupts.c: 74: }
+[; ;easat2_func_interrupts.c: 78: if (valid_samples < 100) valid_samples++;
+"78
+[e $ ! < F6945 -> -> 100 `i `ui 848  ]
+[e ++ F6945 -> -> 1 `i `ui ]
+[e :U 848 ]
+[; ;easat2_func_interrupts.c: 91: ADCON0bits.CHS = 4;
+"91
+[e = . . _ADCON0bits 1 2 -> -> 4 `i `uc ]
+[; ;easat2_func_interrupts.c: 92: ADCON0bits.ADON = 1;
+"92
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 93: PIR1bits.ADIF = 0;
+"93
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 95: ADCON0bits.GO = 1;
+"95
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 96: while(!PIR1bits.ADIF);
+"96
+[e $U 849  ]
+[e :U 850 ]
+[e :U 849 ]
+[e $ ! != -> . . _PIR1bits 0 6 `i -> -> -> 0 `i `Vuc `i 850  ]
+[e :U 851 ]
+[; ;easat2_func_interrupts.c: 98: sample = ADRES;
+"98
+[e = _sample -> _ADRES `ui ]
+[; ;easat2_func_interrupts.c: 100: PIR1bits.ADIF = 0;
+"100
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 101: ADCON0bits.ADON = 0;
+"101
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 103: if (is_transmitter_active) cycles_transmitter_active++;
+"103
+[e $ ! != -> F6944 `i -> -> -> 0 `i `uc `i 852  ]
+[e ++ F6943 -> -> 1 `i `ui ]
+[e :U 852 ]
+[; ;easat2_func_interrupts.c: 108: if (sample > 128 && sample > activation_thresold) {
+"108
+[e $ ! && > _sample -> -> 128 `i `ui > _sample F6941 853  ]
+{
+[; ;easat2_func_interrupts.c: 110: times_thresold_exceeded++;
+"110
+[e ++ F6942 -> -> 1 `i `ui ]
+[; ;easat2_func_interrupts.c: 112: if (times_thresold_exceeded == 200) {
+"112
+[e $ ! == F6942 -> -> 200 `i `ui 854  ]
+{
+[; ;easat2_func_interrupts.c: 117: (PORTBbits.RB1) = 1;
+"117
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 119: is_transmitter_active = 1;
+"119
+[e = F6944 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 120: cycles_transmitter_active = 0;
+"120
+[e = F6943 -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 122: times_thresold_exceeded = 0;
+"122
+[e = F6942 -> -> 0 `i `ui ]
+"124
+}
+[e :U 854 ]
+"127
+}
+[; ;easat2_func_interrupts.c: 124: }
+[; ;easat2_func_interrupts.c: 127: } else {
+[e $U 855  ]
+[e :U 853 ]
+{
+[; ;easat2_func_interrupts.c: 129: times_thresold_exceeded = 0;
+"129
+[e = F6942 -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 131: if (cycles_transmitter_active == 12000) {
+"131
+[e $ ! == F6943 -> -> 12000 `i `ui 856  ]
+{
+[; ;easat2_func_interrupts.c: 133: (PORTBbits.RB1) = 0;
+"133
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 134: is_transmitter_active = 0;
+"134
+[e = F6944 -> -> 0 `i `uc ]
+"135
+}
+[e :U 856 ]
+[; ;easat2_func_interrupts.c: 135: }
+[; ;easat2_func_interrupts.c: 137: samples[sample_position++] = sample;
+"137
+[e = *U + &U F6938 * -> ++ F6939 -> -> 1 `i `ui `ux -> -> # *U &U F6938 `ui `ux _sample ]
+[; ;easat2_func_interrupts.c: 140: if (sample_position == 100) sample_position = 0;
+"140
+[e $ ! == F6939 -> -> 100 `i `ui 857  ]
+[e = F6939 -> -> 0 `i `ui ]
+[e :U 857 ]
+[; ;easat2_func_interrupts.c: 142: if (valid_samples == 100) {
+"142
+[e $ ! == F6945 -> -> 100 `i `ui 858  ]
+{
+[; ;easat2_func_interrupts.c: 145: noise_mean_value = 0;
+"145
+[e = F6940 -> -> -> 0 `i `m `um ]
+[; ;easat2_func_interrupts.c: 151: noise_mean_value = (unsigned short long)(noise_mean_value / 100);
+"151
+[e = F6940 / F6940 -> -> -> 100 `i `m `um ]
+[; ;easat2_func_interrupts.c: 156: activation_thresold = noise_mean_value * 2;
+"156
+[e = F6941 -> * F6940 -> -> -> 2 `i `m `um `ui ]
+"158
+}
+[e :U 858 ]
+"160
+}
+[e :U 855 ]
+[; ;easat2_func_interrupts.c: 158: }
+[; ;easat2_func_interrupts.c: 160: }
+[; ;easat2_func_interrupts.c: 165: PIR1bits.TMR1IF = 0;
+"165
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"167
+}
+[e :U 846 ]
+"169
+}
+[e :U 845 ]
+[; ;easat2_func_interrupts.c: 167: }
+[; ;easat2_func_interrupts.c: 169: }
+[; ;easat2_func_interrupts.c: 170: }
+"170
 [e :UE 843 ]
 }
-"27
-[v _io_initialize `(v ~T0 @X0 1 ef ]
+[v F6935 `(v ~T0 @X0 1 tf ]
+"175
+[v _low_priority_int `ILF6935 ~T0 @X0 1 e ]
 {
-[; ;easat2_util_initialize.c: 27: void io_initialize(void) {
-[e :U _io_initialize ]
+[; ;easat2_func_interrupts.c: 175: void interrupt low_priority low_priority_int() {
+[e :U _low_priority_int ]
 [f ]
-[; ;easat2_util_initialize.c: 36: VREFCON0bits.FVREN = 1;
-"36
-[e = . . _VREFCON0bits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 37: VREFCON0bits.FVRS0 = 0;
-"37
-[e = . . _VREFCON0bits 1 1 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 38: VREFCON0bits.FVRS1 = 1;
-"38
-[e = . . _VREFCON0bits 1 2 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 40: VREFCON0bits.FVRST = 1;
-"40
-[e = . . _VREFCON0bits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 45: ADCON1 = 0x08;
-"45
-[e = _ADCON1 -> -> 8 `i `uc ]
-[; ;easat2_util_initialize.c: 46: ADCON2 = 0xAF;
-"46
-[e = _ADCON2 -> -> 175 `i `uc ]
-[; ;easat2_util_initialize.c: 50: TRISAbits.TRISA0 = 1;
-"50
-[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 51: TRISAbits.TRISA1 = 1;
-"51
-[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 52: TRISAbits.TRISA2 = 0;
-"52
-[e = . . _TRISAbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 53: TRISAbits.TRISA3 = 1;
-"53
-[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 54: TRISAbits.TRISA4 = 1;
-"54
-[e = . . _TRISAbits 0 4 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 55: TRISAbits.TRISA5 = 1;
-"55
-[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 62: ANSELAbits.ANSA0 = 1;
-"62
-[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 63: ANSELAbits.ANSA1 = 1;
-"63
-[e = . . _ANSELAbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 64: ANSELAbits.ANSA2 = 1;
-"64
-[e = . . _ANSELAbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 65: ANSELAbits.ANSA3 = 0;
-"65
-[e = . . _ANSELAbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 67: ANSELAbits.ANSA5 = 1;
-"67
-[e = . . _ANSELAbits 0 5 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 71: LATAbits.LATA0 = 0;
-"71
-[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 72: LATAbits.LATA1 = 0;
-"72
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 73: LATAbits.LATA2 = 0;
-"73
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 74: LATAbits.LATA3 = 0;
-"74
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 75: LATAbits.LATA4 = 0;
-"75
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 76: LATAbits.LATA5 = 0;
-"76
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 84: WPUB = 0b00000000;
-"84
-[e = _WPUB -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 85: RBPU = 0b11111111;
-"85
-[e = _RBPU -> -> 255 `i `b ]
-[; ;easat2_util_initialize.c: 89: TRISBbits.TRISB0 = 1;
-"89
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 90: TRISBbits.TRISB1 = 0;
-"90
-[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 91: TRISBbits.TRISB2 = 0;
-"91
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 92: TRISBbits.TRISB3 = 0;
-"92
-[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 93: TRISBbits.TRISB4 = 0;
-"93
-[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 94: TRISBbits.TRISB5 = 0;
-"94
-[e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 95: TRISBbits.TRISB6 = 0;
-"95
-[e = . . _TRISBbits 0 6 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 96: TRISBbits.TRISB7 = 0;
-"96
-[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 100: ANSELBbits.ANSB0 = 1;
-"100
-[e = . . _ANSELBbits 0 0 -> -> 1 `i `uc ]
-[; ;easat2_util_initialize.c: 101: ANSELBbits.ANSB1 = 0;
-"101
-[e = . . _ANSELBbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 102: ANSELBbits.ANSB2 = 0;
-"102
-[e = . . _ANSELBbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 103: ANSELBbits.ANSB3 = 0;
-"103
-[e = . . _ANSELBbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 105: ANSELBbits.ANSB5 = 0;
-"105
-[e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 109: LATBbits.LATB0 = 0;
-"109
-[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 110: LATBbits.LATB1 = 0;
-"110
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 111: LATBbits.LATB2 = 0;
-"111
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 112: LATBbits.LATB3 = 0;
-"112
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 113: LATBbits.LATB4 = 0;
-"113
-[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 114: LATBbits.LATB5 = 0;
-"114
-[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 118: TRISDbits.TRISD0 = 0;
-"118
-[e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 119: TRISDbits.TRISD1 = 0;
-"119
-[e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 120: TRISDbits.TRISD2 = 0;
-"120
-[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 121: TRISDbits.TRISD3 = 0;
-"121
-[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 122: TRISDbits.TRISD4 = 0;
-"122
-[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 123: TRISDbits.TRISD5 = 0;
-"123
-[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 124: TRISDbits.TRISD6 = 0;
-"124
-[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 125: TRISDbits.TRISD7 = 0;
-"125
-[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 129: ANSELDbits.ANSD0 = 0;
-"129
-[e = . . _ANSELDbits 0 0 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 130: ANSELDbits.ANSD1 = 0;
-"130
-[e = . . _ANSELDbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 131: ANSELDbits.ANSD2 = 0;
-"131
-[e = . . _ANSELDbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 132: ANSELDbits.ANSD3 = 0;
-"132
-[e = . . _ANSELDbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 133: ANSELDbits.ANSD4 = 0;
-"133
-[e = . . _ANSELDbits 0 4 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 134: ANSELDbits.ANSD5 = 0;
-"134
-[e = . . _ANSELDbits 0 5 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 135: ANSELDbits.ANSD6 = 0;
-"135
-[e = . . _ANSELDbits 0 6 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 136: ANSELDbits.ANSD7 = 0;
-"136
-[e = . . _ANSELDbits 0 7 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 140: LATDbits.LATD0 = 0;
-"140
-[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 141: LATDbits.LATD1 = 0;
-"141
-[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 142: LATDbits.LATD2 = 0;
-"142
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 143: LATDbits.LATD3 = 0;
-"143
-[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 144: LATDbits.LATD4 = 0;
-"144
-[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 145: LATDbits.LATD5 = 0;
-"145
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 146: LATDbits.LATD6 = 0;
-"146
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 147: LATDbits.LATD7 = 0;
-"147
-[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
-[; ;easat2_util_initialize.c: 153: }
-"153
-[e :UE 844 ]
+[; ;easat2_func_interrupts.c: 179: }
+"179
+[e :UE 859 ]
 }

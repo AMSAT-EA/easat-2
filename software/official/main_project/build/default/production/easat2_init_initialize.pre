@@ -1,5 +1,5 @@
 
-# 1 "easat2_util_pwm.c"
+# 1 "easat2_init_initialize.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -8481,93 +8481,140 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
+# 18 "easat2_init_initialize.h"
+void init_initialize(void);
+void init_io_initialize(void);
+
+# 21 "easat2_init_timer.h"
+void init_timer1_initialize(void);
+void init_timer2_initialize(void);
+
 # 33 "easat2_util_pwm.h"
 void util_pwm_initialize(void);
 void util_pwm_start(void);
 void util_pwm_stop(void);
 
-# 24 "easat2_util_pwm.c"
-void util_pwm_initialize(void) {
-
-# 31
-(TRISDbits.TRISD2) = 1;
-(TRISDbits.TRISD3) = 1;
+# 18 "easat2_init_initialize.c"
+void init_initialize(void) {
 
 
-
-CCPTMRS0bits.C2TSEL = 0;
-
+init_io_initialize();
 
 
-PR2 = (2000000 / (4 * 1000 * 4)) - 1;
-
-# 49
-CCP2CONbits.P2M = 0b00;
-CCP2CONbits.CCP2M = 0b1100;
+init_timer1_initialize();
+init_timer2_initialize();
 
 
-
-PSTR2CONbits.STR2A = 0;
-PSTR2CONbits.STR2B = 1;
-PSTR2CONbits.STR2C = 1;
-PSTR2CONbits.STR2D = 0;
-
-
-
-CCPR2L = (2*((2000000 / (4 * 1000 * 4)) - 1 + 1) >> 2) & 0xFF;
-CCP2CONbits.DC2B = (2*((2000000 / (4 * 1000 * 4)) - 1 + 1)) & 0x03;
-
-
-
-T2CONbits.TMR2ON = 0b0;
-
-
-
-PIR1bits.TMR2IF = 0;
-
+util_pwm_initialize();
 
 }
 
 
 
+void init_io_initialize(void) {
 
-void util_pwm_start(void) {
+# 43
+VREFCON0bits.FVREN = 1;
+VREFCON0bits.FVRS0 = 0;
+VREFCON0bits.FVRS1 = 1;
+
+VREFCON0bits.FVRST = 1;
+
+# 52
+ADCON1 = 0x08;
+ADCON2 = 0xAF;
 
 
 
+TRISAbits.TRISA0 = 1;
+TRISAbits.TRISA1 = 1;
+TRISAbits.TRISA2 = 0;
+TRISAbits.TRISA3 = 1;
+TRISAbits.TRISA4 = 1;
+TRISAbits.TRISA5 = 1;
 
-(TRISDbits.TRISD2) = 0;
-(TRISDbits.TRISD3) = 0;
+# 69
+ANSELAbits.ANSA0 = 1;
+ANSELAbits.ANSA1 = 1;
+ANSELAbits.ANSA2 = 1;
+ANSELAbits.ANSA3 = 0;
+
+ANSELAbits.ANSA5 = 1;
 
 
 
-T2CONbits.TMR2ON = 1;
+LATAbits.LATA0 = 0;
+LATAbits.LATA1 = 0;
+LATAbits.LATA2 = 0;
+LATAbits.LATA3 = 0;
+LATAbits.LATA4 = 0;
+LATAbits.LATA5 = 0;
 
+# 91
+WPUB = 0b00000000;
+RBPU = 0b11111111;
+
+
+
+TRISBbits.TRISB0 = 1;
+TRISBbits.TRISB1 = 0;
+TRISBbits.TRISB2 = 0;
+TRISBbits.TRISB3 = 0;
+TRISBbits.TRISB4 = 0;
+TRISBbits.TRISB5 = 0;
+TRISBbits.TRISB6 = 0;
+TRISBbits.TRISB7 = 0;
+
+
+
+ANSELBbits.ANSB0 = 1;
+ANSELBbits.ANSB1 = 0;
+ANSELBbits.ANSB2 = 0;
+ANSELBbits.ANSB3 = 0;
+
+ANSELBbits.ANSB5 = 0;
+
+
+
+LATBbits.LATB0 = 0;
+LATBbits.LATB1 = 0;
+LATBbits.LATB2 = 0;
+LATBbits.LATB3 = 0;
+LATBbits.LATB4 = 0;
+LATBbits.LATB5 = 0;
+
+
+
+TRISDbits.TRISD0 = 0;
+TRISDbits.TRISD1 = 0;
+TRISDbits.TRISD2 = 0;
+TRISDbits.TRISD3 = 0;
+TRISDbits.TRISD4 = 0;
+TRISDbits.TRISD5 = 0;
+TRISDbits.TRISD6 = 0;
+TRISDbits.TRISD7 = 0;
+
+
+
+ANSELDbits.ANSD0 = 0;
+ANSELDbits.ANSD1 = 0;
+ANSELDbits.ANSD2 = 0;
+ANSELDbits.ANSD3 = 0;
+ANSELDbits.ANSD4 = 0;
+ANSELDbits.ANSD5 = 0;
+ANSELDbits.ANSD6 = 0;
+ANSELDbits.ANSD7 = 0;
+
+
+
+LATDbits.LATD0 = 0;
+LATDbits.LATD1 = 0;
+LATDbits.LATD2 = 0;
+LATDbits.LATD3 = 0;
+LATDbits.LATD4 = 0;
+LATDbits.LATD5 = 0;
+LATDbits.LATD6 = 0;
+LATDbits.LATD7 = 0;
+
+# 160
 }
-
-
-
-
-void util_pwm_stop(void) {
-
-
-
-
-(TRISDbits.TRISD2) = 1;
-(TRISDbits.TRISD3) = 1;
-
-
-
-T2CONbits.TMR2ON = 0;
-
-}
-
-
-
-
-int util_check_pwm_on(void) {
-
-return (T2CONbits.TMR2ON == 1);
-
-}
-

@@ -8598,7 +8598,12 @@ void util_waits_delay_secs(int secs);
 void util_waits_delay_ms(int ms);
 void util_waits_delay_hundred_us(int us);
 
-# 21 "easat2_util_transmission.c"
+# 33 "easat2_util_pwm.h"
+void util_pwm_initialize(void);
+void util_pwm_start(void);
+void util_pwm_stop(void);
+
+# 22 "easat2_util_transmission.c"
 void util_beacon_transmission(float battery_voltage, int solar_current,
 int battery_current, float temperature) {
 
@@ -8625,7 +8630,7 @@ util_transmit_letter(BEACON_MESSAGE[i]);
 
 }
 
-# 52
+# 53
 void util_transmit_letter(char letter) {
 
 switch (letter) {
@@ -8769,7 +8774,7 @@ util_transmit_space_between_letters();
 
 }
 
-# 201
+# 202
 void util_transmit_morse_sequence(char * morse_sequence) {
 
 
@@ -8795,49 +8800,37 @@ util_transmit_space_between_dots_dashes();
 
 }
 
-# 231
+# 232
 void util_transmit_dot(void) {
 
 
 
 (PORTDbits.RD1) = 1;
-(PORTDbits.RD3) = 1;
 
-for (int i = 0; i < (int)(2400/32); i++) {
 
-# 244
-if (1)
-util_transmit_buzzer_1ms_cycle();
-else
-util_waits_delay_ms(1);
-
-}
+util_pwm_start();
+util_waits_delay_ms((int)(2400/32));
+util_pwm_stop();
 
 (PORTDbits.RD1) = 0;
-(PORTDbits.RD3) = 0;
+
 
 }
 
-# 262
+# 254
 void util_transmit_dash(void) {
 
 
 
 (PORTDbits.RD1) = 1;
-(PORTDbits.RD3) = 1;
 
-for (int i = 0; i < ((int)(2400/32)*3); i++) {
 
-# 275
-if (1)
-util_transmit_buzzer_1ms_cycle();
-else
-util_waits_delay_ms(1);
-
-}
+util_pwm_start();
+util_waits_delay_ms(((int)(2400/32)*3));
+util_pwm_stop();
 
 (PORTDbits.RD1) = 0;
-(PORTDbits.RD3) = 0;
+
 }
 
 
@@ -8847,7 +8840,7 @@ void util_transmit_space_between_dots_dashes(void) {
 util_waits_delay_ms((int)(2400/32));
 }
 
-# 297
+# 280
 void util_transmit_space_between_letters(void) {
 util_waits_delay_ms(3*(int)(2400/32));
 }
@@ -8863,9 +8856,9 @@ util_waits_delay_ms(7*(int)(2400/32));
 
 void util_transmit_buzzer_1ms_cycle(void) {
 
-(PORTDbits.RD2) = 1;
+
 util_waits_delay_hundred_us((int)(10/2));
-(PORTDbits.RD2) = 0;
+
 util_waits_delay_hundred_us((int)(10/2));
 
 }

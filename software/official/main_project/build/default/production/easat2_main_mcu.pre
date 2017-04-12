@@ -8484,9 +8484,9 @@ extern __nonreentrant void _delay3(unsigned char);
 # 18 "easat2_main_mcu.h"
 void main_loop(void);
 
-# 18 "easat2_util_initialize.h"
-void initialize(void);
-void io_initialize(void);
+# 18 "easat2_init_initialize.h"
+void init_initialize(void);
+void init_io_initialize(void);
 
 # 18 "easat2_util_inputs.h"
 float util_getBatteryVoltage(void);
@@ -8615,7 +8615,7 @@ void util_transmit_buzzer_1ms_cycle(void);
 void main(void) {
 
 
-initialize();
+init_initialize();
 
 
 main_loop();

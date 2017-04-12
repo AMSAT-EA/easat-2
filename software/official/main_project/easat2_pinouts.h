@@ -52,7 +52,7 @@
                                                            // RD0 avaliable
 #define PINOUT_BEACON_LED                 (PORTDbits.RD1)  // main test red led pin
 #define PINOUT_BUZZER                     (PORTDbits.RD2)  // test buzzer 1 Khz square wave
-#define PINOUT_BEACON_ON                  (PORTDbits.RD3)  // Audio beacon out, same as buzzer
+#define PINOUT_BEACON_OUT                 (PORTDbits.RD3)  // Audio beacon out, same as buzzer
 #define PINOUT_TIMER_LED                  (PORTDbits.RD4)  // aux green blinking timer led
 #define PINOUT_WATCHDOG                   (PORTDbits.RD5)  // out signal to watchdog
                                                            // RD6 avaliable
@@ -60,5 +60,9 @@
 // PORTE
 
 
+// TRIS registers that change while execution
+
+#define PINOUT_BUZZER_PWM                 (TRISDbits.TRISD2) // PWM CCP P2B
+#define PINOUT_BEACON_AUDIO_PWM           (TRISDbits.TRISD3) // PWM CCP P2C
 
 #endif

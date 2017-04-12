@@ -1,5 +1,92 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"8636 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f45k22.h
+"19 easat2_init_initialize.h
+[v _init_io_initialize `(v ~T0 @X0 0 ef ]
+"21 easat2_init_timer.h
+[v _init_timer1_initialize `(v ~T0 @X0 0 ef ]
+"22
+[v _init_timer2_initialize `(v ~T0 @X0 0 ef ]
+"33 easat2_util_pwm.h
+[v _util_pwm_initialize `(v ~T0 @X0 0 ef ]
+"692 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f45k22.h
+[s S32 :4 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S32 . . FVRS FVRST FVREN ]
+"698
+[s S33 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . . FVRS0 FVRS1 ]
+"691
+[u S31 `S32 1 `S33 1 ]
+[n S31 . . . ]
+"704
+[v _VREFCON0bits `VS31 ~T0 @X0 0 e@3906 ]
+"13368
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"13298
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"7973
+[s S389 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S389 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"7983
+[s S390 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S390 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"7972
+[u S388 `S389 1 `S390 1 ]
+[n S388 . . . ]
+"7994
+[v _TRISAbits `VS388 ~T0 @X0 0 e@3986 ]
+"55
+[s S2 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2 . ANSA0 ANSA1 ANSA2 ANSA3 . ANSA5 ]
+"54
+[u S1 `S2 1 ]
+[n S1 . . ]
+"64
+[v _ANSELAbits `VS1 ~T0 @X0 0 e@3896 ]
+"7473
+[s S374 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S374 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"7483
+[s S375 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S375 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
+"7472
+[u S373 `S374 1 `S375 1 ]
+[n S373 . . . ]
+"7494
+[v _LATAbits `VS373 ~T0 @X0 0 e@3977 ]
+"2671
+[v _WPUB `Vuc ~T0 @X0 0 e@3937 ]
+"18506
+[v _RBPU `Vb ~T0 @X0 0 e@32655 ]
+"8194
+[s S395 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S395 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"8204
+[s S396 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S396 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"8193
+[u S394 `S395 1 `S396 1 ]
+[n S394 . . . ]
+"8215
+[v _TRISBbits `VS394 ~T0 @X0 0 e@3987 ]
+"99
+[s S4 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S4 . ANSB0 ANSB1 ANSB2 ANSB3 ANSB4 ANSB5 ]
+"98
+[u S3 `S4 1 ]
+[n S3 . . ]
+"108
+[v _ANSELBbits `VS3 ~T0 @X0 0 e@3897 ]
+"7584
+[s S377 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S377 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"7594
+[s S378 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S378 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
+"7583
+[u S376 `S377 1 `S378 1 ]
+[n S376 . . . ]
+"7605
+[v _LATBbits `VS376 ~T0 @X0 0 e@3978 ]
+"8636
 [s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S407 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
 "8646
@@ -10,71 +97,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S406 . . . ]
 "8657
 [v _TRISDbits `VS406 ~T0 @X0 0 e@3989 ]
-"1375
-[s S62 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :2 `uc 1 ]
-[n S62 . C1TSEL . C2TSEL . C3TSEL ]
-"1382
-[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S63 . C1TSEL0 C1TSEL1 . C2TSEL0 C2TSEL1 . C3TSEL0 C3TSEL1 ]
-"1374
-[u S61 `S62 1 `S63 1 ]
-[n S61 . . . ]
-"1393
-[v _CCPTMRS0bits `VS61 ~T0 @X0 0 e@3913 ]
-"13135
-[v _PR2 `Vuc ~T0 @X0 0 e@4027 ]
-"3225
-[s S154 :4 `uc 1 :2 `uc 1 :2 `uc 1 ]
-[n S154 . CCP2M DC2B P2M ]
-"3230
-[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S155 . CCP2M0 CCP2M1 CCP2M2 CCP2M3 DC2B0 DC2B1 P2M0 P2M1 ]
-"3224
-[u S153 `S154 1 `S155 1 ]
-[n S153 . . . ]
-"3241
-[v _CCP2CONbits `VS153 ~T0 @X0 0 e@3942 ]
-"2776
-[s S136 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S136 . STR2A STR2B STR2C STR2D STR2SYNC ]
-"2783
-[s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S137 . P2DC02 P2DC12 P2DC22 P2DC32 P2DC42 ]
-"2790
-[s S138 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S138 . P2DC0CON P2DC1CON P2DC2CON P2DC3CON P2DC4CON ]
-"2797
-[s S139 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S139 . STRA2 STRB2 STRC2 STRD2 STRSYNC2 ]
-"2775
-[u S135 `S136 1 `S137 1 `S138 1 `S139 1 ]
-[n S135 . . . . . ]
-"2805
-[v _PSTR2CONbits `VS135 ~T0 @X0 0 e@3939 ]
-"3306
-[v _CCPR2L `Vuc ~T0 @X0 0 e@3943 ]
-"13071
-[s S618 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
-[n S618 . T2CKPS TMR2ON T2OUTPS ]
-"13076
-[s S619 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S619 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
-"13070
-[u S617 `S618 1 `S619 1 ]
-[n S617 . . . ]
-"13086
-[v _T2CONbits `VS617 ~T0 @X0 0 e@4026 ]
-"9391
-[s S435 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S435 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
-"9400
-[s S436 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S436 . . SSPIF TXIF RCIF ]
-"9390
-[u S434 `S435 1 `S436 1 ]
-[n S434 . . . ]
-"9407
-[v _PIR1bits `VS434 ~T0 @X0 0 e@3998 ]
+"198
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . ANSD0 ANSD1 ANSD2 ANSD3 ANSD4 ANSD5 ANSD6 ANSD7 ]
+"197
+[u S7 `S8 1 ]
+[n S7 . . ]
+"209
+[v _ANSELDbits `VS7 ~T0 @X0 0 e@3899 ]
+"7806
+[s S383 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S383 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"7816
+[s S384 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S384 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
+"7805
+[u S382 `S383 1 `S384 1 ]
+[n S382 . . . ]
+"7827
+[v _LATDbits `VS382 ~T0 @X0 0 e@3980 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6687,110 +6728,246 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
+[; ;easat2_init_initialize.h: 18: void init_initialize(void);
+[; ;easat2_init_initialize.h: 19: void init_io_initialize(void);
+[; ;easat2_init_timer.h: 21: void init_timer1_initialize(void);
+[; ;easat2_init_timer.h: 22: void init_timer2_initialize(void);
 [; ;easat2_util_pwm.h: 33: void util_pwm_initialize(void);
 [; ;easat2_util_pwm.h: 34: void util_pwm_start(void);
 [; ;easat2_util_pwm.h: 35: void util_pwm_stop(void);
-"24 easat2_util_pwm.c
-[v _util_pwm_initialize `(v ~T0 @X0 1 ef ]
+"18 easat2_init_initialize.c
+[v _init_initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_pwm.c: 24: void util_pwm_initialize(void) {
-[e :U _util_pwm_initialize ]
+[; ;easat2_init_initialize.c: 18: void init_initialize(void) {
+[e :U _init_initialize ]
 [f ]
-[; ;easat2_util_pwm.c: 31: (TRISDbits.TRISD2) = 1;
-"31
-[e = . . _TRISDbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_pwm.c: 32: (TRISDbits.TRISD3) = 1;
-"32
-[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_pwm.c: 36: CCPTMRS0bits.C2TSEL = 0;
-"36
-[e = . . _CCPTMRS0bits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 40: PR2 = (2000000 / (4 * 1000 * 4)) - 1;
-"40
-[e = _PR2 -> - / -> 2000000 `l -> * * -> 4 `i -> 1000 `i -> 4 `i `l -> -> 1 `i `l `uc ]
-[; ;easat2_util_pwm.c: 49: CCP2CONbits.P2M = 0b00;
-"49
-[e = . . _CCP2CONbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 50: CCP2CONbits.CCP2M = 0b1100;
-"50
-[e = . . _CCP2CONbits 0 0 -> -> 12 `i `uc ]
-[; ;easat2_util_pwm.c: 54: PSTR2CONbits.STR2A = 0;
-"54
-[e = . . _PSTR2CONbits 0 0 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 55: PSTR2CONbits.STR2B = 1;
-"55
-[e = . . _PSTR2CONbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_pwm.c: 56: PSTR2CONbits.STR2C = 1;
-"56
-[e = . . _PSTR2CONbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_pwm.c: 57: PSTR2CONbits.STR2D = 0;
-"57
-[e = . . _PSTR2CONbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 61: CCPR2L = (2*((2000000 / (4 * 1000 * 4)) - 1 + 1) >> 2) & 0xFF;
-"61
-[e = _CCPR2L -> & >> * -> -> 2 `i `l + - / -> 2000000 `l -> * * -> 4 `i -> 1000 `i -> 4 `i `l -> -> 1 `i `l -> -> 1 `i `l -> 2 `i -> -> 255 `i `l `uc ]
-[; ;easat2_util_pwm.c: 62: CCP2CONbits.DC2B = (2*((2000000 / (4 * 1000 * 4)) - 1 + 1)) & 0x03;
-"62
-[e = . . _CCP2CONbits 0 1 -> & * -> -> 2 `i `l + - / -> 2000000 `l -> * * -> 4 `i -> 1000 `i -> 4 `i `l -> -> 1 `i `l -> -> 1 `i `l -> -> 3 `i `l `uc ]
-[; ;easat2_util_pwm.c: 66: T2CONbits.TMR2ON = 0b0;
-"66
-[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 70: PIR1bits.TMR2IF = 0;
-"70
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 73: }
-"73
+[; ;easat2_init_initialize.c: 21: init_io_initialize();
+"21
+[e ( _init_io_initialize ..  ]
+[; ;easat2_init_initialize.c: 24: init_timer1_initialize();
+"24
+[e ( _init_timer1_initialize ..  ]
+[; ;easat2_init_initialize.c: 25: init_timer2_initialize();
+"25
+[e ( _init_timer2_initialize ..  ]
+[; ;easat2_init_initialize.c: 28: util_pwm_initialize();
+"28
+[e ( _util_pwm_initialize ..  ]
+[; ;easat2_init_initialize.c: 30: }
+"30
 [e :UE 843 ]
 }
+"34
+[v _init_io_initialize `(v ~T0 @X0 1 ef ]
+{
+[; ;easat2_init_initialize.c: 34: void init_io_initialize(void) {
+[e :U _init_io_initialize ]
+[f ]
+[; ;easat2_init_initialize.c: 43: VREFCON0bits.FVREN = 1;
+"43
+[e = . . _VREFCON0bits 0 3 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 44: VREFCON0bits.FVRS0 = 0;
+"44
+[e = . . _VREFCON0bits 1 1 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 45: VREFCON0bits.FVRS1 = 1;
+"45
+[e = . . _VREFCON0bits 1 2 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 47: VREFCON0bits.FVRST = 1;
+"47
+[e = . . _VREFCON0bits 0 2 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 52: ADCON1 = 0x08;
+"52
+[e = _ADCON1 -> -> 8 `i `uc ]
+[; ;easat2_init_initialize.c: 53: ADCON2 = 0xAF;
+"53
+[e = _ADCON2 -> -> 175 `i `uc ]
+[; ;easat2_init_initialize.c: 57: TRISAbits.TRISA0 = 1;
+"57
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 58: TRISAbits.TRISA1 = 1;
+"58
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 59: TRISAbits.TRISA2 = 0;
+"59
+[e = . . _TRISAbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 60: TRISAbits.TRISA3 = 1;
+"60
+[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 61: TRISAbits.TRISA4 = 1;
+"61
+[e = . . _TRISAbits 0 4 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 62: TRISAbits.TRISA5 = 1;
+"62
+[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 69: ANSELAbits.ANSA0 = 1;
+"69
+[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 70: ANSELAbits.ANSA1 = 1;
+"70
+[e = . . _ANSELAbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 71: ANSELAbits.ANSA2 = 1;
+"71
+[e = . . _ANSELAbits 0 2 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 72: ANSELAbits.ANSA3 = 0;
+"72
+[e = . . _ANSELAbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 74: ANSELAbits.ANSA5 = 1;
+"74
+[e = . . _ANSELAbits 0 5 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 78: LATAbits.LATA0 = 0;
 "78
-[v _util_pwm_start `(v ~T0 @X0 1 ef ]
-{
-[; ;easat2_util_pwm.c: 78: void util_pwm_start(void) {
-[e :U _util_pwm_start ]
-[f ]
-[; ;easat2_util_pwm.c: 83: (TRISDbits.TRISD2) = 0;
+[e = . . _LATAbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 79: LATAbits.LATA1 = 0;
+"79
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 80: LATAbits.LATA2 = 0;
+"80
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 81: LATAbits.LATA3 = 0;
+"81
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 82: LATAbits.LATA4 = 0;
+"82
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 83: LATAbits.LATA5 = 0;
 "83
-[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 84: (TRISDbits.TRISD3) = 0;
-"84
-[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 88: T2CONbits.TMR2ON = 1;
-"88
-[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_util_pwm.c: 90: }
-"90
-[e :UE 844 ]
-}
-"95
-[v _util_pwm_stop `(v ~T0 @X0 1 ef ]
-{
-[; ;easat2_util_pwm.c: 95: void util_pwm_stop(void) {
-[e :U _util_pwm_stop ]
-[f ]
-[; ;easat2_util_pwm.c: 100: (TRISDbits.TRISD2) = 1;
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 91: WPUB = 0b00000000;
+"91
+[e = _WPUB -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 92: RBPU = 0b11111111;
+"92
+[e = _RBPU -> -> 255 `i `b ]
+[; ;easat2_init_initialize.c: 96: TRISBbits.TRISB0 = 1;
+"96
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 97: TRISBbits.TRISB1 = 0;
+"97
+[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 98: TRISBbits.TRISB2 = 0;
+"98
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 99: TRISBbits.TRISB3 = 0;
+"99
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 100: TRISBbits.TRISB4 = 0;
 "100
-[e = . . _TRISDbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_util_pwm.c: 101: (TRISDbits.TRISD3) = 1;
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 101: TRISBbits.TRISB5 = 0;
 "101
-[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
-[; ;easat2_util_pwm.c: 105: T2CONbits.TMR2ON = 0;
-"105
-[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_util_pwm.c: 107: }
+[e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 102: TRISBbits.TRISB6 = 0;
+"102
+[e = . . _TRISBbits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 103: TRISBbits.TRISB7 = 0;
+"103
+[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 107: ANSELBbits.ANSB0 = 1;
 "107
-[e :UE 845 ]
-}
+[e = . . _ANSELBbits 0 0 -> -> 1 `i `uc ]
+[; ;easat2_init_initialize.c: 108: ANSELBbits.ANSB1 = 0;
+"108
+[e = . . _ANSELBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 109: ANSELBbits.ANSB2 = 0;
+"109
+[e = . . _ANSELBbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 110: ANSELBbits.ANSB3 = 0;
+"110
+[e = . . _ANSELBbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 112: ANSELBbits.ANSB5 = 0;
 "112
-[v _util_check_pwm_on `(i ~T0 @X0 1 ef ]
-{
-[; ;easat2_util_pwm.c: 112: int util_check_pwm_on(void) {
-[e :U _util_check_pwm_on ]
-[f ]
-[; ;easat2_util_pwm.c: 114: return (T2CONbits.TMR2ON == 1);
-"114
-[e ) -> == -> . . _T2CONbits 0 1 `i -> 1 `i `i ]
-[e $UE 846  ]
-[; ;easat2_util_pwm.c: 116: }
+[e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 116: LATBbits.LATB0 = 0;
 "116
-[e :UE 846 ]
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 117: LATBbits.LATB1 = 0;
+"117
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 118: LATBbits.LATB2 = 0;
+"118
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 119: LATBbits.LATB3 = 0;
+"119
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 120: LATBbits.LATB4 = 0;
+"120
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 121: LATBbits.LATB5 = 0;
+"121
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 125: TRISDbits.TRISD0 = 0;
+"125
+[e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 126: TRISDbits.TRISD1 = 0;
+"126
+[e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 127: TRISDbits.TRISD2 = 0;
+"127
+[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 128: TRISDbits.TRISD3 = 0;
+"128
+[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 129: TRISDbits.TRISD4 = 0;
+"129
+[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 130: TRISDbits.TRISD5 = 0;
+"130
+[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 131: TRISDbits.TRISD6 = 0;
+"131
+[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 132: TRISDbits.TRISD7 = 0;
+"132
+[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 136: ANSELDbits.ANSD0 = 0;
+"136
+[e = . . _ANSELDbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 137: ANSELDbits.ANSD1 = 0;
+"137
+[e = . . _ANSELDbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 138: ANSELDbits.ANSD2 = 0;
+"138
+[e = . . _ANSELDbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 139: ANSELDbits.ANSD3 = 0;
+"139
+[e = . . _ANSELDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 140: ANSELDbits.ANSD4 = 0;
+"140
+[e = . . _ANSELDbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 141: ANSELDbits.ANSD5 = 0;
+"141
+[e = . . _ANSELDbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 142: ANSELDbits.ANSD6 = 0;
+"142
+[e = . . _ANSELDbits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 143: ANSELDbits.ANSD7 = 0;
+"143
+[e = . . _ANSELDbits 0 7 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 147: LATDbits.LATD0 = 0;
+"147
+[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 148: LATDbits.LATD1 = 0;
+"148
+[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 149: LATDbits.LATD2 = 0;
+"149
+[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 150: LATDbits.LATD3 = 0;
+"150
+[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 151: LATDbits.LATD4 = 0;
+"151
+[e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 152: LATDbits.LATD5 = 0;
+"152
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 153: LATDbits.LATD6 = 0;
+"153
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 154: LATDbits.LATD7 = 0;
+"154
+[e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
+[; ;easat2_init_initialize.c: 160: }
+"160
+[e :UE 844 ]
 }

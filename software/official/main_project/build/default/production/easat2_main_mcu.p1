@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"18 easat2_util_initialize.h
-[v _initialize `(v ~T0 @X0 0 ef ]
+"18 easat2_init_initialize.h
+[v _init_initialize `(v ~T0 @X0 0 ef ]
 "18 easat2_main_mcu.h
 [v _main_loop `(v ~T0 @X0 0 ef ]
 "18 easat2_util_inputs.h
@@ -6631,8 +6631,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "80
 [p x EBTRB=OFF ]
 [; ;easat2_main_mcu.h: 18: void main_loop(void);
-[; ;easat2_util_initialize.h: 18: void initialize(void);
-[; ;easat2_util_initialize.h: 19: void io_initialize(void);
+[; ;easat2_init_initialize.h: 18: void init_initialize(void);
+[; ;easat2_init_initialize.h: 19: void init_io_initialize(void);
 [; ;easat2_util_inputs.h: 18: float util_getBatteryVoltage(void);
 [; ;easat2_util_inputs.h: 19: int util_getSolarCurrent(void);
 [; ;easat2_util_inputs.h: 20: int util_getBatteryCurrent(void);
@@ -6714,9 +6714,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_main_mcu.c: 19: void main(void) {
 [e :U _main ]
 [f ]
-[; ;easat2_main_mcu.c: 22: initialize();
+[; ;easat2_main_mcu.c: 22: init_initialize();
 "22
-[e ( _initialize ..  ]
+[e ( _init_initialize ..  ]
 [; ;easat2_main_mcu.c: 25: main_loop();
 "25
 [e ( _main_loop ..  ]

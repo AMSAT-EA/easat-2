@@ -11,6 +11,7 @@
 #include "easat2.h"
 #include "easat2_util_transmission.h"
 #include "easat2_util_waits.h"
+#include "easat2_util_pwm.h"
 
 // This is the function to be called to transmit the beacon message
 // It receives the sensor values (battery voltage, solar panel current,
@@ -233,28 +234,19 @@ void util_transmit_dot(void) {
     // set to high the configured outputs
     
     PINOUT_BEACON_LED = 1;  // led pin
-    PINOUT_BEACON_ON  = 1;  // RF module pin
+//    PINOUT_BEACON_OUT = 1;  // RF module pin
     
-    for (int i = 0; i < DOT_DURATION_MS; i++) {
-        
-        // if buzzer is present...
-        // make a square 1 Khz signal in the buzzer
-        // by switching between high and low each 500us (1ms cycle)
-     
-        if (BUZZER_PRESENT)
-                util_transmit_buzzer_1ms_cycle();
-        else
-                util_waits_delay_ms(1); // if not we just wait 1ms   
-       
-    }
+    util_pwm_start();  
+    util_waits_delay_ms(DOT_DURATION_MS);         
+    util_pwm_stop();  
     
     PINOUT_BEACON_LED = 0;  // led pin
-    PINOUT_BEACON_ON  = 0;  // RF module pin
+//    PINOUT_BEACON_OUT = 0;  // RF module pin
     
 }
 
 // This function transmits a dot using the port
-// Transmitint a dot is just put to high the output of the port
+// Transmiting a dot is just put to high the output of the port
 // the required time and then to low. The dash duration is three
 // times the dot duration.
 // To make the buzzer sound, a 1 Khz square signal is generated inside
@@ -264,23 +256,14 @@ void util_transmit_dash(void) {
     // set to high the configured outputs
     
     PINOUT_BEACON_LED = 1;  // led pin on
-    PINOUT_BEACON_ON  = 1;  // RF module pin on
+//    PINOUT_BEACON_OUT = 1;  // RF module pin on
     
-    for (int i = 0; i < DASH_DURATION_MS; i++) {
-          
-        // if buzzer is present...
-        // make a square 1 Khz signal in the buzzer
-        // by switching between high and low each 500us (1ms cycle)
-     
-        if (BUZZER_PRESENT)
-                util_transmit_buzzer_1ms_cycle();
-        else
-                util_waits_delay_ms(1); // if not we just wait 1ms   
-
-    }
+    util_pwm_start();  
+    util_waits_delay_ms(DASH_DURATION_MS);    
+    util_pwm_stop();  
     
     PINOUT_BEACON_LED = 0;  // led pin off
-    PINOUT_BEACON_ON  = 0;  // RF module pin off
+ //   PINOUT_BEACON_OUT = 0;  // RF module pin off
 }
 
 // This function waits the required time between dots and dashes
@@ -309,9 +292,9 @@ void util_transmit_space_between_words(void) {
 
 void util_transmit_buzzer_1ms_cycle(void) {
            
-    PINOUT_BUZZER = 1;  // buzzer pin high
+//    PINOUT_BUZZER = 1;  // buzzer pin high
     util_waits_delay_hundred_us(BUZZER_HALF_CYCLE_HUNDRED_US);
-    PINOUT_BUZZER = 0;  // buzzer pin low
+//    PINOUT_BUZZER = 0;  // buzzer pin low
     util_waits_delay_hundred_us(BUZZER_HALF_CYCLE_HUNDRED_US);
            
 }
