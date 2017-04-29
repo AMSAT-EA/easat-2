@@ -1,10 +1,105 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"134 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18.h
-[v _Busy_eep `(v ~T0 @X0 0 ef ]
-"135
-[v _Write_b_eep `(v ~T0 @X0 0 ef2`ui`uc ]
-"133
-[v _Read_b_eep `(uc ~T0 @X0 0 ef1`ui ]
+"9391 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f45k22.h
+[s S435 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S435 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+"9400
+[s S436 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S436 . . SSPIF TXIF RCIF ]
+"9390
+[u S434 `S435 1 `S436 1 ]
+[n S434 . . . ]
+"9407
+[v _PIR1bits `VS434 ~T0 @X0 0 e@3998 ]
+"15601
+[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
+"15582
+[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
+"7057
+[s S357 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S357 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"7067
+[s S358 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S358 . . P2B P2C P2D P1B P1C P1D ]
+"7076
+[s S359 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S359 . . CCP4 . TX2 RX2 ]
+"7083
+[s S360 :3 `uc 1 :1 `uc 1 ]
+[n S360 . . NOT_SS2 ]
+"7087
+[s S361 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S361 . SCK2 SDI2 . nSS2 SDO2 . CK2 DT2 ]
+"7097
+[s S362 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S362 . SCL2 SDA2 . SS2 ]
+"7103
+[s S363 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S363 . AN20 AN21 AN22 AN23 AN24 AN25 AN26 AN27 ]
+"7056
+[u S356 `S357 1 `S358 1 `S359 1 `S360 1 `S361 1 `S362 1 `S363 1 ]
+[n S356 . . . . . . . . ]
+"7114
+[v _PORTDbits `VS356 ~T0 @X0 0 e@3971 ]
+"13441
+[s S639 :1 `uc 1 :1 `uc 1 ]
+[n S639 . . GO_NOT_DONE ]
+"13445
+[s S640 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S640 . ADON GO_nDONE CHS ]
+"13450
+[s S641 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S641 . . GO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"13459
+[s S642 :1 `uc 1 :1 `uc 1 ]
+[n S642 . . DONE ]
+"13463
+[s S643 :1 `uc 1 :1 `uc 1 ]
+[n S643 . . NOT_DONE ]
+"13467
+[s S644 :1 `uc 1 :1 `uc 1 ]
+[n S644 . . nDONE ]
+"13471
+[s S645 :1 `uc 1 :1 `uc 1 ]
+[n S645 . . GO_DONE ]
+"13475
+[s S646 :1 `uc 1 :1 `uc 1 ]
+[n S646 . . GODONE ]
+"13440
+[u S638 `S639 1 `S640 1 `S641 1 `S642 1 `S643 1 `S644 1 `S645 1 `S646 1 ]
+[n S638 . . . . . . . . . ]
+"13480
+[v _ADCON0bits `VS638 ~T0 @X0 0 e@4034 ]
+"13559
+[v _ADRES `Vus ~T0 @X0 0 e@4035 ]
+"6482
+[s S340 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S340 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"6492
+[s S341 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S341 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"6502
+[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
+"6512
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . FLT0 C12IN3M . C12IN2M T5G T1G ]
+"6520
+[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S344 . SRI C12IN3N . C12IN2N . CCP3 ]
+"6528
+[s S345 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S345 . . CTED1 CTED2 . T3CKI ]
+"6535
+[s S346 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S346 . . P2A . P3A ]
+"6541
+[s S347 :3 `uc 1 :1 `uc 1 ]
+[n S347 . . CCP2_PA2 ]
+"6481
+[u S339 `S340 1 `S341 1 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 ]
+[n S339 . . . . . . . . . ]
+"6546
+[v _PORTBbits `VS339 ~T0 @X0 0 e@3969 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6617,62 +6712,259 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
-"16 easat2_util_eeprom.c
-[v _util_eeprom_check `(i ~T0 @X0 1 ef ]
+[; ;easat2_init_timer.h: 21: void init_timer1_initialize(void);
+[; ;easat2_init_timer.h: 22: void init_timer2_initialize(void);
+[; ;easat2_func_interrupts.h: 32: void interrupt high_priority_int();
+[; ;easat2_func_interrupts.h: 33: void interrupt low_priority low_priority_int();
+[v F6933 `(v ~T0 @X0 1 tf ]
+"17 easat2_func_interrupts.c
+[v _high_priority_int `IF6933 ~T0 @X0 1 e ]
 {
-[; ;easat2_util_eeprom.c: 16: int util_eeprom_check(void) {
-[e :U _util_eeprom_check ]
+[; ;easat2_func_interrupts.c: 17: void interrupt high_priority_int() {
+[e :U _high_priority_int ]
 [f ]
-[; ;easat2_util_eeprom.c: 21: }
+"19
+[v F6937 `i ~T0 @X0 1 s tmr1_interrupt_number ]
+[i F6937
+-> 0 `i
+]
 "21
+[v F6938 `ui ~T0 @X0 -> 100 `i s samples ]
+"22
+[v F6939 `ui ~T0 @X0 1 s sample_position ]
+[i F6939
+-> -> 0 `i `ui
+]
+"23
+[v F6940 `um ~T0 @X0 1 s noise_mean_value ]
+[i F6940
+-> -> -> 32000 `i `m `um
+]
+"24
+[v F6941 `ui ~T0 @X0 1 s activation_thresold ]
+[i F6941
+-> -> 32000 `i `ui
+]
+"25
+[v F6942 `ui ~T0 @X0 1 s times_thresold_exceeded ]
+[i F6942
+-> -> 0 `i `ui
+]
+"26
+[v F6943 `ui ~T0 @X0 1 s cycles_transmitter_active ]
+[i F6943
+-> -> 0 `i `ui
+]
+"27
+[v F6944 `uc ~T0 @X0 1 s is_transmitter_active ]
+[i F6944
+-> -> 0 `i `uc
+]
+"29
+[v F6945 `ui ~T0 @X0 1 s valid_samples ]
+[i F6945
+-> -> 0 `i `ui
+]
+"31
+[v _sample `ui ~T0 @X0 1 a ]
+[; ;easat2_func_interrupts.c: 19: static int tmr1_interrupt_number = 0;
+[; ;easat2_func_interrupts.c: 21: static unsigned int samples[100];
+[; ;easat2_func_interrupts.c: 22: static unsigned int sample_position = 0;
+[; ;easat2_func_interrupts.c: 23: static unsigned short long noise_mean_value = 32000;
+[; ;easat2_func_interrupts.c: 24: static unsigned int activation_thresold = 32000;
+[; ;easat2_func_interrupts.c: 25: static unsigned int times_thresold_exceeded = 0;
+[; ;easat2_func_interrupts.c: 26: static unsigned int cycles_transmitter_active = 0;
+[; ;easat2_func_interrupts.c: 27: static unsigned char is_transmitter_active = 0;
+[; ;easat2_func_interrupts.c: 29: static unsigned int valid_samples = 0;
+[; ;easat2_func_interrupts.c: 31: unsigned int sample = 0;
+[e = _sample -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 33: if (PIR1bits.TMR2IF) {
+"33
+[e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 844  ]
+{
+[; ;easat2_func_interrupts.c: 37: PIR1bits.TMR2IF = 0;
+"37
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"39
+}
+[; ;easat2_func_interrupts.c: 39: } else {
+[e $U 845  ]
+[e :U 844 ]
+{
+[; ;easat2_func_interrupts.c: 43: if (PIR1bits.TMR1IF) {
+"43
+[e $ ! != -> . . _PIR1bits 0 0 `i -> -> -> 0 `i `Vuc `i 846  ]
+{
+[; ;easat2_func_interrupts.c: 47: TMR1H = 0xEC;
+"47
+[e = _TMR1H -> -> 236 `i `uc ]
+[; ;easat2_func_interrupts.c: 48: TMR1L = 0x77 ; 60535;
+"48
+[e = _TMR1L -> -> 119 `i `uc ]
+[e -> 60535 `l ]
+[; ;easat2_func_interrupts.c: 52: (PORTDbits.RD5) = !(PORTDbits.RD5);
+"52
+[e = . . _PORTDbits 0 5 -> -> ! != -> . . _PORTDbits 0 5 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;easat2_func_interrupts.c: 56: tmr1_interrupt_number++;
+"56
+[e ++ F6937 -> 1 `i ]
+[; ;easat2_func_interrupts.c: 60: if (tmr1_interrupt_number == 50) {
+"60
+[e $ ! == F6937 -> 50 `i 847  ]
+{
+[; ;easat2_func_interrupts.c: 63: (PORTDbits.RD4) = !(PORTDbits.RD4);
+"63
+[e = . . _PORTDbits 0 4 -> -> ! != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;easat2_func_interrupts.c: 68: asm(" clrwdt");
+"68
+[; <"  clrwdt ;# ">
+[; ;easat2_func_interrupts.c: 72: tmr1_interrupt_number = 0;
+"72
+[e = F6937 -> 0 `i ]
+"74
+}
+[e :U 847 ]
+[; ;easat2_func_interrupts.c: 74: }
+[; ;easat2_func_interrupts.c: 78: if (valid_samples < 100) valid_samples++;
+"78
+[e $ ! < F6945 -> -> 100 `i `ui 848  ]
+[e ++ F6945 -> -> 1 `i `ui ]
+[e :U 848 ]
+[; ;easat2_func_interrupts.c: 91: ADCON0bits.CHS = 4;
+"91
+[e = . . _ADCON0bits 1 2 -> -> 4 `i `uc ]
+[; ;easat2_func_interrupts.c: 92: ADCON0bits.ADON = 1;
+"92
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 93: PIR1bits.ADIF = 0;
+"93
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 95: ADCON0bits.GO = 1;
+"95
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 96: while(!PIR1bits.ADIF);
+"96
+[e $U 849  ]
+[e :U 850 ]
+[e :U 849 ]
+[e $ ! != -> . . _PIR1bits 0 6 `i -> -> -> 0 `i `Vuc `i 850  ]
+[e :U 851 ]
+[; ;easat2_func_interrupts.c: 98: sample = ADRES;
+"98
+[e = _sample -> _ADRES `ui ]
+[; ;easat2_func_interrupts.c: 100: PIR1bits.ADIF = 0;
+"100
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 101: ADCON0bits.ADON = 0;
+"101
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 103: if (is_transmitter_active) cycles_transmitter_active++;
+"103
+[e $ ! != -> F6944 `i -> -> -> 0 `i `uc `i 852  ]
+[e ++ F6943 -> -> 1 `i `ui ]
+[e :U 852 ]
+[; ;easat2_func_interrupts.c: 108: if (sample > 128 && sample > activation_thresold) {
+"108
+[e $ ! && > _sample -> -> 128 `i `ui > _sample F6941 853  ]
+{
+[; ;easat2_func_interrupts.c: 110: times_thresold_exceeded++;
+"110
+[e ++ F6942 -> -> 1 `i `ui ]
+[; ;easat2_func_interrupts.c: 112: if (times_thresold_exceeded == 200) {
+"112
+[e $ ! == F6942 -> -> 200 `i `ui 854  ]
+{
+[; ;easat2_func_interrupts.c: 117: (PORTBbits.RB1) = 1;
+"117
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 119: is_transmitter_active = 1;
+"119
+[e = F6944 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 120: cycles_transmitter_active = 0;
+"120
+[e = F6943 -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 122: times_thresold_exceeded = 0;
+"122
+[e = F6942 -> -> 0 `i `ui ]
+"124
+}
+[e :U 854 ]
+"127
+}
+[; ;easat2_func_interrupts.c: 124: }
+[; ;easat2_func_interrupts.c: 127: } else {
+[e $U 855  ]
+[e :U 853 ]
+{
+[; ;easat2_func_interrupts.c: 129: times_thresold_exceeded = 0;
+"129
+[e = F6942 -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 131: if (cycles_transmitter_active == 12000) {
+"131
+[e $ ! == F6943 -> -> 12000 `i `ui 856  ]
+{
+[; ;easat2_func_interrupts.c: 133: (PORTBbits.RB1) = 0;
+"133
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 134: is_transmitter_active = 0;
+"134
+[e = F6944 -> -> 0 `i `uc ]
+"135
+}
+[e :U 856 ]
+[; ;easat2_func_interrupts.c: 135: }
+[; ;easat2_func_interrupts.c: 137: samples[sample_position++] = sample;
+"137
+[e = *U + &U F6938 * -> ++ F6939 -> -> 1 `i `ui `ux -> -> # *U &U F6938 `ui `ux _sample ]
+[; ;easat2_func_interrupts.c: 140: if (sample_position == 100) sample_position = 0;
+"140
+[e $ ! == F6939 -> -> 100 `i `ui 857  ]
+[e = F6939 -> -> 0 `i `ui ]
+[e :U 857 ]
+[; ;easat2_func_interrupts.c: 142: if (valid_samples == 100) {
+"142
+[e $ ! == F6945 -> -> 100 `i `ui 858  ]
+{
+[; ;easat2_func_interrupts.c: 145: noise_mean_value = 0;
+"145
+[e = F6940 -> -> -> 0 `i `m `um ]
+[; ;easat2_func_interrupts.c: 151: noise_mean_value = (unsigned short long)(noise_mean_value / 100);
+"151
+[e = F6940 / F6940 -> -> -> 100 `i `m `um ]
+[; ;easat2_func_interrupts.c: 156: activation_thresold = noise_mean_value * 2;
+"156
+[e = F6941 -> * F6940 -> -> -> 2 `i `m `um `ui ]
+"158
+}
+[e :U 858 ]
+"160
+}
+[e :U 855 ]
+[; ;easat2_func_interrupts.c: 158: }
+[; ;easat2_func_interrupts.c: 160: }
+[; ;easat2_func_interrupts.c: 165: PIR1bits.TMR1IF = 0;
+"165
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"167
+}
+[e :U 846 ]
+"169
+}
+[e :U 845 ]
+[; ;easat2_func_interrupts.c: 167: }
+[; ;easat2_func_interrupts.c: 169: }
+[; ;easat2_func_interrupts.c: 170: }
+"170
 [e :UE 843 ]
 }
-"26
-[v _util_eeprom_fix `(i ~T0 @X0 1 ef ]
+[v F6935 `(v ~T0 @X0 1 tf ]
+"175
+[v _low_priority_int `ILF6935 ~T0 @X0 1 e ]
 {
-[; ;easat2_util_eeprom.c: 26: int util_eeprom_fix(void) {
-[e :U _util_eeprom_fix ]
+[; ;easat2_func_interrupts.c: 175: void interrupt low_priority low_priority_int() {
+[e :U _low_priority_int ]
 [f ]
-[; ;easat2_util_eeprom.c: 30: }
-"30
-[e :UE 844 ]
-}
-"35
-[v _util_eeprom_write_CRC `(i ~T0 @X0 1 ef ]
-{
-[; ;easat2_util_eeprom.c: 35: int util_eeprom_write_CRC(void) {
-[e :U _util_eeprom_write_CRC ]
-[f ]
-[; ;easat2_util_eeprom.c: 40: }
-"40
-[e :UE 845 ]
-}
-"44
-[v _util_eeprom_write `(i ~T0 @X0 1 ef2`i`i ]
-{
-[; ;easat2_util_eeprom.c: 44: int util_eeprom_write(int address, int value ) {
-[e :U _util_eeprom_write ]
-[v _address `i ~T0 @X0 1 r1 ]
-[v _value `i ~T0 @X0 1 r2 ]
-[f ]
-[; ;easat2_util_eeprom.c: 49: (Busy_eep(), Write_b_eep(address,value));
-"49
-[e ; ( _Busy_eep ..  ( _Write_b_eep (2 , -> _address `ui -> _value `uc ]
-[; ;easat2_util_eeprom.c: 50: value = Read_b_eep(address);
-"50
-[e = _value -> ( _Read_b_eep (1 -> _address `ui `i ]
-[; ;easat2_util_eeprom.c: 53: }
-"53
-[e :UE 846 ]
-}
-"58
-[v _util_eeprom_read `(i ~T0 @X0 1 ef1`i ]
-{
-[; ;easat2_util_eeprom.c: 58: int util_eeprom_read(int address) {
-[e :U _util_eeprom_read ]
-[v _address `i ~T0 @X0 1 r1 ]
-[f ]
-[; ;easat2_util_eeprom.c: 62: }
-"62
-[e :UE 847 ]
+[; ;easat2_func_interrupts.c: 179: }
+"179
+[e :UE 859 ]
 }

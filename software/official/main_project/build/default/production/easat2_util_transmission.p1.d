@@ -4,5 +4,6 @@
 easat2_util_transmission.h  \
 easat2_pinouts.h  \
 easat2_config.h  \
+easat2_util_pwm.h  \
 easat2.h  \
 easat2_util_waits.h 

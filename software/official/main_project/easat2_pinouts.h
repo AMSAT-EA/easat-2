@@ -31,12 +31,11 @@
 #define PINOUT_BATTERY_VOLTAGE_CHANNEL    (PORTAbits.RA0) // used as ADC channel
 #define PINOUT_SOLAR_CURRENT_CHANNEL      (PORTAbits.RA1) // used as ADC channel
 #define PINOUT_AGC_DAC                    (PORTAbits.RA2) // DAC for AGC
-#define PINOUT_TERMOMETHER                (PORTAbits.RA3) // digital termomether
+#define PINOUT_THERMOMETER                (PORTAbits.RA3) // digital termomether
                                                           // RA4 avaliable
 #define PINOUT_RF_IN_SIGNAL_POWER_CHANNEL (PORTAbits.RA5) // used as ADC channel
                                                           // RA6 crystal
                                                           // RA7 crystal
-
 // PORTB, configured as output except RB0
 
 #define PINOUT_BATTERY_CURRENT_CHANNEL    (PORTBbits.RB0) // used as ADC channel
@@ -50,14 +49,20 @@
 // PORTC
 
 // PORTD, configured as output
-                                                // RD0 avaliable
-#define PINOUT_BEACON_LED      (PORTDbits.RD1)  // main test red led pin
-#define PINOUT_BUZZER          (PORTDbits.RD2)  // test buzzer 1 Khz square wave
-#define PINOUT_BEACON_ON       (PORTDbits.RD3)  // Audio beacon out, same as buzzer
-#define PINOUT_TIMER_LED       (PORTDbits.RD4)  // aux green blinking timer led
-#define PINOUT_WATCHDOG        (PORTDbits.RD5)  // out signal to watchdog
-                                                // RD6 avaliable
-                                                // RD7 avaliable
+                                                           // RD0 avaliable
+#define PINOUT_BEACON_LED                 (PORTDbits.RD1)  // main test red led pin
+#define PINOUT_BUZZER                     (PORTDbits.RD2)  // test buzzer 1 Khz square wave
+#define PINOUT_BEACON_OUT                 (PORTDbits.RD3)  // Audio beacon out, same as buzzer
+#define PINOUT_TIMER_LED                  (PORTDbits.RD4)  // aux green blinking timer led
+#define PINOUT_WATCHDOG                   (PORTDbits.RD5)  // out signal to watchdog
+                                                           // RD6 avaliable
+                                                           // RD7 avaliable
+// PORTE
 
+
+// TRIS registers that change while execution
+
+#define PINOUT_BUZZER_PWM                 (TRISDbits.TRISD2) // PWM CCP P2B
+#define PINOUT_BEACON_AUDIO_PWM           (TRISDbits.TRISD3) // PWM CCP P2C
 
 #endif

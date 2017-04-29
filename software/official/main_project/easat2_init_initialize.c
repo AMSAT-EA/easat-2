@@ -1,7 +1,7 @@
 /*
  *                                                       
  * Project     : EASAT2                                            
- * File        : easat2_util_initialize.c
+ * File        : easat2_init_initialize.c
  *
  * Description : EASAT2 MCU initializing functions
  * Last update : 10 October 2016                                              
@@ -9,22 +9,29 @@
 */
 
 #include "easat2.h"
-#include "easat2_util_initialize.h"
-#include "easat2_util_timer.h"
+#include "easat2_init_initialize.h"
+#include "easat2_init_timer.h"
+#include "easat2_util_pwm.h"
 
 // this function initializes the MCU
 
-void initialize(void) {
+void init_initialize(void) {
     
-    io_initialize();
-    util_timer1_initialize();
+    // I/O initialize
+    init_io_initialize();
     
+    // timers initialize
+    init_timer1_initialize();
+    init_timer2_initialize();
     
+    // PWM initialize
+    util_pwm_initialize();
+      
 }
 
 // this functions initializes PORTS and ADCs
 
-void io_initialize(void) {
+void init_io_initialize(void) {
           
     // configure PORTS, ADCs, and so on
 
@@ -77,7 +84,13 @@ void io_initialize(void) {
     
     // LATAbits.LATA6   = 0; Crystal
     // LATAbits.LATA7   = 0; Crystal
-
+    
+    // disable all PORTB/E pull-up resistors (only usable in input mode)
+     // PORTE MCLR internal pull-up is always on in MCLR mode
+    
+    WPUB = 0b00000000;
+    RBPU = 0b11111111;
+         
     // set PORTB as input for B0, the other ones are output
 
     TRISBbits.TRISB0 = 1;
@@ -139,5 +152,9 @@ void io_initialize(void) {
     LATDbits.LATD5   = 0;
     LATDbits.LATD6   = 0;
     LATDbits.LATD7   = 0;    
+    
+    // PORTE
+    
+    
 
 }

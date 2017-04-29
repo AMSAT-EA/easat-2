@@ -1,5 +1,5 @@
 
-# 1 "easat2_main_mcu.c"
+# 1 "easat2_init_initialize.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -8481,191 +8481,140 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
-# 18 "easat2_main_mcu.h"
-void main_loop(void);
-
 # 18 "easat2_init_initialize.h"
 void init_initialize(void);
 void init_io_initialize(void);
 
-# 18 "easat2_util_inputs.h"
-float util_getBatteryVoltage(void);
-int util_getSolarCurrent(void);
-int util_getBatteryCurrent(void);
-float util_getTemperature(void);
+# 21 "easat2_init_timer.h"
+void init_timer1_initialize(void);
+void init_timer2_initialize(void);
 
-# 24 "easat2_util_waits.h"
-void util_waits_delay_hours(int hours);
-void util_waits_delay_mins(int minutes);
-void util_waits_delay_secs(int secs);
-void util_waits_delay_ms(int ms);
-void util_waits_delay_hundred_us(int us);
+# 33 "easat2_util_pwm.h"
+void util_pwm_initialize(void);
+void util_pwm_start(void);
+void util_pwm_stop(void);
 
-# 4 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\__size_t.h"
-typedef unsigned size_t;
-
-# 7 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\stdarg.h"
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-
-# 43 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\stdio.h"
-struct __prbuf
-{
-char * ptr;
-void (* func)(char);
-};
-
-# 29 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\errno.h"
-extern int errno;
-
-# 12 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\conio.h"
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-# 23
-extern char * cgets(char *);
-extern void cputs(const char *);
-
-# 88 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\stdio.h"
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
+# 18 "easat2_init_initialize.c"
+void init_initialize(void) {
 
 
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-
-
-# 180
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-
-# 14 "C:\Program Files (x86)\Microchip\xc8\v1.40\include\string.h"
-extern void * memcpy(void *, const void *, size_t);
-extern void * memmove(void *, const void *, size_t);
-extern void * memset(void *, int, size_t);
-
-# 34
-extern char * strcat(char *, const char *);
-extern char * strcpy(char *, const char *);
-extern char * strncat(char *, const char *, size_t);
-extern char * strncpy(char *, const char *, size_t);
-extern char * strdup(const char *);
-extern char * strtok(char *, const char *);
+init_io_initialize();
 
 
-extern int memcmp(const void *, const void *, size_t);
-extern int strcmp(const char *, const char *);
-extern int stricmp(const char *, const char *);
-extern int strncmp(const char *, const char *, size_t);
-extern int strnicmp(const char *, const char *, size_t);
-extern void * memchr(const void *, int, size_t);
-extern size_t strcspn(const char *, const char *);
-extern char * strpbrk(const char *, const char *);
-extern size_t strspn(const char *, const char *);
-extern char * strstr(const char *, const char *);
-extern char * stristr(const char *, const char *);
-extern char * strerror(int);
-extern size_t strlen(const char *);
-extern char * strchr(const char *, int);
-extern char * strichr(const char *, int);
-extern char * strrchr(const char *, int);
-extern char * strrichr(const char *, int);
-
-# 20 "easat2_util_transmission.h"
-void util_beacon_transmission(float battery_voltage, int solar_current,
-int battery_current, float temperature);
-
-void util_transmit_letter(char letter);
-void util_transmit_morse_sequence(char * morse_sequence);
-void util_transmit_dot(void);
-void util_transmit_dash(void);
-
-void util_transmit_space_between_dots_dashes(void);
-void util_transmit_space_between_letters(void);
-void util_transmit_space_between_words(void);
-
-void util_transmit_buzzer_1ms_cycle(void);
-
-# 19 "easat2_main_mcu.c"
-void main(void) {
+init_timer1_initialize();
+init_timer2_initialize();
 
 
-init_initialize();
-
-
-main_loop();
+util_pwm_initialize();
 
 }
 
 
 
-void main_loop(void) {
+void init_io_initialize(void) {
 
-float battery_voltage;
-int solar_current;
-int battery_current;
-float temperature;
+# 43
+VREFCON0bits.FVREN = 1;
+VREFCON0bits.FVRS0 = 0;
+VREFCON0bits.FVRS1 = 1;
 
-do {
+VREFCON0bits.FVRST = 1;
 
-
-
-asm(" clrwdt");
-
-
-
-
-battery_voltage = util_getBatteryVoltage();
-
-
-solar_current = util_getSolarCurrent();
-
-
-battery_current = util_getBatteryCurrent();
-
-
-temperature = util_getTemperature();
+# 52
+ADCON1 = 0x08;
+ADCON2 = 0xAF;
 
 
 
-if (battery_voltage >= 0) {
-util_beacon_transmission(battery_voltage, solar_current, battery_current, temperature);
-} else {
+TRISAbits.TRISA0 = 1;
+TRISAbits.TRISA1 = 1;
+TRISAbits.TRISA2 = 0;
+TRISAbits.TRISA3 = 1;
+TRISAbits.TRISA4 = 1;
+TRISAbits.TRISA5 = 1;
 
-util_waits_delay_hours(2);
-}
+# 69
+ANSELAbits.ANSA0 = 1;
+ANSELAbits.ANSA1 = 1;
+ANSELAbits.ANSA2 = 1;
+ANSELAbits.ANSA3 = 0;
+
+ANSELAbits.ANSA5 = 1;
 
 
-util_waits_delay_mins(3);
+
+LATAbits.LATA0 = 0;
+LATAbits.LATA1 = 0;
+LATAbits.LATA2 = 0;
+LATAbits.LATA3 = 0;
+LATAbits.LATA4 = 0;
+LATAbits.LATA5 = 0;
+
+# 91
+WPUB = 0b00000000;
+RBPU = 0b11111111;
 
 
-} while (1);
+
+TRISBbits.TRISB0 = 1;
+TRISBbits.TRISB1 = 0;
+TRISBbits.TRISB2 = 0;
+TRISBbits.TRISB3 = 0;
+TRISBbits.TRISB4 = 0;
+TRISBbits.TRISB5 = 0;
+TRISBbits.TRISB6 = 0;
+TRISBbits.TRISB7 = 0;
 
 
 
+ANSELBbits.ANSB0 = 1;
+ANSELBbits.ANSB1 = 0;
+ANSELBbits.ANSB2 = 0;
+ANSELBbits.ANSB3 = 0;
+
+ANSELBbits.ANSB5 = 0;
+
+
+
+LATBbits.LATB0 = 0;
+LATBbits.LATB1 = 0;
+LATBbits.LATB2 = 0;
+LATBbits.LATB3 = 0;
+LATBbits.LATB4 = 0;
+LATBbits.LATB5 = 0;
+
+
+
+TRISDbits.TRISD0 = 0;
+TRISDbits.TRISD1 = 0;
+TRISDbits.TRISD2 = 0;
+TRISDbits.TRISD3 = 0;
+TRISDbits.TRISD4 = 0;
+TRISDbits.TRISD5 = 0;
+TRISDbits.TRISD6 = 0;
+TRISDbits.TRISD7 = 0;
+
+
+
+ANSELDbits.ANSD0 = 0;
+ANSELDbits.ANSD1 = 0;
+ANSELDbits.ANSD2 = 0;
+ANSELDbits.ANSD3 = 0;
+ANSELDbits.ANSD4 = 0;
+ANSELDbits.ANSD5 = 0;
+ANSELDbits.ANSD6 = 0;
+ANSELDbits.ANSD7 = 0;
+
+
+
+LATDbits.LATD0 = 0;
+LATDbits.LATD1 = 0;
+LATDbits.LATD2 = 0;
+LATDbits.LATD3 = 0;
+LATDbits.LATD4 = 0;
+LATDbits.LATD5 = 0;
+LATDbits.LATD6 = 0;
+LATDbits.LATD7 = 0;
+
+# 160
 }

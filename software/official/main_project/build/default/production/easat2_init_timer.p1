@@ -1,10 +1,111 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"134 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18.h
-[v _Busy_eep `(v ~T0 @X0 0 ef ]
-"135
-[v _Write_b_eep `(v ~T0 @X0 0 ef2`ui`uc ]
-"133
-[v _Read_b_eep `(uc ~T0 @X0 0 ef1`ui ]
+"15626 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f45k22.h
+[s S742 :1 `uc 1 ]
+[n S742 . NOT_BOR ]
+"15629
+[s S743 :1 `uc 1 :1 `uc 1 ]
+[n S743 . . NOT_POR ]
+"15633
+[s S744 :2 `uc 1 :1 `uc 1 ]
+[n S744 . . NOT_PD ]
+"15637
+[s S745 :3 `uc 1 :1 `uc 1 ]
+[n S745 . . NOT_TO ]
+"15641
+[s S746 :4 `uc 1 :1 `uc 1 ]
+[n S746 . . NOT_RI ]
+"15645
+[s S747 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S747 . nBOR nPOR nPD nTO nRI . SBOREN IPEN ]
+"15655
+[s S748 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S748 . BOR POR PD TO RI ]
+"15625
+[u S741 `S742 1 `S743 1 `S744 1 `S745 1 `S746 1 `S747 1 `S748 1 ]
+[n S741 . . . . . . . . ]
+"15663
+[v _RCONbits `VS741 ~T0 @X0 0 e@4048 ]
+"15470
+[s S733 :2 `uc 1 :1 `uc 1 ]
+[n S733 . . NOT_T1SYNC ]
+"15474
+[s S734 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :2 `uc 1 ]
+[n S734 . TMR1ON T1RD16 nT1SYNC T1SOSCEN T1CKPS TMR1CS ]
+"15482
+[s S735 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S735 . . RD16 T1SYNC T1OSCEN T1CKPS0 T1CKPS1 TMR1CS0 TMR1CS1 ]
+"15492
+[s S736 :3 `uc 1 :1 `uc 1 ]
+[n S736 . . SOSCEN ]
+"15469
+[u S732 `S733 1 `S734 1 `S735 1 `S736 1 ]
+[n S732 . . . . . ]
+"15497
+[v _T1CONbits `VS732 ~T0 @X0 0 e@4045 ]
+"15601
+[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
+"15582
+[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
+"9315
+[s S432 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S432 . TMR1IE TMR2IE CCP1IE SSP1IE TX1IE RC1IE ADIE ]
+"9324
+[s S433 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S433 . . SSPIE TXIE RCIE ]
+"9314
+[u S431 `S432 1 `S433 1 ]
+[n S431 . . . ]
+"9331
+[v _PIE1bits `VS431 ~T0 @X0 0 e@3997 ]
+"9467
+[s S438 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S438 . TMR1IP TMR2IP CCP1IP SSP1IP TX1IP RC1IP ADIP ]
+"9476
+[s S439 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S439 . . SSPIP TXIP RCIP ]
+"9466
+[u S437 `S438 1 `S439 1 ]
+[n S437 . . . ]
+"9483
+[v _IPR1bits `VS437 ~T0 @X0 0 e@3999 ]
+"9391
+[s S435 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S435 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+"9400
+[s S436 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S436 . . SSPIF TXIF RCIF ]
+"9390
+[u S434 `S435 1 `S436 1 ]
+[n S434 . . . ]
+"9407
+[v _PIR1bits `VS434 ~T0 @X0 0 e@3998 ]
+"16687
+[s S815 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S815 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"16697
+[s S816 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S816 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"16707
+[s S817 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S817 . . GIEL GIEH ]
+"16686
+[u S814 `S815 1 `S816 1 `S817 1 ]
+[n S814 . . . . ]
+"16713
+[v _INTCONbits `VS814 ~T0 @X0 0 e@4082 ]
+"13071
+[s S618 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S618 . T2CKPS TMR2ON T2OUTPS ]
+"13076
+[s S619 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S619 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
+"13070
+[u S617 `S618 1 `S619 1 ]
+[n S617 . . . ]
+"13086
+[v _T2CONbits `VS617 ~T0 @X0 0 e@4026 ]
+"13154
+[v _TMR2 `Vuc ~T0 @X0 0 e@4028 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6617,62 +6718,98 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
-"16 easat2_util_eeprom.c
-[v _util_eeprom_check `(i ~T0 @X0 1 ef ]
+[; ;easat2_init_timer.h: 21: void init_timer1_initialize(void);
+[; ;easat2_init_timer.h: 22: void init_timer2_initialize(void);
+"17 easat2_init_timer.c
+[v _init_timer1_initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_eeprom.c: 16: int util_eeprom_check(void) {
-[e :U _util_eeprom_check ]
+[; ;easat2_init_timer.c: 17: void init_timer1_initialize(void) {
+[e :U _init_timer1_initialize ]
 [f ]
-[; ;easat2_util_eeprom.c: 21: }
-"21
+[; ;easat2_init_timer.c: 30: RCONbits.IPEN = 1;
+"30
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+[; ;easat2_init_timer.c: 34: T1CONbits.TMR1ON = 0;
+"34
+[e = . . _T1CONbits 1 0 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 37: T1CONbits.TMR1CS0 = 0;
+"37
+[e = . . _T1CONbits 2 6 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 38: T1CONbits.TMR1CS1 = 0;
+"38
+[e = . . _T1CONbits 2 7 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 41: T1CONbits.T1CKPS1 = 0;
+"41
+[e = . . _T1CONbits 2 5 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 42: T1CONbits.T1CKPS0 = 0;
+"42
+[e = . . _T1CONbits 2 4 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 45: T1CONbits.T1OSCEN = 0;
+"45
+[e = . . _T1CONbits 2 3 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 48: T1CONbits.RD16 = 1;
+"48
+[e = . . _T1CONbits 2 1 -> -> 1 `i `uc ]
+[; ;easat2_init_timer.c: 51: TMR1H = 0xEC;
+"51
+[e = _TMR1H -> -> 236 `i `uc ]
+[; ;easat2_init_timer.c: 52: TMR1L = 0x77 ; 60535;
+"52
+[e = _TMR1L -> -> 119 `i `uc ]
+[e -> 60535 `l ]
+[; ;easat2_init_timer.c: 55: PIE1bits.TMR1IE = 1;
+"55
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+[; ;easat2_init_timer.c: 56: IPR1bits.TMR1IP = 1;
+"56
+[e = . . _IPR1bits 0 0 -> -> 1 `i `uc ]
+[; ;easat2_init_timer.c: 57: PIR1bits.TMR1IF = 0;
+"57
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 59: T1CONbits.TMR1ON = 1;
+"59
+[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
+[; ;easat2_init_timer.c: 61: INTCONbits.PEIE = 0;
+"61
+[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 62: INTCONbits.GIE = 1;
+"62
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;easat2_init_timer.c: 64: }
+"64
 [e :UE 843 ]
 }
-"26
-[v _util_eeprom_fix `(i ~T0 @X0 1 ef ]
+"70
+[v _init_timer2_initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_eeprom.c: 26: int util_eeprom_fix(void) {
-[e :U _util_eeprom_fix ]
+[; ;easat2_init_timer.c: 70: void init_timer2_initialize(void) {
+[e :U _init_timer2_initialize ]
 [f ]
-[; ;easat2_util_eeprom.c: 30: }
-"30
+[; ;easat2_init_timer.c: 77: T2CONbits.TMR2ON = 0;
+"77
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 82: T2CONbits.T2CKPS0 = 1;
+"82
+[e = . . _T2CONbits 1 0 -> -> 1 `i `uc ]
+[; ;easat2_init_timer.c: 83: T2CONbits.T2CKPS1 = 0;
+"83
+[e = . . _T2CONbits 1 1 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 86: T2CONbits.T2OUTPS = 0b0000;
+"86
+[e = . . _T2CONbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 93: TMR2 = 0;
+"93
+[e = _TMR2 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 96: PIE1bits.TMR2IE = 1;
+"96
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_init_timer.c: 97: IPR1bits.TMR2IP = 0;
+"97
+[e = . . _IPR1bits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 98: PIR1bits.TMR2IF = 0;
+"98
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_init_timer.c: 105: }
+"105
 [e :UE 844 ]
-}
-"35
-[v _util_eeprom_write_CRC `(i ~T0 @X0 1 ef ]
-{
-[; ;easat2_util_eeprom.c: 35: int util_eeprom_write_CRC(void) {
-[e :U _util_eeprom_write_CRC ]
-[f ]
-[; ;easat2_util_eeprom.c: 40: }
-"40
-[e :UE 845 ]
-}
-"44
-[v _util_eeprom_write `(i ~T0 @X0 1 ef2`i`i ]
-{
-[; ;easat2_util_eeprom.c: 44: int util_eeprom_write(int address, int value ) {
-[e :U _util_eeprom_write ]
-[v _address `i ~T0 @X0 1 r1 ]
-[v _value `i ~T0 @X0 1 r2 ]
-[f ]
-[; ;easat2_util_eeprom.c: 49: (Busy_eep(), Write_b_eep(address,value));
-"49
-[e ; ( _Busy_eep ..  ( _Write_b_eep (2 , -> _address `ui -> _value `uc ]
-[; ;easat2_util_eeprom.c: 50: value = Read_b_eep(address);
-"50
-[e = _value -> ( _Read_b_eep (1 -> _address `ui `i ]
-[; ;easat2_util_eeprom.c: 53: }
-"53
-[e :UE 846 ]
-}
-"58
-[v _util_eeprom_read `(i ~T0 @X0 1 ef1`i ]
-{
-[; ;easat2_util_eeprom.c: 58: int util_eeprom_read(int address) {
-[e :U _util_eeprom_read ]
-[v _address `i ~T0 @X0 1 r1 ]
-[f ]
-[; ;easat2_util_eeprom.c: 62: }
-"62
-[e :UE 847 ]
 }

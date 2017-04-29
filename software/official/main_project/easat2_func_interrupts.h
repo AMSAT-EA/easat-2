@@ -1,17 +1,18 @@
 /*
  *                                                       
  * Project     : EASAT2                                            
- * File        : easat2_util_timer.h
+ * File        : easat2_func_interrupts.h
  *
  * Description : This file includes all the function prototypes
  * Last update : 07 October 2016                                              
  *                                                                            
 */
 
-#ifndef EASAT2_UTIL_TIMER
-#define EASAT2_UTIL_TIMER
+#ifndef EASAT2_FUNC_INTERRUPTS
+#define EASAT2_FUNC_INTERRUPTS
 
 #include "easat2.h"
+#include "easat2_init_timer.h"
 
 #define TMR1_HALF_SECOND                    50
 #define SAMPLE_TABLE_SIZE                   100   // 100 samples in a second
@@ -28,7 +29,6 @@
 #define REPEATER_ACTIVE_CYCLES              12000 // 2 minutes transmitter active */
 // functions prototypes
 
-void util_timer1_initialize(void);
 void interrupt high_priority_int();
 void interrupt low_priority low_priority_int();
 

@@ -1,10 +1,80 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"134 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18.h
-[v _Busy_eep `(v ~T0 @X0 0 ef ]
-"135
-[v _Write_b_eep `(v ~T0 @X0 0 ef2`ui`uc ]
-"133
-[v _Read_b_eep `(uc ~T0 @X0 0 ef1`ui ]
+"8636 C:\Program Files (x86)\Microchip\xc8\v1.40\include\pic18f45k22.h
+[s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S407 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"8646
+[s S408 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S408 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"8635
+[u S406 `S407 1 `S408 1 ]
+[n S406 . . . ]
+"8657
+[v _TRISDbits `VS406 ~T0 @X0 0 e@3989 ]
+"1375
+[s S62 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :2 `uc 1 ]
+[n S62 . C1TSEL . C2TSEL . C3TSEL ]
+"1382
+[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S63 . C1TSEL0 C1TSEL1 . C2TSEL0 C2TSEL1 . C3TSEL0 C3TSEL1 ]
+"1374
+[u S61 `S62 1 `S63 1 ]
+[n S61 . . . ]
+"1393
+[v _CCPTMRS0bits `VS61 ~T0 @X0 0 e@3913 ]
+"13135
+[v _PR2 `Vuc ~T0 @X0 0 e@4027 ]
+"3225
+[s S154 :4 `uc 1 :2 `uc 1 :2 `uc 1 ]
+[n S154 . CCP2M DC2B P2M ]
+"3230
+[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S155 . CCP2M0 CCP2M1 CCP2M2 CCP2M3 DC2B0 DC2B1 P2M0 P2M1 ]
+"3224
+[u S153 `S154 1 `S155 1 ]
+[n S153 . . . ]
+"3241
+[v _CCP2CONbits `VS153 ~T0 @X0 0 e@3942 ]
+"2776
+[s S136 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S136 . STR2A STR2B STR2C STR2D STR2SYNC ]
+"2783
+[s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S137 . P2DC02 P2DC12 P2DC22 P2DC32 P2DC42 ]
+"2790
+[s S138 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S138 . P2DC0CON P2DC1CON P2DC2CON P2DC3CON P2DC4CON ]
+"2797
+[s S139 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S139 . STRA2 STRB2 STRC2 STRD2 STRSYNC2 ]
+"2775
+[u S135 `S136 1 `S137 1 `S138 1 `S139 1 ]
+[n S135 . . . . . ]
+"2805
+[v _PSTR2CONbits `VS135 ~T0 @X0 0 e@3939 ]
+"3306
+[v _CCPR2L `Vuc ~T0 @X0 0 e@3943 ]
+"13071
+[s S618 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S618 . T2CKPS TMR2ON T2OUTPS ]
+"13076
+[s S619 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S619 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
+"13070
+[u S617 `S618 1 `S619 1 ]
+[n S617 . . . ]
+"13086
+[v _T2CONbits `VS617 ~T0 @X0 0 e@4026 ]
+"9391
+[s S435 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S435 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+"9400
+[s S436 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S436 . . SSPIF TXIF RCIF ]
+"9390
+[u S434 `S435 1 `S436 1 ]
+[n S434 . . . ]
+"9407
+[v _PIR1bits `VS434 ~T0 @X0 0 e@3998 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6617,62 +6687,110 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
-"16 easat2_util_eeprom.c
-[v _util_eeprom_check `(i ~T0 @X0 1 ef ]
+[; ;easat2_util_pwm.h: 33: void util_pwm_initialize(void);
+[; ;easat2_util_pwm.h: 34: void util_pwm_start(void);
+[; ;easat2_util_pwm.h: 35: void util_pwm_stop(void);
+"24 easat2_util_pwm.c
+[v _util_pwm_initialize `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_eeprom.c: 16: int util_eeprom_check(void) {
-[e :U _util_eeprom_check ]
+[; ;easat2_util_pwm.c: 24: void util_pwm_initialize(void) {
+[e :U _util_pwm_initialize ]
 [f ]
-[; ;easat2_util_eeprom.c: 21: }
-"21
+[; ;easat2_util_pwm.c: 31: (TRISDbits.TRISD2) = 1;
+"31
+[e = . . _TRISDbits 0 2 -> -> 1 `i `uc ]
+[; ;easat2_util_pwm.c: 32: (TRISDbits.TRISD3) = 1;
+"32
+[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
+[; ;easat2_util_pwm.c: 36: CCPTMRS0bits.C2TSEL = 0;
+"36
+[e = . . _CCPTMRS0bits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 40: PR2 = (2000000 / (4 * 1000 * 4)) - 1;
+"40
+[e = _PR2 -> - / -> 2000000 `l -> * * -> 4 `i -> 1000 `i -> 4 `i `l -> -> 1 `i `l `uc ]
+[; ;easat2_util_pwm.c: 49: CCP2CONbits.P2M = 0b00;
+"49
+[e = . . _CCP2CONbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 50: CCP2CONbits.CCP2M = 0b1100;
+"50
+[e = . . _CCP2CONbits 0 0 -> -> 12 `i `uc ]
+[; ;easat2_util_pwm.c: 54: PSTR2CONbits.STR2A = 0;
+"54
+[e = . . _PSTR2CONbits 0 0 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 55: PSTR2CONbits.STR2B = 1;
+"55
+[e = . . _PSTR2CONbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_util_pwm.c: 56: PSTR2CONbits.STR2C = 1;
+"56
+[e = . . _PSTR2CONbits 0 2 -> -> 1 `i `uc ]
+[; ;easat2_util_pwm.c: 57: PSTR2CONbits.STR2D = 0;
+"57
+[e = . . _PSTR2CONbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 61: CCPR2L = (2*((2000000 / (4 * 1000 * 4)) - 1 + 1) >> 2) & 0xFF;
+"61
+[e = _CCPR2L -> & >> * -> -> 2 `i `l + - / -> 2000000 `l -> * * -> 4 `i -> 1000 `i -> 4 `i `l -> -> 1 `i `l -> -> 1 `i `l -> 2 `i -> -> 255 `i `l `uc ]
+[; ;easat2_util_pwm.c: 62: CCP2CONbits.DC2B = (2*((2000000 / (4 * 1000 * 4)) - 1 + 1)) & 0x03;
+"62
+[e = . . _CCP2CONbits 0 1 -> & * -> -> 2 `i `l + - / -> 2000000 `l -> * * -> 4 `i -> 1000 `i -> 4 `i `l -> -> 1 `i `l -> -> 1 `i `l -> -> 3 `i `l `uc ]
+[; ;easat2_util_pwm.c: 66: T2CONbits.TMR2ON = 0b0;
+"66
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 70: PIR1bits.TMR2IF = 0;
+"70
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 73: }
+"73
 [e :UE 843 ]
 }
-"26
-[v _util_eeprom_fix `(i ~T0 @X0 1 ef ]
+"78
+[v _util_pwm_start `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_eeprom.c: 26: int util_eeprom_fix(void) {
-[e :U _util_eeprom_fix ]
+[; ;easat2_util_pwm.c: 78: void util_pwm_start(void) {
+[e :U _util_pwm_start ]
 [f ]
-[; ;easat2_util_eeprom.c: 30: }
-"30
+[; ;easat2_util_pwm.c: 83: (TRISDbits.TRISD2) = 0;
+"83
+[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 84: (TRISDbits.TRISD3) = 0;
+"84
+[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 88: T2CONbits.TMR2ON = 1;
+"88
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_util_pwm.c: 90: }
+"90
 [e :UE 844 ]
 }
-"35
-[v _util_eeprom_write_CRC `(i ~T0 @X0 1 ef ]
+"95
+[v _util_pwm_stop `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_eeprom.c: 35: int util_eeprom_write_CRC(void) {
-[e :U _util_eeprom_write_CRC ]
+[; ;easat2_util_pwm.c: 95: void util_pwm_stop(void) {
+[e :U _util_pwm_stop ]
 [f ]
-[; ;easat2_util_eeprom.c: 40: }
-"40
+[; ;easat2_util_pwm.c: 100: (TRISDbits.TRISD2) = 1;
+"100
+[e = . . _TRISDbits 0 2 -> -> 1 `i `uc ]
+[; ;easat2_util_pwm.c: 101: (TRISDbits.TRISD3) = 1;
+"101
+[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
+[; ;easat2_util_pwm.c: 105: T2CONbits.TMR2ON = 0;
+"105
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_util_pwm.c: 107: }
+"107
 [e :UE 845 ]
 }
-"44
-[v _util_eeprom_write `(i ~T0 @X0 1 ef2`i`i ]
+"112
+[v _util_check_pwm_on `(i ~T0 @X0 1 ef ]
 {
-[; ;easat2_util_eeprom.c: 44: int util_eeprom_write(int address, int value ) {
-[e :U _util_eeprom_write ]
-[v _address `i ~T0 @X0 1 r1 ]
-[v _value `i ~T0 @X0 1 r2 ]
+[; ;easat2_util_pwm.c: 112: int util_check_pwm_on(void) {
+[e :U _util_check_pwm_on ]
 [f ]
-[; ;easat2_util_eeprom.c: 49: (Busy_eep(), Write_b_eep(address,value));
-"49
-[e ; ( _Busy_eep ..  ( _Write_b_eep (2 , -> _address `ui -> _value `uc ]
-[; ;easat2_util_eeprom.c: 50: value = Read_b_eep(address);
-"50
-[e = _value -> ( _Read_b_eep (1 -> _address `ui `i ]
-[; ;easat2_util_eeprom.c: 53: }
-"53
+[; ;easat2_util_pwm.c: 114: return (T2CONbits.TMR2ON == 1);
+"114
+[e ) -> == -> . . _T2CONbits 0 1 `i -> 1 `i `i ]
+[e $UE 846  ]
+[; ;easat2_util_pwm.c: 116: }
+"116
 [e :UE 846 ]
-}
-"58
-[v _util_eeprom_read `(i ~T0 @X0 1 ef1`i ]
-{
-[; ;easat2_util_eeprom.c: 58: int util_eeprom_read(int address) {
-[e :U _util_eeprom_read ]
-[v _address `i ~T0 @X0 1 r1 ]
-[f ]
-[; ;easat2_util_eeprom.c: 62: }
-"62
-[e :UE 847 ]
 }
