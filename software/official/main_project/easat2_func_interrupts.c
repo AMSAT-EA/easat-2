@@ -12,7 +12,9 @@
 #include "easat2_func_interrupts.h"
 
 
-// this is the high priority interruption function
+// this is the high priority interruption function.
+// TMR1 triggers 100 times per second (100 Hz - 10ms cycle)
+// Sample table size is 128, so it is stored more than 1 second
 
 void interrupt high_priority_int() {
 
@@ -20,12 +22,13 @@ void interrupt high_priority_int() {
 
     static unsigned int samples[SAMPLE_TABLE_SIZE];
     static unsigned int sample_position           = 0;
-    static unsigned short long noise_mean_value   = INITIAL_NOISE_MEAN_VALUE;
+    static unsigned short long noise_avg_value    = INITIAL_NOISE_MEAN_VALUE;
     static unsigned int activation_thresold       = INITIAL_ACTIVACION_THRESOLD;
     static unsigned int times_thresold_exceeded   = 0;
     static unsigned int cycles_transmitter_active = 0;   /* (number of interruptions) */
     static unsigned char is_transmitter_active    = 0;
     
+    static unsigned int total_add                 = 0;   /* total add for average level */  
     static unsigned int valid_samples             = 0;   /* valid samples in sample size */
     
     unsigned int sample                           = 0;   /* ADC sample value */
@@ -47,7 +50,7 @@ void interrupt high_priority_int() {
         TMR1H = TIMER1H_VAL; /* EC77 for 60535 */
         TMR1L = TIMER1L_VAL;
              
-        // change output in hardware watchdog pin
+        // change output in hardware watchdog pin (60 seconds configuration)
         
         PINOUT_WATCHDOG = !PINOUT_WATCHDOG;
             
@@ -130,35 +133,40 @@ void interrupt high_priority_int() {
             
             if (cycles_transmitter_active == REPEATER_ACTIVE_CYCLES) {
                 // turn off repeater
-                PINOUT_REPEATER_PTT_ON = 0;
+                PINOUT_REPEATER_PTT_ON    = 0;
                 is_transmitter_active     = 0;
             }
             
-            samples[sample_position++]  = sample; // store value in table   
+            samples[sample_position]  = sample; // store value in table   
+            
+            /* we add the new sample and substract the oldest one */
+            total_add += sample;
+            
+            if (sample_position > 0)
+                total_add -= samples[sample_position-1];
+            else
+                total_add -= samples[SAMPLE_TABLE_SIZE-1];
+            
+            /* move pointer */
+            sample_position++;
         
             // check if we have to start from first position again (cycle)
             if (sample_position == SAMPLE_TABLE_SIZE) sample_position = 0;
 
+            // only calculate average when the table is full of samples
             if (valid_samples   == SAMPLE_TABLE_SIZE) {
                 
                 // calculate new noise mean value
-                noise_mean_value = 0;
-        
-    //            for (int i = 0; i < SAMPLE_TABLE_SIZE; i++) 
-    //                noise_mean_value += samples[i];
-            
+                noise_avg_value     = total_add;              
                 // we use integes because it is faster
-                noise_mean_value = (unsigned short long)(noise_mean_value / SAMPLE_TABLE_SIZE);
-                                   
+                noise_avg_value     = noise_avg_value >> AVERAGE_NOISE_RIGHT_SHIFTS;
                 // calculate new thresold
                 // new thresold has to be a fixed percentage over current noise
-            
-                activation_thresold = noise_mean_value * THRESOLD_NOISE_MULTIPLIER;
+                activation_thresold = noise_avg_value < THRESOLD_NOISE_LEFT_SHIFTS;
                 
             }
             
-        }
-        
+        }     
         
         // clear interruption flag
         

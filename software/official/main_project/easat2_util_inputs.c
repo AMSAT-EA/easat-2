@@ -136,6 +136,14 @@ float util_getTemperature(void) {
     float sign        = 1.0;
     int i = 0;
     
+    // disable interrupts in places where we need a precise temporization
+    
+    /////////////////////////////////////////////////////////
+    
+    INTCONbits.GIE   = 0; /* disable global interrupts */
+    
+    /////////////////////////////////////////////////////////
+    
     // reset the thermometer
 
     /* Tx Reset Master issues reset pulse.
@@ -152,6 +160,8 @@ float util_getTemperature(void) {
 
     // set RA3 as input
     TRISAbits.TRISA3 = 1;
+    
+    INTCONbits.GIE   = 1; /* enable global interrupts */
 
     // we wait until RA3 is 1 again or MAX_ATTEMPS
     
@@ -159,7 +169,13 @@ float util_getTemperature(void) {
         util_waits_delay_secs(1);
 
     if (i == MAX_THERMOMETER_WAIT_ATTEMPS) return THERMOMETER_FAIL_VALUE_2;
+    
+    /////////////////////////////////////////////////////////
+    
+    INTCONbits.GIE   = 0; /* disable global interrupts */    
 
+    /////////////////////////////////////////////////////////
+    
     /* Tx Reset Master issues reset pulse.
      * Rx Presence DS18B20 responds with presence pulse. */
     if (util_onewire_reset()) return THERMOMETER_FAIL_VALUE_3;
@@ -197,6 +213,12 @@ float util_getTemperature(void) {
     // crc
     byte_mem[8] = util_onewire_read_byte();
 
+    /////////////////////////////////////////////////////////
+    
+    INTCONbits.GIE   = 1; /* enable global interrupts */
+    
+    /////////////////////////////////////////////////////////
+    
     // we store together all the bits copying them from the byte table
 
     for (num_byte = 0; num_byte < THERMOMETER_TABLE_SIZE; num_byte++) {

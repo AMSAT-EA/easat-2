@@ -37,9 +37,8 @@ void main_loop(void) {
   
         do {
             
-            // first of all clear the watchdog timer (131 seconds timer)
-            // the watchdog has been configured by software fuses
-            ClrWdt();
+            // initialize software and hardware watchdogs
+            init_watchdogs_initialize();
             
             // get the sensor values
             
@@ -51,7 +50,7 @@ void main_loop(void) {
             
             // get the battery current
             battery_current = util_getBatteryCurrent();
-            
+     
             // get the system temperature
             temperature     = util_getTemperature();
 

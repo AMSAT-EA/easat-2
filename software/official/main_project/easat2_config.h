@@ -1,7 +1,7 @@
 /*
  *                                                       
  * Project     : EASAT2                                            
- * File        : easat2_inc_config.h
+ * File        : easat2_config.h
  *
  * Description : MCU configuration registers
  * Last update : 07 October 2016                                              

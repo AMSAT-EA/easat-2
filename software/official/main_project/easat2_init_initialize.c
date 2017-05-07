@@ -16,6 +16,9 @@
 // this function initializes the MCU
 
 void init_initialize(void) {
+
+    // clean watchdogs timers
+    init_watchdogs_initialize();
     
     // I/O initialize
     init_io_initialize();
@@ -27,6 +30,18 @@ void init_initialize(void) {
     // PWM initialize
     util_pwm_initialize();
       
+}
+
+
+void init_watchdogs_initialize(void) {
+
+    // change output in hardware watchdog pin (60 seconds configuration)
+    PINOUT_WATCHDOG = !PINOUT_WATCHDOG;
+    
+    // clear the watchdog timer (131 seconds configuration)
+    // the watchdog has been configured by software fuses
+    ClrWdt();
+            
 }
 
 // this functions initializes PORTS and ADCs

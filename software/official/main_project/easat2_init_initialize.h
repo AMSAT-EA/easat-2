@@ -15,6 +15,7 @@
 
 // functions prototypes
 
+void init_watchdogs_initialize(void);
 void init_initialize(void);
 void init_io_initialize(void);
 

@@ -1,7 +1,7 @@
 /*
  *                                                       
  * Project     : EASAT2                                            
- * File        : easat2_util_agc.h
+ * File        : easat2_func_energy.h
  *
  * Description : This file includes all the function prototypes
  * Last update : 07 October 2016                                              

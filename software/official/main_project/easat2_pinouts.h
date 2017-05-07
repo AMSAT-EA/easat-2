@@ -1,7 +1,7 @@
 /*
  *                                                       
  * Project     : EASAT2                                            
- * File        : pinouts.h
+ * File        : easat2_pinouts.h
  *
  * Description : This file include all the necessary project includes
  * Last update : 01 April 2017                                              

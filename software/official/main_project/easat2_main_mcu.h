@@ -1,7 +1,7 @@
 /*
  *                                                       
  * Project     : EASAT2                                            
- * File        : easat2_inc_prototypes.h
+ * File        : easat2_main_mcu.h
  *
  * Description : This file includes all the function prototypes
  * Last update : 07 October 2016                                              
