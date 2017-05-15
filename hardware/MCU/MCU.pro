@@ -1,6 +1,6 @@
-update=23/03/2017 23:38:42
+update=15/05/2017 22:43:43
 version=1
-last_client=kicad
+last_client=eeschema
 [pcbnew]
 version=1
 LastNetListRead=
@@ -25,9 +25,19 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
-LibDir=C:/KiCAD/kicad-pcblib
+LibDir=C:/KiCAD/kicad-pcblib;C:/KiCAD/kicad-library;C:/KiCAD/library-kicad
 [eeschema/libraries]
 LibName1=MCU-rescue
 LibName2=power
@@ -62,13 +72,5 @@ LibName30=valves
 LibName31=librerias/pic18f45k22
 LibName32=librerias/max6369
 LibName33=MCU-Components
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName34=C:/KiCAD/kicad-library/library/mechanical
+LibName35=fiducial

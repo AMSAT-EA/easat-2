@@ -32,16 +32,18 @@ LIBS:valves
 LIBS:pic18f45k22
 LIBS:max6369
 LIBS:MCU-Components
+LIBS:mechanical
+LIBS:fiducial
 LIBS:MCU-cache
 EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "EASAT MCU"
+Date "2017-05-15"
+Rev "1.0"
+Comp "EASAT"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -1254,7 +1256,7 @@ Wire Wire Line
 Wire Wire Line
 	9160 3235 8885 3235
 Wire Wire Line
-	8885 3235 8885 3565
+	8885 3565 8885 3235
 Wire Wire Line
 	2445 3325 2656 3325
 Wire Wire Line
@@ -1313,7 +1315,7 @@ Wire Wire Line
 Wire Wire Line
 	5355 2675 5355 2925
 Wire Wire Line
-	7250 1230 7250 1145
+	7250 1145 7250 1230
 Wire Wire Line
 	7250 1530 7250 1630
 Wire Wire Line
@@ -1413,7 +1415,7 @@ Connection ~ 6210 5755
 Wire Wire Line
 	6210 6065 6210 6170
 Wire Wire Line
-	7500 5855 7315 5855
+	7315 5855 7500 5855
 Wire Wire Line
 	7365 6245 7365 5855
 Connection ~ 7365 5855
@@ -1571,7 +1573,7 @@ F 10 "Diodo Zener Simple, 3.3 V, 500 mW, SOD-123, 6 %, 2 Pines, 150 °C" H 8325 
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8885 3565 8325 3565
+	8325 3565 8885 3565
 Wire Wire Line
 	8325 3565 8325 3410
 Connection ~ 8600 3565
@@ -1603,18 +1605,18 @@ Wire Wire Line
 $Comp
 L R R2
 U 1 1 59041535
-P 1475 4235
-F 0 "R2" V 1555 4235 50  0000 C CNN
-F 1 "470" V 1475 4235 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" H 1405 4235 50  0001 C CNN
-F 3 "" H 1475 4235 50  0000 C CNN
-F 4 "YAGEO" H 1475 4235 60  0001 C CNN "Fabricante"
-F 5 "RT0603FRE07470RL" H 1475 4235 60  0001 C CNN "Referencia Fabricante"
-F 6 "Mouser" H 1475 4235 60  0001 C CNN "Proveedor #1"
-F 7 "603-RT0603FRE07470RL" H 1475 4235 60  0001 C CNN "Referencia Proveedor #1"
-F 8 "Farnell" H 1475 4235 60  0001 C CNN "Proveedor #2"
-F 9 "1500635" H 1475 4235 60  0001 C CNN "Referencia Proveedor #2"
-	1    1475 4235
+P 1475 4240
+F 0 "R2" V 1555 4240 50  0000 C CNN
+F 1 "470" V 1475 4240 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 1405 4240 50  0001 C CNN
+F 3 "" H 1475 4240 50  0000 C CNN
+F 4 "YAGEO" H 1475 4240 60  0001 C CNN "Fabricante"
+F 5 "RT0603FRE07470RL" H 1475 4240 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 1475 4240 60  0001 C CNN "Proveedor #1"
+F 7 "603-RT0603FRE07470RL" H 1475 4240 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 1475 4240 60  0001 C CNN "Proveedor #2"
+F 9 "1500635" H 1475 4240 60  0001 C CNN "Referencia Proveedor #2"
+	1    1475 4240
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1851,6 +1853,39 @@ F 8 "Farnell" H 11250 2160 60  0001 C CNN "Proveedor #2"
 F 9 "2672610" H 11250 2160 60  0001 C CNN "Referencia Proveedor #2"
 F 10 "Conector de Placa a Placa, 2.54 mm, 5 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 11250 2160 60  0001 C CNN "Descripción"
 	1    11250 2160
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FID1
+U 1 1 591A5C55
+P 11790 1035
+F 0 "FID1" H 11790 1160 60  0000 C CNN
+F 1 "FIDUCIAL" H 11790 910 60  0000 C CNN
+F 2 "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 11790 1035 60  0001 C CNN
+F 3 "" H 11790 1035 60  0000 C CNN
+	1    11790 1035
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FID2
+U 1 1 591A6223
+P 12190 1035
+F 0 "FID2" H 12190 1160 60  0000 C CNN
+F 1 "FIDUCIAL" H 12190 910 60  0000 C CNN
+F 2 "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 12190 1035 60  0001 C CNN
+F 3 "" H 12190 1035 60  0000 C CNN
+	1    12190 1035
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FID3
+U 1 1 591A629A
+P 12605 1035
+F 0 "FID3" H 12605 1160 60  0000 C CNN
+F 1 "FIDUCIAL" H 12605 910 60  0000 C CNN
+F 2 "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 12605 1035 60  0001 C CNN
+F 3 "" H 12605 1035 60  0000 C CNN
+	1    12605 1035
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
