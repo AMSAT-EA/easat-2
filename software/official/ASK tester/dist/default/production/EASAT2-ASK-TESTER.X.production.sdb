@@ -1,0 +1,557 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F45K22 ]
+[d frameptr 4065 ]
+"464 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+"62 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"7 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+"10 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 D:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"19 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_func_interrupts.c
+[v _high_priority_int high_priority_int `II(v  1 e 1 0 ]
+"73
+[v _low_priority_int low_priority_int `IIL(v  1 e 1 0 ]
+"17 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_init_initialize.c
+[v _init_initialize init_initialize `(v  1 e 1 0 ]
+"32
+[v _init_watchdogs_initialize init_watchdogs_initialize `(v  1 e 1 0 ]
+"43
+[v _init_io_initialize init_io_initialize `(v  1 e 1 0 ]
+"17 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_init_timer.c
+[v _init_timer1_initialize init_timer1_initialize `(v  1 e 1 0 ]
+"70
+[v _init_timer2_initialize init_timer2_initialize `(v  1 e 1 0 ]
+"19 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_main_mcu.c
+[v _main main `(v  1 e 1 0 ]
+"31
+[v _main_loop main_loop `(v  1 e 1 0 ]
+"20 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_send.c
+[v _send_ask_command send_ask_command `(v  1 e 1 0 ]
+"24 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_util_waits.c
+[v _util_waits_delay_mins util_waits_delay_mins `(v  1 e 1 0 ]
+"31
+[v _util_waits_delay_secs util_waits_delay_secs `(v  1 e 1 0 ]
+"40
+[v _util_waits_delay_ms util_waits_delay_ms `(v  1 e 1 0 ]
+"13 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_golay_CRCGcod.c
+[v _golay golay `(ul  1 e 4 0 ]
+"57
+[v _syndrome syndrome `(ul  1 e 4 0 ]
+"13 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_golay_CRCGcor.c
+[v _weight weight `(i  1 e 2 0 ]
+"39
+[v _rotate_left rotate_left `(ul  1 e 4 0 ]
+"58
+[v _rotate_right rotate_right `(ul  1 e 4 0 ]
+[s S298 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 ANSA3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 ANSA5 1 0 :1:5 
+]
+"64 D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
+[u S305 . 1 `S298 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES305  1 e 1 @3896 ]
+[s S397 . 1 `uc 1 ANSB0 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"108
+[u S404 . 1 `S397 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES404  1 e 1 @3897 ]
+[s S494 . 1 `uc 1 ANSD0 1 0 :1:0 
+`uc 1 ANSD1 1 0 :1:1 
+`uc 1 ANSD2 1 0 :1:2 
+`uc 1 ANSD3 1 0 :1:3 
+`uc 1 ANSD4 1 0 :1:4 
+`uc 1 ANSD5 1 0 :1:5 
+`uc 1 ANSD6 1 0 :1:6 
+`uc 1 ANSD7 1 0 :1:7 
+]
+"209
+[u S503 . 1 `S494 1 . 1 0 ]
+[v _ANSELDbits ANSELDbits `VES503  1 e 1 @3899 ]
+[s S234 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 FVRS 1 0 :2:4 
+`uc 1 FVRST 1 0 :1:6 
+`uc 1 FVREN 1 0 :1:7 
+]
+"704
+[s S239 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 FVRS0 1 0 :1:4 
+`uc 1 FVRS1 1 0 :1:5 
+]
+[u S243 . 1 `S234 1 . 1 0 `S239 1 . 1 0 ]
+[v _VREFCON0bits VREFCON0bits `VES243  1 e 1 @3906 ]
+"2671
+[v _WPUB WPUB `VEuc  1 e 1 @3937 ]
+[s S53 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"6285
+[s S62 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+]
+[s S69 . 1 `uc 1 C12IN0M 1 0 :1:0 
+`uc 1 C12IN1M 1 0 :1:1 
+`uc 1 C2INP 1 0 :1:2 
+`uc 1 C1INP 1 0 :1:3 
+`uc 1 C1OUT 1 0 :1:4 
+`uc 1 C2OUT 1 0 :1:5 
+]
+[s S76 . 1 `uc 1 C12IN0N 1 0 :1:0 
+`uc 1 C12IN1N 1 0 :1:1 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 SS 1 0 :1:5 
+]
+[s S83 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_SS 1 0 :1:5 
+]
+[s S86 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFN 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SRQ 1 0 :1:4 
+`uc 1 nSS 1 0 :1:5 
+]
+[s S92 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CVREF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S97 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 DACOUT 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S102 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SS1 1 0 :1:5 
+]
+[s S105 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_SS1 1 0 :1:5 
+]
+[s S108 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 nSS1 1 0 :1:5 
+]
+[s S111 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRNQ 1 0 :1:5 
+]
+[s S114 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 RJPU 1 0 :1:7 
+]
+[u S118 . 1 `S53 1 . 1 0 `S62 1 . 1 0 `S69 1 . 1 0 `S76 1 . 1 0 `S83 1 . 1 0 `S86 1 . 1 0 `S92 1 . 1 0 `S97 1 . 1 0 `S102 1 . 1 0 `S105 1 . 1 0 `S108 1 . 1 0 `S111 1 . 1 0 `S114 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES118  1 e 1 @3968 ]
+[s S315 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"7502
+[s S324 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+`uc 1 LA7 1 0 :1:7 
+]
+[u S333 . 1 `S315 1 . 1 0 `S324 1 . 1 0 ]
+[v _LATAbits LATAbits `VES333  1 e 1 @3977 ]
+[s S414 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"7613
+[s S423 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S432 . 1 `S414 1 . 1 0 `S423 1 . 1 0 ]
+[v _LATBbits LATBbits `VES432  1 e 1 @3978 ]
+[s S515 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"7835
+[s S524 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S533 . 1 `S515 1 . 1 0 `S524 1 . 1 0 ]
+[v _LATDbits LATDbits `VES533  1 e 1 @3980 ]
+[s S258 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"8002
+[u S276 . 1 `S258 1 . 1 0 `S53 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES276  1 e 1 @3986 ]
+[s S357 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"8223
+[s S366 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+[u S375 . 1 `S357 1 . 1 0 `S366 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES375  1 e 1 @3987 ]
+[s S454 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"8665
+[s S463 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+[u S472 . 1 `S454 1 . 1 0 `S463 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES472  1 e 1 @3989 ]
+[s S752 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"9339
+[s S760 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+[u S765 . 1 `S752 1 . 1 0 `S760 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES765  1 e 1 @3997 ]
+[s S21 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"9415
+[s S29 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S34 . 1 `S21 1 . 1 0 `S29 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES34  1 e 1 @3998 ]
+[s S782 . 1 `uc 1 TMR1IP 1 0 :1:0 
+`uc 1 TMR2IP 1 0 :1:1 
+`uc 1 CCP1IP 1 0 :1:2 
+`uc 1 SSP1IP 1 0 :1:3 
+`uc 1 TX1IP 1 0 :1:4 
+`uc 1 RC1IP 1 0 :1:5 
+`uc 1 ADIP 1 0 :1:6 
+]
+"9491
+[s S790 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIP 1 0 :1:3 
+`uc 1 TXIP 1 0 :1:4 
+`uc 1 RCIP 1 0 :1:5 
+]
+[u S795 . 1 `S782 1 . 1 0 `S790 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES795  1 e 1 @3999 ]
+[s S878 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+"13094
+[s S882 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[u S890 . 1 `S878 1 . 1 0 `S882 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES890  1 e 1 @4026 ]
+"13162
+[v _TMR2 TMR2 `VEuc  1 e 1 @4028 ]
+"13306
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"13376
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+[s S700 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+]
+"15521
+[s S703 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1SOSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[s S710 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 T1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+[s S719 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN 1 0 :1:3 
+]
+[u S722 . 1 `S700 1 . 1 0 `S703 1 . 1 0 `S710 1 . 1 0 `S719 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES722  1 e 1 @4045 ]
+"15606
+[v _TMR1L TMR1L `VEuc  1 e 1 @4046 ]
+"15625
+[v _TMR1H TMR1H `VEuc  1 e 1 @4047 ]
+[s S633 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"15687
+[s S635 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S638 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S641 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S644 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S647 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S656 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+]
+[u S662 . 1 `S633 1 . 1 0 `S635 1 . 1 0 `S638 1 . 1 0 `S641 1 . 1 0 `S644 1 . 1 0 `S647 1 . 1 0 `S656 1 . 1 0 ]
+[v _RCONbits RCONbits `VES662  1 e 1 @4048 ]
+[s S829 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"16737
+[s S838 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S847 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S851 . 1 `S829 1 . 1 0 `S838 1 . 1 0 `S847 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES851  1 e 1 @4082 ]
+"18530
+[v _RBPU RBPU `VEb  1 e 0 @32655 ]
+"19 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_main_mcu.c
+[v _main main `(v  1 e 1 0 ]
+{
+"27
+} 0
+"31
+[v _main_loop main_loop `(v  1 e 1 0 ]
+{
+"34
+[v main_loop@golay_command golay_command `ul  1 a 4 55 ]
+"33
+[v main_loop@test_command test_command `ul  1 a 4 51 ]
+"51
+} 0
+"24 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_util_waits.c
+[v _util_waits_delay_mins util_waits_delay_mins `(v  1 e 1 0 ]
+{
+"25
+[v util_waits_delay_mins@i i `i  1 a 2 47 ]
+"24
+[v util_waits_delay_mins@minutes minutes `i  1 p 2 44 ]
+"27
+} 0
+"31
+[v _util_waits_delay_secs util_waits_delay_secs `(v  1 e 1 0 ]
+{
+"33
+[v util_waits_delay_secs@j j `i  1 a 2 42 ]
+"32
+[v util_waits_delay_secs@i i `i  1 a 2 40 ]
+"31
+[v util_waits_delay_secs@secs secs `i  1 p 2 37 ]
+"36
+} 0
+"20 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_send.c
+[v _send_ask_command send_ask_command `(v  1 e 1 0 ]
+{
+"22
+[v send_ask_command@current_signal_level current_signal_level `i  1 a 2 49 ]
+"23
+[v send_ask_command@bit_to_transfer bit_to_transfer `i  1 a 2 47 ]
+"24
+[v send_ask_command@i i `i  1 a 2 45 ]
+"20
+[v send_ask_command@command command `ul  1 p 4 37 ]
+"72
+} 0
+"40 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_util_waits.c
+[v _util_waits_delay_ms util_waits_delay_ms `(v  1 e 1 0 ]
+{
+"41
+[v util_waits_delay_ms@i i `i  1 a 2 35 ]
+"40
+[v util_waits_delay_ms@ms ms `i  1 p 2 32 ]
+"43
+} 0
+"13 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_golay_CRCGcod.c
+[v _golay golay `(ul  1 e 4 0 ]
+{
+"19
+[v golay@c c `ul  1 a 4 40 ]
+"18
+[v golay@i i `i  1 a 2 44 ]
+"13
+[v golay@cw cw `ul  1 p 4 32 ]
+"29
+} 0
+"17 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_init_initialize.c
+[v _init_initialize init_initialize `(v  1 e 1 0 ]
+{
+"29
+} 0
+"32
+[v _init_watchdogs_initialize init_watchdogs_initialize `(v  1 e 1 0 ]
+{
+"39
+} 0
+"70 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_init_timer.c
+[v _init_timer2_initialize init_timer2_initialize `(v  1 e 1 0 ]
+{
+"105
+} 0
+"17
+[v _init_timer1_initialize init_timer1_initialize `(v  1 e 1 0 ]
+{
+"64
+} 0
+"43 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_init_initialize.c
+[v _init_io_initialize init_io_initialize `(v  1 e 1 0 ]
+{
+"169
+} 0
+"73 C:\Users\admin\OneDrive\MPLABXProjects\EASAT2-ASK-TESTER.X\easat2_ask_func_interrupts.c
+[v _low_priority_int low_priority_int `IIL(v  1 e 1 0 ]
+{
+"77
+} 0
+"19
+[v _high_priority_int high_priority_int `II(v  1 e 1 0 ]
+{
+"21
+[v high_priority_int@tmr1_interrupt_number tmr1_interrupt_number `i  1 s 2 tmr1_interrupt_number ]
+"68
+} 0
