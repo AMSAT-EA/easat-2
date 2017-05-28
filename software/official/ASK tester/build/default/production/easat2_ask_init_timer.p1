@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"15650 D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
+"15650 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
 [s S745 :1 `uc 1 ]
 [n S745 . NOT_BOR ]
 "15653
@@ -110,7 +110,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k22.h: 49: extern volatile unsigned char ANSELA @ 0xF38;
-"51 D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
 [; ;pic18f45k22.h: 51: asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
 [; ;pic18f45k22.h: 54: typedef union {

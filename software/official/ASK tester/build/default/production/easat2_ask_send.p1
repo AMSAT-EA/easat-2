@@ -1,55 +1,40 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"6206 D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
-[s S327 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S327 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
-"6216
-[s S328 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S328 . AN0 AN1 AN2 AN3 . AN4 ]
-"6224
-[s S329 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S329 . C12IN0M C12IN1M C2INP C1INP C1OUT C2OUT ]
-"6232
-[s S330 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S330 . C12IN0N C12IN1N VREFM VREFP T0CKI SS ]
-"6240
-[s S331 :5 `uc 1 :1 `uc 1 ]
-[n S331 . . NOT_SS ]
-"6244
-[s S332 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S332 . . VREFN . SRQ nSS ]
-"6251
-[s S333 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S333 . . CVREF . LVDIN ]
-"6257
-[s S334 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S334 . . DACOUT . HLVDIN ]
-"6263
-[s S335 :5 `uc 1 :1 `uc 1 ]
-[n S335 . . SS1 ]
-"6267
-[s S336 :5 `uc 1 :1 `uc 1 ]
-[n S336 . . NOT_SS1 ]
-"6271
-[s S337 :5 `uc 1 :1 `uc 1 ]
-[n S337 . . nSS1 ]
-"6275
-[s S338 :5 `uc 1 :1 `uc 1 ]
-[n S338 . . SRNQ ]
-"6279
-[s S339 :1 `uc 1 :6 `uc 1 :1 `uc 1 ]
-[n S339 . ULPWUIN . RJPU ]
-"6205
-[u S326 `S327 1 `S328 1 `S329 1 `S330 1 `S331 1 `S332 1 `S333 1 `S334 1 `S335 1 `S336 1 `S337 1 `S338 1 `S339 1 ]
-[n S326 . . . . . . . . . . . . . . ]
-"6285
-[v _PORTAbits `VS326 ~T0 @X0 0 e@3968 ]
+"6490 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
+[s S341 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S341 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"6500
+[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"6510
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
+"6520
+[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S344 . FLT0 C12IN3M . C12IN2M T5G T1G ]
+"6528
+[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S345 . SRI C12IN3N . C12IN2N . CCP3 ]
+"6536
+[s S346 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S346 . . CTED1 CTED2 . T3CKI ]
+"6543
+[s S347 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S347 . . P2A . P3A ]
+"6549
+[s S348 :3 `uc 1 :1 `uc 1 ]
+[n S348 . . CCP2_PA2 ]
+"6489
+[u S340 `S341 1 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 `S348 1 ]
+[n S340 . . . . . . . . . ]
+"6554
+[v _PORTBbits `VS340 ~T0 @X0 0 e@3969 ]
 "27 easat2_ask_util_waits.h
 [v _util_waits_delay_ms `(v ~T0 @X0 0 ef1`i ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k22.h: 49: extern volatile unsigned char ANSELA @ 0xF38;
-"51 D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
 [; ;pic18f45k22.h: 51: asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
 [; ;pic18f45k22.h: 54: typedef union {
@@ -6672,80 +6657,84 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_ask_util_waits.h: 27: void util_waits_delay_ms(int ms);
 [; ;easat2_ask_util_waits.h: 28: void util_waits_delay_hundred_us(int us);
 [; ;easat2_ask_send.h: 28: void send_ask_command(unsigned long command);
-"20 easat2_ask_send.c
+"18 easat2_ask_send.c
 [v _send_ask_command `(v ~T0 @X0 1 ef1`ul ]
 {
-[; ;easat2_ask_send.c: 20: void send_ask_command(unsigned long command) {
+[; ;easat2_ask_send.c: 18: void send_ask_command(unsigned long command) {
 [e :U _send_ask_command ]
 [v _command `ul ~T0 @X0 1 r1 ]
 [f ]
-"22
+"20
 [v _current_signal_level `i ~T0 @X0 1 a ]
-[; ;easat2_ask_send.c: 22: int current_signal_level = 0;
+[; ;easat2_ask_send.c: 20: int current_signal_level = 0;
 [e = _current_signal_level -> 0 `i ]
-"23
+"21
 [v _bit_to_transfer `i ~T0 @X0 1 a ]
-[; ;easat2_ask_send.c: 23: int bit_to_transfer = 0;
+[; ;easat2_ask_send.c: 21: int bit_to_transfer = 0;
 [e = _bit_to_transfer -> 0 `i ]
-"24
+"22
 [v _i `i ~T0 @X0 1 a ]
-[; ;easat2_ask_send.c: 24: int i = 0;
+[; ;easat2_ask_send.c: 22: int i = 0;
 [e = _i -> 0 `i ]
-[; ;easat2_ask_send.c: 28: do {
-"28
+[; ;easat2_ask_send.c: 26: do {
+"26
 [e :U 849 ]
 {
-[; ;easat2_ask_send.c: 30: bit_to_transfer = command & 1;
-"30
+[; ;easat2_ask_send.c: 28: bit_to_transfer = command & 1;
+"28
 [e = _bit_to_transfer -> & _command -> -> -> 1 `i `l `ul `i ]
-[; ;easat2_ask_send.c: 38: if (bit_to_transfer == 1 && current_signal_level == 1)
-"38
+[; ;easat2_ask_send.c: 36: if (bit_to_transfer == 1 && current_signal_level == 1)
+"36
 [e $ ! && == _bit_to_transfer -> 1 `i == _current_signal_level -> 1 `i 850  ]
-[; ;easat2_ask_send.c: 39: current_signal_level = 0;
-"39
+[; ;easat2_ask_send.c: 37: current_signal_level = 0;
+"37
 [e = _current_signal_level -> 0 `i ]
 [e :U 850 ]
-[; ;easat2_ask_send.c: 42: if (bit_to_transfer == 0 && current_signal_level == 0)
-"42
+[; ;easat2_ask_send.c: 40: if (bit_to_transfer == 0 && current_signal_level == 0)
+"40
 [e $ ! && == _bit_to_transfer -> 0 `i == _current_signal_level -> 0 `i 851  ]
-[; ;easat2_ask_send.c: 43: current_signal_level = 1;
-"43
+[; ;easat2_ask_send.c: 41: current_signal_level = 1;
+"41
 [e = _current_signal_level -> 1 `i ]
 [e :U 851 ]
-[; ;easat2_ask_send.c: 45: (PORTAbits.RA0) = current_signal_level;
-"45
-[e = . . _PORTAbits 0 0 -> _current_signal_level `uc ]
-[; ;easat2_ask_send.c: 49: util_waits_delay_ms(5);
-"49
+[; ;easat2_ask_send.c: 43: (PORTBbits.RB1) = current_signal_level;
+"43
+[e = . . _PORTBbits 0 1 -> _current_signal_level `uc ]
+[; ;easat2_ask_send.c: 47: util_waits_delay_ms(5);
+"47
 [e ( _util_waits_delay_ms (1 -> 5 `i ]
-[; ;easat2_ask_send.c: 53: if (bit_to_transfer == 1) current_signal_level = 1;
-"53
-[e $ ! == _bit_to_transfer -> 1 `i 852  ]
-[e = _current_signal_level -> 1 `i ]
-[e $U 853  ]
-"54
-[e :U 852 ]
-[; ;easat2_ask_send.c: 54: else current_signal_level = 0;
+[; ;easat2_ask_send.c: 50: if (bit_to_transfer == 1 && current_signal_level == 1)
+"50
+[e $ ! && == _bit_to_transfer -> 1 `i == _current_signal_level -> 1 `i 852  ]
+[; ;easat2_ask_send.c: 51: current_signal_level = 0;
+"51
 [e = _current_signal_level -> 0 `i ]
+[e :U 852 ]
+[; ;easat2_ask_send.c: 54: if (bit_to_transfer == 0 && current_signal_level == 0)
+"54
+[e $ ! && == _bit_to_transfer -> 0 `i == _current_signal_level -> 0 `i 853  ]
+[; ;easat2_ask_send.c: 55: current_signal_level = 1;
+"55
+[e = _current_signal_level -> 1 `i ]
 [e :U 853 ]
-[; ;easat2_ask_send.c: 56: (PORTAbits.RA0) = current_signal_level;
-"56
-[e = . . _PORTAbits 0 0 -> _current_signal_level `uc ]
-[; ;easat2_ask_send.c: 58: util_waits_delay_ms(5);
-"58
+[; ;easat2_ask_send.c: 57: (PORTBbits.RB1) = current_signal_level;
+"57
+[e = . . _PORTBbits 0 1 -> _current_signal_level `uc ]
+[; ;easat2_ask_send.c: 59: util_waits_delay_ms(5);
+"59
 [e ( _util_waits_delay_ms (1 -> 5 `i ]
-[; ;easat2_ask_send.c: 65: command = command >> 1;
-"65
+[; ;easat2_ask_send.c: 66: command = command >> 1;
+"66
 [e = _command >> _command -> 1 `i ]
-[; ;easat2_ask_send.c: 67: i++;
-"67
+[; ;easat2_ask_send.c: 68: i++;
+"68
 [e ++ _i -> 1 `i ]
-"69
+"70
 }
-[; ;easat2_ask_send.c: 69: } while (i < 24);
+[; ;easat2_ask_send.c: 70: } while (i < 24);
 [e $ < _i -> 24 `i 849  ]
 [e :U 848 ]
-[; ;easat2_ask_send.c: 72: }
-"72
+[; ;easat2_ask_send.c: 74: }
+"74
 [e :UE 846 ]
 }

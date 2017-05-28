@@ -1,10 +1,10 @@
 
 # 1 "easat2_ask_main_mcu.c"
 
-# 4 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\__size_t.h"
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\__size_t.h"
 typedef unsigned size_t;
 
-# 7 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\stdarg.h"
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdarg.h"
 typedef void * va_list[1];
 
 #pragma intrinsic(__va_start)
@@ -13,17 +13,17 @@ extern void * __va_start(void);
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
 
-# 43 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h"
+# 43 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h"
 struct __prbuf
 {
 char * ptr;
 void (* func)(char);
 };
 
-# 29 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\errno.h"
+# 29 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\errno.h"
 extern int errno;
 
-# 12 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\conio.h"
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\conio.h"
 extern void init_uart(void);
 
 extern char getch(void);
@@ -37,7 +37,7 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 
-# 88 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h"
+# 88 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h"
 extern int cprintf(char *, ...);
 #pragma printf_check(cprintf)
 
@@ -64,17 +64,17 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 26 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\htc.h"
+# 26 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
-# 13 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\xc8debug.h"
+# 13 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 49 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h"
+# 49 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h"
 extern volatile unsigned char ANSELA @ 0xF38;
 
 asm("ANSELA equ 0F38h");
@@ -8466,7 +8466,7 @@ extern volatile __bit nW2 @ (((unsigned) &SSP2STAT)*8) + 2;
 
 extern volatile __bit nWRITE2 @ (((unsigned) &SSP2STAT)*8) + 2;
 
-# 18 "D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18.h"
+# 18 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18.h"
 __attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
 __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
 
@@ -8563,8 +8563,9 @@ void util_waits_delay_hundred_us(int us);
 # 28 "easat2_ask_send.h"
 void send_ask_command(unsigned long command);
 
-# 25 "easat2_ask_main_mcu.h"
+# 27 "easat2_ask_main_mcu.h"
 void main_loop(void);
+void blink_debugging_led(void);
 
 # 18 "easat2_ask_init_initialize.h"
 void init_watchdogs_initialize(void);
@@ -8600,6 +8601,21 @@ main_loop();
 
 
 
+void blink_debugging_led(void) {
+
+
+(PORTBbits.RB2) = 1;
+
+
+util_waits_delay_ms(300);
+
+
+(PORTBbits.RB2) = 0;
+
+}
+
+
+
 void main_loop(void) {
 
 unsigned long test_command = (unsigned int) 0xAAA;
@@ -8614,7 +8630,10 @@ golay_command = golay(test_command);
 send_ask_command(golay_command);
 
 
-util_waits_delay_mins(1);
+blink_debugging_led();
+
+
+util_waits_delay_secs(10);
 
 
 } while (1);

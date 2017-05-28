@@ -16,10 +16,9 @@
 
 // pinout configuration, look in initialize file for i/o analog/digital conf
 
-
-#define PINOUT_ASK_OUTPUT                 (PORTAbits.RA0)                                        
-#define PINOUT_ASK_LED                    (PORTAbits.RA1)
-#define PINOUT_TIMER_LED                  (PORTAbits.RA2)
+#define PINOUT_ASK_OUTPUT                 (PORTBbits.RB1)                                        
+#define PINOUT_ASK_LED                    (PORTBbits.RB2)
+#define PINOUT_TIMER_LED                  (PORTBbits.RB3)
 
 // PORTB
                                                         

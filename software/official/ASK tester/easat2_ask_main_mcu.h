@@ -19,10 +19,12 @@
 #define TEST_COMMAND (unsigned int) 0xAAA      // 010101010000111101010101
 
 #define MAIN_LOOP_SLEEP_MINUTES         1
+#define MAIN_LOOP_SLEEP_SECONDS         10     // 10 seconds between sends
+#define LED_TIME_ON_MS                  300    // 300 ms
 
 // functions prototypes
 
 void main_loop(void);
-
+void blink_debugging_led(void);
 
 #endif

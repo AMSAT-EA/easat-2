@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"9399 D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
+"9399 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
 [s S436 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S436 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
 "9408
@@ -14,55 +14,40 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
 "15606
 [v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
-"6206
-[s S327 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S327 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
-"6216
-[s S328 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S328 . AN0 AN1 AN2 AN3 . AN4 ]
-"6224
-[s S329 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S329 . C12IN0M C12IN1M C2INP C1INP C1OUT C2OUT ]
-"6232
-[s S330 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S330 . C12IN0N C12IN1N VREFM VREFP T0CKI SS ]
-"6240
-[s S331 :5 `uc 1 :1 `uc 1 ]
-[n S331 . . NOT_SS ]
-"6244
-[s S332 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S332 . . VREFN . SRQ nSS ]
-"6251
-[s S333 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S333 . . CVREF . LVDIN ]
-"6257
-[s S334 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S334 . . DACOUT . HLVDIN ]
-"6263
-[s S335 :5 `uc 1 :1 `uc 1 ]
-[n S335 . . SS1 ]
-"6267
-[s S336 :5 `uc 1 :1 `uc 1 ]
-[n S336 . . NOT_SS1 ]
-"6271
-[s S337 :5 `uc 1 :1 `uc 1 ]
-[n S337 . . nSS1 ]
-"6275
-[s S338 :5 `uc 1 :1 `uc 1 ]
-[n S338 . . SRNQ ]
-"6279
-[s S339 :1 `uc 1 :6 `uc 1 :1 `uc 1 ]
-[n S339 . ULPWUIN . RJPU ]
-"6205
-[u S326 `S327 1 `S328 1 `S329 1 `S330 1 `S331 1 `S332 1 `S333 1 `S334 1 `S335 1 `S336 1 `S337 1 `S338 1 `S339 1 ]
-[n S326 . . . . . . . . . . . . . . ]
-"6285
-[v _PORTAbits `VS326 ~T0 @X0 0 e@3968 ]
+"6490
+[s S341 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S341 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"6500
+[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"6510
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
+"6520
+[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S344 . FLT0 C12IN3M . C12IN2M T5G T1G ]
+"6528
+[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S345 . SRI C12IN3N . C12IN2N . CCP3 ]
+"6536
+[s S346 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S346 . . CTED1 CTED2 . T3CKI ]
+"6543
+[s S347 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S347 . . P2A . P3A ]
+"6549
+[s S348 :3 `uc 1 :1 `uc 1 ]
+[n S348 . . CCP2_PA2 ]
+"6489
+[u S340 `S341 1 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 `S348 1 ]
+[n S340 . . . . . . . . . ]
+"6554
+[v _PORTBbits `VS340 ~T0 @X0 0 e@3969 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k22.h: 49: extern volatile unsigned char ANSELA @ 0xF38;
-"51 D:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
 [; ;pic18f45k22.h: 51: asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
 [; ;pic18f45k22.h: 54: typedef union {
@@ -6727,9 +6712,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "44
 [e $ ! == F6946 -> 50 `i 850  ]
 {
-[; ;easat2_ask_func_interrupts.c: 47: (PORTAbits.RA2) = !(PORTAbits.RA2);
+[; ;easat2_ask_func_interrupts.c: 47: (PORTBbits.RB3) = !(PORTBbits.RB3);
 "47
-[e = . . _PORTAbits 0 2 -> -> ! != -> . . _PORTAbits 0 2 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[e = . . _PORTBbits 0 3 -> -> ! != -> . . _PORTBbits 0 3 `i -> -> -> 0 `i `Vuc `i `i `uc ]
 [; ;easat2_ask_func_interrupts.c: 52: asm(" clrwdt");
 "52
 [; <"  clrwdt ;# ">

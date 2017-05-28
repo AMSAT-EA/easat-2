@@ -23,13 +23,13 @@
       <itemPath>easat2_ask_main_mcu.c</itemPath>
       <itemPath>easat2_ask_main_mcu.h</itemPath>
       <itemPath>easat2_ask_pinouts.h</itemPath>
-      <itemPath>easat2_ask_send.c</itemPath>
-      <itemPath>easat2_ask_send.h</itemPath>
       <itemPath>easat2_ask_util_waits.c</itemPath>
       <itemPath>easat2_ask_util_waits.h</itemPath>
-      <itemPath>easat2_golay_CRCG.h</itemPath>
+      <itemPath>easat2_ask_send.c</itemPath>
+      <itemPath>easat2_ask_send.h</itemPath>
       <itemPath>easat2_golay_CRCGcod.c</itemPath>
       <itemPath>easat2_golay_CRCGcor.c</itemPath>
+      <itemPath>easat2_golay_CRCG.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -145,6 +145,10 @@
         <property key="opt-xc8-linker-serial" value=""/>
         <property key="program-the-device-with-default-config-words" value="true"/>
       </HI-TECH-LINK>
+      <Simulator>
+        <property key="W9602_COMP_DAC_SOURCE_UNAVAILABLE" value="report"/>
+        <property key="periphADC1.minTacq" value="5"/>
+      </Simulator>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
         <property key="output-file-format" value="-mcof,+elf"/>

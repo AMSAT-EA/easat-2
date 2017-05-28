@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"195 D:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h
+"195 C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
