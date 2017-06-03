@@ -1,0 +1,208 @@
+
+# 1 "easat2_golay_CRCGcor.c"
+
+# 4 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\__size_t.h"
+typedef unsigned size_t;
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h"
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 29 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\errno.h"
+extern int errno;
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\conio.h"
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 88 "C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 12 "easat2_golay_CRCG.h"
+unsigned long golay(unsigned long cw);
+int parity(unsigned long cw);
+
+
+unsigned long syndrome(unsigned long cw);
+
+
+int weight(unsigned long cw);
+unsigned long rotate_left(unsigned long cw, int n);
+unsigned long rotate_right(unsigned long cw, int n);
+unsigned long correct(unsigned long cw, int *errs);
+
+
+int dec2bin(unsigned long c);
+
+# 13 "easat2_golay_CRCGcor.c"
+int weight(unsigned long cw)
+
+# 16
+{
+int bits,k;
+
+
+const char wgt[16] = {0,1,1,2,1,2,2,3,1,2,2,3,2,3,3,4};
+
+bits=0;
+k=0;
+
+while ((k<6) && (cw))
+{
+bits=bits+wgt[cw & 0xf];
+cw>>=4;
+k++;
+}
+
+return(bits);
+}
+
+# 39
+unsigned long rotate_left(unsigned long cw, int n)
+
+{
+int i;
+
+if (n != 0)
+{
+for (i=1; i<=n; i++)
+{
+if ((cw & 0x400000l) != 0)
+cw=(cw << 1) | 1;
+else
+cw<<=1;
+}
+}
+
+return(cw & 0x7fffffl);
+}
+
+unsigned long rotate_right(unsigned long cw, int n)
+
+{
+int i;
+
+if (n != 0)
+{
+for (i=1; i<=n; i++)
+{
+if ((cw & 1) != 0)
+cw=(cw >> 1) | 0x400000l;
+else
+cw>>=1;
+}
+}
+
+return(cw & 0x7fffffl);
+}
+
+
+
+
+unsigned long correct(unsigned long cw, int *errs)
+
+# 86
+{
+unsigned char
+w;
+unsigned long
+mask;
+int
+i,j;
+unsigned long
+s,
+cwsaver;
+
+cwsaver=cw;
+*errs=0;
+w=3;
+j=-1;
+mask=1;
+while (j<23)
+{
+if (j != -1)
+{
+if (j>0)
+{
+cw=cwsaver ^ mask;
+mask+=mask;
+}
+cw=cwsaver ^ mask;
+w=2;
+}
+
+s=syndrome(cw);
+if (s)
+{
+for (i=0; i<23; i++)
+{
+if ((*errs=weight(s)) <= w)
+{
+cw=cw ^ s;
+cw=rotate_right(cw,i);
+
+if (j >= 0)
+*errs=*errs+1;
+
+return(s=cw);
+}
+else
+{
+cw=rotate_left(cw,1);
+s=syndrome(cw);
+}
+}
+j++;
+}
+else
+return(cw);
+}
+
+return(cwsaver);
+}

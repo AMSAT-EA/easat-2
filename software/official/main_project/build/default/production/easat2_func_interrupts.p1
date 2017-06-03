@@ -6723,60 +6723,66 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTRB=OFF ]
 [; ;easat2_init_timer.h: 21: void init_timer1_initialize(void);
 [; ;easat2_init_timer.h: 22: void init_timer2_initialize(void);
-[; ;easat2_func_interrupts.h: 34: void interrupt high_priority_int();
-[; ;easat2_func_interrupts.h: 35: void interrupt low_priority low_priority_int();
-[v F6942 `(v ~T0 @X0 1 tf ]
+"21 easat2_func_commands.h
+[v _global_command_buffer `ui ~T0 @X0 1 e ]
+[; ;easat2_func_commands.h: 21: unsigned int global_command_buffer;
+"22
+[v _global_command_pending_check `ui ~T0 @X0 1 e ]
+[; ;easat2_func_commands.h: 22: unsigned int global_command_pending_check;
+[; ;easat2_func_interrupts.h: 45: void interrupt high_priority_int();
+[; ;easat2_func_interrupts.h: 46: void interrupt low_priority low_priority_int();
+[v F6944 `(v ~T0 @X0 1 tf ]
 "19 easat2_func_interrupts.c
-[v _high_priority_int `IF6942 ~T0 @X0 1 e ]
+[v _high_priority_int `IF6944 ~T0 @X0 1 e ]
 {
 [; ;easat2_func_interrupts.c: 19: void interrupt high_priority_int() {
 [e :U _high_priority_int ]
 [f ]
 "21
-[v F6946 `i ~T0 @X0 1 s tmr1_interrupt_number ]
-[i F6946
+[v F6948 `i ~T0 @X0 1 s tmr1_interrupt_number ]
+[i F6948
 -> 0 `i
 ]
 "23
-[v F6947 `ui ~T0 @X0 -> 128 `i s samples ]
+[v F6949 `ui ~T0 @X0 -> 128 `i s samples ]
 "24
-[v F6948 `ui ~T0 @X0 1 s sample_position ]
-[i F6948
+[v F6950 `ui ~T0 @X0 1 s sample_position ]
+[i F6950
 -> -> 0 `i `ui
 ]
 "25
-[v F6949 `um ~T0 @X0 1 s noise_avg_value ]
-[i F6949
+[v F6951 `um ~T0 @X0 1 s noise_avg_value ]
+[i F6951
 -> -> -> 32000 `i `m `um
 ]
 "26
-[v F6950 `ui ~T0 @X0 1 s activation_thresold ]
-[i F6950
+[v F6952 `ui ~T0 @X0 1 s activation_threshold ]
+[i F6952
 -> -> 32000 `i `ui
 ]
 "27
-[v F6951 `ui ~T0 @X0 1 s times_thresold_exceeded ]
-[i F6951
+[v F6953 `ui ~T0 @X0 1 s times_threshold_exceeded ]
+[i F6953
 -> -> 0 `i `ui
 ]
 "28
-[v F6952 `ui ~T0 @X0 1 s cycles_transmitter_active ]
-[i F6952
--> -> 0 `i `ui
-]
-"29
-[v F6953 `uc ~T0 @X0 1 s is_transmitter_active ]
-[i F6953
--> -> 0 `i `uc
-]
-"31
-[v F6954 `ui ~T0 @X0 1 s total_add ]
+[v F6954 `ui ~T0 @X0 1 s cycles_transmitter_active ]
 [i F6954
 -> -> 0 `i `ui
 ]
-"32
-[v F6955 `ui ~T0 @X0 1 s valid_samples ]
+"29
+[v F6955 `uc ~T0 @X0 1 s is_transmitter_active ]
 [i F6955
+-> -> 0 `i `uc
+]
+"31
+[v F6956 `ui ~T0 @X0 1 s total_add ]
+[i F6956
+-> -> 0 `i `ui
+]
+"32
+[v F6957 `ui ~T0 @X0 1 s valid_samples ]
+[i F6957
 -> -> 0 `i `ui
 ]
 "34
@@ -6785,221 +6791,347 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_func_interrupts.c: 23: static unsigned int samples[128];
 [; ;easat2_func_interrupts.c: 24: static unsigned int sample_position = 0;
 [; ;easat2_func_interrupts.c: 25: static unsigned short long noise_avg_value = 32000;
-[; ;easat2_func_interrupts.c: 26: static unsigned int activation_thresold = 32000;
-[; ;easat2_func_interrupts.c: 27: static unsigned int times_thresold_exceeded = 0;
+[; ;easat2_func_interrupts.c: 26: static unsigned int activation_threshold = 32000;
+[; ;easat2_func_interrupts.c: 27: static unsigned int times_threshold_exceeded = 0;
 [; ;easat2_func_interrupts.c: 28: static unsigned int cycles_transmitter_active = 0;
 [; ;easat2_func_interrupts.c: 29: static unsigned char is_transmitter_active = 0;
 [; ;easat2_func_interrupts.c: 31: static unsigned int total_add = 0;
 [; ;easat2_func_interrupts.c: 32: static unsigned int valid_samples = 0;
 [; ;easat2_func_interrupts.c: 34: unsigned int sample = 0;
 [e = _sample -> -> 0 `i `ui ]
-[; ;easat2_func_interrupts.c: 36: if (PIR1bits.TMR2IF) {
-"36
+"37
+[v F6959 `ui ~T0 @X0 1 s previous_signal_level ]
+[i F6959
+-> -> 0 `i `ui
+]
+"38
+[v _current_signal_level `ui ~T0 @X0 1 a ]
+[; ;easat2_func_interrupts.c: 37: static unsigned int previous_signal_level = 0;
+[; ;easat2_func_interrupts.c: 38: unsigned int current_signal_level = 0;
+[e = _current_signal_level -> -> 0 `i `ui ]
+"40
+[v _received_bit `ui ~T0 @X0 1 a ]
+[; ;easat2_func_interrupts.c: 40: unsigned int received_bit = 0;
+[e = _received_bit -> -> 0 `i `ui ]
+"41
+[v F6962 `ui ~T0 @X0 1 s previous_received_bit ]
+[i F6962
+-> -> 0 `i `ui
+]
+"43
+[v F6963 `ui ~T0 @X0 1 s num_received_bits ]
+[i F6963
+-> -> 0 `i `ui
+]
+[; ;easat2_func_interrupts.c: 41: static unsigned int previous_received_bit = 0;
+[; ;easat2_func_interrupts.c: 43: static unsigned int num_received_bits = 0;
+[; ;easat2_func_interrupts.c: 46: if (PIR1bits.TMR2IF) {
+"46
 [e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 847  ]
 {
-[; ;easat2_func_interrupts.c: 40: PIR1bits.TMR2IF = 0;
-"40
+[; ;easat2_func_interrupts.c: 50: PIR1bits.TMR2IF = 0;
+"50
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"42
+"52
 }
-[; ;easat2_func_interrupts.c: 42: } else {
+[; ;easat2_func_interrupts.c: 52: } else {
 [e $U 848  ]
 [e :U 847 ]
 {
-[; ;easat2_func_interrupts.c: 46: if (PIR1bits.TMR1IF) {
-"46
+[; ;easat2_func_interrupts.c: 56: if (PIR1bits.TMR1IF) {
+"56
 [e $ ! != -> . . _PIR1bits 0 0 `i -> -> -> 0 `i `Vuc `i 849  ]
 {
-[; ;easat2_func_interrupts.c: 50: TMR1H = 0xEC;
-"50
+[; ;easat2_func_interrupts.c: 60: TMR1H = 0xEC;
+"60
 [e = _TMR1H -> -> 236 `i `uc ]
-[; ;easat2_func_interrupts.c: 51: TMR1L = 0x77 ; 60535;
-"51
+[; ;easat2_func_interrupts.c: 61: TMR1L = 0x77 ; 60535;
+"61
 [e = _TMR1L -> -> 119 `i `uc ]
 [e -> 60535 `l ]
-[; ;easat2_func_interrupts.c: 55: (PORTDbits.RD5) = !(PORTDbits.RD5);
-"55
+[; ;easat2_func_interrupts.c: 65: (PORTDbits.RD5) = !(PORTDbits.RD5);
+"65
 [e = . . _PORTDbits 0 5 -> -> ! != -> . . _PORTDbits 0 5 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;easat2_func_interrupts.c: 59: tmr1_interrupt_number++;
-"59
-[e ++ F6946 -> 1 `i ]
-[; ;easat2_func_interrupts.c: 63: if (tmr1_interrupt_number == 50) {
-"63
-[e $ ! == F6946 -> 50 `i 850  ]
+[; ;easat2_func_interrupts.c: 69: tmr1_interrupt_number++;
+"69
+[e ++ F6948 -> 1 `i ]
+[; ;easat2_func_interrupts.c: 73: if (tmr1_interrupt_number == 50) {
+"73
+[e $ ! == F6948 -> 50 `i 850  ]
 {
-[; ;easat2_func_interrupts.c: 66: (PORTDbits.RD4) = !(PORTDbits.RD4);
-"66
+[; ;easat2_func_interrupts.c: 76: (PORTDbits.RD4) = !(PORTDbits.RD4);
+"76
 [e = . . _PORTDbits 0 4 -> -> ! != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;easat2_func_interrupts.c: 71: asm(" clrwdt");
-"71
+[; ;easat2_func_interrupts.c: 81: asm(" clrwdt");
+"81
 [; <"  clrwdt ;# ">
-[; ;easat2_func_interrupts.c: 75: tmr1_interrupt_number = 0;
-"75
-[e = F6946 -> 0 `i ]
-"77
+[; ;easat2_func_interrupts.c: 85: tmr1_interrupt_number = 0;
+"85
+[e = F6948 -> 0 `i ]
+"87
 }
 [e :U 850 ]
-[; ;easat2_func_interrupts.c: 77: }
-[; ;easat2_func_interrupts.c: 81: if (valid_samples < 128) valid_samples++;
-"81
-[e $ ! < F6955 -> -> 128 `i `ui 851  ]
-[e ++ F6955 -> -> 1 `i `ui ]
+[; ;easat2_func_interrupts.c: 87: }
+[; ;easat2_func_interrupts.c: 91: if (valid_samples < 128) valid_samples++;
+"91
+[e $ ! < F6957 -> -> 128 `i `ui 851  ]
+[e ++ F6957 -> -> 1 `i `ui ]
 [e :U 851 ]
-[; ;easat2_func_interrupts.c: 94: ADCON0bits.CHS = 4;
-"94
+[; ;easat2_func_interrupts.c: 104: ADCON0bits.CHS = 4;
+"104
 [e = . . _ADCON0bits 1 2 -> -> 4 `i `uc ]
-[; ;easat2_func_interrupts.c: 95: ADCON0bits.ADON = 1;
-"95
+[; ;easat2_func_interrupts.c: 105: ADCON0bits.ADON = 1;
+"105
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;easat2_func_interrupts.c: 96: PIR1bits.ADIF = 0;
-"96
+[; ;easat2_func_interrupts.c: 106: PIR1bits.ADIF = 0;
+"106
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;easat2_func_interrupts.c: 98: ADCON0bits.GO = 1;
-"98
+[; ;easat2_func_interrupts.c: 108: ADCON0bits.GO = 1;
+"108
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-[; ;easat2_func_interrupts.c: 99: while(!PIR1bits.ADIF);
-"99
+[; ;easat2_func_interrupts.c: 109: while(!PIR1bits.ADIF);
+"109
 [e $U 852  ]
 [e :U 853 ]
 [e :U 852 ]
 [e $ ! != -> . . _PIR1bits 0 6 `i -> -> -> 0 `i `Vuc `i 853  ]
 [e :U 854 ]
-[; ;easat2_func_interrupts.c: 101: sample = ADRES;
-"101
-[e = _sample -> _ADRES `ui ]
-[; ;easat2_func_interrupts.c: 103: PIR1bits.ADIF = 0;
-"103
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;easat2_func_interrupts.c: 104: ADCON0bits.ADON = 0;
-"104
-[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
-[; ;easat2_func_interrupts.c: 106: if (is_transmitter_active) cycles_transmitter_active++;
-"106
-[e $ ! != -> F6953 `i -> -> -> 0 `i `uc `i 855  ]
-[e ++ F6952 -> -> 1 `i `ui ]
-[e :U 855 ]
-[; ;easat2_func_interrupts.c: 111: if (sample > 128 && sample > activation_thresold) {
+[; ;easat2_func_interrupts.c: 111: sample = ADRES;
 "111
-[e $ ! && > _sample -> -> 128 `i `ui > _sample F6950 856  ]
-{
-[; ;easat2_func_interrupts.c: 113: times_thresold_exceeded++;
+[e = _sample -> _ADRES `ui ]
+[; ;easat2_func_interrupts.c: 113: PIR1bits.ADIF = 0;
 "113
-[e ++ F6951 -> -> 1 `i `ui ]
-[; ;easat2_func_interrupts.c: 115: if (times_thresold_exceeded == 200) {
-"115
-[e $ ! == F6951 -> -> 200 `i `ui 857  ]
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 114: ADCON0bits.ADON = 0;
+"114
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[; ;easat2_func_interrupts.c: 116: if (is_transmitter_active) cycles_transmitter_active++;
+"116
+[e $ ! != -> F6955 `i -> -> -> 0 `i `uc `i 855  ]
+[e ++ F6954 -> -> 1 `i `ui ]
+[e :U 855 ]
+[; ;easat2_func_interrupts.c: 121: if (sample > 128 && sample > activation_threshold) {
+"121
+[e $ ! && > _sample -> -> 128 `i `ui > _sample F6952 856  ]
 {
-[; ;easat2_func_interrupts.c: 120: (PORTBbits.RB1) = 1;
-"120
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-[; ;easat2_func_interrupts.c: 122: is_transmitter_active = 1;
-"122
-[e = F6953 -> -> 1 `i `uc ]
-[; ;easat2_func_interrupts.c: 123: cycles_transmitter_active = 0;
-"123
-[e = F6952 -> -> 0 `i `ui ]
-[; ;easat2_func_interrupts.c: 125: times_thresold_exceeded = 0;
-"125
-[e = F6951 -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 124: current_signal_level = 1;
+"124
+[e = _current_signal_level -> -> 1 `i `ui ]
+[; ;easat2_func_interrupts.c: 127: times_threshold_exceeded++;
 "127
+[e ++ F6953 -> -> 1 `i `ui ]
+[; ;easat2_func_interrupts.c: 129: if (times_threshold_exceeded == 200) {
+"129
+[e $ ! == F6953 -> -> 200 `i `ui 857  ]
+{
+[; ;easat2_func_interrupts.c: 132: (PORTBbits.RB1) = 1;
+"132
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 134: is_transmitter_active = 1;
+"134
+[e = F6955 -> -> 1 `i `uc ]
+[; ;easat2_func_interrupts.c: 135: cycles_transmitter_active = 0;
+"135
+[e = F6954 -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 137: times_threshold_exceeded = 0;
+"137
+[e = F6953 -> -> 0 `i `ui ]
+"139
 }
 [e :U 857 ]
-"130
+"141
 }
-[; ;easat2_func_interrupts.c: 127: }
-[; ;easat2_func_interrupts.c: 130: } else {
+[; ;easat2_func_interrupts.c: 139: }
+[; ;easat2_func_interrupts.c: 141: } else {
 [e $U 858  ]
 [e :U 856 ]
 {
-[; ;easat2_func_interrupts.c: 132: times_thresold_exceeded = 0;
-"132
-[e = F6951 -> -> 0 `i `ui ]
-[; ;easat2_func_interrupts.c: 134: if (cycles_transmitter_active == 12000) {
-"134
-[e $ ! == F6952 -> -> 12000 `i `ui 859  ]
+[; ;easat2_func_interrupts.c: 144: current_signal_level = 0;
+"144
+[e = _current_signal_level -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 147: times_threshold_exceeded = 0;
+"147
+[e = F6953 -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 149: if (cycles_transmitter_active == 12000) {
+"149
+[e $ ! == F6954 -> -> 12000 `i `ui 859  ]
 {
-[; ;easat2_func_interrupts.c: 136: (PORTBbits.RB1) = 0;
-"136
+[; ;easat2_func_interrupts.c: 151: (PORTBbits.RB1) = 0;
+"151
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-[; ;easat2_func_interrupts.c: 137: is_transmitter_active = 0;
-"137
-[e = F6953 -> -> 0 `i `uc ]
-"138
+[; ;easat2_func_interrupts.c: 152: is_transmitter_active = 0;
+"152
+[e = F6955 -> -> 0 `i `uc ]
+"153
 }
 [e :U 859 ]
-[; ;easat2_func_interrupts.c: 138: }
-[; ;easat2_func_interrupts.c: 140: samples[sample_position] = sample;
-"140
-[e = *U + &U F6947 * -> F6948 `ux -> -> # *U &U F6947 `ui `ux _sample ]
-[; ;easat2_func_interrupts.c: 143: total_add += sample;
-"143
-[e =+ F6954 _sample ]
-[; ;easat2_func_interrupts.c: 145: if (sample_position > 0)
-"145
-[e $ ! > F6948 -> -> 0 `i `ui 860  ]
-[; ;easat2_func_interrupts.c: 146: total_add -= samples[sample_position-1];
-"146
-[e =- F6954 *U + &U F6947 * -> - F6948 -> -> 1 `i `ui `ux -> -> # *U &U F6947 `ui `ux ]
-[e $U 861  ]
-"147
-[e :U 860 ]
-[; ;easat2_func_interrupts.c: 147: else
-[; ;easat2_func_interrupts.c: 148: total_add -= samples[128-1];
-"148
-[e =- F6954 *U + &U F6947 * -> -> - -> 128 `i -> 1 `i `ui `ux -> -> # *U &U F6947 `ui `ux ]
-[e :U 861 ]
-[; ;easat2_func_interrupts.c: 151: sample_position++;
-"151
-[e ++ F6948 -> -> 1 `i `ui ]
-[; ;easat2_func_interrupts.c: 154: if (sample_position == 128) sample_position = 0;
-"154
-[e $ ! == F6948 -> -> 128 `i `ui 862  ]
-[e = F6948 -> -> 0 `i `ui ]
-[e :U 862 ]
-[; ;easat2_func_interrupts.c: 157: if (valid_samples == 128) {
-"157
-[e $ ! == F6955 -> -> 128 `i `ui 863  ]
-{
-[; ;easat2_func_interrupts.c: 160: noise_avg_value = total_add;
+[; ;easat2_func_interrupts.c: 153: }
+[; ;easat2_func_interrupts.c: 155: samples[sample_position] = sample;
+"155
+[e = *U + &U F6949 * -> F6950 `ux -> -> # *U &U F6949 `ui `ux _sample ]
+[; ;easat2_func_interrupts.c: 158: total_add += sample;
+"158
+[e =+ F6956 _sample ]
+[; ;easat2_func_interrupts.c: 160: if (sample_position > 0)
 "160
-[e = F6949 -> F6954 `um ]
-[; ;easat2_func_interrupts.c: 162: noise_avg_value = noise_avg_value >> 7;
+[e $ ! > F6950 -> -> 0 `i `ui 860  ]
+[; ;easat2_func_interrupts.c: 161: total_add -= samples[sample_position-1];
+"161
+[e =- F6956 *U + &U F6949 * -> - F6950 -> -> 1 `i `ui `ux -> -> # *U &U F6949 `ui `ux ]
+[e $U 861  ]
 "162
-[e = F6949 >> F6949 -> 7 `i ]
-[; ;easat2_func_interrupts.c: 165: activation_thresold = noise_avg_value < 1;
-"165
-[e = F6950 -> -> < F6949 -> -> -> 1 `i `m `um `i `ui ]
-"167
+[e :U 860 ]
+[; ;easat2_func_interrupts.c: 162: else
+[; ;easat2_func_interrupts.c: 163: total_add -= samples[128-1];
+"163
+[e =- F6956 *U + &U F6949 * -> -> - -> 128 `i -> 1 `i `ui `ux -> -> # *U &U F6949 `ui `ux ]
+[e :U 861 ]
+[; ;easat2_func_interrupts.c: 166: sample_position++;
+"166
+[e ++ F6950 -> -> 1 `i `ui ]
+[; ;easat2_func_interrupts.c: 169: if (sample_position == 128) sample_position = 0;
+"169
+[e $ ! == F6950 -> -> 128 `i `ui 862  ]
+[e = F6950 -> -> 0 `i `ui ]
+[e :U 862 ]
+[; ;easat2_func_interrupts.c: 172: if (valid_samples == 128) {
+"172
+[e $ ! == F6957 -> -> 128 `i `ui 863  ]
+{
+[; ;easat2_func_interrupts.c: 175: noise_avg_value = total_add;
+"175
+[e = F6951 -> F6956 `um ]
+[; ;easat2_func_interrupts.c: 177: noise_avg_value = noise_avg_value >> 7;
+"177
+[e = F6951 >> F6951 -> 7 `i ]
+[; ;easat2_func_interrupts.c: 180: activation_threshold = noise_avg_value < 1;
+"180
+[e = F6952 -> -> < F6951 -> -> -> 1 `i `m `um `i `ui ]
+"182
 }
 [e :U 863 ]
-"169
+"184
 }
 [e :U 858 ]
-[; ;easat2_func_interrupts.c: 167: }
-[; ;easat2_func_interrupts.c: 169: }
-[; ;easat2_func_interrupts.c: 173: PIR1bits.TMR1IF = 0;
-"173
+[; ;easat2_func_interrupts.c: 182: }
+[; ;easat2_func_interrupts.c: 184: }
+[; ;easat2_func_interrupts.c: 192: if (previous_signal_level == 0 && current_signal_level == 1) {
+"192
+[e $ ! && == F6959 -> -> 0 `i `ui == _current_signal_level -> -> 1 `i `ui 864  ]
+{
+[; ;easat2_func_interrupts.c: 195: received_bit = 1;
+"195
+[e = _received_bit -> -> 1 `i `ui ]
+[; ;easat2_func_interrupts.c: 198: if (num_received_bits < 32) num_received_bits++;
+"198
+[e $ ! < F6963 -> -> 32 `i `ui 865  ]
+[e ++ F6963 -> -> 1 `i `ui ]
+[e :U 865 ]
+"200
+}
+[; ;easat2_func_interrupts.c: 200: } else {
+[e $U 866  ]
+[e :U 864 ]
+{
+[; ;easat2_func_interrupts.c: 202: if (previous_signal_level == 1 && current_signal_level == 0) {
+"202
+[e $ ! && == F6959 -> -> 1 `i `ui == _current_signal_level -> -> 0 `i `ui 867  ]
+{
+[; ;easat2_func_interrupts.c: 205: received_bit = 0;
+"205
+[e = _received_bit -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 208: if (num_received_bits < 32) num_received_bits++;
+"208
+[e $ ! < F6963 -> -> 32 `i `ui 868  ]
+[e ++ F6963 -> -> 1 `i `ui ]
+[e :U 868 ]
+"210
+}
+[; ;easat2_func_interrupts.c: 210: } else {
+[e $U 869  ]
+[e :U 867 ]
+{
+[; ;easat2_func_interrupts.c: 213: received_bit = 2;
+"213
+[e = _received_bit -> -> 2 `i `ui ]
+[; ;easat2_func_interrupts.c: 216: num_received_bits = 0;
+"216
+[e = F6963 -> -> 0 `i `ui ]
+"217
+}
+[e :U 869 ]
+"218
+}
+[e :U 866 ]
+[; ;easat2_func_interrupts.c: 217: }
+[; ;easat2_func_interrupts.c: 218: }
+[; ;easat2_func_interrupts.c: 224: if (received_bit != 2 && num_received_bits <= 32
+[; ;easat2_func_interrupts.c: 225: && !global_command_pending_check) {
+"225
+[e $ ! && && != _received_bit -> -> 2 `i `ui <= F6963 -> -> 32 `i `ui ! != _global_command_pending_check -> -> 0 `i `ui 870  ]
+{
+[; ;easat2_func_interrupts.c: 227: global_command_buffer << 1;
+"227
+[e << _global_command_buffer -> 1 `i ]
+[; ;easat2_func_interrupts.c: 228: global_command_buffer = global_command_buffer & 0xfffffe;
+"228
+[e = _global_command_buffer -> & -> _global_command_buffer `l -> 16777214 `l `ui ]
+[; ;easat2_func_interrupts.c: 229: global_command_buffer = global_command_buffer | received_bit;
+"229
+[e = _global_command_buffer | _global_command_buffer _received_bit ]
+"231
+}
+[e :U 870 ]
+[; ;easat2_func_interrupts.c: 231: }
+[; ;easat2_func_interrupts.c: 234: if (received_bit == 2 && previous_received_bit != 2 && !global_command_pending_check
+[; ;easat2_func_interrupts.c: 235: && num_received_bits == 32) {
+"235
+[e $ ! && && && == _received_bit -> -> 2 `i `ui != F6962 -> -> 2 `i `ui ! != _global_command_pending_check -> -> 0 `i `ui == F6963 -> -> 32 `i `ui 871  ]
+{
+[; ;easat2_func_interrupts.c: 240: global_command_pending_check = 1;
+"240
+[e = _global_command_pending_check -> -> 1 `i `ui ]
+"242
+}
+[e :U 871 ]
+[; ;easat2_func_interrupts.c: 242: }
+[; ;easat2_func_interrupts.c: 244: if (received_bit == 2 && previous_received_bit == 2 && !global_command_pending_check) {
+"244
+[e $ ! && && == _received_bit -> -> 2 `i `ui == F6962 -> -> 2 `i `ui ! != _global_command_pending_check -> -> 0 `i `ui 872  ]
+{
+[; ;easat2_func_interrupts.c: 248: global_command_buffer = 0;
+"248
+[e = _global_command_buffer -> -> 0 `i `ui ]
+[; ;easat2_func_interrupts.c: 249: num_received_bits = 0;
+"249
+[e = F6963 -> -> 0 `i `ui ]
+"251
+}
+[e :U 872 ]
+[; ;easat2_func_interrupts.c: 251: }
+[; ;easat2_func_interrupts.c: 259: PIR1bits.TMR1IF = 0;
+"259
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"175
+"261
 }
 [e :U 849 ]
-"177
+"263
 }
 [e :U 848 ]
-[; ;easat2_func_interrupts.c: 175: }
-[; ;easat2_func_interrupts.c: 177: }
-[; ;easat2_func_interrupts.c: 178: }
-"178
+[; ;easat2_func_interrupts.c: 261: }
+[; ;easat2_func_interrupts.c: 263: }
+[; ;easat2_func_interrupts.c: 264: }
+"264
 [e :UE 846 ]
 }
-[v F6944 `(v ~T0 @X0 1 tf ]
-"183
-[v _low_priority_int `ILF6944 ~T0 @X0 1 e ]
+[v F6946 `(v ~T0 @X0 1 tf ]
+"269
+[v _low_priority_int `ILF6946 ~T0 @X0 1 e ]
 {
-[; ;easat2_func_interrupts.c: 183: void interrupt low_priority low_priority_int() {
+[; ;easat2_func_interrupts.c: 269: void interrupt low_priority low_priority_int() {
 [e :U _low_priority_int ]
 [f ]
-[; ;easat2_func_interrupts.c: 187: }
-"187
-[e :UE 864 ]
+[; ;easat2_func_interrupts.c: 273: }
+"273
+[e :UE 873 ]
 }

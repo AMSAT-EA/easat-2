@@ -1,0 +1,250 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"195 C:\Program Files (x86)\Microchip\xc8\v1.41\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 43: struct __prbuf
+[; ;stdio.h: 44: {
+[; ;stdio.h: 45: char * ptr;
+[; ;stdio.h: 46: void (* func)(char);
+[; ;stdio.h: 47: };
+[; ;errno.h: 29: extern int errno;
+[; ;conio.h: 12: extern void init_uart(void);
+[; ;conio.h: 14: extern char getch(void);
+[; ;conio.h: 15: extern char getche(void);
+[; ;conio.h: 16: extern void putch(char);
+[; ;conio.h: 17: extern void ungetch(char);
+[; ;conio.h: 19: extern __bit kbhit(void);
+[; ;conio.h: 23: extern char * cgets(char *);
+[; ;conio.h: 24: extern void cputs(const char *);
+[; ;stdio.h: 88: extern int cprintf(char *, ...);
+[; ;stdio.h: 93: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 183: extern char * gets(char *);
+[; ;stdio.h: 184: extern int puts(const char *);
+[; ;stdio.h: 185: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 186: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 187: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 188: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 189: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 195: extern int printf(const char *, ...);
+[; ;easat2_golay_CRCG.h: 12: unsigned long golay(unsigned long cw);
+[; ;easat2_golay_CRCG.h: 13: int parity(unsigned long cw);
+[; ;easat2_golay_CRCG.h: 16: unsigned long syndrome(unsigned long cw);
+[; ;easat2_golay_CRCG.h: 19: int weight(unsigned long cw);
+[; ;easat2_golay_CRCG.h: 20: unsigned long rotate_left(unsigned long cw, int n);
+[; ;easat2_golay_CRCG.h: 21: unsigned long rotate_right(unsigned long cw, int n);
+[; ;easat2_golay_CRCG.h: 22: unsigned long correct(unsigned long cw, int *errs);
+[; ;easat2_golay_CRCG.h: 25: int dec2bin(unsigned long c);
+"13 easat2_golay_CRCGcod.c
+[v _golay `(ul ~T0 @X0 1 ef1`ul ]
+{
+[; ;easat2_golay_CRCGcod.c: 13: unsigned long golay(unsigned long cw){
+[e :U _golay ]
+[v _cw `ul ~T0 @X0 1 r1 ]
+[f ]
+"18
+[v _i `i ~T0 @X0 1 a ]
+"19
+[v _c `ul ~T0 @X0 1 a ]
+[; ;easat2_golay_CRCGcod.c: 18: int i;
+[; ;easat2_golay_CRCGcod.c: 19: unsigned long c;
+[; ;easat2_golay_CRCGcod.c: 20: cw&=0xfffl;
+"20
+[e =& _cw -> -> 4095 `l `ul ]
+[; ;easat2_golay_CRCGcod.c: 21: c=cw;
+"21
+[e = _c _cw ]
+[; ;easat2_golay_CRCGcod.c: 22: for (i=1; i<=12; i++)
+"22
+{
+[e = _i -> 1 `i ]
+[e $ <= _i -> 12 `i 3  ]
+[e $U 4  ]
+"23
+[e :U 3 ]
+[; ;easat2_golay_CRCGcod.c: 23: {
+{
+[; ;easat2_golay_CRCGcod.c: 24: if (cw & 1)
+"24
+[e $ ! != & _cw -> -> -> 1 `i `l `ul -> -> 0 `i `ul 6  ]
+[; ;easat2_golay_CRCGcod.c: 25: cw^=0xAE3;
+"25
+[e =^ _cw -> -> -> 2787 `i `l `ul ]
+[e :U 6 ]
+[; ;easat2_golay_CRCGcod.c: 26: cw>>=1;
+"26
+[e =>> _cw -> 1 `i ]
+"27
+}
+"22
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 12 `i 3  ]
+[e :U 4 ]
+"27
+}
+[; ;easat2_golay_CRCGcod.c: 27: }
+[; ;easat2_golay_CRCGcod.c: 28: return((cw<<12)|c);
+"28
+[e ) | << _cw -> 12 `i _c ]
+[e $UE 2  ]
+[; ;easat2_golay_CRCGcod.c: 29: }
+"29
+[e :UE 2 ]
+}
+"32
+[v _parity `(i ~T0 @X0 1 ef1`ul ]
+{
+[; ;easat2_golay_CRCGcod.c: 32: int parity(unsigned long cw){
+[e :U _parity ]
+[v _cw `ul ~T0 @X0 1 r1 ]
+[f ]
+"36
+[v _p `uc ~T0 @X0 1 a ]
+[; ;easat2_golay_CRCGcod.c: 36: unsigned char p;
+[; ;easat2_golay_CRCGcod.c: 39: p=*(unsigned char*)&cw;
+"39
+[e = _p *U -> &U _cw `*uc ]
+[; ;easat2_golay_CRCGcod.c: 40: p^=*((unsigned char*)&cw+1);
+"40
+[e =^ _p *U + -> &U _cw `*uc * -> -> 1 `i `x -> -> # *U -> &U _cw `*uc `i `x ]
+[; ;easat2_golay_CRCGcod.c: 41: p^=*((unsigned char*)&cw+2);
+"41
+[e =^ _p *U + -> &U _cw `*uc * -> -> 2 `i `x -> -> # *U -> &U _cw `*uc `i `x ]
+[; ;easat2_golay_CRCGcod.c: 44: p=p ^ (p>>4);
+"44
+[e = _p -> ^ -> _p `i >> -> _p `i -> 4 `i `uc ]
+[; ;easat2_golay_CRCGcod.c: 45: p=p ^ (p>>2);
+"45
+[e = _p -> ^ -> _p `i >> -> _p `i -> 2 `i `uc ]
+[; ;easat2_golay_CRCGcod.c: 46: p=p ^ (p>>1);
+"46
+[e = _p -> ^ -> _p `i >> -> _p `i -> 1 `i `uc ]
+[; ;easat2_golay_CRCGcod.c: 49: return(p & 1);
+"49
+[e ) & -> _p `i -> 1 `i ]
+[e $UE 7  ]
+[; ;easat2_golay_CRCGcod.c: 50: }
+"50
+[e :UE 7 ]
+}
+"57
+[v _syndrome `(ul ~T0 @X0 1 ef1`ul ]
+"60
+{
+[; ;easat2_golay_CRCGcod.c: 57: unsigned long syndrome(unsigned long cw)
+[; ;easat2_golay_CRCGcod.c: 60: {
+[e :U _syndrome ]
+"57
+[v _cw `ul ~T0 @X0 1 r1 ]
+"60
+[f ]
+"61
+[v _i `i ~T0 @X0 1 a ]
+[; ;easat2_golay_CRCGcod.c: 61: int i;
+[; ;easat2_golay_CRCGcod.c: 62: cw&=0x7fffffl;
+"62
+[e =& _cw -> -> 8388607 `l `ul ]
+[; ;easat2_golay_CRCGcod.c: 63: for (i=1; i<=12; i++)
+"63
+{
+[e = _i -> 1 `i ]
+[e $ <= _i -> 12 `i 9  ]
+[e $U 10  ]
+"64
+[e :U 9 ]
+[; ;easat2_golay_CRCGcod.c: 64: {
+{
+[; ;easat2_golay_CRCGcod.c: 65: if (cw & 1)
+"65
+[e $ ! != & _cw -> -> -> 1 `i `l `ul -> -> 0 `i `ul 12  ]
+[; ;easat2_golay_CRCGcod.c: 66: cw^=0xAE3;
+"66
+[e =^ _cw -> -> -> 2787 `i `l `ul ]
+[e :U 12 ]
+[; ;easat2_golay_CRCGcod.c: 67: cw>>=1;
+"67
+[e =>> _cw -> 1 `i ]
+"68
+}
+"63
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 12 `i 9  ]
+[e :U 10 ]
+"68
+}
+[; ;easat2_golay_CRCGcod.c: 68: }
+[; ;easat2_golay_CRCGcod.c: 69: return(cw<<12);
+"69
+[e ) << _cw -> 12 `i ]
+[e $UE 8  ]
+[; ;easat2_golay_CRCGcod.c: 70: }
+"70
+[e :UE 8 ]
+}
+"75
+[v _dec2bin `(i ~T0 @X0 1 ef1`ul ]
+"76
+{
+[; ;easat2_golay_CRCGcod.c: 75: int dec2bin(unsigned long c)
+[; ;easat2_golay_CRCGcod.c: 76: {
+[e :U _dec2bin ]
+"75
+[v _c `ul ~T0 @X0 1 r1 ]
+"76
+[f ]
+"77
+[v _i `i ~T0 @X0 1 a ]
+[; ;easat2_golay_CRCGcod.c: 77: int i = 0;
+[e = _i -> 0 `i ]
+[; ;easat2_golay_CRCGcod.c: 78: for(i = 23; i >= 0; i--){
+"78
+{
+[e = _i -> 23 `i ]
+[e $ >= _i -> 0 `i 14  ]
+[e $U 15  ]
+[e :U 14 ]
+{
+[; ;easat2_golay_CRCGcod.c: 79: if((c & (1 << i)) != 0){
+"79
+[e $ ! != & _c -> -> << -> 1 `i _i `l `ul -> -> -> 0 `i `l `ul 17  ]
+{
+[; ;easat2_golay_CRCGcod.c: 80: printf("1");
+"80
+[e ( _printf :s 1C ]
+"81
+}
+[; ;easat2_golay_CRCGcod.c: 81: }else{
+[e $U 18  ]
+[e :U 17 ]
+{
+[; ;easat2_golay_CRCGcod.c: 82: printf("0");
+"82
+[e ( _printf :s 2C ]
+"83
+}
+[e :U 18 ]
+"84
+}
+"78
+[e -- _i -> 1 `i ]
+[e $ >= _i -> 0 `i 14  ]
+[e :U 15 ]
+"84
+}
+[; ;easat2_golay_CRCGcod.c: 83: }
+[; ;easat2_golay_CRCGcod.c: 84: }
+[; ;easat2_golay_CRCGcod.c: 85: return 1;
+"85
+[e ) -> 1 `i ]
+[e $UE 13  ]
+[; ;easat2_golay_CRCGcod.c: 86: }
+"86
+[e :UE 13 ]
+}
+[p f _printf 8388608 ]
+[a 1C 49 0 ]
+[a 2C 48 0 ]

@@ -8494,7 +8494,11 @@ extern __nonreentrant void _delay3(unsigned char);
 void init_timer1_initialize(void);
 void init_timer2_initialize(void);
 
-# 34 "easat2_func_interrupts.h"
+# 21 "easat2_func_commands.h"
+unsigned int global_command_buffer;
+unsigned int global_command_pending_check;
+
+# 45 "easat2_func_interrupts.h"
 void interrupt high_priority_int();
 void interrupt low_priority low_priority_int();
 
@@ -8506,8 +8510,8 @@ static int tmr1_interrupt_number = 0;
 static unsigned int samples[128];
 static unsigned int sample_position = 0;
 static unsigned short long noise_avg_value = 32000;
-static unsigned int activation_thresold = 32000;
-static unsigned int times_thresold_exceeded = 0;
+static unsigned int activation_threshold = 32000;
+static unsigned int times_threshold_exceeded = 0;
 static unsigned int cycles_transmitter_active = 0;
 static unsigned char is_transmitter_active = 0;
 
@@ -8515,6 +8519,16 @@ static unsigned int total_add = 0;
 static unsigned int valid_samples = 0;
 
 unsigned int sample = 0;
+
+
+static unsigned int previous_signal_level = 0;
+unsigned int current_signal_level = 0;
+
+unsigned int received_bit = 0;
+static unsigned int previous_received_bit = 0;
+
+static unsigned int num_received_bits = 0;
+
 
 if (PIR1bits.TMR2IF) {
 
@@ -8563,7 +8577,7 @@ tmr1_interrupt_number = 0;
 
 if (valid_samples < 128) valid_samples++;
 
-# 94
+# 104
 ADCON0bits.CHS = 4;
 ADCON0bits.ADON = 1;
 PIR1bits.ADIF = 0;
@@ -8581,13 +8595,15 @@ if (is_transmitter_active) cycles_transmitter_active++;
 
 
 
-if (sample > 128 && sample > activation_thresold) {
-
-times_thresold_exceeded++;
-
-if (times_thresold_exceeded == 200) {
+if (sample > 128 && sample > activation_threshold) {
 
 
+current_signal_level = 1;
+
+
+times_threshold_exceeded++;
+
+if (times_threshold_exceeded == 200) {
 
 
 (PORTBbits.RB1) = 1;
@@ -8595,14 +8611,17 @@ if (times_thresold_exceeded == 200) {
 is_transmitter_active = 1;
 cycles_transmitter_active = 0;
 
-times_thresold_exceeded = 0;
+times_threshold_exceeded = 0;
 
 }
 
-
 } else {
 
-times_thresold_exceeded = 0;
+
+current_signal_level = 0;
+
+
+times_threshold_exceeded = 0;
 
 if (cycles_transmitter_active == 12000) {
 
@@ -8635,14 +8654,72 @@ noise_avg_value = total_add;
 noise_avg_value = noise_avg_value >> 7;
 
 
-activation_thresold = noise_avg_value < 1;
+activation_threshold = noise_avg_value < 1;
 
 }
 
 }
 
+# 192
+if (previous_signal_level == 0 && current_signal_level == 1) {
 
 
+received_bit = 1;
+
+
+if (num_received_bits < 32) num_received_bits++;
+
+} else {
+
+if (previous_signal_level == 1 && current_signal_level == 0) {
+
+
+received_bit = 0;
+
+
+if (num_received_bits < 32) num_received_bits++;
+
+} else {
+
+
+received_bit = 2;
+
+
+num_received_bits = 0;
+}
+}
+
+# 224
+if (received_bit != 2 && num_received_bits <= 32
+&& !global_command_pending_check) {
+
+global_command_buffer << 1;
+global_command_buffer = global_command_buffer & 0xfffffe;
+global_command_buffer = global_command_buffer | received_bit;
+
+}
+
+
+if (received_bit == 2 && previous_received_bit != 2 && !global_command_pending_check
+&& num_received_bits == 32) {
+
+
+
+
+global_command_pending_check = 1;
+
+}
+
+if (received_bit == 2 && previous_received_bit == 2 && !global_command_pending_check) {
+
+
+
+global_command_buffer = 0;
+num_received_bits = 0;
+
+}
+
+# 259
 PIR1bits.TMR1IF = 0;
 
 }

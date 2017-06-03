@@ -23,8 +23,8 @@ void interrupt high_priority_int() {
     static unsigned int samples[SAMPLE_TABLE_SIZE];
     static unsigned int sample_position           = 0;
     static unsigned short long noise_avg_value    = INITIAL_NOISE_MEAN_VALUE;
-    static unsigned int activation_thresold       = INITIAL_ACTIVACION_THRESOLD;
-    static unsigned int times_thresold_exceeded   = 0;
+    static unsigned int activation_threshold      = INITIAL_ACTIVACION_THRESHOLD;
+    static unsigned int times_threshold_exceeded  = 0;
     static unsigned int cycles_transmitter_active = 0;   /* (number of interruptions) */
     static unsigned char is_transmitter_active    = 0;
     
@@ -32,6 +32,16 @@ void interrupt high_priority_int() {
     static unsigned int valid_samples             = 0;   /* valid samples in sample size */
     
     unsigned int sample                           = 0;   /* ADC sample value */
+    
+    // ASK variables
+    static unsigned int previous_signal_level     = LOW;	
+    unsigned int current_signal_level             = LOW;
+
+    unsigned int received_bit                     = BIT_0;
+    static unsigned int previous_received_bit     = BIT_0;
+
+    static unsigned int num_received_bits         = 0; // number of continuos bit received
+    // code
     
     if (PIR1bits.TMR2IF) {
         
@@ -108,28 +118,33 @@ void interrupt high_priority_int() {
         // check if taken signal sample is greater than thresold by at least
         // the configured value
         
-        if (sample > THRESOLD_FLOOR_VALUE && sample > activation_thresold) {
+        if (sample > THRESHOLD_FLOOR_VALUE && sample > activation_threshold) {
 
-            times_thresold_exceeded++;
+            // this means a 1 to ASK (we are over threshold level)
+            current_signal_level = HIGH;
+            
+            // count times
+            times_threshold_exceeded++;
                      
-            if (times_thresold_exceeded == THRESOLD_EXCEED_TIMES_ACTIVATION) {
+            if (times_threshold_exceeded == THRESHOLD_EXCEED_TIMES_ACTIVATION) {
                              
-                // turn on repeater
-                
-                // set output high
+                // turn on repeater              
                 PINOUT_REPEATER_PTT_ON = 1;               
                 
                 is_transmitter_active     = 1;
                 cycles_transmitter_active = 0;
                 
-                times_thresold_exceeded   = 0;
+                times_threshold_exceeded   = 0;
                 
             }
-            
 
         } else {
 
-            times_thresold_exceeded = 0;         
+            // this means a 0 to ASK (we are under threshold level)        
+            current_signal_level     = LOW;
+            
+            // reset times that threshold has been continuosly exceeded
+            times_threshold_exceeded = 0;         
             
             if (cycles_transmitter_active == REPEATER_ACTIVE_CYCLES) {
                 // turn off repeater
@@ -157,16 +172,87 @@ void interrupt high_priority_int() {
             if (valid_samples   == SAMPLE_TABLE_SIZE) {
                 
                 // calculate new noise mean value
-                noise_avg_value     = total_add;              
+                noise_avg_value      = total_add;              
                 // we use integes because it is faster
-                noise_avg_value     = noise_avg_value >> AVERAGE_NOISE_RIGHT_SHIFTS;
+                noise_avg_value      = noise_avg_value >> AVERAGE_NOISE_RIGHT_SHIFTS;
                 // calculate new thresold
                 // new thresold has to be a fixed percentage over current noise
-                activation_thresold = noise_avg_value < THRESOLD_NOISE_LEFT_SHIFTS;
+                activation_threshold = noise_avg_value < THRESHOLD_NOISE_LEFT_SHIFTS;
                 
             }
             
         }     
+        
+        ///////////////////////////////////////////////        
+		// ASK commands management
+        ///////////////////////////////////////////////
+
+        // ASK signal management
+        
+        if (previous_signal_level == LOW && current_signal_level == HIGH) {
+            
+            // low to high means bit 1
+            received_bit = BIT_1;
+            
+            // count the bit
+            if (num_received_bits < ASK_COMMAND_LENGTH) num_received_bits++;
+                    
+        }  else {
+	
+                if (previous_signal_level == HIGH && current_signal_level == LOW) {
+                    
+                    // high to low means 0
+                    received_bit = BIT_0;
+                    
+                    // count the bit
+                    if (num_received_bits < ASK_COMMAND_LENGTH) num_received_bits++;
+                            
+                } else {
+			
+                    // low to low or high to high means nothing at this timing
+                    received_bit = NOTHING;
+		
+                    // reset bit counter
+                    num_received_bits = 0;
+                }
+        }
+	
+        // if we have a bit we store it in the command buffer
+        // but only if we don't have a previous command pending of check
+        // (so we do not overwrite it)
+
+        if (received_bit != NOTHING && num_received_bits <= ASK_COMMAND_LENGTH
+                && !global_command_pending_check) {
+
+            global_command_buffer << 1;
+            global_command_buffer = global_command_buffer & 0xfffffe;       // set LSB to 0
+            global_command_buffer = global_command_buffer | received_bit;	// set LSB to received_bit
+	
+        }
+
+        // check if we just finished to receive a command
+        if (received_bit == NOTHING && previous_received_bit != NOTHING && !global_command_pending_check
+                && num_received_bits == ASK_COMMAND_LENGTH) {
+                       
+            // if we received nothing but in last timer expiration we had a bit
+            // we check if we have a possible commmand
+
+            global_command_pending_check = 1;
+
+        }
+
+        if (received_bit == NOTHING && previous_received_bit == NOTHING && !global_command_pending_check) {
+	
+            // if we received nothing last two times and no command if pending to decode we clean the command buffer
+
+            global_command_buffer = 0;
+            num_received_bits     = 0;
+
+        }             
+
+        ///////////////////////////////////////////////
+        // end of ASK management
+        ///////////////////////////////////////////////        
         
         // clear interruption flag
         
