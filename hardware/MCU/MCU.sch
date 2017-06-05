@@ -143,6 +143,7 @@ F 7 "700-MAX6369KAT" H 1995 3050 60  0001 C CNN "Referencia Proveedor #1"
 F 8 "Farnell" H 1995 3050 60  0001 C CNN "Proveedor #2"
 F 9 "2519138" H 1995 3050 60  0001 C CNN "Referencia Proveedor #2"
 F 10 "Supervisory Circuits Pin-Selectable Watchdog Timer" H 1995 3050 60  0001 C CNN "Descripción"
+F 11 "MAXIM" H 1995 3050 60  0001 C CNN "Fabricante"
 	1    1995 3050
 	1    0    0    1   
 $EndComp
@@ -242,6 +243,10 @@ F 0 "SP1" H 9360 3385 50  0000 C CNN
 F 1 "SPEAKER" H 9360 2885 50  0000 C CNN
 F 2 "Buzzers_Beepers:MagneticBuzzer_Kingstate_KCG0601" H 9460 3135 50  0001 C CNN
 F 3 "" H 9460 3135 50  0000 C CNN
+F 4 "PRO SIGNAL" H 9460 3135 60  0001 C CNN "Fabricante"
+F 5 "ABI-050-RC" H 9460 3135 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" H 9460 3135 60  0001 C CNN "Proveedor #1"
+F 7 "2534976" H 9460 3135 60  0001 C CNN "Referencia Proveedor #1"
 	1    9460 3135
 	1    0    0    -1  
 $EndComp
@@ -894,9 +899,13 @@ L R R9
 U 1 1 58C66605
 P 10375 5805
 F 0 "R9" V 10455 5805 50  0000 C CNN
-F 1 "R" V 10375 5805 50  0000 C CNN
+F 1 "1K" V 10375 5805 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 10305 5805 50  0001 C CNN
 F 3 "" H 10375 5805 50  0000 C CNN
+F 4 "WELWYN" V 10375 5805 60  0001 C CNN "Fabricante"
+F 5 "WCR0603-1K0FI" V 10375 5805 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" V 10375 5805 60  0001 C CNN " Proveedor #1"
+F 7 "2422029" V 10375 5805 60  0001 C CNN "Referencia Proveedor #1"
 	1    10375 5805
 	0    1    1    0   
 $EndComp
@@ -919,6 +928,12 @@ F 0 "R10" V 11060 6315 50  0000 C CNN
 F 1 "R" V 10980 6315 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 10910 6315 50  0001 C CNN
 F 3 "" H 10980 6315 50  0000 C CNN
+F 4 "PANASONIC" V 10980 6315 60  0001 C CNN "Fabricante"
+F 5 "ERJ3EKF2002V" V 10980 6315 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" V 10980 6315 60  0001 C CNN "Proveedor #1"
+F 7 "Mouser" V 10980 6315 60  0001 C CNN "Proveedor #2"
+F 8 "2059432" V 10980 6315 60  0001 C CNN "Referencia Proveedor #1"
+F 9 "667-ERJ-3EKF2002V" V 10980 6315 60  0001 C CNN "Referencia Proveedor #2"
 	1    10980 6315
 	0    1    1    0   
 $EndComp
@@ -975,24 +990,18 @@ F 3 "" H 12980 6160 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R11
-U 1 1 58C78986
-P 12130 5445
-F 0 "R11" V 12210 5445 50  0000 C CNN
-F 1 "R" V 12130 5445 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 12060 5445 50  0001 C CNN
-F 3 "" H 12130 5445 50  0000 C CNN
-	1    12130 5445
-	-1   0    0    1   
-$EndComp
-$Comp
 L R R12
 U 1 1 58C78BAD
 P 12130 5845
 F 0 "R12" V 12210 5845 50  0000 C CNN
-F 1 "R" V 12130 5845 50  0000 C CNN
+F 1 "1K" V 12130 5845 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 12060 5845 50  0001 C CNN
 F 3 "" H 12130 5845 50  0000 C CNN
+F 4 "WCR0603-1K0FI" V 12130 5845 60  0001 C CNN "Referencia Fabricante"
+F 5 "WELWYN" V 12130 5845 60  0001 C CNN "Fabricante"
+F 6 "Mouser" V 12130 5845 60  0001 C CNN "Proveedor #1"
+F 7 "Farnell" V 12130 5845 60  0001 C CNN " Proveedor #2"
+F 8 "2422029" V 12130 5845 60  0001 C CNN "Referencia Proveedor #2"
 	1    12130 5845
 	-1   0    0    1   
 $EndComp
@@ -1899,4 +1908,19 @@ Wire Wire Line
 Wire Wire Line
 	3170 2985 3175 2985
 Connection ~ 3175 2985
+$Comp
+L R R11
+U 1 1 58C78986
+P 12130 5445
+F 0 "R11" V 12210 5445 50  0000 C CNN
+F 1 "1K" V 12130 5445 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 12060 5445 50  0001 C CNN
+F 3 "" H 12130 5445 50  0000 C CNN
+F 4 "WELWYN" V 12130 5445 60  0001 C CNN "Fabricante"
+F 5 "WCR0603-1K0FI" V 12130 5445 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" V 12130 5445 60  0001 C CNN " Proveedor #1"
+F 7 "2422029" V 12130 5445 60  0001 C CNN "Referencia Proveedor #1"
+	1    12130 5445
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
