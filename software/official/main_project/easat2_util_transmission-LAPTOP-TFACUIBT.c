@@ -233,7 +233,7 @@ void util_transmit_dot(void) {
     // set to high the configured outputs
     
     PINOUT_BEACON_LED = 1;  // led pin
-    PINOUT_BEACON_ON  = 1;  // RF module pin
+    PINOUT_BEACON_OUT = 1;  // RF module pin
     
     for (int i = 0; i < DOT_DURATION_MS; i++) {
         
@@ -249,7 +249,7 @@ void util_transmit_dot(void) {
     }
     
     PINOUT_BEACON_LED = 0;  // led pin
-    PINOUT_BEACON_ON  = 0;  // RF module pin
+    PINOUT_BEACON_OUT = 0;  // RF module pin
     
 }
 
@@ -264,7 +264,7 @@ void util_transmit_dash(void) {
     // set to high the configured outputs
     
     PINOUT_BEACON_LED = 1;  // led pin on
-    PINOUT_BEACON_ON  = 1;  // RF module pin on
+    PINOUT_BEACON_OUT = 1;  // RF module pin on
     
     for (int i = 0; i < DASH_DURATION_MS; i++) {
           
@@ -280,7 +280,7 @@ void util_transmit_dash(void) {
     }
     
     PINOUT_BEACON_LED = 0;  // led pin off
-    PINOUT_BEACON_ON  = 0;  // RF module pin off
+    PINOUT_BEACON_OUT = 0;  // RF module pin off
 }
 
 // This function waits the required time between dots and dashes

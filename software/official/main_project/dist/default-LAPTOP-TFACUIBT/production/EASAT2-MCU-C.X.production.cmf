@@ -1,0 +1,2000 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\felix\AppData\Local\Temp\scqc.obj
+idloc IDLOC 0 200000 200000 8 1
+reset_vec CODE 0 0 0 4 1
+end_init CODE 0 A6 A6 4 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\EASAT2-MCU-C.X.production.obj
+intcodelo CODE 0 18 18 8E 1
+cinit CODE 0 3870 3870 46 1
+intcode_body CODE 0 219C 219C 21A 1
+text0 CODE 0 3CA8 3CA8 C 1
+text1 CODE 0 35B8 35B8 8C 1
+text2 CODE 0 38FA 38FA 42 1
+text3 CODE 0 39BE 39BE 36 1
+text4 CODE 0 C48 C48 7A2 1
+text5 CODE 0 37D0 37D0 54 1
+text6 CODE 0 254A 254A 188 1
+text7 CODE 0 39F4 39F4 34 1
+text8 CODE 0 393C 393C 42 1
+text9 CODE 0 23B6 23B6 194 1
+text10 CODE 0 3A90 3A90 32 1
+text11 CODE 0 2C2E 2C2E 140 1
+text12 CODE 0 397E 397E 40 1
+text13 CODE 0 2F74 2F74 CA 1
+text14 CODE 0 3108 3108 BE 1
+text15 CODE 0 303E 303E CA 1
+text16 CODE 0 3BE8 3BE8 2A 1
+text17 CODE 0 2D6E 2D6E 112 1
+text18 CODE 0 1898 1898 3F0 1
+text19 CODE 0 3C78 3C78 10 1
+text20 CODE 0 3C88 3C88 10 1
+text21 CODE 0 3716 3716 64 1
+text22 CODE 0 3C98 3C98 10 1
+text23 CODE 0 3A28 3A28 34 1
+text24 CODE 0 3A5C 3A5C 34 1
+text25 CODE 0 3B58 3B58 30 1
+text26 CODE 0 3C38 3C38 22 1
+text27 CODE 0 3B88 3B88 30 1
+text28 CODE 0 377A 377A 56 1
+text29 CODE 0 3AC2 3AC2 32 1
+text30 CODE 0 38B6 38B6 44 1
+text31 CODE 0 AA AA B9E 1
+text32 CODE 0 13EA 13EA 4AE 1
+text33 CODE 0 3C5A 3C5A 1E 1
+text34 CODE 0 1C88 1C88 2AC 1
+text35 CODE 0 3AF4 3AF4 32 1
+text36 CODE 0 2998 2998 152 1
+text37 CODE 0 3490 3490 94 1
+text38 CODE 0 33EA 33EA A6 1
+text39 CODE 0 26D2 26D2 168 1
+text40 CODE 0 283A 283A 15E 1
+text41 CODE 0 36AE 36AE 68 1
+text42 CODE 0 3524 3524 94 1
+text43 CODE 0 333A 333A B0 1
+text44 CODE 0 2AEA 2AEA 144 1
+text45 CODE 0 3824 3824 4C 1
+text46 CODE 0 1F34 1F34 268 1
+text47 CODE 0 2E80 2E80 F4 1
+text48 CODE 0 3BB8 3BB8 30 1
+text49 CODE 0 3282 3282 B8 1
+text50 CODE 0 3B26 3B26 32 1
+text51 CODE 0 3CB4 3CB4 A 1
+text52 CODE 0 3C12 3C12 26 1
+text53 CODE 0 31C6 31C6 BC 1
+text56 CODE 0 3644 3644 6A 1
+idataCOMRAM CODE 0 3CBE 3CBE 5 1
+cstackCOMRAM COMRAM 1 1 1 2C 1
+cstackBANK0 BANK0 1 60 60 86 1
+cstackBANK1 BANK1 1 100 100 CE 1
+temp COMRAM 1 3E 3E 1 1
+bssBANK2 BANK2 1 200 200 C8 1
+intcode CODE 0 8 8 E 1
+dataCOMRAM COMRAM 1 39 39 5 1
+bssCOMRAM COMRAM 1 2D 2D C 1
+mediumconst MEDIUMCONST 0 7EF4 7EF4 10C 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM E6-FF 1
+RAM 1CE-1FF 1
+RAM 2C8-5FF 1
+SFR F38-FFF 1
+BANK0 E6-FF 1
+BANK1 1CE-1FF 1
+BANK2 2C8-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+CONST 4-7 1
+CONST 16-17 1
+CONST 3CC3-7EF3 1
+STACK 2C8-5FF 1
+SMALLCONST 3CC3-7EF3 1
+CODE 4-7 1
+CODE 16-17 1
+CODE 3CC3-7EF3 1
+BIGRAM 3F-5F 1
+BIGRAM E6-FF 1
+BIGRAM 1CE-1FF 1
+BIGRAM 2C8-5FF 1
+COMRAM 3F-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 3CC3-7EF3 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\EASAT2-MCU-C.X.production.obj
+18 intcodelo CODE >153:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+18 intcodelo CODE >223:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+5E intcodelo CODE >227:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+8 intcode CODE >74:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+8 intcode CODE >227:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3644 text56 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3644 text56 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3650 text56 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+365A text56 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+365E text56 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3660 text56 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3668 text56 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+366A text56 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+366E text56 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3676 text56 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3686 text56 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3692 text56 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3694 text56 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+3694 text56 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+369C text56 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+36A0 text56 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+36A0 text56 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+36AC text56 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ltdiv.c
+219C intcode_body CODE >74:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+21CC intcode_body CODE >86:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+21D4 intcode_body CODE >90:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+21D8 intcode_body CODE >94:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+21DC intcode_body CODE >95:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+21E0 intcode_body CODE >100:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+21E2 intcode_body CODE >112:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+21E6 intcode_body CODE >116:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+21F0 intcode_body CODE >119:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2208 intcode_body CODE >121:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2210 intcode_body CODE >127:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2224 intcode_body CODE >140:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+222E intcode_body CODE >141:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2230 intcode_body CODE >142:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2232 intcode_body CODE >144:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2234 intcode_body CODE >145:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2238 intcode_body CODE >147:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2240 intcode_body CODE >149:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2242 intcode_body CODE >150:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2244 intcode_body CODE >152:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2250 intcode_body CODE >157:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2268 intcode_body CODE >159:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+226C intcode_body CODE >161:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2276 intcode_body CODE >166:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2278 intcode_body CODE >168:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2280 intcode_body CODE >169:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2288 intcode_body CODE >171:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2290 intcode_body CODE >176:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2292 intcode_body CODE >178:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+229A intcode_body CODE >180:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+22A8 intcode_body CODE >182:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+22AA intcode_body CODE >183:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+22B2 intcode_body CODE >186:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+22D0 intcode_body CODE >189:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+22E2 intcode_body CODE >191:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+22EC intcode_body CODE >194:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+22F8 intcode_body CODE >196:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2310 intcode_body CODE >197:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2340 intcode_body CODE >196:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2346 intcode_body CODE >200:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+236E intcode_body CODE >205:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+2378 intcode_body CODE >214:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+237A intcode_body CODE >218:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+31C6 text53 CODE >27:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31C6 text53 CODE >36:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31CA text53 CODE >37:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31CE text53 CODE >38:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31D2 text53 CODE >40:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31D6 text53 CODE >45:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31DA text53 CODE >46:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31DE text53 CODE >50:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31E0 text53 CODE >51:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31E2 text53 CODE >52:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31E4 text53 CODE >53:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31E6 text53 CODE >54:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31E8 text53 CODE >55:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31EA text53 CODE >62:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31EE text53 CODE >63:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31F2 text53 CODE >64:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31F6 text53 CODE >65:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31FA text53 CODE >67:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+31FE text53 CODE >71:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3200 text53 CODE >72:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3202 text53 CODE >73:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3204 text53 CODE >74:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3206 text53 CODE >75:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3208 text53 CODE >76:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+320A text53 CODE >84:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+320E text53 CODE >85:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3210 text53 CODE >89:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3212 text53 CODE >90:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3214 text53 CODE >91:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3216 text53 CODE >92:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3218 text53 CODE >93:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+321A text53 CODE >94:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+321C text53 CODE >95:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+321E text53 CODE >96:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3220 text53 CODE >100:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3224 text53 CODE >101:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3228 text53 CODE >102:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+322C text53 CODE >103:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3230 text53 CODE >105:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3234 text53 CODE >109:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3236 text53 CODE >110:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3238 text53 CODE >111:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+323A text53 CODE >112:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+323C text53 CODE >113:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+323E text53 CODE >114:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3240 text53 CODE >118:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3242 text53 CODE >119:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3244 text53 CODE >120:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3246 text53 CODE >121:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3248 text53 CODE >122:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+324A text53 CODE >123:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+324C text53 CODE >124:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+324E text53 CODE >125:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3250 text53 CODE >129:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3254 text53 CODE >130:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3258 text53 CODE >131:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+325C text53 CODE >132:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3260 text53 CODE >133:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3264 text53 CODE >134:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3268 text53 CODE >135:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+326C text53 CODE >136:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3270 text53 CODE >140:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3272 text53 CODE >141:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3274 text53 CODE >142:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3276 text53 CODE >143:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3278 text53 CODE >144:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+327A text53 CODE >145:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+327C text53 CODE >146:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+327E text53 CODE >147:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3280 text53 CODE >153:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3C12 text52 CODE >19:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C12 text52 CODE >32:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C14 text52 CODE >36:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C16 text52 CODE >39:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C18 text52 CODE >40:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C1A text52 CODE >43:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C1C text52 CODE >44:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C1E text52 CODE >47:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C20 text52 CODE >50:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C22 text52 CODE >53:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C26 text52 CODE >54:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C2A text52 CODE >57:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C2C text52 CODE >58:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C2E text52 CODE >59:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C30 text52 CODE >61:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C32 text52 CODE >63:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C34 text52 CODE >64:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3C36 text52 CODE >66:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_timer.c
+3CB4 text51 CODE >17:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3CB4 text51 CODE >19:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3CB8 text51 CODE >20:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3CBC text51 CODE >23:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_init_initialize.c
+3B26 text50 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\memset.c
+3B26 text50 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\memset.c
+3B2E text50 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\memset.c
+3B30 text50 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\memset.c
+3B40 text50 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\memset.c
+3282 text49 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+3282 text49 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+3288 text49 CODE >7:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+32BA text49 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+32C0 text49 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+32F2 text49 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+3304 text49 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+3316 text49 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftge.c
+3BB8 text48 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftneg.c
+3BB8 text48 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftneg.c
+3BC8 text48 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftneg.c
+3BDA text48 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftneg.c
+3BE6 text48 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftneg.c
+2E80 text47 CODE >62:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2E80 text47 CODE >64:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2E9A text47 CODE >65:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2EAE text47 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2EB2 text47 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2EBC text47 CODE >66:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2EE0 text47 CODE >71:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2EE4 text47 CODE >72:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2EF6 text47 CODE >73:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F00 text47 CODE >70:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F24 text47 CODE >76:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F28 text47 CODE >77:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F32 text47 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F40 text47 CODE >79:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F46 text47 CODE >80:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F4A text47 CODE >81:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F50 text47 CODE >82:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F58 text47 CODE >83:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F62 text47 CODE >84:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+2F66 text47 CODE >85:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+1F34 text46 CODE >86:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1F34 text46 CODE >90:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1F52 text46 CODE >91:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1F70 text46 CODE >92:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1F9C text46 CODE >93:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1FAA text46 CODE >94:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1FD6 text46 CODE >95:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1FE4 text46 CODE >96:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1FEA text46 CODE >97:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1FF0 text46 CODE >98:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1FF4 text46 CODE >99:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1FFA text46 CODE >100:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+1FFE text46 CODE >101:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2002 text46 CODE >102:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2014 text46 CODE >103:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2018 text46 CODE >104:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+202A text46 CODE >106:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2036 text46 CODE >110:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2040 text46 CODE >111:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2044 text46 CODE >112:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2064 text46 CODE >114:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+206E text46 CODE >115:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2072 text46 CODE >113:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2080 text46 CODE >117:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+208C text46 CODE >121:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2096 text46 CODE >122:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+209A text46 CODE >123:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+20BA text46 CODE >125:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+20C4 text46 CODE >126:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+20C8 text46 CODE >124:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+20D4 text46 CODE >129:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+20DA text46 CODE >131:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+20EC text46 CODE >132:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+20FE text46 CODE >133:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+20FE text46 CODE >134:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2104 text46 CODE >136:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2116 text46 CODE >137:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2128 text46 CODE >139:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+212E text46 CODE >140:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2146 text46 CODE >141:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+214C text46 CODE >142:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+215E text46 CODE >143:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2170 text46 CODE >144:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+2176 text46 CODE >146:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+3824 text45 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftsub.c
+3824 text45 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftsub.c
+3834 text45 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftsub.c
+3846 text45 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftsub.c
+2AEA text44 CODE >44:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2AEA text44 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2B10 text44 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2B24 text44 CODE >51:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2B58 text44 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2B5C text44 CODE >53:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2B6E text44 CODE >54:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2B8A text44 CODE >55:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2B90 text44 CODE >56:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2B96 text44 CODE >57:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BA2 text44 CODE >58:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BB6 text44 CODE >60:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BC2 text44 CODE >61:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BC8 text44 CODE >62:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BCA text44 CODE >63:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BD2 text44 CODE >64:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BE6 text44 CODE >66:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BF2 text44 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2BF6 text44 CODE >65:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2C00 text44 CODE >70:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2C0A text44 CODE >71:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+2C1C text44 CODE >72:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fttol.c
+333A text43 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+333A text43 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+334A text43 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+335E text43 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+3362 text43 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+3364 text43 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+3370 text43 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+3372 text43 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+3378 text43 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+3382 text43 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+33A6 text43 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+33C6 text43 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+33C8 text43 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+33D4 text43 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+33D8 text43 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+33D8 text43 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+33E8 text43 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lldiv.c
+3524 text42 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+3524 text42 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+3538 text42 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+353C text42 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+353E text42 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+354A text42 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+354C text42 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+3552 text42 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+3576 text42 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+3596 text42 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+35A2 text42 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+35A6 text42 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+35A6 text42 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+35B6 text42 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\llmod.c
+36AE text41 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lltoft.c
+36AE text41 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lltoft.c
+36B2 text41 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lltoft.c
+36B4 text41 CODE >42:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lltoft.c
+36C0 text41 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lltoft.c
+36C2 text41 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lltoft.c
+36EE text41 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lltoft.c
+283A text40 CODE >60:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+283A text40 CODE >66:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2848 text40 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+285C text40 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+286A text40 CODE >69:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+287E text40 CODE >70:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2882 text40 CODE >71:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2894 text40 CODE >72:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2898 text40 CODE >73:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+28AA text40 CODE >74:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+28BA text40 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+28BE text40 CODE >76:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+28C4 text40 CODE >77:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+28C8 text40 CODE >79:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+28D2 text40 CODE >80:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+28F6 text40 CODE >81:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2916 text40 CODE >82:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2918 text40 CODE >84:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2924 text40 CODE >85:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2928 text40 CODE >86:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+292C text40 CODE >87:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2936 text40 CODE >88:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+294A text40 CODE >90:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2954 text40 CODE >91:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2958 text40 CODE >92:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+295A text40 CODE >93:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2960 text40 CODE >94:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2974 text40 CODE >96:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+297E text40 CODE >97:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2980 text40 CODE >95:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2986 text40 CODE >99:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2986 text40 CODE >100:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+2996 text40 CODE >101:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\fldivl.c
+26D2 text39 CODE >60:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+26D2 text39 CODE >66:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+26EE text39 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2702 text39 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+271E text39 CODE >69:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2732 text39 CODE >70:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2736 text39 CODE >71:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2748 text39 CODE >72:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+274C text39 CODE >73:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+275E text39 CODE >74:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+276E text39 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2772 text39 CODE >76:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2778 text39 CODE >77:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+277C text39 CODE >78:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+277C text39 CODE >79:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2786 text39 CODE >80:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27A2 text39 CODE >81:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27BA text39 CODE >82:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27BC text39 CODE >83:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27BC text39 CODE >84:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27C6 text39 CODE >85:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27CA text39 CODE >86:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27CE text39 CODE >87:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27D8 text39 CODE >88:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27EC text39 CODE >90:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27F6 text39 CODE >91:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27FA text39 CODE >92:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+27FC text39 CODE >93:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2802 text39 CODE >94:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2816 text39 CODE >96:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2820 text39 CODE >97:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2822 text39 CODE >95:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2828 text39 CODE >99:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2828 text39 CODE >100:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+2838 text39 CODE >101:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdivl.c
+33EA text38 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+33EA text38 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+33EE text38 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+33F4 text38 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+33FE text38 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3402 text38 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3408 text38 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3412 text38 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3416 text38 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+341E text38 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+342A text38 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+342E text38 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3430 text38 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3438 text38 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+343A text38 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3440 text38 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3446 text38 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+345A text38 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+346A text38 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+346C text38 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3474 text38 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3478 text38 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+347E text38 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3486 text38 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+3490 text37 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+3490 text37 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+3494 text37 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+349A text37 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34A4 text37 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34A8 text37 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34AE text37 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34B8 text37 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34C4 text37 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34C8 text37 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34CA text37 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34D2 text37 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34D4 text37 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34DA text37 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34EE text37 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+34FE text37 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+3506 text37 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+350A text37 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+3510 text37 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+351A text37 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+2998 text36 CODE >62:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2998 text36 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+29B8 text36 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+29CC text36 CODE >69:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+29EC text36 CODE >70:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A00 text36 CODE >71:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A0A text36 CODE >72:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A0E text36 CODE >73:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A16 text36 CODE >74:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A1C text36 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A20 text36 CODE >77:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A24 text36 CODE >78:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A36 text36 CODE >79:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A48 text36 CODE >134:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A4E text36 CODE >136:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A54 text36 CODE >137:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A6C text36 CODE >138:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A76 text36 CODE >139:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A80 text36 CODE >140:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A86 text36 CODE >143:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A8C text36 CODE >145:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2A92 text36 CODE >146:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2AAA text36 CODE >147:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2AB4 text36 CODE >148:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2ABE text36 CODE >149:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+2AC4 text36 CODE >156:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftmul.c
+3AF4 text35 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+3AF4 text35 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+3B04 text35 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+3B10 text35 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+3B1C text35 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+1C88 text34 CODE >409:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1C8C text34 CODE >413:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1C94 text34 CODE >414:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1E08 text34 CODE >415:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1E10 text34 CODE >416:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1EEC text34 CODE >417:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+3C5A text33 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\isdigit.c
+3C5C text33 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\isdigit.c
+13EA text32 CODE >425:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+13EE text32 CODE >428:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+13F4 text32 CODE >429:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+13F8 text32 CODE >430:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1404 text32 CODE >431:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+155C text32 CODE >432:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1568 text32 CODE >433:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1622 text32 CODE >434:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1648 text32 CODE >436:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1654 text32 CODE >437:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+17AC text32 CODE >438:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+17B8 text32 CODE >439:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1872 text32 CODE >440:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+AA text31 CODE >492:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+AA text31 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+B6 text31 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+BA text31 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+C4 text31 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+D6 text31 CODE >542:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+DA text31 CODE >546:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+E4 text31 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+EE text31 CODE >597:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+102 text31 CODE >598:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+10C text31 CODE >600:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+12A text31 CODE >601:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+16E text31 CODE >602:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+182 text31 CODE >611:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+194 text31 CODE >612:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+198 text31 CODE >613:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+19E text31 CODE >621:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1A8 text31 CODE >622:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1AA text31 CODE >623:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+1F0 text31 CODE >622:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+206 text31 CODE >626:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+210 text31 CODE >628:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+214 text31 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+216 text31 CODE >663:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+21A text31 CODE >699:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+21C text31 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+250 text31 CODE >825:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+25A text31 CODE >827:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+260 text31 CODE >829:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+26A text31 CODE >830:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+288 text31 CODE >831:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+28E text31 CODE >832:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+2AA text31 CODE >833:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+2B0 text31 CODE >835:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+2BA text31 CODE >836:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+2CA text31 CODE >837:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+310 text31 CODE >838:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+318 text31 CODE >839:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+336 text31 CODE >840:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+354 text31 CODE >841:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+35A text31 CODE >842:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+362 text31 CODE >846:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+378 text31 CODE >847:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+3A0 text31 CODE >848:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+3C8 text31 CODE >849:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+3D2 text31 CODE >850:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+3FA text31 CODE >851:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+400 text31 CODE >1112:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+416 text31 CODE >1113:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+446 text31 CODE >1116:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+4A6 text31 CODE >1120:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+4CE text31 CODE >1121:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+4D4 text31 CODE >1123:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+4DE text31 CODE >1125:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+4F2 text31 CODE >1126:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+51E text31 CODE >1129:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+530 text31 CODE >1130:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+532 text31 CODE >1131:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+552 text31 CODE >1132:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+58E text31 CODE >1133:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+598 text31 CODE >1136:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+5A8 text31 CODE >1137:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+5DE text31 CODE >1136:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+5E4 text31 CODE >1142:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+620 text31 CODE >1147:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+62C text31 CODE >1148:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+634 text31 CODE >1149:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+654 text31 CODE >1150:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+656 text31 CODE >1181:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+668 text31 CODE >1182:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+670 text31 CODE >1180:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+684 text31 CODE >1188:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+6A4 text31 CODE >1190:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+6B6 text31 CODE >1196:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+6B8 text31 CODE >1201:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+706 text31 CODE >1202:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+73C text31 CODE >1203:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+74E text31 CODE >1196:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+75C text31 CODE >1208:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+76E text31 CODE >1209:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+776 text31 CODE >1207:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+78A text31 CODE >1211:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+7A0 text31 CODE >1212:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+7A8 text31 CODE >1213:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+7A8 text31 CODE >1214:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+7AC text31 CODE >1215:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+7C0 text31 CODE >1219:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+7CA text31 CODE >1221:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+7DC text31 CODE >1227:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+82C text31 CODE >1228:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+82E text31 CODE >1229:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+87C text31 CODE >1230:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+8B2 text31 CODE >1231:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+8C8 text31 CODE >1232:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+916 text31 CODE >1228:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+924 text31 CODE >1236:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+936 text31 CODE >1237:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+93E text31 CODE >1235:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+94C text31 CODE >1259:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+972 text31 CODE >1261:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+978 text31 CODE >1262:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+97E text31 CODE >1263:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+990 text31 CODE >1290:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+9B0 text31 CODE >1291:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+9B6 text31 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+9C6 text31 CODE >1306:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+9FC text31 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+A02 text31 CODE >1339:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+A24 text31 CODE >1340:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+A2A text31 CODE >1341:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+A4C text31 CODE >1342:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+A5A text31 CODE >1345:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+A86 text31 CODE >1346:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+A8E text31 CODE >1348:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+A94 text31 CODE >1349:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+AB4 text31 CODE >1350:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+AC6 text31 CODE >1352:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+AD0 text31 CODE >1381:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+AF2 text31 CODE >1382:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+B08 text31 CODE >1384:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+B12 text31 CODE >1428:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+B1E text31 CODE >1430:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+B30 text31 CODE >1431:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+B44 text31 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+B64 text31 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+B72 text31 CODE >1489:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+BF4 text31 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+C06 text31 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+C1C text31 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+C3A text31 CODE >1538:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\doprnt.c
+38B6 text30 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcat.c
+38B6 text30 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcat.c
+38BE text30 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcat.c
+38C0 text30 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcat.c
+38C4 text30 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcat.c
+38D4 text30 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcat.c
+38D8 text30 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcat.c
+38DE text30 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcat.c
+3AC2 text29 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcpy.c
+3AC2 text29 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcpy.c
+3ACA text29 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcpy.c
+3ACC text29 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcpy.c
+3AD0 text29 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcpy.c
+3AD6 text29 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strcpy.c
+377A text28 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strlen.c
+377A text28 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strlen.c
+3782 text28 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strlen.c
+3784 text28 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strlen.c
+3788 text28 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strlen.c
+37AE text28 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strlen.c
+3B88 text27 CODE >47:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3B88 text27 CODE >48:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3B92 text27 CODE >49:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3B9A text27 CODE >48:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3C38 text26 CODE >310:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C38 text26 CODE >312:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C3A text26 CODE >313:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C48 text26 CODE >314:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C4A text26 CODE >315:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C58 text26 CODE >317:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3B58 text25 CODE >40:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3B58 text25 CODE >41:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3B62 text25 CODE >42:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3B6A text25 CODE >41:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3A5C text24 CODE >262:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A5C text24 CODE >266:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A5E text24 CODE >267:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A60 text24 CODE >269:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A78 text24 CODE >276:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A7C text24 CODE >269:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A8A text24 CODE >282:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A8C text24 CODE >283:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A8E text24 CODE >284:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A28 text23 CODE >231:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A28 text23 CODE >235:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A2A text23 CODE >236:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A2C text23 CODE >238:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A44 text23 CODE >245:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A48 text23 CODE >238:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A56 text23 CODE >251:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A58 text23 CODE >252:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3A5A text23 CODE >254:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C98 text22 CODE >289:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C98 text22 CODE >290:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3CA6 text22 CODE >291:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3716 text21 CODE >201:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3716 text21 CODE >205:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3720 text21 CODE >210:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3724 text21 CODE >211:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3726 text21 CODE >213:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+372A text21 CODE >217:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+372C text21 CODE >207:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3754 text21 CODE >220:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3758 text21 CODE >205:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C88 text20 CODE >297:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C88 text20 CODE >298:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C96 text20 CODE >299:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C78 text19 CODE >304:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C78 text19 CODE >305:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3C86 text19 CODE >306:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1898 text18 CODE >52:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+189A text18 CODE >54:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+189C text18 CODE >60:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18AC text18 CODE >61:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18AE text18 CODE >63:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18BE text18 CODE >64:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18C0 text18 CODE >66:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18D0 text18 CODE >67:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18D2 text18 CODE >69:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18E2 text18 CODE >70:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18E4 text18 CODE >72:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18F4 text18 CODE >73:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+18F6 text18 CODE >75:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1906 text18 CODE >76:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1908 text18 CODE >78:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1918 text18 CODE >79:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+191A text18 CODE >81:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+192A text18 CODE >82:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+192C text18 CODE >84:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+193C text18 CODE >85:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+193E text18 CODE >87:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+194E text18 CODE >88:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1950 text18 CODE >90:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1960 text18 CODE >91:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1962 text18 CODE >93:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1972 text18 CODE >94:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1974 text18 CODE >96:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1984 text18 CODE >97:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1986 text18 CODE >99:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1996 text18 CODE >100:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1998 text18 CODE >102:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19A8 text18 CODE >103:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19AA text18 CODE >105:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19BA text18 CODE >106:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19BC text18 CODE >108:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19CC text18 CODE >109:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19CE text18 CODE >111:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19DE text18 CODE >112:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19E0 text18 CODE >114:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19F0 text18 CODE >115:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+19F2 text18 CODE >117:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A02 text18 CODE >118:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A04 text18 CODE >120:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A14 text18 CODE >121:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A16 text18 CODE >123:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A26 text18 CODE >124:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A28 text18 CODE >126:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A38 text18 CODE >127:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A3A text18 CODE >129:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A4A text18 CODE >130:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A4C text18 CODE >132:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A5C text18 CODE >133:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A5E text18 CODE >135:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A6E text18 CODE >136:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A70 text18 CODE >138:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A80 text18 CODE >139:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A82 text18 CODE >141:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A92 text18 CODE >142:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1A94 text18 CODE >144:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1AA4 text18 CODE >145:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1AA6 text18 CODE >147:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1AB6 text18 CODE >148:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1AB8 text18 CODE >150:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1AC8 text18 CODE >151:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1ACA text18 CODE >153:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1ADA text18 CODE >154:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1ADC text18 CODE >156:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1AEC text18 CODE >157:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1AEE text18 CODE >159:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1AFE text18 CODE >160:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B00 text18 CODE >162:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B10 text18 CODE >163:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B12 text18 CODE >165:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B22 text18 CODE >166:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B24 text18 CODE >168:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B34 text18 CODE >169:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B36 text18 CODE >171:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B46 text18 CODE >172:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B48 text18 CODE >174:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B58 text18 CODE >175:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B5A text18 CODE >177:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B6A text18 CODE >178:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B6C text18 CODE >180:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B7C text18 CODE >181:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B7E text18 CODE >183:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B82 text18 CODE >188:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1B84 text18 CODE >54:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1C82 text18 CODE >191:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+1C86 text18 CODE >193:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2D6E text17 CODE >21:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2D6E text17 CODE >29:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2D92 text17 CODE >30:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2DAE text17 CODE >32:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2DD2 text17 CODE >34:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2E16 text17 CODE >36:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2E32 text17 CODE >41:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2E3E text17 CODE >42:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+2E54 text17 CODE >41:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_transmission.c
+3BE8 text16 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwtoft.c
+3BE8 text16 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwtoft.c
+303E text15 CODE >85:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+303E text15 CODE >87:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3062 text15 CODE >89:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+306C text15 CODE >90:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+306E text15 CODE >91:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3070 text15 CODE >93:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3072 text15 CODE >94:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3076 text15 CODE >96:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+308E text15 CODE >97:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3090 text15 CODE >99:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3092 text15 CODE >106:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+30C0 text15 CODE >110:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+30EE text15 CODE >112:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3108 text14 CODE >19:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3108 text14 CODE >21:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+312C text14 CODE >23:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3136 text14 CODE >24:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3138 text14 CODE >25:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+313A text14 CODE >27:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+313C text14 CODE >28:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3140 text14 CODE >30:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3158 text14 CODE >31:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+315A text14 CODE >33:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+315C text14 CODE >40:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+318A text14 CODE >44:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+31B8 text14 CODE >46:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2F74 text13 CODE >52:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2F74 text13 CODE >54:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2F98 text13 CODE >56:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FA2 text13 CODE >57:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FA4 text13 CODE >58:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FA6 text13 CODE >60:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FA8 text13 CODE >61:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FAC text13 CODE >63:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FC4 text13 CODE >64:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FC6 text13 CODE >66:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FC8 text13 CODE >73:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+2FF6 text13 CODE >77:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+3024 text13 CODE >79:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+397E text12 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+397E text12 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+3982 text12 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+3988 text12 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+3992 text12 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+3996 text12 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awtoft.c
+2C2E text11 CODE >54:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2C2E text11 CODE >63:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2C4E text11 CODE >64:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2C62 text11 CODE >65:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2C82 text11 CODE >66:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2C96 text11 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CA8 text11 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CB2 text11 CODE >69:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CB6 text11 CODE >70:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CBE text11 CODE >71:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CC4 text11 CODE >72:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CC8 text11 CODE >73:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CDA text11 CODE >74:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CDE text11 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CF0 text11 CODE >76:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2CF6 text11 CODE >78:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2D00 text11 CODE >79:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2D1C text11 CODE >80:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2D34 text11 CODE >81:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2D38 text11 CODE >82:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2D38 text11 CODE >83:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2D42 text11 CODE >84:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+2D48 text11 CODE >85:C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftdiv.c
+3A90 text10 CODE >162:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A90 text10 CODE >164:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A98 text10 CODE >167:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A9A text10 CODE >170:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A9C text10 CODE >176:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A9E text10 CODE >179:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3AA0 text10 CODE >182:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3AB2 text10 CODE >185:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3AB8 text10 CODE >187:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23B6 text9 CODE >96:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23B6 text9 CODE >99:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23C0 text9 CODE >102:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23C2 text9 CODE >104:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23CE text9 CODE >105:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23DA text9 CODE >106:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23E6 text9 CODE >107:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23F2 text9 CODE >108:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+23FE text9 CODE >109:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+240A text9 CODE >110:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2416 text9 CODE >111:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2422 text9 CODE >114:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2540 text9 CODE >116:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+393C text8 CODE >18:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+393C text8 CODE >20:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3944 text8 CODE >23:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3946 text8 CODE >25:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3948 text8 CODE >29:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3950 text8 CODE >32:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3952 text8 CODE >39:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+395A text8 CODE >42:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+395C text8 CODE >47:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+396E text8 CODE >52:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3974 text8 CODE >56:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+39F4 text7 CODE >121:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+39F4 text7 CODE >124:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+39F6 text7 CODE >126:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A02 text7 CODE >129:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A04 text7 CODE >133:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A0A text7 CODE >136:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A0C text7 CODE >139:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A12 text7 CODE >141:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A14 text7 CODE >144:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A16 text7 CODE >148:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A1E text7 CODE >151:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+3A20 text7 CODE >154:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+254A text6 CODE >62:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+254A text6 CODE >66:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2558 text6 CODE >67:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2572 text6 CODE >68:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2592 text6 CODE >69:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+25B8 text6 CODE >70:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+25DA text6 CODE >71:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+25FC text6 CODE >72:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+261E text6 CODE >73:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2640 text6 CODE >75:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+264C text6 CODE >76:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2652 text6 CODE >77:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+265E text6 CODE >78:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2664 text6 CODE >79:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2670 text6 CODE >80:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2676 text6 CODE >81:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2682 text6 CODE >82:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2688 text6 CODE >83:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+2694 text6 CODE >84:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+269A text6 CODE >85:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+26A6 text6 CODE >86:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+26AC text6 CODE >87:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+26B8 text6 CODE >88:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+26BE text6 CODE >89:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+26CA text6 CODE >90:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+26D0 text6 CODE >92:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_onewire.c
+37D0 text5 CODE >31:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+37D0 text5 CODE >32:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+37DA text5 CODE >33:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+37F2 text5 CODE >34:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3800 text5 CODE >33:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3806 text5 CODE >32:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+C48 text4 CODE >118:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C48 text4 CODE >123:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C52 text4 CODE >124:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C5C text4 CODE >125:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C66 text4 CODE >126:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C70 text4 CODE >127:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C7A text4 CODE >128:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C84 text4 CODE >129:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C8E text4 CODE >130:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+C98 text4 CODE >131:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+CA2 text4 CODE >133:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+CC0 text4 CODE >135:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+CD2 text4 CODE >136:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+CE4 text4 CODE >137:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+CEE text4 CODE >143:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+D12 text4 CODE >146:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+D20 text4 CODE >149:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+D2E text4 CODE >154:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+D30 text4 CODE >158:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+D3C text4 CODE >159:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+D4A text4 CODE >158:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+D6A text4 CODE >161:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+D8C text4 CODE >165:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+DB0 text4 CODE >168:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+DBE text4 CODE >171:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+DCC text4 CODE >182:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+DD8 text4 CODE >184:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+DE4 text4 CODE >186:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+DF0 text4 CODE >188:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+DFC text4 CODE >190:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+E08 text4 CODE >192:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+E14 text4 CODE >194:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+E20 text4 CODE >196:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+E2C text4 CODE >198:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+E38 text4 CODE >202:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+E58 text4 CODE >203:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+E78 text4 CODE >204:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+EDC text4 CODE >203:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+EE4 text4 CODE >202:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+EEC text4 CODE >209:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F0C text4 CODE >214:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F42 text4 CODE >216:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F4A text4 CODE >217:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F52 text4 CODE >218:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F6A text4 CODE >219:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F82 text4 CODE >220:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F8A text4 CODE >221:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F92 text4 CODE >222:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+F9A text4 CODE >223:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+FA2 text4 CODE >209:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+FAA text4 CODE >231:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+100A text4 CODE >232:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+101E text4 CODE >236:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+104C text4 CODE >240:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+1206 text4 CODE >244:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+13B4 text4 CODE >246:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+13DC text4 CODE >248:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_inputs.c
+39BE text3 CODE >24:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+39BE text3 CODE >25:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+39C8 text3 CODE >26:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+39D6 text3 CODE >25:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+38FA text2 CODE >17:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+38FA text2 CODE >18:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3906 text2 CODE >19:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+3914 text2 CODE >18:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_util_waits.c
+35B8 text1 CODE >31:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+35B8 text1 CODE >38:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+35B8 text1 CODE >42:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+35BA text1 CODE >47:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+35CA text1 CODE >50:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+35D6 text1 CODE >53:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+35E2 text1 CODE >56:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+35F2 text1 CODE >60:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+35F8 text1 CODE >61:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3624 text1 CODE >62:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3626 text1 CODE >64:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3634 text1 CODE >65:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3634 text1 CODE >68:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3642 text1 CODE >71:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3CA8 text0 CODE >19:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3CA8 text0 CODE >22:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3CAC text0 CODE >25:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3CB0 text0 CODE >27:C:\Users\felix\OneDrive\MPLABXProjects\EASAT2-MCU-C.X\easat2_main_mcu.c
+3870 cinit CODE >6793:C:\Users\felix\AppData\Local\Temp\scqc.
+3870 cinit CODE >6795:C:\Users\felix\AppData\Local\Temp\scqc.
+3870 cinit CODE >6798:C:\Users\felix\AppData\Local\Temp\scqc.
+3870 cinit CODE >6838:C:\Users\felix\AppData\Local\Temp\scqc.
+3872 cinit CODE >6839:C:\Users\felix\AppData\Local\Temp\scqc.
+3874 cinit CODE >6840:C:\Users\felix\AppData\Local\Temp\scqc.
+3876 cinit CODE >6841:C:\Users\felix\AppData\Local\Temp\scqc.
+3878 cinit CODE >6842:C:\Users\felix\AppData\Local\Temp\scqc.
+387A cinit CODE >6843:C:\Users\felix\AppData\Local\Temp\scqc.
+387C cinit CODE >6844:C:\Users\felix\AppData\Local\Temp\scqc.
+3880 cinit CODE >6845:C:\Users\felix\AppData\Local\Temp\scqc.
+3884 cinit CODE >6846:C:\Users\felix\AppData\Local\Temp\scqc.
+3884 cinit CODE >6847:C:\Users\felix\AppData\Local\Temp\scqc.
+3886 cinit CODE >6848:C:\Users\felix\AppData\Local\Temp\scqc.
+388A cinit CODE >6849:C:\Users\felix\AppData\Local\Temp\scqc.
+388C cinit CODE >6850:C:\Users\felix\AppData\Local\Temp\scqc.
+388E cinit CODE >6851:C:\Users\felix\AppData\Local\Temp\scqc.
+3890 cinit CODE >6855:C:\Users\felix\AppData\Local\Temp\scqc.
+3894 cinit CODE >6856:C:\Users\felix\AppData\Local\Temp\scqc.
+3896 cinit CODE >6857:C:\Users\felix\AppData\Local\Temp\scqc.
+3896 cinit CODE >6858:C:\Users\felix\AppData\Local\Temp\scqc.
+3898 cinit CODE >6859:C:\Users\felix\AppData\Local\Temp\scqc.
+389A cinit CODE >6860:C:\Users\felix\AppData\Local\Temp\scqc.
+389C cinit CODE >6863:C:\Users\felix\AppData\Local\Temp\scqc.
+38A0 cinit CODE >6864:C:\Users\felix\AppData\Local\Temp\scqc.
+38A2 cinit CODE >6865:C:\Users\felix\AppData\Local\Temp\scqc.
+38A2 cinit CODE >6866:C:\Users\felix\AppData\Local\Temp\scqc.
+38A4 cinit CODE >6867:C:\Users\felix\AppData\Local\Temp\scqc.
+38A6 cinit CODE >6868:C:\Users\felix\AppData\Local\Temp\scqc.
+38A8 cinit CODE >6874:C:\Users\felix\AppData\Local\Temp\scqc.
+38A8 cinit CODE >6876:C:\Users\felix\AppData\Local\Temp\scqc.
+38AA cinit CODE >6877:C:\Users\felix\AppData\Local\Temp\scqc.
+38AC cinit CODE >6879:C:\Users\felix\AppData\Local\Temp\scqc.
+38AE cinit CODE >6880:C:\Users\felix\AppData\Local\Temp\scqc.
+38B0 cinit CODE >6881:C:\Users\felix\AppData\Local\Temp\scqc.
+38B2 cinit CODE >6882:C:\Users\felix\AppData\Local\Temp\scqc.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___awdiv@counter 24 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lmediumconst 7EF4 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hspace_1 2C8 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of__tdiv_to_l_ 283A 0 CODE 0 text39 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_transmit_dot@i 25 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+main_loop@battery_voltage E3 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftdiv@exp 83 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\EASAT2-MCU-C.X.production.obj
+__mediumconst 7EF4 0 MEDIUMCONST 0 mediumconst C:\Users\felix\AppData\Local\Temp\scqc.obj
+util_onewire_write_byte@value 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_transmit_dash 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_high_priority_int 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___awtoft@sign 25 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\EASAT2-MCU-C.X.production.obj
+_T1CONbits FCD 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_transmit_space_between_letters 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_getSolarCurrent 2F74 0 CODE 0 text13 dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@cycles_transmitter_active 2F 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\EASAT2-MCU-C.X.production.obj
+_RBPU 7F8F 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_WPUB F61 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\scqc.obj
+_main 3CA8 0 CODE 0 text0 dist/default/production\EASAT2-MCU-C.X.production.obj
+btemp 3E 0 COMRAM 1 temp dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftadd@f1 93 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftadd@f2 96 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+start A6 0 CODE 0 init C:\Users\felix\AppData\Local\Temp\scqc.obj
+high_priority_int@valid_samples 37 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___awmod 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___ftadd 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___ftdiv 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___ftmul 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___ftneg 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___ftsub 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___fttol 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___lldiv 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___llmod 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___ltdiv 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_timer1_initialize 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_getTemperature 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_beacon_transmission 2E80 0 CODE 0 text17 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_transmit_letter 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_onewire_write_byte 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+?___wmul 79 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ltdiv@divisor 4 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftdiv@f1 79 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftdiv@f2 7C 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftdiv@f3 80 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_waits_delay_mins 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_waits_delay_secs 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_waits_delay_hours 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_hundred_us@hun_us 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_CCP2MX$PORTC1 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hpowerup A6 0 CODE 0 powerup dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_getTemperature$2674 1A7 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_getTemperature$2675 1AA 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_getTemperature$2676 1AD 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_getTemperature$2677 1B0 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@value 93 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___awmod@sign 23 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftge@ff1 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftge@ff2 74 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_CCP3MX$PORTB5 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of__npowers_ 7F44 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_transmit_letter 1C88 0 CODE 0 text18 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_transmit_letter@letter 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_waits_delay_hundred_us 3B88 0 CODE 0 text27 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_waits_delay_ms 3B88 0 CODE 0 text25 dist/default/production\EASAT2-MCU-C.X.production.obj
+_sprintf$2681 B9 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getBatteryCurrent@value A1 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\scqc.obj
+intlevel0 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\scqc.obj
+intlevel1 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\scqc.obj
+intlevel2 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\scqc.obj
+intlevel3 0 0 CODE 0 text C:\Users\felix\AppData\Local\Temp\scqc.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of__div_to_l_ 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+strcat@from 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___llmod@divisor 7D 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+?_fround 89 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_P2BMX$PORTC0 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getBatteryVoltage@voltage 8F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_onewire_read_byte 254A 0 CODE 0 text9 dist/default/production\EASAT2-MCU-C.X.production.obj
+?__div_to_l_ 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___awdiv@sign 25 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_getBatteryCurrent 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_transmit_morse_sequence@i 29 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_onewire_reset 397E 0 CODE 0 text8 dist/default/production\EASAT2-MCU-C.X.production.obj
+__pidataCOMRAM 3CBE 0 CODE 0 idataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__npowers_ 7F1D 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_getTemperature C48 0 CODE 0 text4 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftmul@f1 7D 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftmul@f2 80 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_PRICLKEN$ON 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftneg@f1 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___wmul@multiplicand 7B 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_ms@i 23 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+_ADCON1 FC1 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_ADCON2 FC0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_scale$2680 8C 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___awdiv@dividend 75 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\scqc.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\felix\AppData\Local\Temp\scqc.obj
+_util_getBatteryVoltage 3108 0 CODE 0 text14 dist/default/production\EASAT2-MCU-C.X.production.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___awtoft 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+?_util_getSolarCurrent 9F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_CCPR2L F67 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\EASAT2-MCU-C.X.production.obj
+util_beacon_transmission@battery_current D7 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_transmit_buzzer_1ms_cycle 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit0 1B3 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit1 1B5 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit2 1B7 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit3 1B9 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit4 1BB 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit5 1BD 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit6 1BF 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit7 1C1 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___ftge 333A 0 CODE 0 text49 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___wmul 3B26 0 CODE 0 text35 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_transmit_space_between_letters 3C88 0 CODE 0 text20 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_init_io_initialize 3282 0 CODE 0 text53 dist/default/production\EASAT2-MCU-C.X.production.obj
+main_loop@solar_current DF 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_beacon_transmission@solar_current D5 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?__tdiv_to_l_ 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@activation_thresold 3C 0 COMRAM 1 dataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftsub@f1 9F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftsub@f2 A2 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@num_bit 1A2 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+___fttol@f1 90 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hmediumconst 8000 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hintcodelo A6 0 CODE 0 intcodelo dist/default/production\EASAT2-MCU-C.X.production.obj
+___awdiv@divisor 77 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___ftpack 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___awdiv 3490 0 CODE 0 text38 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___awmod 3524 0 CODE 0 text37 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___ftadd 219C 0 CODE 0 text46 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___ftdiv 2D6E 0 CODE 0 text11 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___ftmul 2AEA 0 CODE 0 text36 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___ftneg 3BE8 0 CODE 0 text48 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___ftsub 3870 0 CODE 0 text45 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___fttol 2C2E 0 CODE 0 text44 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___lldiv 33EA 0 CODE 0 text43 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___llmod 35B8 0 CODE 0 text42 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___ltdiv 36AE 0 CODE 0 text56 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_isdigit 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_onewire_reset 393C 0 CODE 0 text8 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_high_priority_int 23B6 0 CODE 0 intcode_body dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@sample_position 33 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+?_strlen 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_dpowers 7EF5 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of__tdiv_to_l_ 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_init_initialize 3CBE 0 CODE 0 text51 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_fround 1F34 0 CODE 0 text34 dist/default/production\EASAT2-MCU-C.X.production.obj
+?_util_getBatteryVoltage 89 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+_VREFCON0bits F42 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_scale 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_ms@ms 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___lltoft 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_onewire_write_bit 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___lwtoft 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_hours@i 7A 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___lldiv@counter 26 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lintcodelo 18 0 CODE 0 intcodelo dist/default/production\EASAT2-MCU-C.X.production.obj
+_init_io_initialize 31C6 0 CODE 0 text53 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_tmr1_interrupt_number 2D 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+start_initialization 3870 0 CODE 0 cinit dist/default/production\EASAT2-MCU-C.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___awtoft 397E 0 CODE 0 text12 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_transmit_space_between_words 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_TRISAbits F92 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_TRISBbits F93 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_TRISDbits F95 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___lldiv@dividend 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_onewire_read_bit 3AC2 0 CODE 0 text10 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_mins@minutes 75 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___rparam_used 1 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+fround@prec 92 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_memset 3B58 0 CODE 0 text50 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___awtoft 39BE 0 CODE 0 text12 dist/default/production\EASAT2-MCU-C.X.production.obj
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__pcstackBANK1 100 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+_IPR1bits F9F 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___ltdiv@quotient 7 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___fttol@exp1 9E 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___fttol@lval 9A 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+main_loop@battery_current E1 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_beacon_transmission@temperature D9 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_bit@value 23 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___lltoft@c 76 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_main_loop 3644 0 CODE 0 text1 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftpack 2E80 0 CODE 0 text47 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_getTemperature 13EA 0 CODE 0 text4 dist/default/production\EASAT2-MCU-C.X.production.obj
+__tdiv_to_l_@f1 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__tdiv_to_l_@f2 74 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_main_loop 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_reset@presence 23 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_onewire_read_bit 3A90 0 CODE 0 text10 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftpack@arg 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftpack@exp 74 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_transmit_morse_sequence 3716 0 CODE 0 text21 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___ftpack 2F74 0 CODE 0 text47 dist/default/production\EASAT2-MCU-C.X.production.obj
+_init_initialize 3CB4 0 CODE 0 text51 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hconst 0 0 CONST 0 const dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_strcat 38FA 0 CODE 0 text30 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_strcpy 3AF4 0 CODE 0 text29 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_strlen 37D0 0 CODE 0 text28 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@i 20 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@temperature 1C9 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\felix\AppData\Local\Temp\scqc.obj
+__size_of_util_transmit_dot 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_sprintf C48 0 CODE 0 text31 dist/default/production\EASAT2-MCU-C.X.production.obj
+___lltoft 36AE 0 CODE 0 text41 dist/default/production\EASAT2-MCU-C.X.production.obj
+_main_loop 35B8 0 CODE 0 text1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\EASAT2-MCU-C.X.production.obj
+___lwtoft 3BE8 0 CODE 0 text16 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_transmit_buzzer_1ms_cycle 3C5A 0 CODE 0 text26 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_isdigit 3C78 0 CODE 0 text33 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lconst 0 0 CONST 0 const dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftadd@exp1 9E 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftadd@exp2 9D 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftadd@sign 9C 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\EASAT2-MCU-C.X.production.obj
+_high_priority_int 8 0 CODE 0 intcode dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@times_thresold_exceeded 35 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_timer1_initialize 3C12 0 CODE 0 text52 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___lltoft 3716 0 CODE 0 text41 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@bit0 83 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@bit1 85 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@bit2 87 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@bit3 89 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@bit4 8B 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@bit5 8D 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@bit6 8F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_read_byte@bit7 91 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of___lwtoft 3C12 0 CODE 0 text16 dist/default/production\EASAT2-MCU-C.X.production.obj
+_PORTAbits F80 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_PORTBbits F81 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_PORTDbits F83 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_T3CMX$PORTB5 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hinit A6 0 CODE 0 init dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htemp 3F 0 COMRAM 1 temp dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\EASAT2-MCU-C.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\EASAT2-MCU-C.X.production.obj
+__Linit A6 0 CODE 0 init dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltemp 3E 0 COMRAM 1 temp dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+memset@c 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+memset@n 75 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+memset@p 22 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftge 3282 0 CODE 0 text49 dist/default/production\EASAT2-MCU-C.X.production.obj
+___wmul 3AF4 0 CODE 0 text35 dist/default/production\EASAT2-MCU-C.X.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+int$flags 3E 0 COMRAM 1 temp dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_waits_delay_hours 38FA 0 CODE 0 text2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_onewire_read_byte 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\EASAT2-MCU-C.X.production.obj
+_PR2 FBB 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__S1 2C8 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_hundred_us@i 23 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_getBatteryVoltage 31C6 0 CODE 0 text14 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@bit_mem 100 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+___awtoft@c 76 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@exp CA 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@val C6 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_hours@hours 77 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+strcat@cp 22 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+strcat@to 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+strcpy@cp 22 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+strcpy@to 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_fround 1C88 0 CODE 0 text34 dist/default/production\EASAT2-MCU-C.X.production.obj
+?_util_onewire_read_bit 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_transmit_letter 1898 0 CODE 0 text18 dist/default/production\EASAT2-MCU-C.X.production.obj
+int_func 219C 0 CODE 0 intcode_body dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_getBatteryCurrent 303E 0 CODE 0 text15 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_BORV$190 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\EASAT2-MCU-C.X.production.obj
+___lldiv@divisor 75 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hramtop 600 0 RAM 0 ramtop dist/default/production\EASAT2-MCU-C.X.production.obj
+strlen@s 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\EASAT2-MCU-C.X.production.obj
+_CCPTMRS0bits F49 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__powers_ 7F44 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getBatteryCurrent@batteryCurrent A4 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_PWRTEN$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__activetblptr 2 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___ftge 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__LbssBANK2 0 0 ABS 0 bssBANK2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_getSolarCurrent 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext24 0 0 ABS 0 text24 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext25 0 0 ABS 0 text25 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext26 0 0 ABS 0 text26 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext27 0 0 ABS 0 text27 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext28 0 0 ABS 0 text28 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext29 0 0 ABS 0 text29 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext30 0 0 ABS 0 text30 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext31 0 0 ABS 0 text31 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext32 0 0 ABS 0 text32 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext33 0 0 ABS 0 text33 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext34 0 0 ABS 0 text34 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext35 0 0 ABS 0 text35 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext36 0 0 ABS 0 text36 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext37 0 0 ABS 0 text37 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext38 0 0 ABS 0 text38 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext39 0 0 ABS 0 text39 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext40 0 0 ABS 0 text40 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext41 0 0 ABS 0 text41 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext42 0 0 ABS 0 text42 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext43 0 0 ABS 0 text43 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext44 0 0 ABS 0 text44 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext45 0 0 ABS 0 text45 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext46 0 0 ABS 0 text46 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext47 0 0 ABS 0 text47 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext48 0 0 ABS 0 text48 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext49 0 0 ABS 0 text49 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext50 0 0 ABS 0 text50 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext51 0 0 ABS 0 text51 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext52 0 0 ABS 0 text52 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext53 0 0 ABS 0 text53 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Htext56 0 0 ABS 0 text56 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_onewire_write_byte 254A 0 CODE 0 text6 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getSolarCurrent@value A1 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___awtoft 76 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_transmit_dash 3A90 0 CODE 0 text24 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_init_initialize 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@is_transmitter_active 31 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+main_loop@temperature DC 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_onewire_write_byte 26D2 0 CODE 0 text6 dist/default/production\EASAT2-MCU-C.X.production.obj
+___awmod@counter 22 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+_PIE1bits F9D 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of__powers_ 7F6B 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+__tdiv_to_l_@cntr 29 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__tdiv_to_l_@exp1 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__tdiv_to_l_@quot 25 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+_memset 3B26 0 CODE 0 text50 dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@flag BE 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@fval CC 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@prec CF 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+memset@p1 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext10 3A90 0 CODE 0 text10 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext11 2C2E 0 CODE 0 text11 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext12 397E 0 CODE 0 text12 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext13 2F74 0 CODE 0 text13 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext14 3108 0 CODE 0 text14 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext15 303E 0 CODE 0 text15 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext16 3BE8 0 CODE 0 text16 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext17 2D6E 0 CODE 0 text17 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext18 1898 0 CODE 0 text18 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext19 3C78 0 CODE 0 text19 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext20 3C88 0 CODE 0 text20 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext21 3716 0 CODE 0 text21 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext22 3C98 0 CODE 0 text22 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext23 3A28 0 CODE 0 text23 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext24 3A5C 0 CODE 0 text24 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext25 3B58 0 CODE 0 text25 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext26 3C38 0 CODE 0 text26 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext27 3B88 0 CODE 0 text27 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext28 377A 0 CODE 0 text28 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext29 3AC2 0 CODE 0 text29 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext30 38B6 0 CODE 0 text30 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext31 AA 0 CODE 0 text31 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext32 13EA 0 CODE 0 text32 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext33 3C5A 0 CODE 0 text33 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext34 1C88 0 CODE 0 text34 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext35 3AF4 0 CODE 0 text35 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext36 2998 0 CODE 0 text36 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext37 3490 0 CODE 0 text37 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext38 33EA 0 CODE 0 text38 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext39 26D2 0 CODE 0 text39 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext40 283A 0 CODE 0 text40 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext41 36AE 0 CODE 0 text41 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext42 3524 0 CODE 0 text42 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext43 333A 0 CODE 0 text43 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext44 2AEA 0 CODE 0 text44 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext45 3824 0 CODE 0 text45 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext46 1F34 0 CODE 0 text46 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext47 2E80 0 CODE 0 text47 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext48 3BB8 0 CODE 0 text48 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext49 3282 0 CODE 0 text49 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext50 3B26 0 CODE 0 text50 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext51 3CB4 0 CODE 0 text51 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext52 3C12 0 CODE 0 text52 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext53 31C6 0 CODE 0 text53 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext56 3644 0 CODE 0 text56 dist/default/production\EASAT2-MCU-C.X.production.obj
+___awdiv 33EA 0 CODE 0 text38 dist/default/production\EASAT2-MCU-C.X.production.obj
+___awmod 3490 0 CODE 0 text37 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftadd 1F34 0 CODE 0 text46 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftdiv 2C2E 0 CODE 0 text11 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftmul 2998 0 CODE 0 text36 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftneg 3BB8 0 CODE 0 text48 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftsub 3824 0 CODE 0 text45 dist/default/production\EASAT2-MCU-C.X.production.obj
+___fttol 2AEA 0 CODE 0 text44 dist/default/production\EASAT2-MCU-C.X.production.obj
+__tdiv_to_l_ 26D2 0 CODE 0 text39 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_waits_delay_hundred_us 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__pintcode_body 219C 0 CODE 0 intcode_body dist/default/production\EASAT2-MCU-C.X.production.obj
+___lldiv 333A 0 CODE 0 text43 dist/default/production\EASAT2-MCU-C.X.production.obj
+___llmod 3524 0 CODE 0 text42 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ltdiv 3644 0 CODE 0 text56 dist/default/production\EASAT2-MCU-C.X.production.obj
+strlen@cp 24 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_onewire_reset 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_getSolarCurrent 303E 0 CODE 0 text13 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_waits_delay_mins 39F4 0 CODE 0 text3 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_waits_delay_secs 3824 0 CODE 0 text5 dist/default/production\EASAT2-MCU-C.X.production.obj
+?_util_getBatteryCurrent 9F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\EASAT2-MCU-C.X.production.obj
+?___ftpack 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WDTEN$ON 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___wmul@multiplier 79 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_LATAbits F89 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_LATBbits F8A 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_LATDbits F8C 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_fround 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_transmit_dot 3A5C 0 CODE 0 text23 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_beacon_transmission 2D6E 0 CODE 0 text17 dist/default/production\EASAT2-MCU-C.X.production.obj
+_strcat 38B6 0 CODE 0 text30 dist/default/production\EASAT2-MCU-C.X.production.obj
+_strcpy 3AC2 0 CODE 0 text29 dist/default/production\EASAT2-MCU-C.X.production.obj
+_strlen 377A 0 CODE 0 text28 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getSolarCurrent@solarCurrent A4 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_transmit_buzzer_1ms_cycle 3C38 0 CODE 0 text26 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_transmit_dash@i 25 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_init_io_initialize 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_transmit_space_between_words 3C78 0 CODE 0 text19 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_transmit_dash 3A5C 0 CODE 0 text24 dist/default/production\EASAT2-MCU-C.X.production.obj
+___lwtoft@c 76 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+stackhi 5FF 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\scqc.obj
+stacklo 2C8 0 ABS 0 - C:\Users\felix\AppData\Local\Temp\scqc.obj
+_util_transmit_space_between_dots_dashes 3C98 0 CODE 0 text22 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_waits_delay_hundred_us 3BB8 0 CODE 0 text27 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_waits_delay_mins 39BE 0 CODE 0 text3 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_waits_delay_secs 37D0 0 CODE 0 text5 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lintcode 8 0 CODE 0 intcode dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_onewire_write_bit 39F4 0 CODE 0 text7 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___lltoft 76 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\EASAT2-MCU-C.X.production.obj
+?___lwtoft 76 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_transmit_morse_sequence 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_ADCON0bits FC2 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__div_to_l_ 283A 0 CODE 0 text40 dist/default/production\EASAT2-MCU-C.X.production.obj
+strcpy@from 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftmul@cntr 87 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__pbssCOMRAM 2D 0 COMRAM 1 bssCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftmul@sign 88 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_memset 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_transmit_morse_sequence 377A 0 CODE 0 text21 dist/default/production\EASAT2-MCU-C.X.production.obj
+_PIR1bits F9E 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lend_init A6 0 CODE 0 end_init dist/default/production\EASAT2-MCU-C.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__div_to_l_@f1 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__div_to_l_@f2 74 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+end_of_initialization 38A8 0 CODE 0 cinit dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_RCONbits FD0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___awdiv@quotient 26 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+?___awdiv 75 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___awmod 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_low_priority_int 18 0 CODE 0 intcodelo dist/default/production\EASAT2-MCU-C.X.production.obj
+?___ftadd 93 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___ftdiv 79 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___ftmul 7D 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___ftneg 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___ftsub 9F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___fttol 90 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@num_byte 1C5 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___lldiv 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___llmod 79 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+?___ltdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_timer1_initialize 3C38 0 CODE 0 text52 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\EASAT2-MCU-C.X.production.obj
+__HbssBANK2 0 0 ABS 0 bssBANK2 dist/default/production\EASAT2-MCU-C.X.production.obj
+___awmod@dividend 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lramtop 600 0 RAM 0 ramtop dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_strcat 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_strcpy 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_strlen 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@bit_in_byte 1C7 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_secs@secs 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\EASAT2-MCU-C.X.production.obj
+__pcinit 3870 0 CODE 0 cinit dist/default/production\EASAT2-MCU-C.X.production.obj
+___lltoft@exp 29 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext0 3CA8 0 CODE 0 text0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext1 35B8 0 CODE 0 text1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext2 38FA 0 CODE 0 text2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext3 39BE 0 CODE 0 text3 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext4 C48 0 CODE 0 text4 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext5 37D0 0 CODE 0 text5 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext6 254A 0 CODE 0 text6 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext7 39F4 0 CODE 0 text7 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext8 393C 0 CODE 0 text8 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ptext9 23B6 0 CODE 0 text9 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_waits_delay_hours 393C 0 CODE 0 text2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext25 0 0 ABS 0 text25 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext26 0 0 ABS 0 text26 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext27 0 0 ABS 0 text27 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext28 0 0 ABS 0 text28 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext29 0 0 ABS 0 text29 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext30 0 0 ABS 0 text30 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext31 0 0 ABS 0 text31 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext32 0 0 ABS 0 text32 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext33 0 0 ABS 0 text33 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext34 0 0 ABS 0 text34 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext35 0 0 ABS 0 text35 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext36 0 0 ABS 0 text36 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext37 0 0 ABS 0 text37 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext38 0 0 ABS 0 text38 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext39 0 0 ABS 0 text39 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext40 0 0 ABS 0 text40 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext41 0 0 ABS 0 text41 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext42 0 0 ABS 0 text42 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext43 0 0 ABS 0 text43 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext44 0 0 ABS 0 text44 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext45 0 0 ABS 0 text45 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext46 0 0 ABS 0 text46 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext47 0 0 ABS 0 text47 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext48 0 0 ABS 0 text48 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext49 0 0 ABS 0 text49 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext50 0 0 ABS 0 text50 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext51 0 0 ABS 0 text51 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext52 0 0 ABS 0 text52 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext53 0 0 ABS 0 text53 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Ltext56 0 0 ABS 0 text56 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_transmit_space_between_letters 3C98 0 CODE 0 text20 dist/default/production\EASAT2-MCU-C.X.production.obj
+__ramtop 600 0 RAM 0 ramtop C:\Users\felix\AppData\Local\Temp\scqc.obj
+_sprintf AA 0 CODE 0 text31 dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@noise_mean_value 39 0 COMRAM 1 dataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lpowerup A6 0 CODE 0 powerup dist/default/production\EASAT2-MCU-C.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_onewire_read_bit 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@ap BC 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@sp A5 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_isdigit 3C5A 0 CODE 0 text33 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ltdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\EASAT2-MCU-C.X.production.obj
+scale@scl 8F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_waits_delay_ms 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_FOSC$XT 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_getBatteryVoltage 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of__div_to_l_ 2998 0 CODE 0 text40 dist/default/production\EASAT2-MCU-C.X.production.obj
+___param_bank 10 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_transmit_dot 3A28 0 CODE 0 text23 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ltdiv@counter A 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+util_beacon_transmission@BEACON_BUFFER 180 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftmul@exp 83 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of__initialization 38A8 0 CODE 0 cinit dist/default/production\EASAT2-MCU-C.X.production.obj
+___awmod@divisor 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@sign 1A4 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\EASAT2-MCU-C.X.production.obj
+?_util_getTemperature 9F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_getBatteryCurrent 3108 0 CODE 0 text15 dist/default/production\EASAT2-MCU-C.X.production.obj
+?_scale 89 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_beacon_transmission@BEACON_MESSAGE 100 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_onewire_read_byte 23B6 0 CODE 0 text9 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_HFOFST$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftpack@sign 75 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_mins@i 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@tmpval C2 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@samples 200 0 BANK2 1 bssBANK2 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_beacon_transmission@battery_voltage D2 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__pintcodelo 18 0 CODE 0 intcodelo dist/default/production\EASAT2-MCU-C.X.production.obj
+___lldiv@quotient 22 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftdiv@cntr 7F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftdiv@sign 84 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_transmit_space_between_words 3C88 0 CODE 0 text19 dist/default/production\EASAT2-MCU-C.X.production.obj
+__pmediumconst 7EF4 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_beacon_transmission 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hend_init AA 0 CODE 0 end_init dist/default/production\EASAT2-MCU-C.X.production.obj
+___llmod@dividend 79 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+___llmod@counter 27 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@c D1 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@f A7 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_beacon_transmission@i 1C0 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_main 3CB4 0 CODE 0 text0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_CCP2CONbits F66 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__pintcode 8 0 CODE 0 intcode dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@i 1CC 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+isdigit@c 24 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_byte@bit0 75 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_byte@bit1 77 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_byte@bit2 79 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_byte@bit3 7B 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_byte@bit4 7D 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_byte@bit5 7F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_byte@bit6 81 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_byte@bit7 83 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_transmit_morse_sequence@morse_sequence 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_ADRES FC3 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_dpowers 7F1D 0 MEDIUMCONST 0 mediumconst dist/default/production\EASAT2-MCU-C.X.production.obj
+?_sprintf A5 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_isdigit$2306 23 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+_TMR1H FCF 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_TMR1L FCE 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_scale 1898 0 CODE 0 text32 dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_low_priority_int A6 0 CODE 0 intcodelo dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\EASAT2-MCU-C.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_secs@i 26 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+util_waits_delay_secs@j 28 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_PLLCFG$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_util_waits_delay_ms 3B58 0 CODE 0 text25 dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_scale 13EA 0 CODE 0 text32 dist/default/production\EASAT2-MCU-C.X.production.obj
+_fround$2678 8F 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+_fround$2679 8C 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_onewire_write_bit@bit_in 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_util_transmit_space_between_dots_dashes 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+___fttol@sign1 99 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+sprintf@width C0 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@byte_mem 190 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+?_util_onewire_read_byte 73 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__size_of_low_priority_int 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+?_util_onewire_reset 71 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__initialization 3870 0 CODE 0 cinit dist/default/production\EASAT2-MCU-C.X.production.obj
+__pbssBANK2 200 0 BANK2 1 bssBANK2 dist/default/production\EASAT2-MCU-C.X.production.obj
+__pdataCOMRAM 39 0 COMRAM 1 dataCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+_T2CONbits FBA 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WRTC$ON 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_WRTD$ON 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+high_priority_int@sample 1E 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\EASAT2-MCU-C.X.production.obj
+___wmul@product 28 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getTemperature@shift_reg_bit_temp 1C3 0 BANK1 1 cstackBANK1 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_transmit_space_between_dots_dashes 3CA8 0 CODE 0 text22 dist/default/production\EASAT2-MCU-C.X.production.obj
+_ANSELAbits F38 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_ANSELBbits F39 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+_ANSELDbits F3B 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+__div_to_l_@cntr 26 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__div_to_l_@exp1 27 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__div_to_l_@quot 22 0 COMRAM 1 cstackCOMRAM dist/default/production\EASAT2-MCU-C.X.production.obj
+__end_of_util_onewire_write_bit 3A28 0 CODE 0 text7 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\EASAT2-MCU-C.X.production.obj
+__CFG_MCLRE$EXTMCLR 0 0 ABS 0 - dist/default/production\EASAT2-MCU-C.X.production.obj
+util_getBatteryVoltage@value 8C 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+__Hintcode 16 0 CODE 0 intcode dist/default/production\EASAT2-MCU-C.X.production.obj
+___ftmul@f3_as_product 84 0 BANK0 1 cstackBANK0 dist/default/production\EASAT2-MCU-C.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+intcodelo 0 18 18 3CAB 1
+idloc 0 200000 200000 8 1
+cstackCOMRAM 1 1 1 3E 1
+cstackBANK0 1 60 60 86 1
+cstackBANK1 1 100 100 CE 1
+reset_vec 0 0 0 4 1
+bssBANK2 1 200 200 C8 1
+intcode 0 8 8 E 1
+mediumconst 0 7EF4 7EF4 10C 1
+config 0 300000 300000 E 1

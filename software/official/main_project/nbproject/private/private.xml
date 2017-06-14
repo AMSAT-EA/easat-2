@@ -3,10 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_interrupts.c</file>
-            <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_interrupts.h</file>
-            <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_commands.h</file>
-            <file>file:/C:/Users/FELIX/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/nbproject/Makefile-default.mk</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_interrupts.c</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_main_mcu.c</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_agc.h</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_init_timer.c</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_eeprom.c</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_onewire.c</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_waits.c</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2.h</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_commands.c</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_util_transmission.c</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_func_interrupts.h</file>
+            <file>file:/C:/Users/admin/OneDrive/MPLABXProjects/EASAT2-MCU-C.X/easat2_config.h</file>
         </group>
     </open-files>
 </project-private>

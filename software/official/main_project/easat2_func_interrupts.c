@@ -31,7 +31,7 @@ void interrupt high_priority_int() {
     static unsigned int total_add                 = 0;   /* total add for average level */  
     static unsigned int valid_samples             = 0;   /* valid samples in sample size */
     
-    unsigned int sample                           = 0;   /* ADC sample value */
+    unsigned int sample = 0, oldest_sample        = 0;   /* ADC sample value */
     
     // ASK variables
     static unsigned int previous_signal_level     = LOW;	
@@ -141,34 +141,35 @@ void interrupt high_priority_int() {
         } else {
 
             // this means a 0 to ASK (we are under threshold level)        
-            current_signal_level     = LOW;
+            current_signal_level       = LOW;
             
             // reset times that threshold has been continuosly exceeded
-            times_threshold_exceeded = 0;         
+            times_threshold_exceeded   = 0;         
             
             if (cycles_transmitter_active == REPEATER_ACTIVE_CYCLES) {
                 // turn off repeater
-                PINOUT_REPEATER_PTT_ON    = 0;
-                is_transmitter_active     = 0;
+                PINOUT_REPEATER_PTT_ON = 0;
+                is_transmitter_active  = 0;
             }
             
-            samples[sample_position]  = sample; // store value in table   
-            
-            /* we add the new sample and substract the oldest one */
-            total_add += sample;
-            
-            if (sample_position > 0)
-                total_add -= samples[sample_position-1];
-            else
-                total_add -= samples[SAMPLE_TABLE_SIZE-1];
-            
+            if (valid_samples == SAMPLE_TABLE_SIZE) oldest_sample = samples[sample_position];
+                else oldest_sample = 0;
+
+            samples[sample_position] = sample; // store new value in table             
+ 
+            /* check if sample tables is not full yet */
+            if (valid_samples < SAMPLE_TABLE_SIZE) valid_samples++;
+ 
             /* move pointer */
             sample_position++;
-        
-            // check if we have to start from first position again (cycle)
-            if (sample_position == SAMPLE_TABLE_SIZE) sample_position = 0;
 
-            // only calculate average when the table is full of samples
+            /* check if we have to start from first position again (cycle) */
+            if (sample_position == SAMPLE_TABLE_SIZE) sample_position = 0;
+ 
+            /* we add the new sample and subtract the oldest one */
+            total_add = total_add + sample - oldest_sample;
+ 
+            /* only calculate average when the table is full of samples */            
             if (valid_samples   == SAMPLE_TABLE_SIZE) {
                 
                 // calculate new noise mean value
@@ -177,7 +178,7 @@ void interrupt high_priority_int() {
                 noise_avg_value      = noise_avg_value >> AVERAGE_NOISE_RIGHT_SHIFTS;
                 // calculate new thresold
                 // new thresold has to be a fixed percentage over current noise
-                activation_threshold = noise_avg_value < THRESHOLD_NOISE_LEFT_SHIFTS;
+                activation_threshold = noise_avg_value << THRESHOLD_NOISE_LEFT_SHIFTS;
                 
             }
             
