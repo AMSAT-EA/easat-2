@@ -45,6 +45,33 @@ void util_beacon_transmission(float battery_voltage, int solar_current,
  
 }
 
+/* this function will transmit a message EASAT2 ACK CCC VVV meaning that
+   command CCC has been accepted with value VVV */
+   
+void util_command_ack_transmission(unsigned int command, unsigned int value) {
+    
+    char BEACON_COMMAND_MESSAGE[MAX_BEACON_MESSAGE];
+    char BEACON_COMMAND_BUFFER[MAX_BEACON_BUFFER];
+    
+    // build the beacon message
+    
+    memset(BEACON_COMMAND_MESSAGE, 0, sizeof(BEACON_COMMAND_MESSAGE));
+    strcpy(BEACON_COMMAND_MESSAGE, EASAT2_BEACON_COMMAND_HEADER);
+    
+    memset(BEACON_COMMAND_BUFFER, 0, sizeof(BEACON_COMMAND_BUFFER));
+    sprintf(BEACON_COMMAND_BUFFER, " %3.0d %3.0d", command, value);
+
+    strcat(BEACON_COMMAND_MESSAGE, BEACON_COMMAND_BUFFER);
+        
+    // go over the message and call a function that will
+    // transmit the current letter to the RF module
+    
+    for (int i = 0; i < strlen(BEACON_COMMAND_MESSAGE); i++) {
+        util_transmit_letter(BEACON_COMMAND_MESSAGE[i]);
+    }
+ 
+}
+
 // This function receives the ASCII letter to be transmited using
 // the RF module. It translates the letter to its morse sequence
 // and calls the function that will transmit the sequence to the

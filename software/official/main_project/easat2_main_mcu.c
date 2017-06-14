@@ -14,6 +14,7 @@
 #include "easat2_util_inputs.h"
 #include "easat2_util_waits.h"
 #include "easat2_util_transmission.h"
+#include "easat2_func_commands.h"
 
         
 void main(void) {
@@ -39,6 +40,9 @@ void main_loop(void) {
             
             // initialize software and hardware watchdogs
             init_watchdogs_initialize();
+            
+            // check if there is a command pending execution
+            func_command_management();
             
             // get the sensor values
             

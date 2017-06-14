@@ -85,11 +85,7 @@ void interrupt high_priority_int() {
             tmr1_interrupt_number = 0;
             
         }
-
-        /* check if sample tables is not full yet */
-        
-        if (valid_samples < SAMPLE_TABLE_SIZE) valid_samples++;
-                
+               
         // read currents from battery and solar panels
         
         
@@ -126,7 +122,7 @@ void interrupt high_priority_int() {
             // count times
             times_threshold_exceeded++;
                      
-            if (times_threshold_exceeded == THRESHOLD_EXCEED_TIMES_ACTIVATION) {
+            if (times_threshold_exceeded >= THRESHOLD_EXCEED_TIMES_ACTIVATION) {
                              
                 // turn on repeater              
                 PINOUT_REPEATER_PTT_ON = 1;               
@@ -146,7 +142,7 @@ void interrupt high_priority_int() {
             // reset times that threshold has been continuosly exceeded
             times_threshold_exceeded   = 0;         
             
-            if (cycles_transmitter_active == REPEATER_ACTIVE_CYCLES) {
+            if (cycles_transmitter_active >= REPEATER_ACTIVE_CYCLES) {
                 // turn off repeater
                 PINOUT_REPEATER_PTT_ON = 0;
                 is_transmitter_active  = 0;

@@ -20,6 +20,8 @@
 void util_beacon_transmission(float battery_voltage, int solar_current,
                                 int battery_current, float temperature);
 
+void util_command_ack_transmission(unsigned int command, unsigned int value);
+
 void util_transmit_letter(char letter);
 void util_transmit_morse_sequence(char * morse_sequence); 
 void util_transmit_dot(void);
@@ -30,6 +32,8 @@ void util_transmit_space_between_letters(void);
 void util_transmit_space_between_words(void);
 
 void util_transmit_buzzer_1ms_cycle(void);
+
+#define EASAT2_BEACON_COMMAND_HEADER "EASAT2 ACK"
 
 #define MAX_BEACON_MESSAGE          128
 #define MAX_BEACON_BUFFER           64
