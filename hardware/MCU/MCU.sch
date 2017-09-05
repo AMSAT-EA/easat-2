@@ -159,11 +159,11 @@ F 3 "" H 1281 3360 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 2656 3325 0    39   ~ 0
-~WDO
+~WDO/MCLR
 Text Label 6135 1700 2    39   ~ 0
 RA6
 Text Label 5280 2925 1    39   ~ 0
-~WDO
+~WDO/MCLR
 Text Label 1461 3400 0    39   ~ 0
 WDI
 Text Label 3970 1700 0    39   ~ 0
@@ -225,13 +225,13 @@ $EndComp
 $Comp
 L GND #PWR08
 U 1 1 5827809B
-P 3975 2000
-F 0 "#PWR08" H 3975 1750 50  0001 C CNN
-F 1 "GND" H 3975 1850 50  0000 C CNN
-F 2 "" H 3975 2000 50  0000 C CNN
-F 3 "" H 3975 2000 50  0000 C CNN
-	1    3975 2000
-	1    0    0    -1  
+P 3915 1925
+F 0 "#PWR08" H 3915 1675 50  0001 C CNN
+F 1 "GND" H 3915 1775 50  0000 C CNN
+F 2 "" H 3915 1925 50  0000 C CNN
+F 3 "" H 3915 1925 50  0000 C CNN
+	1    3915 1925
+	0    1    1    0   
 $EndComp
 Text Label 5130 2830 1    39   ~ 0
 PGC
@@ -250,31 +250,13 @@ F 7 "2534976" H 9460 3135 60  0001 C CNN "Referencia Proveedor #1"
 	1    9460 3135
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_01X04 P2
-U 1 1 582785C2
-P 9985 1650
-F 0 "P2" H 9985 1900 50  0000 C CNN
-F 1 "CONN_01X04" V 10085 1650 50  0000 C CNN
-F 2 "Sockets_MOLEX_KK-System:Socket_MOLEX-KK-RM2-54mm_Lock_4pin_straight" H 9985 1650 50  0001 C CNN
-F 3 "" H 9985 1650 50  0000 C CNN
-F 4 "3M" H 9985 1650 60  0001 C CNN "Fabricante"
-F 5 "960104-6202-AR" H 9985 1650 60  0001 C CNN "Referencia Fabricante"
-F 6 "Mouser" H 9985 1650 60  0001 C CNN "Proveedor #1"
-F 7 "517-9601046202AR" H 9985 1650 60  0001 C CNN "Referencia Proveedor #1"
-F 8 "Farnell" H 9985 1650 60  0001 C CNN "Proveedor #2"
-F 9 "2672609" H 9985 1650 60  0001 C CNN "Referencia Proveedor #2"
-F 10 "Conector de Placa a Placa, 2.54 mm, 4 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 9985 1650 60  0001 C CNN "Descripción"
-	1    9985 1650
-	1    0    0    -1  
-$EndComp
-Text Label 9555 1500 0    39   ~ 0
+Text Label 9550 2300 0    39   ~ 0
 PGD
-Text Label 9560 1600 0    39   ~ 0
+Text Label 9555 2400 0    39   ~ 0
 PGC
-Text Label 9630 1995 0    39   ~ 0
+Text Label 10870 2595 0    39   ~ 0
 ENA
-Text Label 9630 2095 0    39   ~ 0
+Text Label 10870 2695 0    39   ~ 0
 F_BEA
 $Comp
 L CONN_01X05 P1
@@ -300,8 +282,6 @@ Text Label 9525 1175 0    39   ~ 0
 PWD
 Text Label 9535 1275 0    39   ~ 0
 DIS
-Text Label 4130 2000 0    39   ~ 0
-VDD
 $Comp
 L DS18B20 U3
 U 1 1 58276865
@@ -390,12 +370,12 @@ DIS
 $Comp
 L VCC #PWR012
 U 1 1 586B51FC
-P 9355 1665
-F 0 "#PWR012" H 9355 1515 50  0001 C CNN
-F 1 "VCC" H 9355 1815 50  0000 C CNN
-F 2 "" H 9355 1665 50  0000 C CNN
-F 3 "" H 9355 1665 50  0000 C CNN
-	1    9355 1665
+P 9065 2045
+F 0 "#PWR012" H 9065 1895 50  0001 C CNN
+F 1 "VCC" H 9065 2195 50  0000 C CNN
+F 2 "" H 9065 2045 50  0000 C CNN
+F 3 "" H 9065 2045 50  0000 C CNN
+	1    9065 2045
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -590,11 +570,11 @@ Text Label 6410 2075 2    39   ~ 0
 ENA
 Text Notes 10215 960  0    118  ~ 24
 MPTT
-Text Notes 10220 2100 0    118  ~ 24
+Text Notes 11575 2800 0    118  ~ 24
 RF
-Text Label 9630 2295 0    39   ~ 0
+Text Label 10870 2895 0    39   ~ 0
 AGC
-Text Label 9640 2395 0    39   ~ 0
+Text Label 10880 2995 0    39   ~ 0
 RF_IN
 Text Label 5505 2920 1    39   ~ 0
 AGC
@@ -706,8 +686,6 @@ Text Notes 8865 1305 0    39   ~ 8
 2.7 V
 Text Notes 8325 1295 0    39   ~ 8
 2.7 V
-Text Label 9560 1700 0    39   ~ 0
-VPP
 $Comp
 L VDD #PWR024
 U 1 1 58C3BA6E
@@ -965,7 +943,7 @@ Text Label 11415 5705 0    39   ~ 0
 F_RF_IN
 Text Label 6155 2225 0    39   ~ 0
 F_RF_IN
-Text Notes 10245 1575 0    118  ~ 24
+Text Notes 10050 1815 1    118  ~ 24
 DEV
 $Comp
 L VCC #PWR037
@@ -1162,24 +1140,24 @@ $EndComp
 $Comp
 L GND #PWR045
 U 1 1 58E42E6D
-P 9340 2235
-F 0 "#PWR045" H 9340 1985 50  0001 C CNN
-F 1 "GND" H 9340 2085 50  0000 C CNN
-F 2 "" H 9340 2235 50  0000 C CNN
-F 3 "" H 9340 2235 50  0000 C CNN
-	1    9340 2235
+P 10580 2835
+F 0 "#PWR045" H 10580 2585 50  0001 C CNN
+F 1 "GND" H 10580 2685 50  0000 C CNN
+F 2 "" H 10580 2835 50  0000 C CNN
+F 3 "" H 10580 2835 50  0000 C CNN
+	1    10580 2835
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR046
 U 1 1 58E43BA0
-P 9350 1815
-F 0 "#PWR046" H 9350 1565 50  0001 C CNN
-F 1 "GND" H 9350 1665 50  0000 C CNN
-F 2 "" H 9350 1815 50  0000 C CNN
-F 3 "" H 9350 1815 50  0000 C CNN
-	1    9350 1815
-	1    0    0    -1  
+P 9550 2200
+F 0 "#PWR046" H 9550 1950 50  0001 C CNN
+F 1 "GND" H 9550 2050 50  0000 C CNN
+F 2 "" H 9550 2200 50  0000 C CNN
+F 3 "" H 9550 2200 50  0000 C CNN
+	1    9550 2200
+	0    1    1    0   
 $EndComp
 $Comp
 L GND #PWR047
@@ -1209,17 +1187,6 @@ F 9 "1843704" H 8325 3210 60  0001 C CNN "Referencia Proveedor #2"
 F 10 "Diodo Zener Simple, 3.3 V, 500 mW, SOD-123, 6 %, 2 Pines, 150 °C" H 8325 3210 60  0001 C CNN "Descripción"
 	1    8325 3210
 	0    1    1    0   
-$EndComp
-$Comp
-L VDD #PWR048
-U 1 1 58ED41A7
-P 7095 2770
-F 0 "#PWR048" H 7095 2620 50  0001 C CNN
-F 1 "VDD" H 7095 2920 50  0000 C CNN
-F 2 "" H 7095 2770 50  0000 C CNN
-F 3 "" H 7095 2770 50  0000 C CNN
-	1    7095 2770
-	1    0    0    -1  
 $EndComp
 $Comp
 L R R2
@@ -1441,19 +1408,19 @@ Text Notes 7990 3205 0    39   ~ 8
 $Comp
 L CONN_01X05 P3
 U 1 1 5905D77A
-P 9990 2195
-F 0 "P3" H 9990 2495 50  0000 C CNN
-F 1 "CONN_01X05" V 10090 2195 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MPT-2.54mm_5pol" H 9990 2195 50  0001 C CNN
-F 3 "" H 9990 2195 50  0000 C CNN
-F 4 "3M" H 9990 2195 60  0001 C CNN "Fabricante"
-F 5 "960105-6202-AR" H 9990 2195 60  0001 C CNN "Referencia Fabricante"
-F 6 "Mouser" H 9990 2195 60  0001 C CNN "Proveedor #1"
-F 7 "517-9601056202AR" H 9990 2195 60  0001 C CNN "Referencia Proveedor #1"
-F 8 "Farnell" H 9990 2195 60  0001 C CNN "Proveedor #2"
-F 9 "2672610" H 9990 2195 60  0001 C CNN "Referencia Proveedor #2"
-F 10 "Conector de Placa a Placa, 2.54 mm, 5 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 9990 2195 60  0001 C CNN "Descripción"
-	1    9990 2195
+P 11230 2795
+F 0 "P3" H 11230 3095 50  0000 C CNN
+F 1 "CONN_01X05" V 11330 2795 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MPT-2.54mm_5pol" H 11230 2795 50  0001 C CNN
+F 3 "" H 11230 2795 50  0000 C CNN
+F 4 "3M" H 11230 2795 60  0001 C CNN "Fabricante"
+F 5 "960105-6202-AR" H 11230 2795 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 11230 2795 60  0001 C CNN "Proveedor #1"
+F 7 "517-9601056202AR" H 11230 2795 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 11230 2795 60  0001 C CNN "Proveedor #2"
+F 9 "2672610" H 11230 2795 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Conector de Placa a Placa, 2.54 mm, 5 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 11230 2795 60  0001 C CNN "Descripción"
+	1    11230 2795
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1525,6 +1492,41 @@ F 10 "TNPW06034K75BEEA  RES, THIN FILM, 4K75, 0.1%, 0.063W, 0603" H 3240 3135 60
 	1    3240 3135
 	1    0    0    -1  
 $EndComp
+$Comp
+L R R11
+U 1 1 58C78986
+P 12130 5445
+F 0 "R11" V 12210 5445 50  0000 C CNN
+F 1 "1K" V 12130 5445 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 12060 5445 50  0001 C CNN
+F 3 "" H 12130 5445 50  0000 C CNN
+F 4 "WELWYN" V 12130 5445 60  0001 C CNN "Fabricante"
+F 5 "WCR0603-1K0FI" V 12130 5445 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" V 12130 5445 60  0001 C CNN " Proveedor #1"
+F 7 "2422029" V 12130 5445 60  0001 C CNN "Referencia Proveedor #1"
+	1    12130 5445
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X05 P2
+U 1 1 59AF3441
+P 9995 2200
+F 0 "P2" H 9995 2500 50  0000 C CNN
+F 1 "CONN_01X05" V 10095 2200 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MPT-2.54mm_5pol" H 9995 2200 50  0001 C CNN
+F 3 "" H 9995 2200 50  0000 C CNN
+F 4 "3M" H 9995 2200 60  0001 C CNN "Fabricante"
+F 5 "960105-6202-AR" H 9995 2200 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 9995 2200 60  0001 C CNN "Proveedor #1"
+F 7 "517-9601056202AR" H 9995 2200 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 9995 2200 60  0001 C CNN "Proveedor #2"
+F 9 "2672610" H 9995 2200 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Conector de Placa a Placa, 2.54 mm, 5 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 9995 2200 60  0001 C CNN "Descripción"
+	1    9995 2200
+	1    0    0    -1  
+$EndComp
+Text Label 9255 2000 0    39   ~ 0
+~WDO/MCLR
 Wire Wire Line
 	2940 1225 3240 1225
 Wire Wire Line
@@ -1566,17 +1568,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 1925 6500 1860
 Wire Wire Line
-	4380 1925 3975 1925
-Wire Wire Line
-	3975 1925 3975 2000
-Wire Wire Line
-	9785 1500 9555 1500
-Wire Wire Line
-	9785 1600 9560 1600
-Wire Wire Line
-	9355 1700 9785 1700
-Wire Wire Line
-	9350 1800 9785 1800
+	3915 1925 4380 1925
 Wire Wire Line
 	9775 1275 9535 1275
 Wire Wire Line
@@ -1601,8 +1593,6 @@ Wire Wire Line
 	8885 3235 8885 3565
 Wire Wire Line
 	5055 1200 5055 885 
-Wire Wire Line
-	9355 1700 9355 1665
 Wire Wire Line
 	795  5905 795  5785
 Wire Wire Line
@@ -1661,15 +1651,15 @@ Wire Wire Line
 Wire Wire Line
 	4380 1700 3970 1700
 Wire Wire Line
-	9790 1995 9630 1995
+	11030 2595 10870 2595
 Wire Wire Line
-	9790 2095 9630 2095
+	11030 2695 10870 2695
 Wire Wire Line
-	9340 2195 9790 2195
+	10580 2795 11030 2795
 Wire Wire Line
-	9790 2295 9630 2295
+	11030 2895 10870 2895
 Wire Wire Line
-	9790 2395 9640 2395
+	11030 2995 10880 2995
 Wire Wire Line
 	5505 2675 5505 2920
 Wire Wire Line
@@ -1862,9 +1852,7 @@ Wire Wire Line
 Wire Wire Line
 	10490 2160 10490 2170
 Wire Wire Line
-	9340 2235 9340 2195
-Wire Wire Line
-	9350 1815 9350 1800
+	10580 2835 10580 2795
 Wire Wire Line
 	9140 975  9775 975 
 Wire Wire Line
@@ -1908,19 +1896,38 @@ Wire Wire Line
 Wire Wire Line
 	3170 2985 3175 2985
 Connection ~ 3175 2985
+Wire Wire Line
+	9255 2000 9795 2000
+Wire Wire Line
+	9795 2200 9550 2200
+Wire Wire Line
+	9795 2300 9550 2300
+Wire Wire Line
+	9795 2400 9555 2400
+Wire Wire Line
+	9065 2100 9795 2100
+Wire Wire Line
+	9065 2100 9065 2045
 $Comp
-L R R11
-U 1 1 58C78986
-P 12130 5445
-F 0 "R11" V 12210 5445 50  0000 C CNN
-F 1 "1K" V 12130 5445 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 12060 5445 50  0001 C CNN
-F 3 "" H 12130 5445 50  0000 C CNN
-F 4 "WELWYN" V 12130 5445 60  0001 C CNN "Fabricante"
-F 5 "WCR0603-1K0FI" V 12130 5445 60  0001 C CNN "Referencia Fabricante"
-F 6 "Farnell" V 12130 5445 60  0001 C CNN " Proveedor #1"
-F 7 "2422029" V 12130 5445 60  0001 C CNN "Referencia Proveedor #1"
-	1    12130 5445
-	-1   0    0    1   
+L VCC #PWR?
+U 1 1 59AFE00E
+P 7095 2770
+F 0 "#PWR?" H 7095 2620 50  0001 C CNN
+F 1 "VCC" H 7095 2920 50  0000 C CNN
+F 2 "" H 7095 2770 50  0000 C CNN
+F 3 "" H 7095 2770 50  0000 C CNN
+	1    7095 2770
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 59B0099F
+P 4130 2000
+F 0 "#PWR?" H 4130 1850 50  0001 C CNN
+F 1 "VCC" H 4130 2150 50  0000 C CNN
+F 2 "" H 4130 2000 50  0000 C CNN
+F 3 "" H 4130 2000 50  0000 C CNN
+	1    4130 2000
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC

@@ -243,6 +243,10 @@ F 0 "SP1" H 9360 3385 50  0000 C CNN
 F 1 "SPEAKER" H 9360 2885 50  0000 C CNN
 F 2 "Buzzers_Beepers:MagneticBuzzer_Kingstate_KCG0601" H 9460 3135 50  0001 C CNN
 F 3 "" H 9460 3135 50  0000 C CNN
+F 4 "PRO SIGNAL" H 9460 3135 60  0001 C CNN "Fabricante"
+F 5 "ABI-050-RC" H 9460 3135 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" H 9460 3135 60  0001 C CNN "Proveedor #1"
+F 7 "2534976" H 9460 3135 60  0001 C CNN "Referencia Proveedor #1"
 	1    9460 3135
 	1    0    0    -1  
 $EndComp
