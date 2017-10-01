@@ -35,13 +35,18 @@ void interrupt high_priority_int() {
     
     // ASK variables
     static unsigned int previous_signal_level     = LOW;	
-    unsigned int current_signal_level             = LOW;
+    static unsigned int current_signal_level      = LOW; // needed static as well!!
 
     unsigned int received_bit                     = BIT_0;
     static unsigned int previous_received_bit     = BIT_0;
 
-    static unsigned int num_received_bits         = 0; // number of continuos bit received
-    // code
+    static int decoder_status                     = IDLE;
+    
+    static int bit_to_process                     = 0;
+    
+    
+static int num_bits_received = 0;    
+   // code
     
     if (PIR1bits.TMR2IF) {
         
@@ -70,7 +75,8 @@ void interrupt high_priority_int() {
                 
         // blink LED each half second and clear software watchdog
         
-        if (tmr1_interrupt_number == TMR1_HALF_SECOND) {
+        if (tmr1_interrupt_number == TMR1_HALF_SECOND ||
+                ((tmr1_interrupt_number == TMR1_CENT_SECOND) && (global_command_pending_check == 1))) {
 
             // blink auxiliar green LED
             PINOUT_TIMER_LED = !PINOUT_TIMER_LED;
@@ -111,10 +117,13 @@ void interrupt high_priority_int() {
        
         if (is_transmitter_active) cycles_transmitter_active++;
         
+        // store previous signal level (neeed for ASK decoding)
+        previous_signal_level = current_signal_level;
+        
         // check if taken signal sample is greater than thresold by at least
         // the configured value
         
-        if (sample > THRESHOLD_FLOOR_VALUE && sample > activation_threshold) {
+        if (sample > activation_threshold) {
 
             // this means a 1 to ASK (we are over threshold level)
             current_signal_level = HIGH;
@@ -125,12 +134,12 @@ void interrupt high_priority_int() {
             if (times_threshold_exceeded >= THRESHOLD_EXCEED_TIMES_ACTIVATION) {
                              
                 // turn on repeater              
-                PINOUT_REPEATER_PTT_ON = 1;               
+                PINOUT_REPEATER_PTT_ON    = 1;               
                 
                 is_transmitter_active     = 1;
                 cycles_transmitter_active = 0;
                 
-                times_threshold_exceeded   = 0;
+                times_threshold_exceeded  = 0;
                 
             }
 
@@ -170,12 +179,15 @@ void interrupt high_priority_int() {
                 
                 // calculate new noise mean value
                 noise_avg_value      = total_add;              
-                // we use integes because it is faster
-                noise_avg_value      = noise_avg_value >> AVERAGE_NOISE_RIGHT_SHIFTS;
+                // we divide all the sum between the number of samples (128)
+                noise_avg_value      = noise_avg_value >> AVERAGE_NOISE_RIGHT_SHIFTS; 
                 // calculate new thresold
-                // new thresold has to be a fixed percentage over current noise
-                activation_threshold = noise_avg_value << THRESHOLD_NOISE_LEFT_SHIFTS;
                 
+                // new thresold is just the average between max ADC value and noise
+                // so (max_adc_value + current_noise lvl / 2)
+                activation_threshold = (MAX_ADC_VALUE + noise_avg_value) << THRESHOLD_NOISE_LEFT_SHIFTS;
+            activation_threshold = 50;
+            
             }
             
         }     
@@ -186,66 +198,101 @@ void interrupt high_priority_int() {
 
         // ASK signal management
         
-        if (previous_signal_level == LOW && current_signal_level == HIGH) {
+        // first transition is to set position high or low, it does not
+        // mean a bit
+        
+        if (decoder_status == IDLE && current_signal_level == HIGH) {
+                   
+            bit_to_process = 1;
+            decoder_status = PROCESSING;
+              
+        }
+        
+        if (bit_to_process) {
             
-            // low to high means bit 1
-            received_bit = BIT_1;
-            
-            // count the bit
-            if (num_received_bits < ASK_COMMAND_LENGTH) num_received_bits++;
-                    
-        }  else {
+            if (previous_signal_level == LOW && current_signal_level == HIGH) {     
+
+                // low to high means bit 1
+                received_bit = BIT_1;
+
+            }  else {
 	
                 if (previous_signal_level == HIGH && current_signal_level == LOW) {
                     
                     // high to low means 0
                     received_bit = BIT_0;
-                    
-                    // count the bit
-                    if (num_received_bits < ASK_COMMAND_LENGTH) num_received_bits++;
-                            
+                                               
                 } else {
 			
-                    // low to low or high to high means nothing at this timing
-                    received_bit = NOTHING;
-		
-                    // reset bit counter
-                    num_received_bits = 0;
+                    // low to low or high to high here means end of transmission
+                    received_bit   = NOTHING;
+                    decoder_status = IDLE;
+                    bit_to_process = 0;
+                                        
+                   if (num_bits_received == 32) {
+                        
+                    }
+
                 }
-        }
+                
+            }
+        
+            if (received_bit != NOTHING) {
+                num_bits_received++;
+
+            }    
+            else {
+                
+                if (num_bits_received == 32) {
+            
+                    global_command_pending_check = !global_command_pending_check;
+                    
+                }
+                num_bits_received = 0;
+                
+            }
+               
+        
+    
+            // if we have a bit we store it in the command buffer
+            // but only if we don't have a previous command pending of check
+            // (so we do not overwrite it)
+
+//            if (received_bit != NOTHING && !global_command_pending_check) {
+
+ //               global_command_buffer = global_command_buffer << 1;
+ //               global_command_buffer = global_command_buffer | received_bit;	// set LSB to received_bit
 	
-        // if we have a bit we store it in the command buffer
-        // but only if we don't have a previous command pending of check
-        // (so we do not overwrite it)
-
-        if (received_bit != NOTHING && num_received_bits <= ASK_COMMAND_LENGTH
-                && !global_command_pending_check) {
-
-            global_command_buffer << 1;
-            global_command_buffer = global_command_buffer & 0xfffffe;       // set LSB to 0
-            global_command_buffer = global_command_buffer | received_bit;	// set LSB to received_bit
-	
-        }
-
-        // check if we just finished to receive a command
-        if (received_bit == NOTHING && previous_received_bit != NOTHING && !global_command_pending_check
-                && num_received_bits == ASK_COMMAND_LENGTH) {
+                // check is header is OK, if so we check for a command
                        
-            // if we received nothing but in last timer expiration we had a bit
-            // we check if we have a possible commmand
+ //               if ((global_command_buffer & ASK_COMMAND_HEADER_MASK) == ASK_COMMAND_HEADER_32BITS) {
+                //         global_command_pending_check = 1;         
+  //              }   
+            
+  //          }
 
-            global_command_pending_check = 1;
-
+ //           if (received_bit == NOTHING && !global_command_pending_check) {
+            
+                // if we received nothing and no command if pending to decode we clean the command buffer
+ //             global_command_buffer = 0;
+            
+  //          }             
+            
+            bit_to_process = 0; // now it will come a sync transition (0->0, 0->1, 1->0 or 1->1)
+        
+        
+        } else {
+            
+            // this a a sync pulse (0->0, 0->1, 1->0 or 1->1)
+            // but in next timer trigger we have to process
+            
+            bit_to_process = 1;
+            
         }
 
-        if (received_bit == NOTHING && previous_received_bit == NOTHING && !global_command_pending_check) {
-	
-            // if we received nothing last two times and no command if pending to decode we clean the command buffer
-
-            global_command_buffer = 0;
-            num_received_bits     = 0;
-
-        }             
+ 
+    
+   //     }
 
         ///////////////////////////////////////////////
         // end of ASK management

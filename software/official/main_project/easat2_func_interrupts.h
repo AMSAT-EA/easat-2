@@ -15,7 +15,8 @@
 #include "easat2_init_timer.h"
 #include "easat2_func_commands.h"
 
-#define TMR1_HALF_SECOND                    50
+#define TMR1_HALF_SECOND                    50    // 50 interrupts is half second  
+#define TMR1_CENT_SECOND                    10    // 10 interrupts is a cent of second
 #define SAMPLE_TABLE_SIZE                   128   // 128 samples in table (100 in a second)
 #define INITIAL_NOISE_MEAN_VALUE            32000 // initial value ADC max is 1024
 #define INITIAL_ACTIVACION_THRESHOLD        32000 // initial value ADC max is 1024
@@ -23,9 +24,9 @@
                                                   // to consider it is a transmission 
                                                   // 200 = 2 seconds
 
+#define MAX_ADC_VALUE                       1024
 #define THRESHOLD_NOISE_LEFT_SHIFTS         1     // thresold is calculated with this
-#define THRESHOLD_FLOOR_VALUE               128   // minimun thresold 0.256V
-                                            
+                                           
 
 #define REPEATER_ACTIVE_CYCLES              12000 // 2 minutes transmitter active */
 
@@ -39,6 +40,9 @@
 #define BIT_0                               0
 #define BIT_1                               1
 #define NOTHING                             2
+
+#define IDLE                                0
+#define PROCESSING                          1
 
 // functions prototypes
 

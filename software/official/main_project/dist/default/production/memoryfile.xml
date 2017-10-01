@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\main_project.production.hex">
+  <executable name="dist/default/production\EASAT2-MCU-C.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>18849</used>
-      <free>13919</free>
+      <used>16745</used>
+      <free>16023</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>1536</length>
-      <used>678</used>
-      <free>858</free>
+      <used>679</used>
+      <free>857</free>
     </memory>
   </executable>
 </project>

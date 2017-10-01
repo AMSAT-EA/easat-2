@@ -39,7 +39,7 @@ int golay_errors;
 	
 	// if header is not 0x55 we do not try to decode command
 	
-	if (header != COMMAND_HEADER) return 0;
+	if (header != ASK_COMMAND_HEADER_8BITS) return 0;
 			
 	// body is 3 bytes long (24 bits), we just set to 0 8 MSB of candidate command
 	
@@ -97,23 +97,23 @@ void func_command_management(void) {
 	
 		candidate_command = global_command_buffer;
 		
-		if (func_command_decode(candidate_command, &decoded_command, &decoded_command_value)) {
+	//	if (func_command_decode(candidate_command, &decoded_command, &decoded_command_value)) {
 		
 			// execute command
 		
 		
 			// transmit ack command beacon message
-			util_command_ack_transmission(decoded_command, decoded_command_value);
+//			util_command_ack_transmission(decoded_command, decoded_command_value);
 			
 					
 		
-		} // else command could not be decoded
+	//	} // else command could not be decoded
 			
 					
 	}
 	
 	// turn off command check flag so other commands can be decodified
 	
-	global_command_pending_check = 0;
+//	global_command_pending_check = 0;
 
 }

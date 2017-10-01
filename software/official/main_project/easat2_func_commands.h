@@ -13,8 +13,10 @@
 
 #include "easat2.h"
 
-#define ASK_COMMAND_LENGTH                    32 // command length in bits
-#define COMMAND_HEADER                        0x55
+#define ASK_COMMAND_LENGTH                    32 // command length in bits (55COMMAND)
+#define ASK_COMMAND_HEADER_8BITS              0x55
+#define ASK_COMMAND_HEADER_32BITS             (unsigned long)0x55000000
+#define ASK_COMMAND_HEADER_MASK               (unsigned long)0xFF000000
 
 
 // functions prototypes
