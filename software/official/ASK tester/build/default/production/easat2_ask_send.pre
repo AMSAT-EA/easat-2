@@ -8490,6 +8490,9 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
+# 18 "easat2_ask.h"
+extern volatile int global_timer_flag;
+
 # 24 "easat2_ask_util_waits.h"
 void util_waits_delay_hours(int hours);
 void util_waits_delay_mins(int minutes);
@@ -8497,56 +8500,99 @@ void util_waits_delay_secs(int secs);
 void util_waits_delay_ms(int ms);
 void util_waits_delay_hundred_us(int us);
 
-# 28 "easat2_ask_send.h"
+# 21 "easat2_ask_init_timer.h"
+void init_timer1_initialize(void);
+void init_timer2_initialize(void);
+
+# 36 "easat2_ask_send.h"
 void send_ask_command(unsigned long command);
 
-# 18 "easat2_ask_send.c"
-void send_ask_command(unsigned long command) {
+# 20 "easat2_ask_send.c"
+void send_ask_command(unsigned long command_in) {
 
-int current_signal_level = 0;
-int bit_to_transfer = 0;
+unsigned long command = 0;
+int signal_level = 0;
 int i = 0;
+int bit_value = 0;
+
+int transitions[32][3];
 
 
 
-do {
-
-bit_to_transfer = command & 1;
-
-# 36
-if (bit_to_transfer == 1 && current_signal_level == 1)
-current_signal_level = 0;
-
-
-if (bit_to_transfer == 0 && current_signal_level == 0)
-current_signal_level = 1;
-
-(PORTBbits.RB1) = current_signal_level;
+(PORTBbits.RB1) = 0;
+signal_level = 0;
 
 
 
-util_waits_delay_ms(5);
+
+util_waits_delay_secs(1);
+
+(PORTBbits.RB2) = 1;
 
 
-if (bit_to_transfer == 1 && current_signal_level == 1)
-current_signal_level = 0;
+
+for (i = 0 ; i < 32; i++) {
+
+bit_value = (command_in >> i) & 0x00000001;
+
+int position = 32-i-1;
 
 
-if (bit_to_transfer == 0 && current_signal_level == 0)
-current_signal_level = 1;
+transitions[position][0] = bit_value;
 
-(PORTBbits.RB1) = current_signal_level;
+if (bit_value == 0) {
 
-util_waits_delay_ms(5);
+transitions[position][1] = 1;
+transitions[position][2] = 0;
+} else {
 
-# 66
-command = command >> 1;
+transitions[position][1] = 0;
+transitions[position][2] = 1;
 
-i++;
+}
 
-} while (i < 24);
+}
 
 
+global_timer_flag = 0;
+
+
+do { continue; } while (!global_timer_flag);
+
+for (i = 0; i < 32; i++) {
+
+
+global_timer_flag = 0;
+
+signal_level = transitions[i][1];
+
+
+do { continue; } while (!global_timer_flag);
+
+(PORTBbits.RB1) = signal_level;
+
+global_timer_flag = 0;
+
+signal_level = transitions[i][2];
+
+
+do { continue; } while (!global_timer_flag);
+
+(PORTBbits.RB1) = signal_level;
+
+}
+
+
+
+
+global_timer_flag = 0;
+
+do { continue; } while (!global_timer_flag);
+
+# 105
+(PORTBbits.RB1) = 0;
+
+(PORTBbits.RB2) = 0;
 
 }
 

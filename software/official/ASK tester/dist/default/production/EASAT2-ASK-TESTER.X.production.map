@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.41\dat\en_msgs.txt -cs \
   -h+dist/default/production\EASAT2-ASK-TESTER.X.production.sym \
   --cmf=dist/default/production\EASAT2-ASK-TESTER.X.production.cmf -z \
-  -Q18F45K22 -oC:\Users\FELIX\AppData\Local\Temp\s6a4.2 \
+  -Q18F45K22 -oC:\Users\FELIX\AppData\Local\Temp\s6rg.2 \
   -Mdist/default/production/EASAT2-ASK-TESTER.X.production.map -E1 -ver=XC8 \
-  -ASTACK=060h-05ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
+  -ASTACK=01CCh-05ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0600h-06FFhx122 -AMEDIUMCONST=0600h-07FFFh -ACOMRAM=01h-05Fh \
   -AABS1=00h-05FFh -ABIGRAM=01h-05FFh -ARAM=060h-0FFh,0100h-01FFhx5 \
   -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\FELIX\AppData\Local\Temp\s6a4.obj \
+  C:\Users\FELIX\AppData\Local\Temp\s6rg.obj \
   dist/default/production\EASAT2-ASK-TESTER.X.production.obj 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\FELIX\AppData\Local\Temp\s6a4.obj
+C:\Users\FELIX\AppData\Local\Temp\s6rg.obj
                 init                                 A6       A6        4        C       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -43,24 +43,25 @@ C:\Users\FELIX\AppData\Local\Temp\s6a4.obj
 dist/default/production\EASAT2-ASK-TESTER.X.production.obj
                 intcodelo                            18       18       8E        C       0
                 intcode                               8        8        6        4       0
-                temp                                 3E       3E        1        1       1
+                temp                                 39       39        1        1       1
                 smallconst                          600      600       16      300       0
-                intcode_body                        704      704       BE      30B       0
-                text11                              7C2      7C2       BC      30B       0
-                text10                              9F8      9F8       26      30B       0
-                text9                               A1E      A1E       1A      30B       0
-                text8                               A7E      A7E        4      30B       0
-                text7                               A60      A60       12      30B       0
-                text6                               9CC      9CC       2C      30B       0
-                text5                               A4E      A4E       12      30B       0
-                text4                               87E      87E       96      30B       0
-                text3                               616      616       EE      30B       0
-                text2                               97E      97E       4E      30B       0
-                text1                               914      914       6A      30B       0
-                text0                               A72      A72        C      30B       0
-                cstackCOMRAM                          1        1       3B        1       1
-                bssCOMRAM                            3C       3C        2        1       1
-                cinit                               A38      A38       16      30B       0
+                intcode_body                        8C8      8C8       C6      30B       0
+                text10                              98E      98E       BC      30B       0
+                text9                               B3C      B3C       26      30B       0
+                text8                               B7C      B7C       1A      30B       0
+                text7                               BB4      BB4        4      30B       0
+                text6                               B96      B96       12      30B       0
+                text5                               B16      B16       26      30B       0
+                text4                               AEA      AEA       2C      30B       0
+                text3                               A9C      A9C       4E      30B       0
+                text2                               616      616      2B2      30B       0
+                text1                               A4A      A4A       52      30B       0
+                text0                               BA8      BA8        C      30B       0
+                cstackCOMRAM                          1        1       34        1       1
+                cstackBANK0                          60       60        8       60       1
+                cstackBANK1                         100      100       CC      100       1
+                bssCOMRAM                            35       35        4        1       1
+                cinit                               B62      B62       1A      30B       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -70,20 +71,19 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        6         0
                 init                                 A6       A6        4         0
                 reset_vec                             0        0        4         0
-                intcode_body                        704      704       BE         0
-                text11                              7C2      7C2       BC         0
-                text10                              9F8      9F8       26         0
-                text9                               A1E      A1E       1A         0
-                text8                               A7E      A7E        4         0
-                text7                               A60      A60       12         0
-                text6                               9CC      9CC       2C         0
-                text5                               A4E      A4E       12         0
-                text4                               87E      87E       96         0
-                text3                               616      616       EE         0
-                text2                               97E      97E       4E         0
-                text1                               914      914       6A         0
-                text0                               A72      A72        C         0
-                cinit                               A38      A38       16         0
+                intcode_body                        8C8      8C8       C6         0
+                text10                              98E      98E       BC         0
+                text9                               B3C      B3C       26         0
+                text8                               B7C      B7C       1A         0
+                text7                               BB4      BB4        4         0
+                text6                               B96      B96       12         0
+                text5                               B16      B16       26         0
+                text4                               AEA      AEA       2C         0
+                text3                               A9C      A9C       4E         0
+                text2                               616      616      2B2         0
+                text1                               A4A      A4A       52         0
+                text0                               BA8      BA8        C         0
+                cinit                               B62      B62       1A         0
 
         CLASS   CONST          
 
@@ -93,9 +93,9 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   MEDIUMCONST    
 
         CLASS   COMRAM         
-                temp                                 3E       3E        1         1
-                cstackCOMRAM                          1        1       3B         1
-                bssCOMRAM                            3C       3C        2         1
+                temp                                 39       39        1         1
+                cstackCOMRAM                          1        1       34         1
+                bssCOMRAM                            35       35        4         1
 
         CLASS   ABS1           
 
@@ -104,8 +104,10 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   RAM            
 
         CLASS   BANK0          
+                cstackBANK0                          60       60        8         1
 
         CLASS   BANK1          
+                cstackBANK1                         100      100       CC         1
 
         CLASS   BANK2          
 
@@ -132,11 +134,13 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackCOMRAM                   000001  00003E  00003F         1       1  COMRAM  
+                cstackCOMRAM                   000001  000039  00003A         1       1  COMRAM  
                 intcode                        000008  000006  00000E         4       0  CODE    
                 intcodelo                      000018  000092  0000AA         C       0  CODE    
+                cstackBANK0                    000060  000008  000068        60       1  BANK0   
+                cstackBANK1                    000100  0000CC  0001CC       100       1  BANK1   
                 smallconst                     000600  000016  000616       300       0  SMALLCON
-                text3                          000616  00046C  000A82       30B       0  CODE    
+                text2                          000616  0005A2  000BB8       30B       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -144,32 +148,35 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            000060-0000FF               A0
-        BANK1            000100-0001FF              100
+        BANK0            000068-0000FF               98
+        BANK1            0001CC-0001FF               34
         BANK2            000200-0002FF              100
         BANK3            000300-0003FF              100
         BANK4            000400-0004FF              100
         BANK5            000500-0005FF              100
-        BIGRAM           00003F-0005FF              5C1
+        BIGRAM           00003A-00005F               26
+                         000068-0000FF               98
+                         0001CC-0005FF              434
         CODE             000004-000007                4
                          00000E-000017                A
                          0000AA-0005FF              556
-                         000A82-007FFF             757E
-        COMRAM           00003F-00005F               21
+                         000BB8-007FFF             7448
+        COMRAM           00003A-00005F               26
         CONST            000004-000007                4
                          00000E-000017                A
                          0000AA-0005FF              556
-                         000A82-007FFF             757E
+                         000BB8-007FFF             7448
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000A82-007FFF             757E
-        RAM              000060-0005FF              100
+        MEDIUMCONST      000BB8-007FFF             7448
+        RAM              000068-0000FF               98
+                         0001CC-0005FF              100
         SFR              000F38-000FFF               28
-        SMALLCONST       000A82-007FFF              100
-        STACK            000060-0005FF              5A0
+        SMALLCONST       000BB8-007FFF              100
+        STACK            0001CC-0005FF              434
 
                                   Symbol Table
 
-?_golay                                 cstackCOMRAM 000021
+?___wmul                                cstackCOMRAM 000021
 _ADCON1                                 (abs)        000FC1
 _ADCON2                                 (abs)        000FC0
 _ANSELAbits                             (abs)        000F38
@@ -251,6 +258,8 @@ __Hclrtext                              clrtext      000000
 __Hcomram                               comram       000000
 __Hconfig                               config       30000E
 __Hconst                                const        000000
+__HcstackBANK0                          cstackBANK0  000000
+__HcstackBANK1                          cstackBANK1  000000
 __HcstackCOMRAM                         cstackCOMRAM 000000
 __Hdata                                 data         000000
 __Heeprom_data                          eeprom_data  000000
@@ -284,16 +293,15 @@ __Hrparam                               rparam       000000
 __Hsfr                                  sfr          000000
 __Hsmallconst                           smallconst   000616
 __Hspace_0                              (abs)        30000E
-__Hspace_1                              (abs)        00003F
+__Hspace_1                              (abs)        0001CC
 __Hspace_2                              (abs)        000000
 __Hstack                                stack        000000
 __Hstruct                               struct       000000
-__Htemp                                 temp         00003F
+__Htemp                                 temp         00003A
 __Htext                                 text         000000
 __Htext0                                text0        000000
 __Htext1                                text1        000000
 __Htext10                               text10       000000
-__Htext11                               text11       000000
 __Htext2                                text2        000000
 __Htext3                                text3        000000
 __Htext4                                text4        000000
@@ -320,6 +328,8 @@ __Lclrtext                              clrtext      000000
 __Lcomram                               comram       000000
 __Lconfig                               config       300000
 __Lconst                                const        000000
+__LcstackBANK0                          cstackBANK0  000000
+__LcstackBANK1                          cstackBANK1  000000
 __LcstackCOMRAM                         cstackCOMRAM 000000
 __Ldata                                 data         000000
 __Leeprom_data                          eeprom_data  000000
@@ -357,12 +367,11 @@ __Lspace_1                              (abs)        000000
 __Lspace_2                              (abs)        000000
 __Lstack                                stack        000000
 __Lstruct                               struct       000000
-__Ltemp                                 temp         00003E
+__Ltemp                                 temp         000039
 __Ltext                                 text         000000
 __Ltext0                                text0        000000
 __Ltext1                                text1        000000
 __Ltext10                               text10       000000
-__Ltext11                               text11       000000
 __Ltext2                                text2        000000
 __Ltext3                                text3        000000
 __Ltext4                                text4        000000
@@ -372,55 +381,58 @@ __Ltext7                                text7        000000
 __Ltext8                                text8        000000
 __Ltext9                                text9        000000
 __S0                                    (abs)        30000E
-__S1                                    (abs)        00003F
+__S1                                    (abs)        0001CC
 __S2                                    (abs)        000000
 ___inthi_sp                             stack        000000
 ___intlo_sp                             stack        000000
 ___param_bank                           (abs)        000000
 ___rparam_used                          (abs)        000001
 ___sp                                   stack        000000
+___wmul                                 text5        000B16
+___wmul@multiplicand                    cstackCOMRAM 000023
+___wmul@multiplier                      cstackCOMRAM 000021
+___wmul@product                         cstackCOMRAM 000025
 __accesstop                             (abs)        000060
 __activetblptr                          (abs)        000001
-__end_of__initialization                cinit        000A3C
-__end_of_blink_debugging_led            text5        000A60
-__end_of_golay                          text4        000914
-__end_of_high_priority_int              intcode_body 0007C2
-__end_of_init_initialize                text7        000A72
-__end_of_init_io_initialize             text11       00087E
-__end_of_init_timer1_initialize         text10       000A1E
-__end_of_init_timer2_initialize         text9        000A38
-__end_of_init_watchdogs_initialize      text8        000A82
+__end_of___wmul                         text5        000B3C
+__end_of__initialization                cinit        000B6A
+__end_of_high_priority_int              intcode_body 00098E
+__end_of_init_initialize                text6        000BA8
+__end_of_init_io_initialize             text10       000A4A
+__end_of_init_timer1_initialize         text9        000B62
+__end_of_init_timer2_initialize         text8        000B96
+__end_of_init_watchdogs_initialize      text7        000BB8
 __end_of_low_priority_int               intcodelo    0000A6
-__end_of_main                           text0        000A7E
-__end_of_main_loop                      text1        00097E
-__end_of_send_ask_command               text3        000704
-__end_of_util_waits_delay_ms            text6        0009F8
-__end_of_util_waits_delay_secs          text2        0009CC
+__end_of_main                           text0        000BB4
+__end_of_main_loop                      text1        000A9C
+__end_of_send_ask_command               text2        0008C8
+__end_of_util_waits_delay_ms            text4        000B16
+__end_of_util_waits_delay_secs          text3        000AEA
 __end_ofweight@F86                      smallconst   000611
-__initialization                        cinit        000A38
+__initialization                        cinit        000B62
 __mediumconst                           mediumconst  000000
-__pbssCOMRAM                            bssCOMRAM    00003C
-__pcinit                                cinit        000A38
+__pbssCOMRAM                            bssCOMRAM    000035
+__pcinit                                cinit        000B62
+__pcstackBANK0                          cstackBANK0  000060
+__pcstackBANK1                          cstackBANK1  000100
 __pcstackCOMRAM                         cstackCOMRAM 000001
 __pintcode                              intcode      000008
-__pintcode_body                         intcode_body 000704
+__pintcode_body                         intcode_body 0008C8
 __pintcodelo                            intcodelo    000018
 __psmallconst                           smallconst   000600
-__ptext0                                text0        000A72
-__ptext1                                text1        000914
-__ptext10                               text10       0009F8
-__ptext11                               text11       0007C2
-__ptext2                                text2        00097E
-__ptext3                                text3        000616
-__ptext4                                text4        00087E
-__ptext5                                text5        000A4E
-__ptext6                                text6        0009CC
-__ptext7                                text7        000A60
-__ptext8                                text8        000A7E
-__ptext9                                text9        000A1E
+__ptext0                                text0        000BA8
+__ptext1                                text1        000A4A
+__ptext10                               text10       00098E
+__ptext2                                text2        000616
+__ptext3                                text3        000A9C
+__ptext4                                text4        000AEA
+__ptext5                                text5        000B16
+__ptext6                                text6        000B96
+__ptext7                                text7        000BB4
+__ptext8                                text8        000B7C
+__ptext9                                text9        000B3C
 __ramtop                                ramtop       000600
-__size_of_blink_debugging_led           (abs)        000000
-__size_of_golay                         (abs)        000000
+__size_of___wmul                        (abs)        000000
 __size_of_high_priority_int             (abs)        000000
 __size_of_init_initialize               (abs)        000000
 __size_of_init_io_initialize            (abs)        000000
@@ -434,42 +446,41 @@ __size_of_send_ask_command              (abs)        000000
 __size_of_util_waits_delay_ms           (abs)        000000
 __size_of_util_waits_delay_secs         (abs)        000000
 __smallconst                            smallconst   000600
-_blink_debugging_led                    text5        000A4E
-_golay                                  text4        00087E
+_global_timer_flag                      bssCOMRAM    000037
 _high_priority_int                      intcode      000008
-_init_initialize                        text7        000A60
-_init_io_initialize                     text11       0007C2
-_init_timer1_initialize                 text10       0009F8
-_init_timer2_initialize                 text9        000A1E
-_init_watchdogs_initialize              text8        000A7E
+_init_initialize                        text6        000B96
+_init_io_initialize                     text10       00098E
+_init_timer1_initialize                 text9        000B3C
+_init_timer2_initialize                 text8        000B7C
+_init_watchdogs_initialize              text7        000BB4
 _low_priority_int                       intcodelo    000018
-_main                                   text0        000A72
-_main_loop                              text1        000914
-_send_ask_command                       text3        000616
-_util_waits_delay_ms                    text6        0009CC
-_util_waits_delay_secs                  text2        00097E
-btemp                                   temp         00003E
-end_of_initialization                   cinit        000A3C
-golay@c                                 cstackCOMRAM 000029
-golay@cw                                cstackCOMRAM 000021
-golay@i                                 cstackCOMRAM 00002D
-high_priority_int@tmr1_interrupt_number bssCOMRAM    00003C
-int$flags                               temp         00003E
-int_func                                intcode_body 000704
+_main                                   text0        000BA8
+_main_loop                              text1        000A4A
+_send_ask_command                       text2        000616
+_util_waits_delay_ms                    text4        000AEA
+_util_waits_delay_secs                  text3        000A9C
+btemp                                   temp         000039
+end_of_initialization                   cinit        000B6A
+high_priority_int@tmr1_interrupt_number bssCOMRAM    000035
+int$flags                               temp         000039
+int_func                                intcode_body 0008C8
 intlevel0                               text         000000
 intlevel1                               text         000000
 intlevel2                               text         000000
 intlevel3                               text         000000
-main_loop@golay_command                 cstackCOMRAM 000038
-main_loop@test_command                  cstackCOMRAM 000034
-send_ask_command@bit_to_transfer        cstackCOMRAM 000030
-send_ask_command@command                cstackCOMRAM 000026
-send_ask_command@current_signal_level   cstackCOMRAM 000032
-send_ask_command@i                      cstackCOMRAM 00002E
+main_loop@golay_command                 cstackBANK0  000064
+main_loop@test_command                  cstackBANK0  000060
+send_ask_command@bit_value              cstackBANK1  0001C4
+send_ask_command@command                cstackBANK1  0001C0
+send_ask_command@command_in             cstackCOMRAM 00002D
+send_ask_command@i                      cstackBANK1  0001CA
+send_ask_command@position               cstackBANK1  0001C8
+send_ask_command@signal_level           cstackBANK1  0001C6
+send_ask_command@transitions            cstackBANK1  000100
 stackhi                                 (abs)        0005FF
-stacklo                                 (abs)        000060
+stacklo                                 (abs)        0001CC
 start                                   init         0000A6
-start_initialization                    cinit        000A38
+start_initialization                    cinit        000B62
 util_waits_delay_ms@i                   cstackCOMRAM 000024
 util_waits_delay_ms@ms                  cstackCOMRAM 000021
 util_waits_delay_secs@i                 cstackCOMRAM 000029
@@ -482,7 +493,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 19 in file "easat2_ask_main_mcu.c"
+		line 21 in file "easat2_ask_main_mcu.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -490,7 +501,7 @@ FUNCTION INFORMATION:
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, status,2, status,0, cstack
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -501,7 +512,7 @@ FUNCTION INFORMATION:
       Temps:          0       0       0       0       0       0       0
       Totals:         0       0       0       0       0       0       0
 Total ram usage:        0 bytes
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    6
  This function calls:
 		_init_initialize
 		_main_loop
@@ -512,35 +523,69 @@ Total ram usage:        0 bytes
 
  *************** function _main_loop *****************
  Defined at:
-		line 46 in file "easat2_ask_main_mcu.c"
+		line 33 in file "easat2_ask_main_mcu.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  golay_comman    4   55[COMRAM] unsigned long 
-  test_command    4   51[COMRAM] unsigned long 
+  golay_comman    4    4[BANK0 ] unsigned long 
+  test_command    4    0[BANK0 ] unsigned long 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, status,2, status,0, cstack
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
       Params:         0       0       0       0       0       0       0
-      Locals:         8       0       0       0       0       0       0
+      Locals:         0       8       0       0       0       0       0
       Temps:          0       0       0       0       0       0       0
-      Totals:         8       0       0       0       0       0       0
+      Totals:         0       8       0       0       0       0       0
 Total ram usage:        8 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
-		_blink_debugging_led
-		_golay
 		_send_ask_command
 		_util_waits_delay_secs
  This function is called by:
 		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _send_ask_command *****************
+ Defined at:
+		line 20 in file "easat2_ask_send.c"
+ Parameters:    Size  Location     Type
+  command_in      4   44[COMRAM] unsigned long 
+ Auto vars:     Size  Location     Type
+  position        2  200[BANK1 ] int 
+  transitions   192    0[BANK1 ] int [3][32]
+  command         4  192[BANK1 ] unsigned long 
+  i               2  202[BANK1 ] int 
+  signal_level    2  198[BANK1 ] int 
+  bit_value       2  196[BANK1 ] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         4       0       0       0       0       0       0
+      Locals:         0       0     204       0       0       0       0
+      Temps:          4       0       0       0       0       0       0
+      Totals:         8       0     204       0       0       0       0
+Total ram usage:      212 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		___wmul
+		_util_waits_delay_secs
+ This function is called by:
+		_main_loop
  This function uses a non-reentrant model
 
 
@@ -572,100 +617,8 @@ Total ram usage:        7 bytes
 		_util_waits_delay_ms
  This function is called by:
 		_main_loop
+		_send_ask_command
 		_util_waits_delay_mins
- This function uses a non-reentrant model
-
-
- *************** function _send_ask_command *****************
- Defined at:
-		line 18 in file "easat2_ask_send.c"
- Parameters:    Size  Location     Type
-  command         4   37[COMRAM] unsigned long 
- Auto vars:     Size  Location     Type
-  current_sign    2   49[COMRAM] int 
-  bit_to_trans    2   47[COMRAM] int 
-  i               2   45[COMRAM] int 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
-      Params:         4       0       0       0       0       0       0
-      Locals:         6       0       0       0       0       0       0
-      Temps:          4       0       0       0       0       0       0
-      Totals:        14       0       0       0       0       0       0
-Total ram usage:       14 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_util_waits_delay_ms
- This function is called by:
-		_main_loop
- This function uses a non-reentrant model
-
-
- *************** function _golay *****************
- Defined at:
-		line 13 in file "easat2_golay_CRCGcod.c"
- Parameters:    Size  Location     Type
-  cw              4   32[COMRAM] unsigned long 
- Auto vars:     Size  Location     Type
-  c               4   40[COMRAM] unsigned long 
-  i               2   44[COMRAM] int 
- Return value:  Size  Location     Type
-                  4   32[COMRAM] unsigned long 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
-      Params:         4       0       0       0       0       0       0
-      Locals:         6       0       0       0       0       0       0
-      Temps:          4       0       0       0       0       0       0
-      Totals:        14       0       0       0       0       0       0
-Total ram usage:       14 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		Nothing
- This function is called by:
-		_main_loop
- This function uses a non-reentrant model
-
-
- *************** function _blink_debugging_led *****************
- Defined at:
-		line 31 in file "easat2_ask_main_mcu.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
-      Params:         0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_util_waits_delay_ms
- This function is called by:
-		_main_loop
  This function uses a non-reentrant model
 
 
@@ -695,8 +648,37 @@ Total ram usage:        5 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_blink_debugging_led
 		_util_waits_delay_secs
+ This function uses a non-reentrant model
+
+
+ *************** function ___wmul *****************
+ Defined at:
+		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\Umul16.c"
+ Parameters:    Size  Location     Type
+  multiplier      2   32[COMRAM] unsigned int 
+  multiplicand    2   34[COMRAM] unsigned int 
+ Auto vars:     Size  Location     Type
+  product         2   36[COMRAM] unsigned int 
+ Return value:  Size  Location     Type
+                  2   32[COMRAM] unsigned int 
+ Registers used:
+		wreg, status,2, status,0, prodl, prodh
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5
+      Params:         4       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
 		_send_ask_command
  This function uses a non-reentrant model
 
@@ -856,7 +838,7 @@ Total ram usage:        0 bytes
 
  *************** function _low_priority_int *****************
  Defined at:
-		line 73 in file "easat2_ask_func_interrupts.c"
+		line 77 in file "easat2_ask_func_interrupts.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -917,51 +899,50 @@ Total ram usage:       15 bytes
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
+C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\Umul16.c
+		___wmul        		CODE           	0B16	0000	39
+
+C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\Umul16.c estimated size: 39
+
 easat2_ask_util_waits.c
-		_util_waits_delay_ms		CODE           	09CC	0000	45
-		_util_waits_delay_secs		CODE           	097E	0000	79
+		_util_waits_delay_ms		CODE           	0AEA	0000	45
+		_util_waits_delay_secs		CODE           	0A9C	0000	79
 
 easat2_ask_util_waits.c estimated size: 124
 
 easat2_ask_init_initialize.c
-		_init_io_initialize		CODE           	07C2	0000	189
-		_init_watchdogs_initialize		CODE           	0A7E	0000	5
-		_init_initialize		CODE           	0A60	0000	19
+		_init_io_initialize		CODE           	098E	0000	189
+		_init_watchdogs_initialize		CODE           	0BB4	0000	5
+		_init_initialize		CODE           	0B96	0000	19
 
 easat2_ask_init_initialize.c estimated size: 213
 
 easat2_ask_func_interrupts.c
-		_high_priority_int		CODE           	0008	0000	197
+		_high_priority_int		CODE           	0008	0000	205
 		_low_priority_int		CODE           	0018	0000	143
 
-easat2_ask_func_interrupts.c estimated size: 340
+easat2_ask_func_interrupts.c estimated size: 348
 
 shared
 		weight@F86     		SMALLCONST     	0601	0000	17
-		__initialization		CODE           	0A38	0000	5
+		__initialization		CODE           	0B62	0000	9
 
-shared estimated size: 22
-
-easat2_golay_CRCGcod.c
-		_golay         		CODE           	087E	0000	151
-
-easat2_golay_CRCGcod.c estimated size: 151
+shared estimated size: 26
 
 easat2_ask_init_timer.c
-		_init_timer1_initialize		CODE           	09F8	0000	39
-		_init_timer2_initialize		CODE           	0A1E	0000	27
+		_init_timer1_initialize		CODE           	0B3C	0000	39
+		_init_timer2_initialize		CODE           	0B7C	0000	27
 
 easat2_ask_init_timer.c estimated size: 66
 
 easat2_ask_send.c
-		_send_ask_command		CODE           	0616	0000	239
+		_send_ask_command		CODE           	0616	0000	691
 
-easat2_ask_send.c estimated size: 239
+easat2_ask_send.c estimated size: 691
 
 easat2_ask_main_mcu.c
-		_blink_debugging_led		CODE           	0A4E	0000	19
-		_main_loop     		CODE           	0914	0000	107
-		_main          		CODE           	0A72	0000	13
+		_main_loop     		CODE           	0A4A	0000	83
+		_main          		CODE           	0BA8	0000	13
 
-easat2_ask_main_mcu.c estimated size: 139
+easat2_ask_main_mcu.c estimated size: 96
 

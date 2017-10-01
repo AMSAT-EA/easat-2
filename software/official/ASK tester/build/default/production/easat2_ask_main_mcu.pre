@@ -8553,6 +8553,9 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
+# 18 "easat2_ask.h"
+extern volatile int global_timer_flag;
+
 # 24 "easat2_ask_util_waits.h"
 void util_waits_delay_hours(int hours);
 void util_waits_delay_mins(int minutes);
@@ -8560,10 +8563,14 @@ void util_waits_delay_secs(int secs);
 void util_waits_delay_ms(int ms);
 void util_waits_delay_hundred_us(int us);
 
-# 28 "easat2_ask_send.h"
+# 21 "easat2_ask_init_timer.h"
+void init_timer1_initialize(void);
+void init_timer2_initialize(void);
+
+# 36 "easat2_ask_send.h"
 void send_ask_command(unsigned long command);
 
-# 27 "easat2_ask_main_mcu.h"
+# 28 "easat2_ask_main_mcu.h"
 void main_loop(void);
 void blink_debugging_led(void);
 
@@ -8589,6 +8596,8 @@ unsigned long correct(unsigned long cw, int *errs);
 int dec2bin(unsigned long c);
 
 # 19 "easat2_ask_main_mcu.c"
+volatile int global_timer_flag = 0;
+
 void main(void) {
 
 
@@ -8601,40 +8610,23 @@ main_loop();
 
 
 
-void blink_debugging_led(void) {
-
-
-(PORTBbits.RB2) = 1;
-
-
-util_waits_delay_ms(300);
-
-
-(PORTBbits.RB2) = 0;
-
-}
-
-
-
 void main_loop(void) {
 
-unsigned long test_command = (unsigned int) 0xAAA;
+unsigned long test_command = (unsigned long) 0x550000A1;
 unsigned long golay_command = 0;
+
+
+
+util_waits_delay_secs(5);
 
 do {
 
-
-golay_command = golay(test_command);
-
-
-send_ask_command(golay_command);
+# 52
+send_ask_command(0xAA123456);
 
 
-blink_debugging_led();
 
-
-util_waits_delay_secs(10);
-
+util_waits_delay_secs(4);
 
 } while (1);
 

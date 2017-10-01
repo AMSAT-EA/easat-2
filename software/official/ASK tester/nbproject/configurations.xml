@@ -23,13 +23,13 @@
       <itemPath>easat2_ask_main_mcu.c</itemPath>
       <itemPath>easat2_ask_main_mcu.h</itemPath>
       <itemPath>easat2_ask_pinouts.h</itemPath>
-      <itemPath>easat2_ask_util_waits.c</itemPath>
-      <itemPath>easat2_ask_util_waits.h</itemPath>
       <itemPath>easat2_ask_send.c</itemPath>
       <itemPath>easat2_ask_send.h</itemPath>
+      <itemPath>easat2_ask_util_waits.c</itemPath>
+      <itemPath>easat2_ask_util_waits.h</itemPath>
+      <itemPath>easat2_golay_CRCG.h</itemPath>
       <itemPath>easat2_golay_CRCGcod.c</itemPath>
       <itemPath>easat2_golay_CRCGcor.c</itemPath>
-      <itemPath>easat2_golay_CRCG.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

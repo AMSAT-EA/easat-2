@@ -43,6 +43,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S340 . . . . . . . . . ]
 "6554
 [v _PORTBbits `VS340 ~T0 @X0 0 e@3969 ]
+"18 easat2_ask.h
+[v _global_timer_flag `Vi ~T0 @X0 0 e ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6664,20 +6666,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
+[; ;easat2_ask.h: 18: extern volatile int global_timer_flag;
 [; ;easat2_ask_init_timer.h: 21: void init_timer1_initialize(void);
 [; ;easat2_ask_init_timer.h: 22: void init_timer2_initialize(void);
 [; ;easat2_ask_func_interrupts.h: 34: void interrupt high_priority_int();
 [; ;easat2_ask_func_interrupts.h: 35: void interrupt low_priority low_priority_int();
-[v F6942 `(v ~T0 @X0 1 tf ]
+[v F6943 `(v ~T0 @X0 1 tf ]
 "19 easat2_ask_func_interrupts.c
-[v _high_priority_int `IF6942 ~T0 @X0 1 e ]
+[v _high_priority_int `IF6943 ~T0 @X0 1 e ]
 {
 [; ;easat2_ask_func_interrupts.c: 19: void interrupt high_priority_int() {
 [e :U _high_priority_int ]
 [f ]
 "21
-[v F6946 `i ~T0 @X0 1 s tmr1_interrupt_number ]
-[i F6946
+[v F6947 `i ~T0 @X0 1 s tmr1_interrupt_number ]
+[i F6947
 -> 0 `i
 ]
 [; ;easat2_ask_func_interrupts.c: 21: static int tmr1_interrupt_number = 0;
@@ -6707,10 +6710,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e -> 60535 `l ]
 [; ;easat2_ask_func_interrupts.c: 40: tmr1_interrupt_number++;
 "40
-[e ++ F6946 -> 1 `i ]
+[e ++ F6947 -> 1 `i ]
 [; ;easat2_ask_func_interrupts.c: 44: if (tmr1_interrupt_number == 50) {
 "44
-[e $ ! == F6946 -> 50 `i 850  ]
+[e $ ! == F6947 -> 50 `i 850  ]
 {
 [; ;easat2_ask_func_interrupts.c: 47: (PORTBbits.RB3) = !(PORTBbits.RB3);
 "47
@@ -6720,7 +6723,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; <"  clrwdt ;# ">
 [; ;easat2_ask_func_interrupts.c: 56: tmr1_interrupt_number = 0;
 "56
-[e = F6946 -> 0 `i ]
+[e = F6947 -> 0 `i ]
 "58
 }
 [e :U 850 ]
@@ -6728,26 +6731,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_ask_func_interrupts.c: 63: PIR1bits.TMR1IF = 0;
 "63
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"65
+[; ;easat2_ask_func_interrupts.c: 66: global_timer_flag = 1;
+"66
+[e = _global_timer_flag -> 1 `i ]
+"69
 }
 [e :U 849 ]
-"67
+"71
 }
 [e :U 848 ]
-[; ;easat2_ask_func_interrupts.c: 65: }
-[; ;easat2_ask_func_interrupts.c: 67: }
-[; ;easat2_ask_func_interrupts.c: 68: }
-"68
+[; ;easat2_ask_func_interrupts.c: 69: }
+[; ;easat2_ask_func_interrupts.c: 71: }
+[; ;easat2_ask_func_interrupts.c: 72: }
+"72
 [e :UE 846 ]
 }
-[v F6944 `(v ~T0 @X0 1 tf ]
-"73
-[v _low_priority_int `ILF6944 ~T0 @X0 1 e ]
+[v F6945 `(v ~T0 @X0 1 tf ]
+"77
+[v _low_priority_int `ILF6945 ~T0 @X0 1 e ]
 {
-[; ;easat2_ask_func_interrupts.c: 73: void interrupt low_priority low_priority_int() {
+[; ;easat2_ask_func_interrupts.c: 77: void interrupt low_priority low_priority_int() {
 [e :U _low_priority_int ]
 [f ]
-[; ;easat2_ask_func_interrupts.c: 77: }
-"77
+[; ;easat2_ask_func_interrupts.c: 81: }
+"81
 [e :UE 851 ]
 }

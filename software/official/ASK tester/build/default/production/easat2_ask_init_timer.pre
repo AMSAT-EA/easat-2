@@ -8490,6 +8490,9 @@ extern __nonreentrant void _delay3(unsigned char);
 
 #pragma config EBTRB = OFF
 
+# 18 "easat2_ask.h"
+extern volatile int global_timer_flag;
+
 # 21 "easat2_ask_init_timer.h"
 void init_timer1_initialize(void);
 void init_timer2_initialize(void);

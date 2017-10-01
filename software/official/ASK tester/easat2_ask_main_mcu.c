@@ -3,7 +3,7 @@
  * Project     : EASAT2 ASK                                            
  * File        : easat2_ask_main_mcu.c
  *
- * Description : EASAT2 MCU main program
+ * Description : EASAT2 ASK tester MCU main program
  * Last update : 10 October 2016                                              
  *                                                                            
 */
@@ -15,7 +15,9 @@
 #include "easat2_ask_util_waits.h"
 #include "easat2_golay_CRCG.h"
 
-        
+// global variable for timer
+volatile int global_timer_flag = 0;      // set to 1 when timer has been fired
+
 void main(void) {
     
     // initialize MCU
@@ -25,21 +27,6 @@ void main(void) {
     main_loop();
            
 }
- 
-// this function set blinks the led
-
-void blink_debugging_led(void) {
-    
-    // turn on debugging LED
-    PINOUT_ASK_LED = 1;
-
-    // let LED on 500ms   
-    util_waits_delay_ms(LED_TIME_ON_MS);
-    
-    // turn off debugging LED
-    PINOUT_ASK_LED = 0;
-    
-}
     
 // this is the code main loop
 
@@ -48,20 +35,25 @@ void main_loop(void) {
     unsigned long test_command  = TEST_COMMAND;
     unsigned long golay_command = 0;
     
+    // waits 5 seconds before doing anything
+    
+    util_waits_delay_secs(5);
+    
     do {
-            
-        // codify command in Golay format
-        golay_command = golay(test_command);
-                     
-        // send command
-        send_ask_command(golay_command);
+                    
+        // code command in Golay format
+        // golay_command = golay(test_command);
+
+        // golay_command = (unsigned long)TEST_COMMAND;
         
-        // blink led
-        blink_debugging_led();
-            
+        // send command
+        // send_ask_command(golay_command);
+
+        send_ask_command(0xAA123456);            
+       
         // wait until next cycle
-        util_waits_delay_secs(MAIN_LOOP_SLEEP_SECONDS);
-            
+ 
+        util_waits_delay_secs(4); // plus 1 internal seconds wait
             
     } while (1);    
         

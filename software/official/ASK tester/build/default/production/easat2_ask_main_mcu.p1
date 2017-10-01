@@ -2,45 +2,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "19 easat2_ask_init_initialize.h
 [v _init_initialize `(v ~T0 @X0 0 ef ]
-"27 easat2_ask_main_mcu.h
+"28 easat2_ask_main_mcu.h
 [v _main_loop `(v ~T0 @X0 0 ef ]
-"6490 C:\Program Files (x86)\Microchip\xc8\v1.41\include\pic18f45k22.h
-[s S342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S342 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"6500
-[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S343 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
-"6510
-[s S344 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S344 . AN12 AN10 AN8 AN9 AN11 AN13 PGC PGD ]
-"6520
-[s S345 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S345 . FLT0 C12IN3M . C12IN2M T5G T1G ]
-"6528
-[s S346 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S346 . SRI C12IN3N . C12IN2N . CCP3 ]
-"6536
-[s S347 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S347 . . CTED1 CTED2 . T3CKI ]
-"6543
-[s S348 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S348 . . P2A . P3A ]
-"6549
-[s S349 :3 `uc 1 :1 `uc 1 ]
-[n S349 . . CCP2_PA2 ]
-"6489
-[u S341 `S342 1 `S343 1 `S344 1 `S345 1 `S346 1 `S347 1 `S348 1 `S349 1 ]
-[n S341 . . . . . . . . . ]
-"6554
-[v _PORTBbits `VS341 ~T0 @X0 0 e@3969 ]
-"27 easat2_ask_util_waits.h
-[v _util_waits_delay_ms `(v ~T0 @X0 0 ef1`i ]
-"12 easat2_golay_CRCG.h
-[v _golay `(ul ~T0 @X0 0 ef1`ul ]
-"28 easat2_ask_send.h
-[v _send_ask_command `(v ~T0 @X0 0 ef1`ul ]
 "26 easat2_ask_util_waits.h
 [v _util_waits_delay_secs `(v ~T0 @X0 0 ef1`i ]
+"36 easat2_ask_send.h
+[v _send_ask_command `(v ~T0 @X0 0 ef1`ul ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -6692,14 +6659,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
+[; ;easat2_ask.h: 18: extern volatile int global_timer_flag;
 [; ;easat2_ask_util_waits.h: 24: void util_waits_delay_hours(int hours);
 [; ;easat2_ask_util_waits.h: 25: void util_waits_delay_mins(int minutes);
 [; ;easat2_ask_util_waits.h: 26: void util_waits_delay_secs(int secs);
 [; ;easat2_ask_util_waits.h: 27: void util_waits_delay_ms(int ms);
 [; ;easat2_ask_util_waits.h: 28: void util_waits_delay_hundred_us(int us);
-[; ;easat2_ask_send.h: 28: void send_ask_command(unsigned long command);
-[; ;easat2_ask_main_mcu.h: 27: void main_loop(void);
-[; ;easat2_ask_main_mcu.h: 28: void blink_debugging_led(void);
+[; ;easat2_ask_init_timer.h: 21: void init_timer1_initialize(void);
+[; ;easat2_ask_init_timer.h: 22: void init_timer2_initialize(void);
+[; ;easat2_ask_send.h: 36: void send_ask_command(unsigned long command);
+[; ;easat2_ask_main_mcu.h: 28: void main_loop(void);
+[; ;easat2_ask_main_mcu.h: 29: void blink_debugging_led(void);
 [; ;easat2_ask_init_initialize.h: 18: void init_watchdogs_initialize(void);
 [; ;easat2_ask_init_initialize.h: 19: void init_initialize(void);
 [; ;easat2_ask_init_initialize.h: 20: void init_io_initialize(void);
@@ -6712,76 +6682,60 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;easat2_golay_CRCG.h: 22: unsigned long correct(unsigned long cw, int *errs);
 [; ;easat2_golay_CRCG.h: 25: int dec2bin(unsigned long c);
 "19 easat2_ask_main_mcu.c
+[v _global_timer_flag `Vi ~T0 @X0 1 e ]
+[i _global_timer_flag
+-> 0 `i
+]
+[; ;easat2_ask_main_mcu.c: 19: volatile int global_timer_flag = 0;
+"21
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_ask_main_mcu.c: 19: void main(void) {
+[; ;easat2_ask_main_mcu.c: 21: void main(void) {
 [e :U _main ]
 [f ]
-[; ;easat2_ask_main_mcu.c: 22: init_initialize();
-"22
+[; ;easat2_ask_main_mcu.c: 24: init_initialize();
+"24
 [e ( _init_initialize ..  ]
-[; ;easat2_ask_main_mcu.c: 25: main_loop();
-"25
-[e ( _main_loop ..  ]
-[; ;easat2_ask_main_mcu.c: 27: }
+[; ;easat2_ask_main_mcu.c: 27: main_loop();
 "27
+[e ( _main_loop ..  ]
+[; ;easat2_ask_main_mcu.c: 29: }
+"29
 [e :UE 847 ]
 }
-"31
-[v _blink_debugging_led `(v ~T0 @X0 1 ef ]
-{
-[; ;easat2_ask_main_mcu.c: 31: void blink_debugging_led(void) {
-[e :U _blink_debugging_led ]
-[f ]
-[; ;easat2_ask_main_mcu.c: 34: (PORTBbits.RB2) = 1;
-"34
-[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-[; ;easat2_ask_main_mcu.c: 37: util_waits_delay_ms(300);
-"37
-[e ( _util_waits_delay_ms (1 -> 300 `i ]
-[; ;easat2_ask_main_mcu.c: 40: (PORTBbits.RB2) = 0;
-"40
-[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-[; ;easat2_ask_main_mcu.c: 42: }
-"42
-[e :UE 848 ]
-}
-"46
+"33
 [v _main_loop `(v ~T0 @X0 1 ef ]
 {
-[; ;easat2_ask_main_mcu.c: 46: void main_loop(void) {
+[; ;easat2_ask_main_mcu.c: 33: void main_loop(void) {
 [e :U _main_loop ]
 [f ]
-"48
+"35
 [v _test_command `ul ~T0 @X0 1 a ]
-[; ;easat2_ask_main_mcu.c: 48: unsigned long test_command = (unsigned int) 0xAAA;
-[e = _test_command -> -> -> 2730 `i `ui `ul ]
-"49
+[; ;easat2_ask_main_mcu.c: 35: unsigned long test_command = (unsigned long) 0x550000A1;
+[e = _test_command -> -> 1426063521 `l `ul ]
+"36
 [v _golay_command `ul ~T0 @X0 1 a ]
-[; ;easat2_ask_main_mcu.c: 49: unsigned long golay_command = 0;
+[; ;easat2_ask_main_mcu.c: 36: unsigned long golay_command = 0;
 [e = _golay_command -> -> -> 0 `i `l `ul ]
-[; ;easat2_ask_main_mcu.c: 51: do {
-"51
-[e :U 852 ]
-{
-[; ;easat2_ask_main_mcu.c: 54: golay_command = golay(test_command);
-"54
-[e = _golay_command ( _golay (1 _test_command ]
-[; ;easat2_ask_main_mcu.c: 57: send_ask_command(golay_command);
-"57
-[e ( _send_ask_command (1 _golay_command ]
-[; ;easat2_ask_main_mcu.c: 60: blink_debugging_led();
-"60
-[e ( _blink_debugging_led ..  ]
-[; ;easat2_ask_main_mcu.c: 63: util_waits_delay_secs(10);
-"63
-[e ( _util_waits_delay_secs (1 -> 10 `i ]
-"66
-}
-[; ;easat2_ask_main_mcu.c: 66: } while (1);
-[e $ != -> 1 `i -> 0 `i 852  ]
+[; ;easat2_ask_main_mcu.c: 40: util_waits_delay_secs(5);
+"40
+[e ( _util_waits_delay_secs (1 -> 5 `i ]
+[; ;easat2_ask_main_mcu.c: 42: do {
+"42
 [e :U 851 ]
-[; ;easat2_ask_main_mcu.c: 69: }
-"69
-[e :UE 849 ]
+{
+[; ;easat2_ask_main_mcu.c: 52: send_ask_command(0xAA123456);
+"52
+[e ( _send_ask_command (1 -> -1441647530 `ul ]
+[; ;easat2_ask_main_mcu.c: 56: util_waits_delay_secs(4);
+"56
+[e ( _util_waits_delay_secs (1 -> 4 `i ]
+"58
+}
+[; ;easat2_ask_main_mcu.c: 58: } while (1);
+[e $ != -> 1 `i -> 0 `i 851  ]
+[e :U 850 ]
+[; ;easat2_ask_main_mcu.c: 61: }
+"61
+[e :UE 848 ]
 }

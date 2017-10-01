@@ -38,7 +38,7 @@ void interrupt high_priority_int() {
         TMR1L = TIMER1L_VAL;
                            
         tmr1_interrupt_number++;
-                
+                        
         // blink LED each half second and clear software watchdog
         
         if (tmr1_interrupt_number == TMR1_HALF_SECOND) {
@@ -61,6 +61,10 @@ void interrupt high_priority_int() {
         // clear interruption flag
         
         PIR1bits.TMR1IF = 0; 
+        
+        // set global interruption flag for timing
+        global_timer_flag = 1;
+        
         
     }
 

@@ -15,8 +15,9 @@
 #include "easat2_ask_send.h"
 
 #define GOLAY_COMMAND_STRING_SIZE   32
-
-#define TEST_COMMAND (unsigned int) 0xAAA      // 010101010000111101010101
+                                
+#define TEST_COMMAND (unsigned long) 0x550000A1 // header 55 + 24 bits Golay
+                                               // Golay = 12 data bis + 12 CRC
 
 #define MAIN_LOOP_SLEEP_MINUTES         1
 #define MAIN_LOOP_SLEEP_SECONDS         10     // 10 seconds between sends

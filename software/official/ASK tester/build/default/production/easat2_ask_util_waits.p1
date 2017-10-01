@@ -6630,6 +6630,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
+[; ;easat2_ask.h: 18: extern volatile int global_timer_flag;
 [; ;easat2_ask_util_waits.h: 24: void util_waits_delay_hours(int hours);
 [; ;easat2_ask_util_waits.h: 25: void util_waits_delay_mins(int minutes);
 [; ;easat2_ask_util_waits.h: 26: void util_waits_delay_secs(int secs);

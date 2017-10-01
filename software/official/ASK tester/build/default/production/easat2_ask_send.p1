@@ -28,8 +28,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S340 . . . . . . . . . ]
 "6554
 [v _PORTBbits `VS340 ~T0 @X0 0 e@3969 ]
-"27 easat2_ask_util_waits.h
-[v _util_waits_delay_ms `(v ~T0 @X0 0 ef1`i ]
+"26 easat2_ask_util_waits.h
+[v _util_waits_delay_secs `(v ~T0 @X0 0 ef1`i ]
+"18 easat2_ask.h
+[v _global_timer_flag `Vi ~T0 @X0 0 e ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -6651,90 +6653,191 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
+[; ;easat2_ask.h: 18: extern volatile int global_timer_flag;
 [; ;easat2_ask_util_waits.h: 24: void util_waits_delay_hours(int hours);
 [; ;easat2_ask_util_waits.h: 25: void util_waits_delay_mins(int minutes);
 [; ;easat2_ask_util_waits.h: 26: void util_waits_delay_secs(int secs);
 [; ;easat2_ask_util_waits.h: 27: void util_waits_delay_ms(int ms);
 [; ;easat2_ask_util_waits.h: 28: void util_waits_delay_hundred_us(int us);
-[; ;easat2_ask_send.h: 28: void send_ask_command(unsigned long command);
-"18 easat2_ask_send.c
+[; ;easat2_ask_init_timer.h: 21: void init_timer1_initialize(void);
+[; ;easat2_ask_init_timer.h: 22: void init_timer2_initialize(void);
+[; ;easat2_ask_send.h: 36: void send_ask_command(unsigned long command);
+"20 easat2_ask_send.c
 [v _send_ask_command `(v ~T0 @X0 1 ef1`ul ]
 {
-[; ;easat2_ask_send.c: 18: void send_ask_command(unsigned long command) {
+[; ;easat2_ask_send.c: 20: void send_ask_command(unsigned long command_in) {
 [e :U _send_ask_command ]
-[v _command `ul ~T0 @X0 1 r1 ]
+[v _command_in `ul ~T0 @X0 1 r1 ]
 [f ]
-"20
-[v _current_signal_level `i ~T0 @X0 1 a ]
-[; ;easat2_ask_send.c: 20: int current_signal_level = 0;
-[e = _current_signal_level -> 0 `i ]
-"21
-[v _bit_to_transfer `i ~T0 @X0 1 a ]
-[; ;easat2_ask_send.c: 21: int bit_to_transfer = 0;
-[e = _bit_to_transfer -> 0 `i ]
 "22
+[v _command `ul ~T0 @X0 1 a ]
+[; ;easat2_ask_send.c: 22: unsigned long command = 0;
+[e = _command -> -> -> 0 `i `l `ul ]
+"23
+[v _signal_level `i ~T0 @X0 1 a ]
+[; ;easat2_ask_send.c: 23: int signal_level = 0;
+[e = _signal_level -> 0 `i ]
+"24
 [v _i `i ~T0 @X0 1 a ]
-[; ;easat2_ask_send.c: 22: int i = 0;
+[; ;easat2_ask_send.c: 24: int i = 0;
 [e = _i -> 0 `i ]
-[; ;easat2_ask_send.c: 26: do {
-"26
-[e :U 849 ]
-{
-[; ;easat2_ask_send.c: 28: bit_to_transfer = command & 1;
-"28
-[e = _bit_to_transfer -> & _command -> -> -> 1 `i `l `ul `i ]
-[; ;easat2_ask_send.c: 36: if (bit_to_transfer == 1 && current_signal_level == 1)
-"36
-[e $ ! && == _bit_to_transfer -> 1 `i == _current_signal_level -> 1 `i 850  ]
-[; ;easat2_ask_send.c: 37: current_signal_level = 0;
+"25
+[v _bit_value `i ~T0 @X0 1 a ]
+[; ;easat2_ask_send.c: 25: int bit_value = 0;
+[e = _bit_value -> 0 `i ]
+[v F6960 `i ~T0 @X0 -> 3 `i t ]
+"27
+[v _transitions `F6960 ~T0 @X0 -> 32 `i a ]
+[; ;easat2_ask_send.c: 27: int transitions[32][3];
+[; ;easat2_ask_send.c: 31: (PORTBbits.RB1) = 0;
+"31
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_ask_send.c: 32: signal_level = 0;
+"32
+[e = _signal_level -> 0 `i ]
+[; ;easat2_ask_send.c: 37: util_waits_delay_secs(1);
 "37
-[e = _current_signal_level -> 0 `i ]
-[e :U 850 ]
-[; ;easat2_ask_send.c: 40: if (bit_to_transfer == 0 && current_signal_level == 0)
-"40
-[e $ ! && == _bit_to_transfer -> 0 `i == _current_signal_level -> 0 `i 851  ]
-[; ;easat2_ask_send.c: 41: current_signal_level = 1;
-"41
-[e = _current_signal_level -> 1 `i ]
-[e :U 851 ]
-[; ;easat2_ask_send.c: 43: (PORTBbits.RB1) = current_signal_level;
+[e ( _util_waits_delay_secs (1 -> 1 `i ]
+[; ;easat2_ask_send.c: 39: (PORTBbits.RB2) = 1;
+"39
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[; ;easat2_ask_send.c: 43: for (i = 0 ; i < 32; i++) {
 "43
-[e = . . _PORTBbits 0 1 -> _current_signal_level `uc ]
-[; ;easat2_ask_send.c: 47: util_waits_delay_ms(5);
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 32 `i 847  ]
+[e $U 848  ]
+[e :U 847 ]
+{
+[; ;easat2_ask_send.c: 45: bit_value = (command_in >> i) & 0x00000001;
+"45
+[e = _bit_value -> & >> _command_in _i -> -> -> 1 `i `l `ul `i ]
 "47
-[e ( _util_waits_delay_ms (1 -> 5 `i ]
-[; ;easat2_ask_send.c: 50: if (bit_to_transfer == 1 && current_signal_level == 1)
+[v _position `i ~T0 @X0 1 a ]
+[; ;easat2_ask_send.c: 47: int position = 32-i-1;
+[e = _position - - -> 32 `i _i -> 1 `i ]
+[; ;easat2_ask_send.c: 50: transitions[position][0] = bit_value;
 "50
-[e $ ! && == _bit_to_transfer -> 1 `i == _current_signal_level -> 1 `i 852  ]
-[; ;easat2_ask_send.c: 51: current_signal_level = 0;
-"51
-[e = _current_signal_level -> 0 `i ]
-[e :U 852 ]
-[; ;easat2_ask_send.c: 54: if (bit_to_transfer == 0 && current_signal_level == 0)
+[e = *U + &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux `ui `ux _bit_value ]
+[; ;easat2_ask_send.c: 52: if (bit_value == 0) {
+"52
+[e $ ! == _bit_value -> 0 `i 850  ]
+{
+[; ;easat2_ask_send.c: 54: transitions[position][1] = 1;
 "54
-[e $ ! && == _bit_to_transfer -> 0 `i == _current_signal_level -> 0 `i 853  ]
-[; ;easat2_ask_send.c: 55: current_signal_level = 1;
+[e = *U + &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux `ui `ux -> 1 `i ]
+[; ;easat2_ask_send.c: 55: transitions[position][2] = 0;
 "55
-[e = _current_signal_level -> 1 `i ]
-[e :U 853 ]
-[; ;easat2_ask_send.c: 57: (PORTBbits.RB1) = current_signal_level;
-"57
-[e = . . _PORTBbits 0 1 -> _current_signal_level `uc ]
-[; ;easat2_ask_send.c: 59: util_waits_delay_ms(5);
-"59
-[e ( _util_waits_delay_ms (1 -> 5 `i ]
-[; ;easat2_ask_send.c: 66: command = command >> 1;
-"66
-[e = _command >> _command -> 1 `i ]
-[; ;easat2_ask_send.c: 68: i++;
-"68
-[e ++ _i -> 1 `i ]
-"70
+[e = *U + &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux `ui `ux -> 0 `i ]
+"56
 }
-[; ;easat2_ask_send.c: 70: } while (i < 24);
-[e $ < _i -> 24 `i 849  ]
+[; ;easat2_ask_send.c: 56: } else {
+[e $U 851  ]
+[e :U 850 ]
+{
+[; ;easat2_ask_send.c: 58: transitions[position][1] = 0;
+"58
+[e = *U + &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux `ui `ux -> 0 `i ]
+[; ;easat2_ask_send.c: 59: transitions[position][2] = 1;
+"59
+[e = *U + &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _transitions * -> -> _position `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux `ui `ux -> 1 `i ]
+"61
+}
+[e :U 851 ]
+"63
+}
+"43
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 32 `i 847  ]
 [e :U 848 ]
-[; ;easat2_ask_send.c: 74: }
+"63
+}
+[; ;easat2_ask_send.c: 61: }
+[; ;easat2_ask_send.c: 63: }
+[; ;easat2_ask_send.c: 66: global_timer_flag = 0;
+"66
+[e = _global_timer_flag -> 0 `i ]
+[; ;easat2_ask_send.c: 69: do { continue; } while (!global_timer_flag);
+"69
+[e :U 854 ]
+{
+[e $U 852  ]
+}
+[e :U 852 ]
+[e $ ! != _global_timer_flag -> 0 `i 854  ]
+[e :U 853 ]
+[; ;easat2_ask_send.c: 71: for (i = 0; i < 32; i++) {
+"71
+{
+[e = _i -> 0 `i ]
+[e $ < _i -> 32 `i 855  ]
+[e $U 856  ]
+[e :U 855 ]
+{
+[; ;easat2_ask_send.c: 74: global_timer_flag = 0;
 "74
+[e = _global_timer_flag -> 0 `i ]
+[; ;easat2_ask_send.c: 76: signal_level = transitions[i][1];
+"76
+[e = _signal_level *U + &U *U + &U _transitions * -> -> _i `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _transitions * -> -> _i `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux `ui `ux ]
+[; ;easat2_ask_send.c: 79: do { continue; } while (!global_timer_flag);
+"79
+[e :U 860 ]
+{
+[e $U 858  ]
+}
+[e :U 858 ]
+[e $ ! != _global_timer_flag -> 0 `i 860  ]
+[e :U 859 ]
+[; ;easat2_ask_send.c: 81: (PORTBbits.RB1) = signal_level;
+"81
+[e = . . _PORTBbits 0 1 -> _signal_level `uc ]
+[; ;easat2_ask_send.c: 83: global_timer_flag = 0;
+"83
+[e = _global_timer_flag -> 0 `i ]
+[; ;easat2_ask_send.c: 85: signal_level = transitions[i][2];
+"85
+[e = _signal_level *U + &U *U + &U _transitions * -> -> _i `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _transitions * -> -> _i `ui `ux -> * -> # *U &U *U &U _transitions `ui -> -> 3 `i `ui `ux `ui `ux ]
+[; ;easat2_ask_send.c: 88: do { continue; } while (!global_timer_flag);
+"88
+[e :U 863 ]
+{
+[e $U 861  ]
+}
+[e :U 861 ]
+[e $ ! != _global_timer_flag -> 0 `i 863  ]
+[e :U 862 ]
+[; ;easat2_ask_send.c: 90: (PORTBbits.RB1) = signal_level;
+"90
+[e = . . _PORTBbits 0 1 -> _signal_level `uc ]
+"92
+}
+"71
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 32 `i 855  ]
+[e :U 856 ]
+"92
+}
+[; ;easat2_ask_send.c: 92: }
+[; ;easat2_ask_send.c: 97: global_timer_flag = 0;
+"97
+[e = _global_timer_flag -> 0 `i ]
+[; ;easat2_ask_send.c: 99: do { continue; } while (!global_timer_flag);
+"99
+[e :U 866 ]
+{
+[e $U 864  ]
+}
+[e :U 864 ]
+[e $ ! != _global_timer_flag -> 0 `i 866  ]
+[e :U 865 ]
+[; ;easat2_ask_send.c: 105: (PORTBbits.RB1) = 0;
+"105
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;easat2_ask_send.c: 107: (PORTBbits.RB2) = 0;
+"107
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+[; ;easat2_ask_send.c: 109: }
+"109
 [e :UE 846 ]
 }

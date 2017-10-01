@@ -6737,6 +6737,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR3=OFF ]
 "80
 [p x EBTRB=OFF ]
+[; ;easat2_ask.h: 18: extern volatile int global_timer_flag;
 [; ;easat2_ask_init_initialize.h: 18: void init_watchdogs_initialize(void);
 [; ;easat2_ask_init_initialize.h: 19: void init_initialize(void);
 [; ;easat2_ask_init_initialize.h: 20: void init_io_initialize(void);

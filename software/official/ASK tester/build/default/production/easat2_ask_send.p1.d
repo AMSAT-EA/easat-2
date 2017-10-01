@@ -4,5 +4,6 @@
 easat2_ask_pinouts.h  \
 easat2_ask.h  \
 easat2_ask_send.h  \
+easat2_ask_init_timer.h  \
 easat2_ask_util_waits.h  \
 easat2_ask_config.h 

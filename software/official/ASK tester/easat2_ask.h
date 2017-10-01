@@ -15,4 +15,6 @@
 #include "easat2_ask_config.h"
 #include "easat2_ask_pinouts.h"
 
+extern volatile int global_timer_flag;      // set to 1 when timer has been fired
+
 #endif
