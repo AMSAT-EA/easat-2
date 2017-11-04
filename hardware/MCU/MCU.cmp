@@ -1,0 +1,363 @@
+Cmp-Mod V01 Created by PcbNew   date = 04/11/2017 17:02:43
+
+BeginCmp
+TimeStamp = 591A13F3
+Path = /591A5C55
+Reference = FID1;
+ValeurCmp = FIDUCIAL;
+IdModule  = Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop;
+EndCmp
+
+BeginCmp
+TimeStamp = 591A13FF
+Path = /591A629A
+Reference = FID3;
+ValeurCmp = FIDUCIAL;
+IdModule  = Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop;
+EndCmp
+
+BeginCmp
+TimeStamp = 591A13F9
+Path = /591A6223
+Reference = FID2;
+ValeurCmp = FIDUCIAL;
+IdModule  = Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D4618F
+Path = /58A0B7A2
+Reference = U4;
+ValeurCmp = PIC18F45K22;
+IdModule  = Housings_QFP:LQFP-44_10x10mm_Pitch0.8mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 587B161B
+Path = /58ABDFF6
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LEDs:LED_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = 587B3B57
+Path = /582783C1
+Reference = SP1;
+ValeurCmp = SPEAKER;
+IdModule  = Buzzers_Beepers:MagneticBuzzer_Kingstate_KCG0601;
+EndCmp
+
+BeginCmp
+TimeStamp = 58850009
+Path = /58272E1A
+Reference = U1;
+ValeurCmp = MAX6369;
+IdModule  = smd-semi:SOT-23-8;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44880
+Path = /5904E69F
+Reference = D5;
+ValeurCmp = ZENER;
+IdModule  = Diodes_SMD:D_SOD-123;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44C9F
+Path = /58789C1B
+Reference = C1;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44CAF
+Path = /582720CA
+Reference = C2;
+ValeurCmp = 18pF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44CBF
+Path = /58C4011D
+Reference = C3;
+ValeurCmp = 1uF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44CCF
+Path = /59047684
+Reference = C4;
+ValeurCmp = 18pF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44CDF
+Path = /59043BAE
+Reference = C5;
+ValeurCmp = 1uF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44CFF
+Path = /590493E7
+Reference = C7;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44D0F
+Path = /58784276
+Reference = C8;
+ValeurCmp = 10nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44D1F
+Path = /59049AB1
+Reference = C9;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44D2F
+Path = /5904C202
+Reference = C10;
+ValeurCmp = 10nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44D4F
+Path = /59053E9C
+Reference = C12;
+ValeurCmp = 10nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44D5F
+Path = /59053545
+Reference = C13;
+ValeurCmp = 10nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44D7F
+Path = /58ABE2B2
+Reference = R1;
+ValeurCmp = 470;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44D8F
+Path = /59041535
+Reference = R2;
+ValeurCmp = 470;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44D9F
+Path = /5827CEF1
+Reference = R3;
+ValeurCmp = 4K7;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44DAF
+Path = /58C4C879
+Reference = R4;
+ValeurCmp = 6,19K;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44DBF
+Path = /5904AD30
+Reference = R5;
+ValeurCmp = 4K7;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44DCF
+Path = /58AC2B3F
+Reference = R6;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44DDF
+Path = /58C4F5A9
+Reference = R7;
+ValeurCmp = 4,99K;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44DEF
+Path = /58C52D06
+Reference = R8;
+ValeurCmp = 6,65K;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44DFF
+Path = /58C66605
+Reference = R9;
+ValeurCmp = 1K;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44E0F
+Path = /58C68694
+Reference = R10;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44E1F
+Path = /58C78986
+Reference = R11;
+ValeurCmp = 1K;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44E2F
+Path = /58C78BAD
+Reference = R12;
+ValeurCmp = 1K;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D44E3F
+Path = /58C89BED
+Reference = U5;
+ValeurCmp = LT6005;
+IdModule  = Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58E2C0A8
+Path = /59051B72
+Reference = C6;
+ValeurCmp = 10nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58E2C0B9
+Path = /5904CD74
+Reference = C11;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 58E2C0BA
+Path = /5827721F
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = LEDs:LED_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = 58E2C0CE
+Path = /58C39182
+Reference = D3;
+ValeurCmp = ZENER;
+IdModule  = Diodes_SMD:D_SOD-123;
+EndCmp
+
+BeginCmp
+TimeStamp = 5903E447
+Path = /58EC9414
+Reference = D4;
+ValeurCmp = ZENER;
+IdModule  = Diodes_SMD:D_SOD-323_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 5903E47B
+Path = /58276865
+Reference = U3;
+ValeurCmp = DS18B20;
+IdModule  = Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 591F2A61
+Path = /591F66F3
+Reference = R13;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 59FE38F1
+Path = /58278D06
+Reference = P1;
+ValeurCmp = CONN_01X05;
+IdModule  = Connectors_Molex:Molex_MicroLatch-53253-0570_05x2.00mm_Straight;
+EndCmp
+
+BeginCmp
+TimeStamp = 59FE3918
+Path = /5A012078
+Reference = P2;
+ValeurCmp = CONN_01X05;
+IdModule  = Connectors_Molex:Molex_MicroLatch-53253-0570_05x2.00mm_Straight;
+EndCmp
+
+BeginCmp
+TimeStamp = 59FE393F
+Path = /5A01222F
+Reference = P3;
+ValeurCmp = CONN_01X05;
+IdModule  = Connectors_Molex:Molex_MicroLatch-53253-0570_05x2.00mm_Straight;
+EndCmp
+
+BeginCmp
+TimeStamp = 59FE3966
+Path = /5A0122FD
+Reference = P4;
+ValeurCmp = CONN_01X05;
+IdModule  = Connectors_Molex:Molex_MicroLatch-53253-0570_05x2.00mm_Straight;
+EndCmp
+
+BeginCmp
+TimeStamp = 59FE398D
+Path = /58272070
+Reference = Y1;
+ValeurCmp = Crystal;
+IdModule  = Crystals:Crystal_SMD_EuroQuartz_X22-4pin_2.5x2.0mm_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = 59FE3E48
+Path = /58C16FE8
+Reference = U2;
+ValeurCmp = TC1262-30VDB;
+IdModule  = smd-semi:SOT-223;
+EndCmp
+
+EndListe

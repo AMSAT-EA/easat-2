@@ -1,6 +1,6 @@
-update=19/05/2017 20:18:40
+update=04/11/2017 18:48:10
 version=1
-last_client=eeschema
+last_client=kicad
 [pcbnew]
 version=1
 LastNetListRead=
@@ -37,7 +37,7 @@ SpiceUseNetNumbers=0
 LabSize=60
 [eeschema]
 version=1
-LibDir=C:/KiCAD/kicad-pcblib;C:/KiCAD/kicad-library;C:/KiCAD/library-kicad
+LibDir=C:/KiCAD/kicad-pcblib;C:/KiCAD/kicad-library;C:/KiCAD/library-kicad;librerias
 [eeschema/libraries]
 LibName1=MCU-rescue
 LibName2=power
@@ -74,3 +74,9 @@ LibName32=librerias/max6369
 LibName33=MCU-Components
 LibName34=C:/KiCAD/kicad-library/library/mechanical
 LibName35=fiducial
+LibName36=librerias/DS18B20
+LibName37=librerias/LT6005
+LibName38=librerias/MCU-cache
+LibName39=librerias/MCU-Components
+LibName40=librerias/MCU-rescue
+LibName41=librerias/Crystal-4pin
