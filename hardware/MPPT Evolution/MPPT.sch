@@ -1874,4 +1874,17 @@ Wire Wire Line
 	5700 5650 5550 5650
 Text Notes 8400 5050 0    60   ~ 0
 VBUS
+Connection ~ 2550 850 
+Connection ~ 2850 850 
+Connection ~ 8850 700 
+Connection ~ 9150 700 
+Connection ~ 8850 2700
+Connection ~ 9150 2700
+Connection ~ 2550 3050
+Connection ~ 2850 3050
+Connection ~ 2550 5100
+Connection ~ 2850 5100
+Connection ~ 7600 5850
+Connection ~ 9300 5850
+Connection ~ 10250 5850
 $EndSCHEMATC
