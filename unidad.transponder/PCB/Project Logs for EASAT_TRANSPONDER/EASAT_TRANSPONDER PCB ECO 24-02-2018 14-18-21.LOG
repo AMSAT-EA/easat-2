@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=NetC15_1 Pin=L12-1
+Removed Pin From Net: NetName=VCC_TX Pin=L12-2
+Added Pin To Net: NetName=NetC3_1 Pin=C2-2
+Added Pin To Net: NetName=GND Pin=L12-1
+Added Pin To Net: NetName=NetC15_1 Pin=L12-1
+Added Pin To Net: NetName=NetC18_1 Pin=L12-2
+Added Pin To Net: NetName=VCC_TX Pin=L12-2
+Change Net Name : Old Net Name=NetC3_1 New Net Name=NetC2_2
+Added Member To Class: ClassName=EASAT_TRANSPODER Member=Component R1 0
+Added Room: Name=EASAT_TRANSPODER

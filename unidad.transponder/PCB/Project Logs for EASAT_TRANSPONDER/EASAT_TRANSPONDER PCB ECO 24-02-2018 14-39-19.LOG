@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=NetC15_1 Pin=L12-1
+Removed Pin From Net: NetName=VCC_TX Pin=L12-2
+Change Component Designator: OldDesignator=L12 NewDesignator=L10
+Added Pin To Net: NetName=NetC22_2 Pin=C18-1
+Added Pin To Net: NetName=NetC14_2 Pin=C20-2
+Added Pin To Net: NetName=NetC15_1 Pin=L10-1
+Added Pin To Net: NetName=VCC_TX Pin=L10-2
+Added Pin To Net: NetName=GND Pin=L12-1
+Added Pin To Net: NetName=NetC22_2 Pin=L12-2
+Change Net Name : Old Net Name=NetC22_2 New Net Name=NetC18_1
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=NetC9_1 Pin=L6-1
+Added Net: Name=NetC9_1
+Added Pin To Net: NetName=NetC15_2 Pin=C15-2
+Added Pin To Net: NetName=NetC15_2 Pin=Q6-1
+Added Pin To Net: NetName=NetC15_2 Pin=R11-1
+Added Net: Name=NetC15_2
+Added Pin To Net: NetName=NetC17_2 Pin=C17-2
+Added Pin To Net: NetName=NetC17_2 Pin=Q7-1
+Added Pin To Net: NetName=NetC17_2 Pin=R14-1
+Added Net: Name=NetC17_2
+Added Member To Class: ClassName=EASAT_TRANSPODER Member=Component L12 5.6nH
