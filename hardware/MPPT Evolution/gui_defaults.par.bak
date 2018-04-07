@@ -4,7 +4,7 @@
     (board_frame
       visible
       (bounds
-        -8 -8 1924 1056
+        -8 -8 1936 1056
       )
     )
     (color_manager
