@@ -1,5 +1,5 @@
-Drill report for C:\Users\FELIX\OneDrive\GitHub\easat-2\hardware\MPPT Evolution Electrical\easat2.kicad_pcb
-Created on 07/04/2018 17:01:20
+Drill report for C:/Users/FELIX/OneDrive/GitHub/easat-2/hardware/MPPT Evolution/easat2.kicad_pcb
+Created on 11/04/2018 20:39:38
 
 Copper Layer Stackup:
     =============================================================
@@ -10,10 +10,10 @@ Copper Layer Stackup:
 Drill file 'easat2.drl' contains
     plated through holes:
     =============================================================
-    T1  0,40mm  0,016"  (47 holes)
+    T1  0,40mm  0,016"  (28 holes)
     T2  0,65mm  0,026"  (22 holes)
 
-    Total plated holes count 69
+    Total plated holes count 50
 
 
 Drill file 'easat2-NPTH.drl' contains

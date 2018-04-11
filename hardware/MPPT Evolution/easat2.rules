@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 7524)
+    (start_pass_no 108)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -63,7 +63,7 @@
     )
   )
   (class "kicad_default"
-    "PV1_IN" GND "PV2_IN" "PV3_IN" "Net-(C4-Pad1)" "Net-(C4-Pad2)" "Net-(C5-Pad1)" "Net-(C5-Pad2)"
+    GND "PV1_IN" "PV2_IN" "PV3_IN" "Net-(C4-Pad1)" "Net-(C4-Pad2)" "Net-(C5-Pad1)" "Net-(C5-Pad2)"
     "Net-(C6-Pad1)" "Net-(C6-Pad2)" "Net-(C7-Pad1)" "Net-(C7-Pad2)" "Net-(C8-Pad1)" "Net-(C8-Pad2)" "Net-(C9-Pad1)" "Net-(C9-Pad2)"
     "Net-(C10-Pad1)" "Net-(C11-Pad1)" "Net-(C12-Pad1)" "Net-(C13-Pad2)" "Net-(C14-Pad2)" "Net-(C15-Pad2)" "Net-(C16-Pad2)" "Net-(C17-Pad2)"
     "Net-(C18-Pad2)" "PV4_IN" "PV5_IN" "Net-(C24-Pad1)" "Net-(C25-Pad1)" "Net-(C26-Pad1)" "I_SOLAR" "Net-(C28-Pad2)"
