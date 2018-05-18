@@ -1,4 +1,8 @@
+<<<<<<< HEAD:hardware/EPS/easat2.pro
+update=17/05/2018 23:55:08
+=======
 update=30/03/2018 17:07:44
+>>>>>>> ac3a8edf6db9816818df769e23e1c47b9ba029ff:hardware/MPPT Evolution/easat2.pro
 version=1
 last_client=kicad
 [cvpcb]
@@ -40,6 +44,25 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=components
+[pcbnew]
+version=1
+PageLayoutDescrFile=
+LastNetListRead=easat2.net
+PadDrill=0.762
+PadDrillOvalY=0.762
+PadSizeH=1.524
+PadSizeV=1.524
+PcbTextSizeV=1.5
+PcbTextSizeH=1.5
+PcbTextThickness=0.3
+ModuleTextSizeV=1
+ModuleTextSizeH=1
+ModuleTextSizeThickness=0.15
+SolderMaskClearance=0.2
+SolderMaskMinWidth=0
+DrawSegmentWidth=0.2
+BoardOutlineThickness=0.15
+ModuleOutlineThickness=0.15
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
