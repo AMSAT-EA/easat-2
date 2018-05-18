@@ -1,0 +1,2108 @@
+EESchema Schematic File Version 2
+LIBS:MCU-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:pic18f45k22
+LIBS:max6369
+LIBS:MCU-Components
+LIBS:mechanical
+LIBS:fiducial
+LIBS:DS18B20
+LIBS:LT6005
+LIBS:MCU-cache
+LIBS:Crystal-4pin
+EELAYER 25 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "EASAT MCU"
+Date "2017-05-15"
+Rev "1.0"
+Comp "EASAT"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C_Small C2
+U 1 1 582720CA
+P 4430 1935
+F 0 "C2" H 4440 2005 50  0000 L CNN
+F 1 "18pF" H 4440 1855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4430 1935 50  0001 C CNN
+F 3 "" H 4430 1935 50  0000 C CNN
+F 4 "KEMET" H 4430 1935 60  0001 C CNN "Fabricante"
+F 5 "CBR06C180FAGAC" H 4430 1935 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 4430 1935 60  0001 C CNN "Proveedor #1"
+F 7 "80-CBR06C180FAGAC" H 4430 1935 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 4430 1935 60  0001 C CNN "Proveedor #2"
+F 9 "-" H 4430 1935 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 250volts 18pF 1%" H 4430 1935 60  0001 C CNN "Descripción"
+	1    4430 1935
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 58272117
+P 4430 2135
+F 0 "#PWR01" H 4430 1885 50  0001 C CNN
+F 1 "GND" H 4430 1985 50  0000 C CNN
+F 2 "" H 4430 2135 50  0000 C CNN
+F 3 "" H 4430 2135 50  0000 C CNN
+	1    4430 2135
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5827213B
+P 5430 2185
+F 0 "#PWR02" H 5430 1935 50  0001 C CNN
+F 1 "GND" H 5430 2035 50  0000 C CNN
+F 2 "" H 5430 2185 50  0000 C CNN
+F 3 "" H 5430 2185 50  0000 C CNN
+	1    5430 2185
+	1    0    0    -1  
+$EndComp
+Text Label 4580 1785 0    60   ~ 0
+RA6
+Text Label 5230 1785 0    60   ~ 0
+RA7
+Text Label 8250 2245 2    39   ~ 0
+RA7
+Text Label 7560 3395 1    39   ~ 0
+SOL
+Text Label 6260 2545 0    39   ~ 0
+PWD
+$Comp
+L MAX6369 U1
+U 1 1 58272E1A
+P 1880 2715
+F 0 "U1" H 1880 2640 60  0000 C CNN
+F 1 "MAX6369" H 1880 3215 60  0000 C CNN
+F 2 "smd-semi:SOT-23-8" H 1880 2715 60  0001 C CNN
+F 3 "" H 1880 2715 60  0001 C CNN
+F 4 "Value" H 1880 2715 60  0001 C CNN "MAXIM"
+F 5 "MAX6369KA+T" H 1880 2715 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 1880 2715 60  0001 C CNN "Proveedor #1"
+F 7 "700-MAX6369KAT" H 1880 2715 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 1880 2715 60  0001 C CNN "Proveedor #2"
+F 9 "2519138" H 1880 2715 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Supervisory Circuits Pin-Selectable Watchdog Timer" H 1880 2715 60  0001 C CNN "Descripción"
+F 11 "MAXIM" H 1880 2715 60  0001 C CNN "Fabricante"
+	1    1880 2715
+	1    0    0    1   
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 58274C58
+P 1166 3025
+F 0 "#PWR03" H 1166 2775 50  0001 C CNN
+F 1 "GND" H 1166 2875 50  0000 C CNN
+F 2 "" H 1166 3025 50  0000 C CNN
+F 3 "" H 1166 3025 50  0000 C CNN
+	1    1166 3025
+	1    0    0    -1  
+$EndComp
+Text Label 2541 2990 0    39   ~ 0
+~WDO/MCLR
+Text Label 8265 2170 2    39   ~ 0
+RA6
+Text Label 7410 3395 1    39   ~ 0
+~WDO/MCLR
+Text Label 1346 3065 0    39   ~ 0
+WDI
+Text Label 6100 2170 0    39   ~ 0
+WDI
+$Comp
+L LED D2
+U 1 1 5827721F
+P 1435 5480
+F 0 "D2" H 1435 5580 50  0000 C CNN
+F 1 "LED" H 1435 5380 50  0000 C CNN
+F 2 "LEDs:LED_1206" H 1435 5480 50  0001 C CNN
+F 3 "" H 1435 5480 50  0000 C CNN
+F 4 "VISHAY" H 1435 5480 60  0001 C CNN "Fabricante"
+F 5 "VLMS1300-GS08" H 1435 5480 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 1435 5480 60  0001 C CNN "Proveedor #1"
+F 7 "78-VLMS1300-GS08" H 1435 5480 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 1435 5480 60  0001 C CNN "Proveedor #2"
+F 9 "2251484" H 1435 5480 60  0001 C CNN "Referencia Proveedor #2"
+	1    1435 5480
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 58277445
+P 1205 5785
+F 0 "#PWR04" H 1205 5535 50  0001 C CNN
+F 1 "GND" H 1205 5635 50  0000 C CNN
+F 2 "" H 1205 5785 50  0000 C CNN
+F 3 "" H 1205 5785 50  0000 C CNN
+	1    1205 5785
+	1    0    0    -1  
+$EndComp
+Text Label 1435 4825 1    39   ~ 0
+LED_R
+Text Label 7335 1450 1    39   ~ 0
+LED_R
+$Comp
+L GND #PWR05
+U 1 1 58277E6B
+P 8245 2320
+F 0 "#PWR05" H 8245 2070 50  0001 C CNN
+F 1 "GND" H 8245 2170 50  0000 C CNN
+F 2 "" H 8245 2320 50  0000 C CNN
+F 3 "" H 8245 2320 50  0000 C CNN
+	1    8245 2320
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VCC #PWR06
+U 1 1 58277E9A
+P 8630 2330
+F 0 "#PWR06" H 8630 2180 50  0001 C CNN
+F 1 "VCC" H 8630 2480 50  0000 C CNN
+F 2 "" H 8630 2330 50  0000 C CNN
+F 3 "" H 8630 2330 50  0000 C CNN
+	1    8630 2330
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5827809B
+P 6445 2395
+F 0 "#PWR07" H 6445 2145 50  0001 C CNN
+F 1 "GND" H 6445 2245 50  0000 C CNN
+F 2 "" H 6445 2395 50  0000 C CNN
+F 3 "" H 6445 2395 50  0000 C CNN
+	1    6445 2395
+	0    1    1    0   
+$EndComp
+Text Label 7260 3300 1    39   ~ 0
+PGC
+Text Label 12485 3035 0    39   ~ 0
+PGD
+Text Label 12490 3135 0    39   ~ 0
+PGC
+Text Label 14500 2695 0    39   ~ 0
+ENA
+Text Label 14500 2795 0    39   ~ 0
+F_BEA
+Text Label 12460 2220 0    39   ~ 0
+SOL
+Text Label 12470 2320 0    39   ~ 0
+PWD
+Text Label 12505 2420 0    39   ~ 0
+DIS
+$Comp
+L DS18B20 U3
+U 1 1 58276865
+P 1595 4110
+F 0 "U3" H 1595 4035 60  0000 C CNN
+F 1 "DS18B20" H 1595 4535 60  0000 C CNN
+F 2 "Housings_SSOP:MSOP-8_3x3mm_Pitch0.65mm" H 1595 4110 60  0001 C CNN
+F 3 "" H 1595 4110 60  0001 C CNN
+F 4 "Value" H 1595 4110 60  0001 C CNN "MAXIM INTEGRATED"
+F 5 "DS18B20U+" H 1595 4110 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 1595 4110 60  0001 C CNN "Proveedor #1"
+F 7 "700-DS18B20U" H 1595 4110 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 1595 4110 60  0001 C CNN "Proveedor #2"
+F 9 "2518694" H 1595 4110 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "MAXIM INTEGRATED PRODUCTS  DS18B20U+  IC de Detección de Temperatura, Digital, ± 0.5°C, -55 °C, +125 °C, MSOP, 8 Pines" H 1595 4110 60  0001 C CNN "Descripción"
+	1    1595 4110
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1220 3810
+NoConn ~ 1220 3885
+NoConn ~ 1995 3810
+NoConn ~ 1995 3885
+NoConn ~ 1995 3960
+$Comp
+L GND #PWR08
+U 1 1 5827C4C9
+P 2110 4090
+F 0 "#PWR08" H 2110 3840 50  0001 C CNN
+F 1 "GND" H 2110 3940 50  0000 C CNN
+F 2 "" H 2110 4090 50  0000 C CNN
+F 3 "" H 2110 4090 50  0000 C CNN
+	1    2110 4090
+	1    0    0    -1  
+$EndComp
+Text Label 1050 4035 0    39   ~ 0
+TEMP
+$Comp
+L R R3
+U 1 1 5827CEF1
+P 7710 3535
+F 0 "R3" V 7790 3535 50  0000 C CNN
+F 1 "4K7" V 7710 3535 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 7640 3535 50  0001 C CNN
+F 3 "" H 7710 3535 50  0000 C CNN
+F 4 "VISHAY" H 7710 3535 60  0001 C CNN "Fabricante"
+F 5 "TNPW06034K75BEEA" H 7710 3535 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 7710 3535 60  0001 C CNN "Proveedor #1"
+F 7 "71-TNPW06034K75BEEA" H 7710 3535 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 7710 3535 60  0001 C CNN "Proveedor #2"
+F 9 "1893941" H 7710 3535 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "TNPW06034K75BEEA  RES, THIN FILM, 4K75, 0.1%, 0.063W, 0603" H 7710 3535 60  0001 C CNN "Descripción"
+	1    7710 3535
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR09
+U 1 1 5827D694
+P 7710 3725
+F 0 "#PWR09" H 7710 3575 50  0001 C CNN
+F 1 "VCC" H 7710 3875 50  0000 C CNN
+F 2 "" H 7710 3725 50  0000 C CNN
+F 3 "" H 7710 3725 50  0000 C CNN
+	1    7710 3725
+	-1   0    0    1   
+$EndComp
+Text Label 7710 3315 1    39   ~ 0
+TEMP
+Text Label 7260 1375 1    39   ~ 0
+BUZZER
+$Comp
+L GND #PWR010
+U 1 1 5827E8B2
+P 2535 5525
+F 0 "#PWR010" H 2535 5275 50  0001 C CNN
+F 1 "GND" H 2535 5375 50  0000 C CNN
+F 2 "" H 2535 5525 50  0000 C CNN
+F 3 "" H 2535 5525 50  0000 C CNN
+	1    2535 5525
+	1    0    0    -1  
+$EndComp
+Text Label 7185 1355 1    39   ~ 0
+BEACON_ON
+NoConn ~ 1455 2915
+Text Label 9235 2470 0    39   ~ 0
+DIS
+$Comp
+L VCC #PWR011
+U 1 1 586B51FC
+P 12275 2835
+F 0 "#PWR011" H 12275 2685 50  0001 C CNN
+F 1 "VCC" H 12275 2985 50  0000 C CNN
+F 2 "" H 12275 2835 50  0000 C CNN
+F 3 "" H 12275 2835 50  0000 C CNN
+	1    12275 2835
+	0    -1   -1   0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG012
+U 1 1 586BEB0A
+P 870 1570
+F 0 "#FLG012" H 870 1665 50  0001 C CNN
+F 1 "PWR_FLAG" H 870 1750 50  0000 C CNN
+F 2 "" H 870 1570 50  0000 C CNN
+F 3 "" H 870 1570 50  0000 C CNN
+	1    870  1570
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 586BECFE
+P 870 1690
+F 0 "#PWR013" H 870 1440 50  0001 C CNN
+F 1 "GND" H 870 1540 50  0000 C CNN
+F 2 "" H 870 1690 50  0000 C CNN
+F 3 "" H 870 1690 50  0000 C CNN
+	1    870  1690
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C8
+U 1 1 58784276
+P 4675 1050
+F 0 "C8" H 4700 1150 50  0000 L CNN
+F 1 "10nF" H 4700 950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4713 900 50  0001 C CNN
+F 3 "" H 4675 1050 50  0000 C CNN
+F 4 "KEMET" H 4675 1050 60  0001 C CNN "Fabricante"
+F 5 "C0603X103F5JACTU" H 4675 1050 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 4675 1050 60  0001 C CNN "Proveedor #1"
+F 7 "80-C0603X103F5J" H 4675 1050 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 4675 1050 60  0001 C CNN "Proveedor #2"
+F 9 "2579110" H 4675 1050 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Ceramic Capacitors MLCC - SMD/SMT 50volts 10000pF 1% U2J" H 4675 1050 60  0001 C CNN "Descripción"
+	1    4675 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR014
+U 1 1 587842D1
+P 5145 1255
+F 0 "#PWR014" H 5145 1005 50  0001 C CNN
+F 1 "GND" H 5145 1105 50  0000 C CNN
+F 2 "" H 5145 1255 50  0000 C CNN
+F 3 "" H 5145 1255 50  0000 C CNN
+	1    5145 1255
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 58789C1B
+P 770 2805
+F 0 "C1" H 795 2905 50  0000 L CNN
+F 1 "100nF" H 795 2705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 808 2655 50  0001 C CNN
+F 3 "Fabricante" H 770 2805 50  0001 C CNN
+F 4 "KEMET" H 770 2805 60  0001 C CNN "Fabricante"
+F 5 "80-C0603X104K5R" H 770 2805 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 770 2805 60  0001 C CNN "Proveedor #1"
+F 7 "C0603X104K5RACTU" H 770 2805 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 770 2805 60  0001 C CNN "Proveedor #2"
+F 9 "1414028" H 770 2805 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Condensador de Cerámica Multicapa, Terminación Flexible (FT-CAP), 0603 [Métrica 1608], 0.1 µF, 50 V" H 770 2805 60  0001 C CNN "Descripción"
+	1    770  2805
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR015
+U 1 1 58789D01
+P 770 2625
+F 0 "#PWR015" H 770 2475 50  0001 C CNN
+F 1 "VCC" H 770 2775 50  0000 C CNN
+F 2 "" H 770 2625 50  0000 C CNN
+F 3 "" H 770 2625 50  0000 C CNN
+	1    770  2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 58789D60
+P 770 3005
+F 0 "#PWR016" H 770 2755 50  0001 C CNN
+F 1 "GND" H 770 2855 50  0000 C CNN
+F 2 "" H 770 3005 50  0000 C CNN
+F 3 "" H 770 3005 50  0000 C CNN
+	1    770  3005
+	1    0    0    -1  
+$EndComp
+Text Label 2495 4945 0    39   ~ 0
+BUZZER
+$Comp
+L VCC #PWR017
+U 1 1 58ABD242
+P 1275 2820
+F 0 "#PWR017" H 1275 2670 50  0001 C CNN
+F 1 "VCC" H 1275 2970 50  0000 C CNN
+F 2 "" H 1275 2820 50  0000 C CNN
+F 3 "" H 1275 2820 50  0000 C CNN
+	1    1275 2820
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 58ABE2B2
+P 895 5105
+F 0 "R1" V 975 5105 50  0000 C CNN
+F 1 "470" V 895 5105 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 825 5105 50  0001 C CNN
+F 3 "" H 895 5105 50  0000 C CNN
+F 4 "YAGEO" H 895 5105 60  0001 C CNN "Fabricante"
+F 5 "RT0603FRE07470RL" H 895 5105 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 895 5105 60  0001 C CNN "Proveedor #1"
+F 7 "603-RT0603FRE07470RL" H 895 5105 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 895 5105 60  0001 C CNN "Proveedor #2"
+F 9 "1500635" H 895 5105 60  0001 C CNN "Referencia Proveedor #2"
+	1    895  5105
+	1    0    0    -1  
+$EndComp
+Text Label 895  4825 1    39   ~ 0
+LED_G
+Text Label 6105 2095 0    39   ~ 0
+LED_G
+Text Label 7335 3300 1    39   ~ 0
+PGD
+Text Label 7485 3395 1    39   ~ 0
+VBAT
+$Comp
+L R R6
+U 1 1 58AC2B3F
+P 9280 1420
+F 0 "R6" V 9395 1405 50  0000 C CNN
+F 1 "10K" V 9280 1420 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 9210 1420 50  0001 C CNN
+F 3 "" H 9280 1420 50  0000 C CNN
+F 4 "Value" H 9280 1420 60  0001 C CNN "Fabricante"
+F 5 "Value" H 9280 1420 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 9280 1420 60  0001 C CNN "Proveedor #1"
+F 7 "71-CRCW0603-10K-E3" H 9280 1420 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 9280 1420 60  0001 C CNN "Proveedor #2"
+F 9 "1469748" H 9280 1420 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Resistencia SMD de Tipo Chip, Película Gruesa, 10 kohm, 75 V, 0603 [Métrica 1608], 100 mW, ± 1%" H 9280 1420 60  0001 C CNN "Descripción"
+	1    9280 1420
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR018
+U 1 1 58AC360A
+P 9280 1670
+F 0 "#PWR018" H 9280 1420 50  0001 C CNN
+F 1 "GND" H 9280 1520 50  0000 C CNN
+F 2 "" H 9280 1670 50  0000 C CNN
+F 3 "" H 9280 1670 50  0000 C CNN
+	1    9280 1670
+	1    0    0    -1  
+$EndComp
+Text Label 9425 1225 0    39   ~ 0
+VBAT
+Text Label 8540 2545 2    39   ~ 0
+ENA
+Text Notes 12885 1790 0    118  ~ 24
+MPTT
+Text Notes 15205 2900 0    118  ~ 24
+RF
+Text Label 14500 2995 0    39   ~ 0
+AGC
+Text Label 14510 3095 0    39   ~ 0
+RF_IN
+Text Label 7635 3390 1    39   ~ 0
+AGC
+NoConn ~ 8135 2770
+NoConn ~ 8135 2620
+NoConn ~ 8135 2095
+NoConn ~ 8135 2020
+$Comp
+L PIC18F45K22 U4
+U 1 1 58A0B7A2
+P 7235 2820
+F 0 "U4" H 6510 2530 60  0000 C CNN
+F 1 "PIC18F45K22" H 6685 4210 60  0000 C CNN
+F 2 "Housings_QFP:LQFP-44_10x10mm_Pitch0.8mm" H 7235 2820 60  0001 C CNN
+F 3 "" H 7235 2820 60  0001 C CNN
+F 4 "MICROCHIP" H 7235 2820 60  0001 C CNN "Fabricante"
+F 5 "PIC18F45K22-I/PT" H 7235 2820 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 7235 2820 60  0001 C CNN "Proveedor #1"
+F 7 "579-PIC18F45K22-I/PT" H 7235 2820 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 7235 2820 60  0001 C CNN "Proveedor #2"
+F 9 "1840995" H 7235 2820 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "8-bit Microcontrollers - MCU 32KB Flash 1536B RAM 8B nanoWatt" H 7235 2820 60  0001 C CNN "Descripción"
+	1    7235 2820
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7735 1670
+NoConn ~ 7660 1670
+NoConn ~ 7560 1670
+NoConn ~ 7485 1670
+NoConn ~ 7410 1670
+NoConn ~ 7110 1670
+NoConn ~ 7035 1670
+NoConn ~ 6960 1670
+NoConn ~ 6510 2020
+NoConn ~ 6510 2245
+NoConn ~ 6510 2320
+NoConn ~ 7185 3145
+NoConn ~ 1220 3960
+$Comp
+L TC1262-30VDB U2
+U 1 1 58C16FE8
+P 2735 1205
+F 0 "U2" H 2735 1530 50  0000 C CNN
+F 1 "TC1262-30VDB" H 2735 1455 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 2785 955 50  0001 L CIN
+F 3 "" H 2735 1005 50  0001 C CNN
+F 4 "MICROCHIP" H 2735 1205 60  0001 C CNN "Fabricante"
+F 5 "TC1262-3.VBD" H 2735 1205 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 2735 1205 60  0001 C CNN "Proveedor #1"
+F 7 "579-TC1262-3.0VDB" H 2735 1205 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 2735 1205 60  0001 C CNN "Proveedor #2"
+F 9 "1852181" H 2735 1205 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "MICROCHIP  TC1262-3.0VDB  Regulador de Tensión Fija LDO, 2.7V a 6V, 350mV de Caída, 3Vout, 500mAout, SOT-223-3" H 2735 1205 60  0001 C CNN "Descripción"
+	1    2735 1205
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR019
+U 1 1 58C36F4D
+P 3425 1040
+F 0 "#PWR019" H 3425 890 50  0001 C CNN
+F 1 "VCC" H 3425 1190 50  0000 C CNN
+F 2 "" H 3425 1040 50  0000 C CNN
+F 3 "" H 3425 1040 50  0000 C CNN
+	1    3425 1040
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 58C37264
+P 2735 1950
+F 0 "#PWR020" H 2735 1700 50  0001 C CNN
+F 1 "GND" H 2735 1800 50  0000 C CNN
+F 2 "" H 2735 1950 50  0000 C CNN
+F 3 "" H 2735 1950 50  0000 C CNN
+	1    2735 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER D3
+U 1 1 58C39182
+P 11845 4645
+F 0 "D3" H 11845 4745 50  0000 C CNN
+F 1 "ZENER" H 11890 4545 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 11845 4645 50  0001 C CNN
+F 3 "" H 11845 4645 50  0000 C CNN
+F 4 "ON SEMICONDUCTOR" H 11845 4645 60  0001 C CNN "Fabricante"
+F 5 "MMSZ5223BT1G" H 11845 4645 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 11845 4645 60  0001 C CNN "Proveedor #1"
+F 7 "863-MMSZ5223BT1G" H 11845 4645 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 11845 4645 60  0001 C CNN "Proveedor #2"
+F 9 "2463576" H 11845 4645 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Diodo Zener Simple, Regulador de Tensión, 2.7 V, 500 mW, SOD-123, 5 %, 2 Pines, 150 °C" H 11845 4645 60  0001 C CNN "Descripción"
+	1    11845 4645
+	0    1    1    0   
+$EndComp
+Text Notes 11490 4615 0    39   ~ 8
+2.7 V
+$Comp
+L VDD #PWR021
+U 1 1 58C3BA6E
+P 12290 1975
+F 0 "#PWR021" H 12290 1825 50  0001 C CNN
+F 1 "VDD" H 12290 2125 50  0000 C CNN
+F 2 "" H 12290 1975 50  0000 C CNN
+F 3 "" H 12290 1975 50  0000 C CNN
+	1    12290 1975
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR022
+U 1 1 58C3BBE9
+P 9280 830
+F 0 "#PWR022" H 9280 680 50  0001 C CNN
+F 1 "VDD" H 9280 980 50  0000 C CNN
+F 2 "" H 9280 830 50  0000 C CNN
+F 3 "" H 9280 830 50  0000 C CNN
+	1    9280 830 
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR023
+U 1 1 58C3DA97
+P 1780 1015
+F 0 "#PWR023" H 1780 865 50  0001 C CNN
+F 1 "VDD" H 1780 1165 50  0000 C CNN
+F 2 "" H 1780 1015 50  0000 C CNN
+F 3 "" H 1780 1015 50  0000 C CNN
+	1    1780 1015
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 58C4011D
+P 2125 1510
+F 0 "C3" H 2150 1610 50  0000 L CNN
+F 1 "1uF" H 2150 1410 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 2163 1360 50  0001 C CNN
+F 3 "" H 2125 1510 50  0000 C CNN
+F 4 "TDK" H 2125 1510 60  0001 C CNN "Fabricante"
+F 5 "C0603X5R0J105M030BC" H 2125 1510 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 2125 1510 60  0001 C CNN "Proveedor #1"
+F 7 "810-C0603X5R0J105M" H 2125 1510 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 2125 1510 60  0001 C CNN "Proveedor #2"
+F 9 "2524945" H 2125 1510 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "TDK  C0603X5R0J105M030BC  Condensador de Cerámica Multicapa, 0201 [Métrica 0603], 1 µF, 6.3 V, ± 20%, X5R, C Series" H 2125 1510 60  0001 C CNN "Descripción"
+	1    2125 1510
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR024
+U 1 1 58C45C7A
+P 4670 5030
+F 0 "#PWR024" H 4670 4780 50  0001 C CNN
+F 1 "GND" H 4670 4880 50  0000 C CNN
+F 2 "" H 4670 5030 50  0000 C CNN
+F 3 "" H 4670 5030 50  0000 C CNN
+	1    4670 5030
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR025
+U 1 1 58C4A4BB
+P 7005 5695
+F 0 "#PWR025" H 7005 5445 50  0001 C CNN
+F 1 "GND" H 7005 5545 50  0000 C CNN
+F 2 "" H 7005 5695 50  0000 C CNN
+F 3 "" H 7005 5695 50  0000 C CNN
+	1    7005 5695
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR026
+U 1 1 58C4AE0E
+P 7005 4770
+F 0 "#PWR026" H 7005 4620 50  0001 C CNN
+F 1 "VCC" H 7005 4920 50  0000 C CNN
+F 2 "" H 7005 4770 50  0000 C CNN
+F 3 "" H 7005 4770 50  0000 C CNN
+	1    7005 4770
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 58C4C879
+P 5870 5100
+F 0 "R4" V 5950 5100 50  0000 C CNN
+F 1 "6,19K" V 5870 5100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 5800 5100 50  0001 C CNN
+F 3 "" H 5870 5100 50  0000 C CNN
+F 4 "WELWYN" H 5870 5100 60  0001 C CNN "Fabricante"
+F 5 "PCF0603R-6K19BT1" H 5870 5100 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 5870 5100 60  0001 C CNN "Proveedor #1"
+F 7 "756-PCF0603R-6K19BT1" H 5870 5100 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 5870 5100 60  0001 C CNN "Proveedor #2"
+F 9 "Farnell" H 5870 5100 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "1160352" H 5870 5100 60  0001 C CNN "Descripción"
+	1    5870 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR027
+U 1 1 58C4D31F
+P 6300 5515
+F 0 "#PWR027" H 6300 5265 50  0001 C CNN
+F 1 "GND" H 6300 5365 50  0000 C CNN
+F 2 "" H 6300 5515 50  0000 C CNN
+F 3 "" H 6300 5515 50  0000 C CNN
+	1    6300 5515
+	1    0    0    -1  
+$EndComp
+Text Label 5210 5100 0    39   ~ 0
+BEACON_ON
+$Comp
+L R R7
+U 1 1 58C4F5A9
+P 7740 5200
+F 0 "R7" V 7820 5200 50  0000 C CNN
+F 1 "4,99K" V 7740 5200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 7670 5200 50  0001 C CNN
+F 3 "" H 7740 5200 50  0000 C CNN
+F 4 "PANASONIC" H 7740 5200 60  0001 C CNN "Fabricante"
+F 5 "ERJ-3EKF4991V" H 7740 5200 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 7740 5200 60  0001 C CNN "Proveedor #1"
+F 7 "667-ERJ-3EKF4991V" H 7740 5200 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 7740 5200 60  0001 C CNN "Proveedor #2"
+F 9 "2059377" H 7740 5200 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Resistencia SMD de Tipo Chip, Película Gruesa, 4.99 kohm, 75 V, 0603 [Métrica 1608], 100 mW, ± 1%" H 7740 5200 60  0001 C CNN "Descripción"
+	1    7740 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R8
+U 1 1 58C52D06
+P 8200 5200
+F 0 "R8" V 8280 5200 50  0000 C CNN
+F 1 "6,65K" V 8200 5200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 8130 5200 50  0001 C CNN
+F 3 "" H 8200 5200 50  0000 C CNN
+F 4 "VISHAY" H 8200 5200 60  0001 C CNN "Fabricante"
+F 5 "TNPW06036K65BEEA" H 8200 5200 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 8200 5200 60  0001 C CNN "Proveedor #1"
+F 7 "71-TNPW06036K65BEEA" H 8200 5200 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 8200 5200 60  0001 C CNN "Proveedor #2"
+F 9 "1809818" H 8200 5200 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Resistencia SMD de Tipo Chip, Película Delgada, 6.65 kohm, 75 V, 0603 [Métrica 1608], 100 mW" H 8200 5200 60  0001 C CNN "Descripción"
+	1    8200 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 58C5D291
+P 8410 5745
+F 0 "#PWR028" H 8410 5495 50  0001 C CNN
+F 1 "GND" H 8410 5595 50  0000 C CNN
+F 2 "" H 8410 5745 50  0000 C CNN
+F 3 "" H 8410 5745 50  0000 C CNN
+	1    8410 5745
+	1    0    0    -1  
+$EndComp
+Text Label 9370 5100 0    39   ~ 0
+F_BEA
+$Comp
+L VCC #PWR029
+U 1 1 58C61D2A
+P 8665 5500
+F 0 "#PWR029" H 8665 5350 50  0001 C CNN
+F 1 "VCC" H 8665 5650 50  0000 C CNN
+F 2 "" H 8665 5500 50  0000 C CNN
+F 3 "" H 8665 5500 50  0000 C CNN
+	1    8665 5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR030
+U 1 1 58C62BB9
+P 8665 4755
+F 0 "#PWR030" H 8665 4505 50  0001 C CNN
+F 1 "GND" H 8665 4605 50  0000 C CNN
+F 2 "" H 8665 4755 50  0000 C CNN
+F 3 "" H 8665 4755 50  0000 C CNN
+	1    8665 4755
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R9
+U 1 1 58C66605
+P 8295 7115
+F 0 "R9" V 8375 7115 50  0000 C CNN
+F 1 "1K" V 8295 7115 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 8225 7115 50  0001 C CNN
+F 3 "" H 8295 7115 50  0000 C CNN
+F 4 "WELWYN" V 8295 7115 60  0001 C CNN "Fabricante"
+F 5 "WCR0603-1K0FI" V 8295 7115 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" V 8295 7115 60  0001 C CNN " Proveedor #1"
+F 7 "2422029" V 8295 7115 60  0001 C CNN "Referencia Proveedor #1"
+	1    8295 7115
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR031
+U 1 1 58C6851C
+P 8080 7375
+F 0 "#PWR031" H 8080 7125 50  0001 C CNN
+F 1 "GND" H 8080 7225 50  0000 C CNN
+F 2 "" H 8080 7375 50  0000 C CNN
+F 3 "" H 8080 7375 50  0000 C CNN
+	1    8080 7375
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R10
+U 1 1 58C68694
+P 8900 7625
+F 0 "R10" V 8980 7625 50  0000 C CNN
+F 1 "R" V 8900 7625 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 8830 7625 50  0001 C CNN
+F 3 "" H 8900 7625 50  0000 C CNN
+F 4 "PANASONIC" V 8900 7625 60  0001 C CNN "Fabricante"
+F 5 "ERJ3EKF2002V" V 8900 7625 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" V 8900 7625 60  0001 C CNN "Proveedor #1"
+F 7 "Mouser" V 8900 7625 60  0001 C CNN "Proveedor #2"
+F 8 "2059432" V 8900 7625 60  0001 C CNN "Referencia Proveedor #1"
+F 9 "667-ERJ-3EKF2002V" V 8900 7625 60  0001 C CNN "Referencia Proveedor #2"
+	1    8900 7625
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR032
+U 1 1 58C6B8AD
+P 8825 7370
+F 0 "#PWR032" H 8825 7120 50  0001 C CNN
+F 1 "GND" H 8825 7220 50  0000 C CNN
+F 2 "" H 8825 7370 50  0000 C CNN
+F 3 "" H 8825 7370 50  0000 C CNN
+	1    8825 7370
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR033
+U 1 1 58C6C913
+P 8825 6570
+F 0 "#PWR033" H 8825 6420 50  0001 C CNN
+F 1 "VCC" H 8825 6720 50  0000 C CNN
+F 2 "" H 8825 6570 50  0000 C CNN
+F 3 "" H 8825 6570 50  0000 C CNN
+	1    8825 6570
+	1    0    0    -1  
+$EndComp
+Text Label 8280 6915 0    39   ~ 0
+RF_IN
+Text Label 9335 7015 0    39   ~ 0
+F_RF_IN
+Text Label 8285 2695 0    39   ~ 0
+F_RF_IN
+Text Notes 13455 2820 2    118  ~ 24
+DEV
+$Comp
+L VCC #PWR034
+U 1 1 58C765F8
+P 14860 5975
+F 0 "#PWR034" H 14860 5825 50  0001 C CNN
+F 1 "VCC" H 14860 6125 50  0000 C CNN
+F 2 "" H 14860 5975 50  0000 C CNN
+F 3 "" H 14860 5975 50  0000 C CNN
+	1    14860 5975
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR035
+U 1 1 58C76DBB
+P 14860 6865
+F 0 "#PWR035" H 14860 6615 50  0001 C CNN
+F 1 "GND" H 14860 6715 50  0000 C CNN
+F 2 "" H 14860 6865 50  0000 C CNN
+F 3 "" H 14860 6865 50  0000 C CNN
+	1    14860 6865
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R12
+U 1 1 58C78BAD
+P 14010 6550
+F 0 "R12" V 14090 6550 50  0000 C CNN
+F 1 "1K" V 14010 6550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 13940 6550 50  0001 C CNN
+F 3 "" H 14010 6550 50  0000 C CNN
+F 4 "WCR0603-1K0FI" V 14010 6550 60  0001 C CNN "Referencia Fabricante"
+F 5 "WELWYN" V 14010 6550 60  0001 C CNN "Fabricante"
+F 6 "Mouser" V 14010 6550 60  0001 C CNN "Proveedor #1"
+F 7 "Farnell" V 14010 6550 60  0001 C CNN " Proveedor #2"
+F 8 "2422029" V 14010 6550 60  0001 C CNN "Referencia Proveedor #2"
+	1    14010 6550
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR036
+U 1 1 58C797BC
+P 14010 6760
+F 0 "#PWR036" H 14010 6510 50  0001 C CNN
+F 1 "GND" H 14010 6610 50  0000 C CNN
+F 2 "" H 14010 6760 50  0000 C CNN
+F 3 "" H 14010 6760 50  0000 C CNN
+	1    14010 6760
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR037
+U 1 1 58C7AD36
+P 14010 5945
+F 0 "#PWR037" H 14010 5795 50  0001 C CNN
+F 1 "VCC" H 14010 6095 50  0000 C CNN
+F 2 "" H 14010 5945 50  0000 C CNN
+F 3 "" H 14010 5945 50  0000 C CNN
+	1    14010 5945
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG038
+U 1 1 58C4A7D5
+P 1345 1575
+F 0 "#FLG038" H 1345 1670 50  0001 C CNN
+F 1 "PWR_FLAG" H 1345 1755 50  0000 C CNN
+F 2 "" H 1345 1575 50  0000 C CNN
+F 3 "" H 1345 1575 50  0000 C CNN
+	1    1345 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR039
+U 1 1 58C4A867
+P 1345 1700
+F 0 "#PWR039" H 1345 1550 50  0001 C CNN
+F 1 "VDD" H 1345 1850 50  0000 C CNN
+F 2 "" H 1345 1700 50  0000 C CNN
+F 3 "" H 1345 1700 50  0000 C CNN
+	1    1345 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L LT6005 U5
+U 1 1 58C89BED
+P 7105 5200
+F 0 "U5" H 7155 5400 50  0000 C CNN
+F 1 "LT6005" H 7105 5000 50  0000 L CNN
+F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 7055 5300 50  0001 C CNN
+F 3 "" H 7155 5400 50  0000 C CNN
+F 4 "LINEAR TECHNOLOGY" H 7105 5200 60  0001 C CNN "Fabricante"
+F 5 "LT6005IGN#PBF" H 7105 5200 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 7105 5200 60  0001 C CNN "Proveedor #1"
+F 7 "-" H 7105 5200 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 7105 5200 60  0001 C CNN "Proveedor #2"
+F 9 "1432099" H 7105 5200 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Amplificador Operacional, Cuádruple, 4 Amplificadores, 2 kHz, 0.0008 V/µs, 1.6V a 16V, TSSOP" H 7105 5200 60  0001 C CNN "Descripción"
+	1    7105 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LT6005 U5
+U 3 1 58C89D74
+P 8925 7015
+F 0 "U5" H 8975 7215 50  0000 C CNN
+F 1 "LT6005" H 8925 6815 50  0000 L CNN
+F 2 "" H 8875 7115 50  0000 C CNN
+F 3 "" H 8975 7215 50  0000 C CNN
+F 4 "LINEAR TECHNOLOGY" H 8925 7015 60  0001 C CNN "Fabricante"
+F 5 "LT6005IGN#PBF" H 8925 7015 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 8925 7015 60  0001 C CNN "Proveedor #1"
+F 7 "-" H 8925 7015 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 8925 7015 60  0001 C CNN "Proveedor #2"
+F 9 "1432099" H 8925 7015 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Amplificador Operacional, Cuádruple, 4 Amplificadores, 2 kHz, 0.0008 V/µs, 1.6V a 16V, TSSOP" H 8925 7015 60  0001 C CNN "Descripción"
+	3    8925 7015
+	1    0    0    -1  
+$EndComp
+$Comp
+L LT6005 U5
+U 4 1 58C89E3B
+P 14960 6455
+F 0 "U5" H 15010 6655 50  0000 C CNN
+F 1 "LT6005" H 14960 6255 50  0000 L CNN
+F 2 "" H 14910 6555 50  0000 C CNN
+F 3 "" H 15010 6655 50  0000 C CNN
+F 4 "LINEAR TECHNOLOGY" H 14960 6455 60  0001 C CNN "Fabricante"
+F 5 "LT6005IGN#PBF" H 14960 6455 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 14960 6455 60  0001 C CNN "Proveedor #1"
+F 7 "-" H 14960 6455 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 14960 6455 60  0001 C CNN "Proveedor #2"
+F 9 "1432099" H 14960 6455 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Amplificador Operacional, Cuádruple, 4 Amplificadores, 2 kHz, 0.0008 V/µs, 1.6V a 16V, TSSOP" H 14960 6455 60  0001 C CNN "Descripción"
+	4    14960 6455
+	1    0    0    -1  
+$EndComp
+$Comp
+L LT6005 U5
+U 2 1 58C8C598
+P 8765 5100
+F 0 "U5" H 8815 5300 50  0000 C CNN
+F 1 "LT6005" H 8765 4900 50  0000 L CNN
+F 2 "" H 8715 5200 50  0000 C CNN
+F 3 "" H 8815 5300 50  0000 C CNN
+F 4 "LINEAR TECHNOLOGY" H 8765 5100 60  0001 C CNN "Fabricante"
+F 5 "LT6005IGN#PBF" H 8765 5100 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 8765 5100 60  0001 C CNN "Proveedor #1"
+F 7 "-" H 8765 5100 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 8765 5100 60  0001 C CNN "Proveedor #2"
+F 9 "1432099" H 8765 5100 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Amplificador Operacional, Cuádruple, 4 Amplificadores, 2 kHz, 0.0008 V/µs, 1.6V a 16V, TSSOP" H 8765 5100 60  0001 C CNN "Descripción"
+	2    8765 5100
+	1    0    0    1   
+$EndComp
+$Comp
+L VCC #PWR040
+U 1 1 58D4A78F
+P 4695 4430
+F 0 "#PWR040" H 4695 4280 50  0001 C CNN
+F 1 "VCC" H 4695 4580 50  0000 C CNN
+F 2 "" H 4695 4430 50  0000 C CNN
+F 3 "" H 4695 4430 50  0000 C CNN
+	1    4695 4430
+	1    0    0    -1  
+$EndComp
+Text Label 6265 2620 0    39   ~ 0
+PTT
+Text Label 6265 2695 0    39   ~ 0
+RPT
+Text Label 6265 2770 0    39   ~ 0
+HIPWR
+Text Label 7110 3605 1    39   ~ 0
+BEACON_MODE
+Text Label 14250 2010 0    39   ~ 0
+PTT
+Text Label 14260 2110 0    39   ~ 0
+RPT
+Text Label 14235 2310 0    39   ~ 0
+HIPWR
+Text Label 14220 2410 0    39   ~ 0
+BEACON_MODE
+$Comp
+L GND #PWR041
+U 1 1 58E428EF
+P 14080 2220
+F 0 "#PWR041" H 14080 1970 50  0001 C CNN
+F 1 "GND" H 14080 2070 50  0000 C CNN
+F 2 "" H 14080 2220 50  0000 C CNN
+F 3 "" H 14080 2220 50  0000 C CNN
+	1    14080 2220
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR042
+U 1 1 58E42E6D
+P 14385 2895
+F 0 "#PWR042" H 14385 2645 50  0001 C CNN
+F 1 "GND" H 14385 2745 50  0000 C CNN
+F 2 "" H 14385 2895 50  0000 C CNN
+F 3 "" H 14385 2895 50  0000 C CNN
+	1    14385 2895
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR043
+U 1 1 58E43BA0
+P 12485 2935
+F 0 "#PWR043" H 12485 2685 50  0001 C CNN
+F 1 "GND" H 12485 2785 50  0000 C CNN
+F 2 "" H 12485 2935 50  0000 C CNN
+F 3 "" H 12485 2935 50  0000 C CNN
+	1    12485 2935
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR044
+U 1 1 58E45284
+P 12110 2120
+F 0 "#PWR044" H 12110 1870 50  0001 C CNN
+F 1 "GND" H 12110 1970 50  0000 C CNN
+F 2 "" H 12110 2120 50  0000 C CNN
+F 3 "" H 12110 2120 50  0000 C CNN
+	1    12110 2120
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 59041535
+P 1435 5105
+F 0 "R2" V 1515 5105 50  0000 C CNN
+F 1 "470" V 1435 5105 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 1365 5105 50  0001 C CNN
+F 3 "" H 1435 5105 50  0000 C CNN
+F 4 "YAGEO" H 1435 5105 60  0001 C CNN "Fabricante"
+F 5 "RT0603FRE07470RL" H 1435 5105 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 1435 5105 60  0001 C CNN "Proveedor #1"
+F 7 "603-RT0603FRE07470RL" H 1435 5105 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 1435 5105 60  0001 C CNN "Proveedor #2"
+F 9 "1500635" H 1435 5105 60  0001 C CNN "Referencia Proveedor #2"
+	1    1435 5105
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 59043BAE
+P 3255 1545
+F 0 "C5" H 3280 1645 50  0000 L CNN
+F 1 "1uF" H 3280 1445 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3293 1395 50  0001 C CNN
+F 3 "" H 3255 1545 50  0000 C CNN
+F 4 "TDK" H 3255 1545 60  0001 C CNN "Fabricante"
+F 5 "C0603X5R0J105M030BC" H 3255 1545 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 3255 1545 60  0001 C CNN "Proveedor #1"
+F 7 "810-C0603X5R0J105M" H 3255 1545 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 3255 1545 60  0001 C CNN "Proveedor #2"
+F 9 "2524945" H 3255 1545 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "TDK  C0603X5R0J105M030BC  Condensador de Cerámica Multicapa, 0201 [Métrica 0603], 1 µF, 6.3 V, ± 20%, X5R, C Series" H 3255 1545 60  0001 C CNN "Descripción"
+	1    3255 1545
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C4
+U 1 1 59047684
+P 5430 1935
+F 0 "C4" H 5440 2005 50  0000 L CNN
+F 1 "18pF" H 5440 1855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5430 1935 50  0001 C CNN
+F 3 "" H 5430 1935 50  0000 C CNN
+F 4 "KEMET" H 5430 1935 60  0001 C CNN "Fabricante"
+F 5 "CBR06C180FAGAC" H 5430 1935 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 5430 1935 60  0001 C CNN "Proveedor #1"
+F 7 "80-CBR06C180FAGAC" H 5430 1935 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 5430 1935 60  0001 C CNN "Proveedor #2"
+F 9 "-" H 5430 1935 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 250volts 18pF 1%" H 5430 1935 60  0001 C CNN "Descripción"
+	1    5430 1935
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 590493E7
+P 8980 2470
+F 0 "C7" H 9005 2570 50  0000 L CNN
+F 1 "100nF" H 9005 2370 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9018 2320 50  0001 C CNN
+F 3 "Fabricante" H 8980 2470 50  0001 C CNN
+F 4 "KEMET" H 8980 2470 60  0001 C CNN "Fabricante"
+F 5 "80-C0603X104K5R" H 8980 2470 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 8980 2470 60  0001 C CNN "Proveedor #1"
+F 7 "C0603X104K5RACTU" H 8980 2470 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 8980 2470 60  0001 C CNN "Proveedor #2"
+F 9 "1414028" H 8980 2470 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Condensador de Cerámica Multicapa, Terminación Flexible (FT-CAP), 0603 [Métrica 1608], 0.1 µF, 50 V" H 8980 2470 60  0001 C CNN "Descripción"
+	1    8980 2470
+	0    1    1    0   
+$EndComp
+$Comp
+L C C9
+U 1 1 59049AB1
+P 4965 1050
+F 0 "C9" H 4990 1150 50  0000 L CNN
+F 1 "100nF" H 4990 950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5003 900 50  0001 C CNN
+F 3 "Fabricante" H 4965 1050 50  0001 C CNN
+F 4 "KEMET" H 4965 1050 60  0001 C CNN "Fabricante"
+F 5 "80-C0603X104K5R" H 4965 1050 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 4965 1050 60  0001 C CNN "Proveedor #1"
+F 7 "C0603X104K5RACTU" H 4965 1050 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 4965 1050 60  0001 C CNN "Proveedor #2"
+F 9 "1414028" H 4965 1050 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Condensador de Cerámica Multicapa, Terminación Flexible (FT-CAP), 0603 [Métrica 1608], 0.1 µF, 50 V" H 4965 1050 60  0001 C CNN "Descripción"
+	1    4965 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 5904AD30
+P 9280 1035
+F 0 "R5" V 9360 1035 50  0000 C CNN
+F 1 "4K7" V 9280 1035 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 9210 1035 50  0001 C CNN
+F 3 "" H 9280 1035 50  0000 C CNN
+F 4 "VISHAY" H 9280 1035 60  0001 C CNN "Fabricante"
+F 5 "TNPW06034K75BEEA" H 9280 1035 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 9280 1035 60  0001 C CNN "Proveedor #1"
+F 7 "71-TNPW06034K75BEEA" H 9280 1035 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 9280 1035 60  0001 C CNN "Proveedor #2"
+F 9 "1893941" H 9280 1035 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "TNPW06034K75BEEA  RES, THIN FILM, 4K75, 0.1%, 0.063W, 0603" H 9280 1035 60  0001 C CNN "Descripción"
+	1    9280 1035
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C10
+U 1 1 5904C202
+P 4475 4670
+F 0 "C10" H 4500 4770 50  0000 L CNN
+F 1 "10nF" H 4500 4570 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4513 4520 50  0001 C CNN
+F 3 "" H 4475 4670 50  0000 C CNN
+F 4 "KEMET" H 4475 4670 60  0001 C CNN "Fabricante"
+F 5 "C0603X103F5JACTU" H 4475 4670 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 4475 4670 60  0001 C CNN "Proveedor #1"
+F 7 "80-C0603X103F5J" H 4475 4670 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 4475 4670 60  0001 C CNN "Proveedor #2"
+F 9 "2579110" H 4475 4670 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Ceramic Capacitors MLCC - SMD/SMT 50volts 10000pF 1% U2J" H 4475 4670 60  0001 C CNN "Descripción"
+	1    4475 4670
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C11
+U 1 1 5904CD74
+P 4850 4675
+F 0 "C11" H 4875 4775 50  0000 L CNN
+F 1 "100nF" H 4875 4575 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4888 4525 50  0001 C CNN
+F 3 "Fabricante" H 4850 4675 50  0001 C CNN
+F 4 "KEMET" H 4850 4675 60  0001 C CNN "Fabricante"
+F 5 "80-C0603X104K5R" H 4850 4675 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 4850 4675 60  0001 C CNN "Proveedor #1"
+F 7 "C0603X104K5RACTU" H 4850 4675 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 4850 4675 60  0001 C CNN "Proveedor #2"
+F 9 "1414028" H 4850 4675 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Condensador de Cerámica Multicapa, Terminación Flexible (FT-CAP), 0603 [Métrica 1608], 0.1 µF, 50 V" H 4850 4675 60  0001 C CNN "Descripción"
+	1    4850 4675
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER D5
+U 1 1 5904E69F
+P 11455 4495
+F 0 "D5" H 11455 4595 50  0000 C CNN
+F 1 "ZENER" H 11500 4395 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 11455 4495 50  0001 C CNN
+F 3 "" H 11455 4495 50  0000 C CNN
+F 4 "ON SEMICONDUCTOR" H 11455 4495 60  0001 C CNN "Fabricante"
+F 5 "MMSZ5223BT1G" H 11455 4495 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 11455 4495 60  0001 C CNN "Proveedor #1"
+F 7 "863-MMSZ5223BT1G" H 11455 4495 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 11455 4495 60  0001 C CNN "Proveedor #2"
+F 9 "2463576" H 11455 4495 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Diodo Zener Simple, Regulador de Tensión, 2.7 V, 500 mW, SOD-123, 5 %, 2 Pines, 150 °C" H 11455 4495 60  0001 C CNN "Descripción"
+	1    11455 4495
+	0    1    1    0   
+$EndComp
+$Comp
+L C C6
+U 1 1 59051B72
+P 6300 5260
+F 0 "C6" H 6325 5360 50  0000 L CNN
+F 1 "10nF" H 6325 5160 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6338 5110 50  0001 C CNN
+F 3 "" H 6300 5260 50  0000 C CNN
+F 4 "KEMET" H 6300 5260 60  0001 C CNN "Fabricante"
+F 5 "C0603X103F5JACTU" H 6300 5260 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 6300 5260 60  0001 C CNN "Proveedor #1"
+F 7 "80-C0603X103F5J" H 6300 5260 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 6300 5260 60  0001 C CNN "Proveedor #2"
+F 9 "2579110" H 6300 5260 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Ceramic Capacitors MLCC - SMD/SMT 50volts 10000pF 1% U2J" H 6300 5260 60  0001 C CNN "Descripción"
+	1    6300 5260
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C13
+U 1 1 59053545
+P 8770 6130
+F 0 "C13" H 8795 6230 50  0000 L CNN
+F 1 "10nF" H 8795 6030 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8808 5980 50  0001 C CNN
+F 3 "" H 8770 6130 50  0000 C CNN
+F 4 "KEMET" H 8770 6130 60  0001 C CNN "Fabricante"
+F 5 "C0603X103F5JACTU" H 8770 6130 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 8770 6130 60  0001 C CNN "Proveedor #1"
+F 7 "80-C0603X103F5J" H 8770 6130 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 8770 6130 60  0001 C CNN "Proveedor #2"
+F 9 "2579110" H 8770 6130 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Ceramic Capacitors MLCC - SMD/SMT 50volts 10000pF 1% U2J" H 8770 6130 60  0001 C CNN "Descripción"
+	1    8770 6130
+	0    1    1    0   
+$EndComp
+$Comp
+L C C12
+U 1 1 59053E9C
+P 8410 5410
+F 0 "C12" H 8435 5510 50  0000 L CNN
+F 1 "10nF" H 8435 5310 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8448 5260 50  0001 C CNN
+F 3 "" H 8410 5410 50  0000 C CNN
+F 4 "KEMET" H 8410 5410 60  0001 C CNN "Fabricante"
+F 5 "C0603X103F5JACTU" H 8410 5410 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 8410 5410 60  0001 C CNN "Proveedor #1"
+F 7 "80-C0603X103F5J" H 8410 5410 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 8410 5410 60  0001 C CNN "Proveedor #2"
+F 9 "2579110" H 8410 5410 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Ceramic Capacitors MLCC - SMD/SMT 50volts 10000pF 1% U2J" H 8410 5410 60  0001 C CNN "Descripción"
+	1    8410 5410
+	-1   0    0    1   
+$EndComp
+Text Notes 2415 5200 0    39   ~ 8
+3.2 V
+$Comp
+L FIDUCIAL FID1
+U 1 1 591A5C55
+P 14330 1055
+F 0 "FID1" H 14330 1180 60  0000 C CNN
+F 1 "FIDUCIAL" H 14330 930 60  0000 C CNN
+F 2 "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 14330 1055 60  0001 C CNN
+F 3 "" H 14330 1055 60  0000 C CNN
+	1    14330 1055
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FID2
+U 1 1 591A6223
+P 14730 1055
+F 0 "FID2" H 14730 1180 60  0000 C CNN
+F 1 "FIDUCIAL" H 14730 930 60  0000 C CNN
+F 2 "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 14730 1055 60  0001 C CNN
+F 3 "" H 14730 1055 60  0000 C CNN
+	1    14730 1055
+	1    0    0    -1  
+$EndComp
+$Comp
+L FIDUCIAL FID3
+U 1 1 591A629A
+P 15145 1055
+F 0 "FID3" H 15145 1180 60  0000 C CNN
+F 1 "FIDUCIAL" H 15145 930 60  0000 C CNN
+F 2 "Fiducials:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 15145 1055 60  0001 C CNN
+F 3 "" H 15145 1055 60  0000 C CNN
+	1    15145 1055
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R13
+U 1 1 591F66F3
+P 3125 2840
+F 0 "R13" V 3230 2840 50  0000 C CNN
+F 1 "10K" V 3125 2840 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 3055 2840 50  0001 C CNN
+F 3 "" H 3125 2840 50  0000 C CNN
+F 4 "VISHAY" H 3125 2840 60  0001 C CNN "Fabricante"
+F 5 "TNPW06034K75BEEA" H 3125 2840 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 3125 2840 60  0001 C CNN "Proveedor #1"
+F 7 "71-TNPW06034K75BEEA" H 3125 2840 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 3125 2840 60  0001 C CNN "Proveedor #2"
+F 9 "1893941" H 3125 2840 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "TNPW06034K75BEEA  RES, THIN FILM, 4K75, 0.1%, 0.063W, 0603" H 3125 2840 60  0001 C CNN "Descripción"
+	1    3125 2840
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R11
+U 1 1 58C78986
+P 14010 6150
+F 0 "R11" V 14090 6150 50  0000 C CNN
+F 1 "1K" V 14010 6150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 13940 6150 50  0001 C CNN
+F 3 "" H 14010 6150 50  0000 C CNN
+F 4 "WELWYN" V 14010 6150 60  0001 C CNN "Fabricante"
+F 5 "WCR0603-1K0FI" V 14010 6150 60  0001 C CNN "Referencia Fabricante"
+F 6 "Farnell" V 14010 6150 60  0001 C CNN " Proveedor #1"
+F 7 "2422029" V 14010 6150 60  0001 C CNN "Referencia Proveedor #1"
+	1    14010 6150
+	-1   0    0    1   
+$EndComp
+Text Label 12190 2735 0    39   ~ 0
+~WDO/MCLR
+$Comp
+L VCC #PWR045
+U 1 1 59AFE00E
+P 5125 785
+F 0 "#PWR045" H 5125 635 50  0001 C CNN
+F 1 "VCC" H 5125 935 50  0000 C CNN
+F 2 "" H 5125 785 50  0000 C CNN
+F 3 "" H 5125 785 50  0000 C CNN
+	1    5125 785 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5430 1785 5430 1835
+Wire Wire Line
+	4430 1785 4430 1835
+Wire Wire Line
+	4430 2135 4430 2035
+Wire Wire Line
+	5430 2185 5430 2035
+Wire Wire Line
+	6510 2470 6260 2470
+Wire Wire Line
+	7560 3145 7560 3395
+Wire Wire Line
+	6510 2545 6260 2545
+Wire Wire Line
+	1166 3025 1166 2990
+Wire Wire Line
+	1166 2990 1455 2990
+Wire Wire Line
+	1455 3065 1346 3065
+Wire Wire Line
+	7410 3145 7410 3395
+Wire Wire Line
+	7335 1670 7335 1450
+Wire Wire Line
+	8135 2395 8630 2395
+Wire Wire Line
+	8630 2395 8630 2330
+Wire Wire Line
+	12745 2420 12505 2420
+Wire Wire Line
+	12290 1975 12290 2020
+Wire Wire Line
+	12290 2020 12745 2020
+Wire Wire Line
+	1995 4035 2110 4035
+Wire Wire Line
+	2110 4035 2110 4090
+Wire Wire Line
+	1220 4035 1050 4035
+Wire Wire Line
+	7260 1670 7260 1375
+Wire Wire Line
+	3095 5195 2820 5195
+Wire Wire Line
+	2820 5525 2820 5195
+Wire Wire Line
+	7185 1670 7185 1355
+Wire Wire Line
+	870  1690 870  1570
+Wire Wire Line
+	4675 900  4675 860 
+Wire Wire Line
+	770  3005 770  2955
+Wire Wire Line
+	770  2625 770  2655
+Wire Wire Line
+	1455 2840 1275 2840
+Wire Wire Line
+	1275 2840 1275 2820
+Wire Wire Line
+	2750 2915 2330 2915
+Wire Wire Line
+	2750 2840 2330 2840
+Wire Wire Line
+	895  5685 895  5755
+Wire Wire Line
+	895  5755 1435 5755
+Wire Wire Line
+	1205 5785 1205 5755
+Connection ~ 1205 5755
+Wire Wire Line
+	6105 2095 6510 2095
+Wire Wire Line
+	7260 3145 7260 3300
+Wire Wire Line
+	7485 3145 7485 3395
+Wire Wire Line
+	9280 1185 9280 1270
+Wire Wire Line
+	9280 1570 9280 1670
+Wire Wire Line
+	9280 885  9280 830 
+Wire Wire Line
+	9280 1225 9425 1225
+Connection ~ 9280 1225
+Wire Wire Line
+	6510 2170 6100 2170
+Wire Wire Line
+	14660 2695 14500 2695
+Wire Wire Line
+	14660 2795 14500 2795
+Wire Wire Line
+	14660 2995 14500 2995
+Wire Wire Line
+	14660 3095 14510 3095
+Wire Wire Line
+	7635 3145 7635 3390
+Wire Wire Line
+	8135 2695 8285 2695
+Wire Wire Line
+	7335 3145 7335 3300
+Wire Wire Line
+	1780 1105 2335 1105
+Wire Wire Line
+	8135 2545 8540 2545
+Wire Wire Line
+	1780 1015 1780 1105
+Wire Wire Line
+	3135 1105 3425 1105
+Wire Wire Line
+	3425 1105 3425 1040
+Wire Wire Line
+	3255 1395 3255 1105
+Connection ~ 3255 1105
+Wire Wire Line
+	3255 1905 3255 1695
+Wire Wire Line
+	2125 1360 2125 1105
+Connection ~ 2125 1105
+Wire Wire Line
+	2125 1905 2125 1660
+Wire Wire Line
+	4850 4430 4850 4525
+Wire Wire Line
+	7005 4900 7005 4770
+Wire Wire Line
+	7005 5500 7005 5695
+Wire Wire Line
+	6700 5590 7455 5590
+Wire Wire Line
+	6700 5590 6700 5300
+Wire Wire Line
+	6700 5300 6805 5300
+Wire Wire Line
+	6020 5100 6805 5100
+Wire Wire Line
+	6300 5100 6300 5110
+Connection ~ 6300 5100
+Wire Wire Line
+	6300 5410 6300 5515
+Wire Wire Line
+	7405 5200 7590 5200
+Wire Wire Line
+	7455 5590 7455 5200
+Connection ~ 7455 5200
+Wire Wire Line
+	7890 5200 8050 5200
+Wire Wire Line
+	8350 5200 8465 5200
+Wire Wire Line
+	8375 5000 8465 5000
+Wire Wire Line
+	8375 4560 8375 5000
+Wire Wire Line
+	8375 4560 9160 4560
+Wire Wire Line
+	9160 4560 9160 5100
+Wire Wire Line
+	9065 5100 9370 5100
+Wire Wire Line
+	8410 5260 8410 5200
+Connection ~ 8410 5200
+Wire Wire Line
+	8410 5560 8410 5745
+Wire Wire Line
+	8620 6130 7945 6130
+Wire Wire Line
+	7945 6130 7945 5200
+Connection ~ 7945 5200
+Wire Wire Line
+	8920 6130 9160 6130
+Wire Wire Line
+	9160 6130 9160 5095
+Connection ~ 9160 5095
+Wire Wire Line
+	8280 6915 8625 6915
+Wire Wire Line
+	8445 7115 8625 7115
+Wire Wire Line
+	8530 7115 8530 7625
+Connection ~ 8530 7115
+Wire Wire Line
+	8530 7625 8750 7625
+Wire Wire Line
+	9050 7625 9335 7625
+Wire Wire Line
+	9335 7625 9335 7015
+Wire Wire Line
+	9335 7015 9225 7015
+Wire Wire Line
+	8080 7375 8080 7115
+Wire Wire Line
+	8080 7115 8145 7115
+Wire Wire Line
+	8825 6715 8825 6570
+Wire Wire Line
+	8825 7315 8825 7370
+Wire Wire Line
+	14860 6865 14860 6755
+Wire Wire Line
+	14860 6155 14860 5975
+Wire Wire Line
+	14660 6555 14450 6555
+Wire Wire Line
+	14450 6555 14450 6805
+Wire Wire Line
+	14450 6805 15360 6805
+Wire Wire Line
+	15360 6805 15360 6455
+Wire Wire Line
+	15360 6455 15260 6455
+Wire Wire Line
+	14010 6355 14660 6355
+Wire Wire Line
+	14010 6300 14010 6400
+Connection ~ 14010 6355
+Wire Wire Line
+	14010 6760 14010 6700
+Wire Wire Line
+	14010 6000 14010 5945
+Wire Wire Line
+	1345 1700 1345 1575
+Wire Wire Line
+	8135 2245 8250 2245
+Wire Wire Line
+	8135 2170 8265 2170
+Wire Wire Line
+	8665 5400 8665 5500
+Wire Wire Line
+	8665 4800 8665 4755
+Wire Wire Line
+	4475 4430 4850 4430
+Connection ~ 4695 4430
+Wire Wire Line
+	4475 4820 4475 4985
+Wire Wire Line
+	4475 4985 4850 4985
+Wire Wire Line
+	4850 4985 4850 4825
+Wire Wire Line
+	4475 4430 4475 4520
+Wire Wire Line
+	6510 2620 6265 2620
+Wire Wire Line
+	6510 2695 6265 2695
+Wire Wire Line
+	6510 2770 6265 2770
+Wire Wire Line
+	7110 3145 7110 3605
+Wire Wire Line
+	5720 5100 5210 5100
+Wire Wire Line
+	14640 2110 14260 2110
+Wire Wire Line
+	14640 2310 14235 2310
+Wire Wire Line
+	14640 2410 14220 2410
+Wire Wire Line
+	14640 2010 14250 2010
+Wire Wire Line
+	14640 2210 14080 2210
+Wire Wire Line
+	14080 2210 14080 2220
+Wire Wire Line
+	12110 2120 12745 2120
+Wire Wire Line
+	2260 5525 2820 5525
+Wire Wire Line
+	2260 5525 2260 5370
+Connection ~ 2535 5525
+Wire Wire Line
+	4675 860  5565 860 
+Wire Wire Line
+	4670 5030 4670 4985
+Connection ~ 4670 4985
+Wire Wire Line
+	1435 5755 1435 5680
+Wire Wire Line
+	8135 2470 8830 2470
+Wire Wire Line
+	9130 2470 9235 2470
+Wire Wire Line
+	2330 2990 3125 2990
+Wire Wire Line
+	2750 2840 2750 2915
+Wire Wire Line
+	2750 2880 2980 2880
+Connection ~ 2750 2880
+Wire Wire Line
+	2980 2880 2980 2650
+Wire Wire Line
+	12190 2735 12730 2735
+Wire Wire Line
+	12730 2935 12485 2935
+Wire Wire Line
+	12730 3035 12485 3035
+Wire Wire Line
+	12730 3135 12490 3135
+Text Notes 14020 830  0    60   ~ 12
+Mechanics
+Text Notes 10985 1520 0    60   ~ 12
+Interfaces
+Text Notes 10990 4020 0    60   ~ 12
+Protections
+Wire Notes Line
+	13885 685  15595 685 
+Wire Notes Line
+	15595 685  15595 1330
+Wire Notes Line
+	15595 1330 13885 1330
+Wire Notes Line
+	13885 1330 13885 685 
+Wire Notes Line
+	10935 3835 15605 3835
+Wire Notes Line
+	15605 3835 15605 1405
+Wire Notes Line
+	15605 1405 10940 1405
+Wire Notes Line
+	10925 3830 10925 1405
+Wire Wire Line
+	11455 4295 11750 4295
+$Comp
+L GND #PWR046
+U 1 1 59FBA0BC
+P 11625 4900
+F 0 "#PWR046" H 11625 4650 50  0001 C CNN
+F 1 "GND" H 11625 4750 50  0000 C CNN
+F 2 "" H 11625 4900 50  0000 C CNN
+F 3 "" H 11625 4900 50  0000 C CNN
+	1    11625 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11455 4850 11455 4695
+Wire Wire Line
+	11455 4850 11845 4850
+Wire Wire Line
+	11845 4850 11845 4845
+Wire Wire Line
+	11625 4900 11625 4850
+Connection ~ 11625 4850
+Wire Wire Line
+	11845 4445 11960 4445
+Text Label 11750 4295 0    39   ~ 0
+PWD
+Text Label 11960 4445 0    39   ~ 0
+SOL
+Wire Wire Line
+	12745 2320 12470 2320
+Wire Wire Line
+	12745 2220 12460 2220
+Wire Notes Line
+	10925 3895 15605 3895
+Wire Notes Line
+	15605 3895 15605 5370
+Wire Notes Line
+	15605 5370 10925 5370
+Wire Notes Line
+	10925 5370 10925 3895
+Wire Notes Line
+	550  560  3870 560 
+Wire Notes Line
+	3870 560  3870 2270
+Wire Notes Line
+	3870 2270 550  2270
+Wire Notes Line
+	550  2270 550  560 
+Text Notes 605  710  0    60   ~ 12
+Power
+Wire Notes Line
+	575  4435 1940 4435
+Wire Notes Line
+	1940 4435 1940 6145
+Wire Notes Line
+	1940 6145 570  6145
+Wire Notes Line
+	570  6145 570  4435
+Text Notes 610  4545 0    60   ~ 12
+LEDs
+Wire Notes Line
+	4270 560  9680 560 
+Wire Notes Line
+	9680 560  9680 4180
+Wire Notes Line
+	9680 4180 4270 4180
+Wire Notes Line
+	4270 4180 4270 560 
+Text Notes 4320 660  0    60   ~ 12
+MCU
+Wire Wire Line
+	8245 2320 8135 2320
+$Comp
+L VCC #PWR047
+U 1 1 59B0099F
+P 6260 2470
+F 0 "#PWR047" H 6260 2320 50  0001 C CNN
+F 1 "VCC" H 6260 2620 50  0000 C CNN
+F 2 "" H 6260 2470 50  0000 C CNN
+F 3 "" H 6260 2470 50  0000 C CNN
+	1    6260 2470
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6510 2395 6445 2395
+Wire Wire Line
+	7710 3145 7710 3385
+Wire Wire Line
+	7710 3725 7710 3685
+Wire Notes Line
+	4275 4220 9685 4220
+Wire Notes Line
+	4270 6360 4270 4215
+Wire Notes Line
+	9690 4220 9690 7835
+Wire Notes Line
+	550  2315 3870 2315
+Wire Notes Line
+	3870 2315 3870 3530
+Wire Notes Line
+	3870 3530 555  3530
+Wire Notes Line
+	555  3530 555  2310
+Wire Wire Line
+	3365 2650 3365 3065
+Wire Wire Line
+	2980 2650 3365 2650
+$Comp
+L VCC #PWR048
+U 1 1 58ABB3FA
+P 3125 2520
+F 0 "#PWR048" H 3125 2370 50  0001 C CNN
+F 1 "VCC" H 3125 2670 50  0000 C CNN
+F 2 "" H 3125 2520 50  0000 C CNN
+F 3 "" H 3125 2520 50  0000 C CNN
+	1    3125 2520
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3125 2520 3125 2690
+Connection ~ 3125 2650
+Wire Wire Line
+	3365 3065 2330 3065
+Text Notes 600  2410 0    60   ~ 12
+Watchdog
+Wire Notes Line
+	3870 4320 550  4320
+Wire Notes Line
+	555  3555 3870 3555
+Wire Notes Line
+	3870 3555 3870 4320
+Wire Notes Line
+	550  4320 550  3555
+Text Notes 600  3650 0    60   ~ 12
+Temperature
+Wire Notes Line
+	2070 4435 3875 4435
+Wire Notes Line
+	3875 4435 3875 6140
+Wire Notes Line
+	3875 6140 2065 6140
+Wire Notes Line
+	2065 6140 2065 4435
+Text Notes 2145 4565 0    60   ~ 12
+Buzzer
+Wire Notes Line
+	10920 5480 15605 5480
+Wire Notes Line
+	15605 5480 15605 7310
+Wire Notes Line
+	15605 7310 10920 7310
+Wire Notes Line
+	10920 7310 10920 5475
+Text Notes 10985 5625 0    60   ~ 12
+Unused
+Wire Notes Line
+	4270 6365 4270 7835
+Wire Notes Line
+	4270 7835 9690 7835
+$Comp
+L PWR_FLAG #FLG049
+U 1 1 5A008569
+P 1750 1575
+F 0 "#FLG049" H 1750 1670 50  0001 C CNN
+F 1 "PWR_FLAG" H 1750 1755 50  0000 C CNN
+F 2 "" H 1750 1575 50  0000 C CNN
+F 3 "" H 1750 1575 50  0000 C CNN
+	1    1750 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR050
+U 1 1 5A008E08
+P 1750 1710
+F 0 "#PWR050" H 1750 1560 50  0001 C CNN
+F 1 "VCC" H 1750 1860 50  0000 C CNN
+F 2 "" H 1750 1710 50  0000 C CNN
+F 3 "" H 1750 1710 50  0000 C CNN
+	1    1750 1710
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1750 1710 1750 1575
+Wire Wire Line
+	2125 1905 3255 1905
+Wire Wire Line
+	2735 1505 2735 1950
+Connection ~ 2735 1905
+Wire Wire Line
+	12730 2835 12275 2835
+$Comp
+L CONN_01X05 P4
+U 1 1 5A0122FD
+P 14840 2210
+F 0 "P4" H 14840 2510 50  0000 C CNN
+F 1 "CONN_01X05" V 14940 2210 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_MicroLatch-53253-0570_05x2.00mm_Straight" H 14840 2210 50  0001 C CNN
+F 3 "" H 14840 2210 50  0000 C CNN
+F 4 "3M" H 14840 2210 60  0001 C CNN "Fabricante"
+F 5 "960105-6202-AR" H 14840 2210 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 14840 2210 60  0001 C CNN "Proveedor #1"
+F 7 "517-9601056202AR" H 14840 2210 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 14840 2210 60  0001 C CNN "Proveedor #2"
+F 9 "2672610" H 14840 2210 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Conector de Placa a Placa, 2.54 mm, 5 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 14840 2210 60  0001 C CNN "Descripción"
+	1    14840 2210
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X05 P1
+U 1 1 59FE19FC
+P 12945 2220
+F 0 "P1" H 12945 2520 50  0000 C CNN
+F 1 "CONN_01X05" V 13045 2220 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_MicroLatch-53253-0570_05x2.00mm_Straight" H 12945 2220 50  0001 C CNN
+F 3 "" H 12945 2220 50  0000 C CNN
+F 4 "3M" H 12945 2220 60  0001 C CNN "Fabricante"
+F 5 "960105-6202-AR" H 12945 2220 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 12945 2220 60  0001 C CNN "Proveedor #1"
+F 7 "517-9601056202AR" H 12945 2220 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 12945 2220 60  0001 C CNN "Proveedor #2"
+F 9 "2672610" H 12945 2220 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Conector de Placa a Placa, 2.54 mm, 5 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 12945 2220 60  0001 C CNN "Descripción"
+	1    12945 2220
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X05 P3
+U 1 1 59FE1ABD
+P 14860 2895
+F 0 "P3" H 14860 3195 50  0000 C CNN
+F 1 "CONN_01X05" V 14960 2895 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_MicroLatch-53253-0570_05x2.00mm_Straight" H 14860 2895 50  0001 C CNN
+F 3 "" H 14860 2895 50  0000 C CNN
+F 4 "3M" H 14860 2895 60  0001 C CNN "Fabricante"
+F 5 "960105-6202-AR" H 14860 2895 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 14860 2895 60  0001 C CNN "Proveedor #1"
+F 7 "517-9601056202AR" H 14860 2895 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 14860 2895 60  0001 C CNN "Proveedor #2"
+F 9 "2672610" H 14860 2895 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Conector de Placa a Placa, 2.54 mm, 5 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 14860 2895 60  0001 C CNN "Descripción"
+	1    14860 2895
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X05 P2
+U 1 1 59FE1B85
+P 12930 2935
+F 0 "P2" H 12930 3235 50  0000 C CNN
+F 1 "CONN_01X05" V 13030 2935 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_MicroLatch-53253-0570_05x2.00mm_Straight" H 12930 2935 50  0001 C CNN
+F 3 "" H 12930 2935 50  0000 C CNN
+F 4 "3M" H 12930 2935 60  0001 C CNN "Fabricante"
+F 5 "960105-6202-AR" H 12930 2935 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 12930 2935 60  0001 C CNN "Proveedor #1"
+F 7 "517-9601056202AR" H 12930 2935 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 12930 2935 60  0001 C CNN "Proveedor #2"
+F 9 "2672610" H 12930 2935 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Conector de Placa a Placa, 2.54 mm, 5 Contactos, Receptáculo, 960 Series, Agujero Pasante, 1 Filas" H 12930 2935 60  0001 C CNN "Descripción"
+	1    12930 2935
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4765 1785 4430 1785
+Wire Wire Line
+	5165 1785 5430 1785
+$Comp
+L GND #PWR051
+U 1 1 59FE40F4
+P 4965 1945
+F 0 "#PWR051" H 4965 1695 50  0001 C CNN
+F 1 "GND" H 4965 1795 50  0000 C CNN
+F 2 "" H 4965 1945 50  0000 C CNN
+F 3 "" H 4965 1945 50  0000 C CNN
+	1    4965 1945
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRYSTAL_SMD X1
+U 1 1 59FE06E9
+P 4965 1785
+F 0 "X1" H 4965 1875 50  0000 C CNN
+F 1 "CRYSTAL_SMD" H 4995 1675 50  0001 L CNN
+F 2 "Crystals:Crystal_SMD_0603-4pin_6.0x3.5mm" H 4960 1790 50  0001 C CNN
+F 3 "" H 4965 1785 50  0000 C CNN
+	1    4965 1785
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P5
+U 1 1 5A9AC5D3
+P 3295 5145
+F 0 "P5" H 3295 5295 50  0000 C CNN
+F 1 "CONN_01X02" V 3395 5145 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 3295 5145 50  0000 C CNN
+F 3 "" H 3295 5145 50  0000 C CNN
+	1    3295 5145
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER D4
+U 1 1 58EC9414
+P 2260 5170
+F 0 "D4" H 2260 5270 50  0000 C CNN
+F 1 "ZENER" H 2305 5070 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-323_HandSoldering" H 2260 5170 50  0001 C CNN
+F 3 "" H 2260 5170 50  0000 C CNN
+F 4 "DIODES INCORPORATED" H 2260 5170 60  0001 C CNN "Fabricante"
+F 5 "BZT52C3V3S-7-F" H 2260 5170 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 2260 5170 60  0001 C CNN "Proveedor #1"
+F 7 "621-BZT52C3V3S-F" H 2260 5170 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 2260 5170 60  0001 C CNN "Proveedor #2"
+F 9 "1843704" H 2260 5170 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Diodo Zener Simple, 3.3 V, 500 mW, SOD-123, 6 %, 2 Pines, 150 °C" H 2260 5170 60  0001 C CNN "Descripción"
+	1    2260 5170
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2260 4970 2260 4945
+Wire Wire Line
+	2260 4945 2820 4945
+Wire Wire Line
+	2820 4945 2820 5095
+Wire Wire Line
+	2820 5095 3095 5095
+$Comp
+L LED D1
+U 1 1 58ABDFF6
+P 895 5485
+F 0 "D1" H 895 5585 50  0000 C CNN
+F 1 "LED" H 895 5385 50  0000 C CNN
+F 2 "LEDs:LED_1206" H 895 5485 50  0001 C CNN
+F 3 "" H 895 5485 50  0000 C CNN
+F 4 "VISHAY" H 895 5485 60  0001 C CNN "Fabricante"
+F 5 "VLMTG1300-GS08" H 895 5485 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 895 5485 60  0001 C CNN "Proveedor #1"
+F 7 "VLMTG1300-GS08" H 895 5485 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 895 5485 60  0001 C CNN "Proveedor #2"
+F 9 "2251490" H 895 5485 60  0001 C CNN "Referencia Proveedor #2"
+	1    895  5485
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	895  5255 895  5285
+Wire Wire Line
+	1435 5255 1435 5280
+Wire Wire Line
+	1435 4825 1435 4955
+Wire Wire Line
+	895  4825 895  4955
+Text Notes 930  5370 0    60   ~ 0
+GREEN
+Text Notes 1450 5370 0    60   ~ 0
+RED
+$Comp
+L C C15
+U 1 1 5A9B69BB
+P 5565 1050
+F 0 "C15" H 5590 1150 50  0000 L CNN
+F 1 "100nF" H 5590 950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5603 900 50  0001 C CNN
+F 3 "Fabricante" H 5565 1050 50  0001 C CNN
+F 4 "KEMET" H 5565 1050 60  0001 C CNN "Fabricante"
+F 5 "80-C0603X104K5R" H 5565 1050 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 5565 1050 60  0001 C CNN "Proveedor #1"
+F 7 "C0603X104K5RACTU" H 5565 1050 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 5565 1050 60  0001 C CNN "Proveedor #2"
+F 9 "1414028" H 5565 1050 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Condensador de Cerámica Multicapa, Terminación Flexible (FT-CAP), 0603 [Métrica 1608], 0.1 µF, 50 V" H 5565 1050 60  0001 C CNN "Descripción"
+	1    5565 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5565 860  5565 900 
+$Comp
+L C C14
+U 1 1 5A9B8997
+P 5280 1050
+F 0 "C14" H 5305 1150 50  0000 L CNN
+F 1 "10nF" H 5305 950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5318 900 50  0001 C CNN
+F 3 "" H 5280 1050 50  0000 C CNN
+F 4 "KEMET" H 5280 1050 60  0001 C CNN "Fabricante"
+F 5 "C0603X103F5JACTU" H 5280 1050 60  0001 C CNN "Referencia Fabricante"
+F 6 "Mouser" H 5280 1050 60  0001 C CNN "Proveedor #1"
+F 7 "80-C0603X103F5J" H 5280 1050 60  0001 C CNN "Referencia Proveedor #1"
+F 8 "Farnell" H 5280 1050 60  0001 C CNN "Proveedor #2"
+F 9 "2579110" H 5280 1050 60  0001 C CNN "Referencia Proveedor #2"
+F 10 "Ceramic Capacitors MLCC - SMD/SMT 50volts 10000pF 1% U2J" H 5280 1050 60  0001 C CNN "Descripción"
+	1    5280 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4675 1200 4675 1255
+Wire Wire Line
+	4675 1255 5565 1255
+Connection ~ 5145 1255
+Wire Wire Line
+	4965 1200 4965 1255
+Connection ~ 4965 1255
+Wire Wire Line
+	5280 1200 5280 1255
+Connection ~ 5280 1255
+Wire Wire Line
+	5565 1255 5565 1200
+Wire Wire Line
+	5125 860  5125 785 
+Connection ~ 5125 860 
+Wire Wire Line
+	5280 900  5280 860 
+Connection ~ 5280 860 
+Wire Wire Line
+	4965 900  4965 860 
+Connection ~ 4965 860 
+Wire Wire Line
+	14660 2895 14385 2895
+Wire Wire Line
+	4965 1885 4965 1945
+$EndSCHEMATC

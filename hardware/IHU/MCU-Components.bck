@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LT6005
+D 36V high side current sense amplifier, adjustable gain, bandwidth 200kHz, Vcc=2.7V~36V, current output, unidirectional
+K current sense highside HS shunt monitor amplifier linear
+F http://cds.linear.com/docs/en/datasheet/6106fb.pdf
+$ENDCMP
+#
+#End Doc Library
