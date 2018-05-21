@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name smini)(type KiCad)(uri "$(KIPRJMOD)/smini.pretty")(options "")(descr ""))
+)
