@@ -1,0 +1,21 @@
+Las restricciones de diseño (EDR) para el PCB de la EPS están impuestas mayormente 
+por el footprint del LT3129 y por los lineamientos del fabricante del PCB (Eurocircuits)
+
+> Parámetros del LT3129 en [mm]
+Ancho de pistas: 0.305 +-0.038
+Distancia entre centro de pistas: 0.5
+Separación entre pistas: 0.195
+
+> Clasificación de diseño Eurocircuits
+Para satisfacer los parámetros anteriores, se necesita un PCB clase 5 (class 5):
+Outer layer Track Width (mìnimo): 0.175
+Outer Track to Track: 0.175
+Outer layer Annular Ring: 0.150
+Base Cu: 35 [um]
+
+Por lo tanto, en KiCad los parámetros Net Classes son (en [mm]):
+Clearance: 0.195
+Track Width: 0.305
+Via Dia - Via Drill: > 0.105
+
+
